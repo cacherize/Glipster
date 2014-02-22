@@ -13,7 +13,7 @@
  */
 body, html {height:100%; padding:0; margin:0; font-family:sans-serif, arial; color:#444;}
 #wrapper {min-height:100%; position:relative;}
-#header {height:100px; background:black;}
+#header {height:50px; background:black;}
 #body {
 	padding-bottom:20px;
 	margin:0 10px;
@@ -25,4 +25,14 @@ body, html {height:100%; padding:0; margin:0; font-family:sans-serif, arial; col
 	bottom:0;
 	left:0;
 	background:black;
+}
+#menu {
+	padding:0;
+	margin:0;
+}
+#menu li {
+	list-style-type:none;
+	display:inline-block;
+	color:white;
+	line-height:50px;
 }
