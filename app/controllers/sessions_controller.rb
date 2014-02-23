@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
   def create
   	if params[:username].present?
-	  	user = User.find_by_email(params[:username].downcase)
+	  	user = User.find_by_email_or_username(params[:username])
 	  end
   	if user && user.authenticate(params[:password])
   		session[:user_id] = user.id
