@@ -5,4 +5,10 @@ class User < ActiveRecord::Base
   validates :password, presence: true, on: :create
   validates :email, presence: true, uniqueness: true, on: :create
   validates :username, presence: true, uniqueness: true, on: :create
+
+  before_save :downcase_email
+
+  def downcase_email
+	  self.email.downcase! if self.email
+	end
 end
