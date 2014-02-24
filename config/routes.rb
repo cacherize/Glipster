@@ -1,8 +1,9 @@
 Glipster::Application.routes.draw do
-
-  resources :sessions, only: [:new, :create, :destroy]
   match 'login', to: 'sessions#new', via: :get
   match 'logout', to: 'sessions#destroy', via: :delete
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :users
+  resources :password_resets
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -16,7 +17,6 @@ Glipster::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-  resources :users
 
   # Sample resource route with options:
   #   resources :products do

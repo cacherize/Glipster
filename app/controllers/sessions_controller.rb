@@ -8,7 +8,11 @@ class SessionsController < ApplicationController
 	  end
   	if user && user.authenticate(params[:password])
   		if user.activated?
-	  		session[:user_id] = user.id
+	  		if params[:remember_me]
+	  			cookies.permanent[:auth_token] = user.auth_token
+	  		else
+	  			cookies[:auth_token] = user.auth_token
+	  		end
 	  		redirect_to root_path, notice: 'Logged in!'
 	  	else
 	  		redirect_to login_path, alert: 'Please check you inbox for a confirmation email to activate your account'
@@ -20,7 +24,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-  	session[:user_id] = nil
+  	cookies.delete(:auth_token)
   	redirect_to root_path, notice: 'Logged out!'
   end
 end
