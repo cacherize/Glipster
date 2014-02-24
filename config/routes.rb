@@ -2,7 +2,11 @@ Glipster::Application.routes.draw do
   match 'login', to: 'sessions#new', via: :get
   match 'logout', to: 'sessions#destroy', via: :delete
   resources :sessions, only: [:new, :create, :destroy]
-  resources :users
+  resources :users do 
+    member do
+      get 'confirm'
+    end
+  end
   resources :password_resets
 
   # The priority is based upon order of creation:

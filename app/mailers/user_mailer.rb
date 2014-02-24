@@ -6,6 +6,11 @@ class UserMailer < ActionMailer::Base
   #
   #   en.user_mailer.password_reset.subject
   #
+  def account_confirmation(user)
+    @user = user
+    mail to: user.email, subject: "Please Confirm Your Account"
+  end
+
   def password_reset(user)
     @user = user
     mail to: user.email, subject: "Reset Password Instructions"

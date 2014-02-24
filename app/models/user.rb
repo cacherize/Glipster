@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
 		end
 	end
 
+	def send_account_confirmation
+		UserMailer.account_confirmation(self).deliver
+	end
+
 	def send_password_reset
 		generate_token(:password_reset_token)
 		self.password_reset_sent_at = Time.zone.now
