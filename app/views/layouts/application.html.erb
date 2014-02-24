@@ -13,6 +13,13 @@
 		<ul id="menu">
 			<li>Home</li>
 			<li>Categories</li>
+			<li>
+				<% if current_user.present? %>
+					<%= link_to "#{current_user.username}", user_path(current_user) %> <%= link_to "Logout",logout_path, method: :delete %>
+				<% else %>
+					<%= link_to "Login", login_path %>
+				<% end %>
+			</li>
 		</ul>
 	</div>
 	<div id="body">

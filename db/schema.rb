@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(:version => 20140222080733) do
     t.string   "email"
     t.string   "username"
     t.boolean  "admin",           :default => false
-    t.boolean  "activated"
+    t.boolean  "activated",       :default => false
     t.string   "password_digest"
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
