@@ -5,22 +5,29 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.png?v=4' %>
 </head>
 <body>
 
 <div id="wrapper">
 	<div id="header">
+		<div id="logo_container">
+			<div id="logo_rounded_corner_left"></div><div id="logo_wrapper"><%= link_to image_tag('logo.png'), root_path %></div><div id="logo_rounded_corner_right"></div>
+		</div>
 		<ul id="menu">
-			<li>Home</li>
-			<li>Categories</li>
-			<li>
-				<% if current_user.present? %>
-					<%= link_to "#{current_user.username}", user_path(current_user) %> <%= link_to "Logout",logout_path, method: :delete %>
-				<% else %>
-					<%= link_to "Login", login_path %>
-				<% end %>
-			</li>
+			<li><%= link_to "New Games", root_path, class: cp(root_path) %></li>
+	    <li><%= link_to "Top Games", class: cp(users_path) %></li>
+	    <li><%= link_to "Categories <span class='sub_arrow'>&#x25bc;</span>".html_safe, class: cp(users_path) %></li>
 		</ul>
+		<div id="sessions_links">
+			<% if current_user.present? %>
+					<span class="submenu_container">
+						<%= link_to avatar_thumb(current_user) + " #{current_user.username}", user_path(current_user), class: cp(current_user) %>
+					</span><%= link_to "Logout", logout_path, method: :delete %>
+				<% else %>
+					<%= link_to "Login", login_path, class: cp(login_path) %>
+				<% end %>
+		</div>
 	</div>
 	<div id="body">
 		<% if flash[:alert] %>
@@ -31,7 +38,11 @@
 	  <% end %>
 		<%= yield %>
 	</div>
-	<div id="footer"></div>
+
+	<div id="footer">
+		<div id="footer_border"></div>
+		<div id="footer_content"></div>
+	</div>
 </div>
 
 </body>

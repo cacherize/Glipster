@@ -1,8 +1,16 @@
-<%= form_tag sessions_path do %>
-	Username: <%= text_field_tag :username %><br/>
-	Password: <%= password_field_tag :password %><br/>
-	<%= link_to "Forgot Password?", new_password_reset_path %><br/>
-	<%= check_box_tag :remember_me, 1, params[:remember_me] %><%= label_tag :remember_me %><br/>
+<div class="center">
+	<%= form_tag sessions_path, class: "form" do %>
+		<h2 class="form_header">Sign In</h2>
+		<div class="form_field">
+			<%= label_tag :username, "Username:" %><br/><%= text_field_tag :username %>
+		</div>
+		<div class="form_field">
+			<%= label_tag :password, "Password:" %><br/><%= password_field_tag :password %>
+		</div>
+		
+		<%= check_box_tag :remember_me, 1, params[:remember_me] %> <%= label_tag :remember_me %><br/>
+		<p style="font-size:0.8em; margin:5px 0;">Forgot your password?<br/>Reset it <%= link_to "here", new_password_reset_path %>.</p>
 
-	<%= submit_tag 'Login' %>
-<% end %>
+		<%= submit_tag 'Login' %>
+	<% end %>
+</div>

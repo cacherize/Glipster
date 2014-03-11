@@ -1,10 +1,12 @@
 Glipster::Application.routes.draw do
   match 'login', to: 'sessions#new', via: :get
   match 'logout', to: 'sessions#destroy', via: :delete
+  match 'signup', to: 'users#new', via: :get
   resources :sessions, only: [:new, :create, :destroy]
   resources :users do 
     member do
       get 'confirm'
+      get 'change_avatar'
     end
   end
   resources :password_resets

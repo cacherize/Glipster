@@ -20,7 +20,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '3.1.0'
+gem 'dragonfly', "~>1.0.3"
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2'
@@ -32,8 +33,10 @@ group :development do
 	gem "letter_opener"
 end
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :production do
+	# Use unicorn as the app server
+	gem 'unicorn'
+end
 
 # Deploy with Capistrano
 # gem 'capistrano'

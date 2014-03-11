@@ -16,6 +16,23 @@ class UsersController < ApplicationController
 		end
 	end
 
+	def show
+	end
+
+	def edit
+	end
+
+	def update
+		@user = User.find_by_username(params[:id])
+		respond_to do |format|
+			if @user.update_attributes(params[:user])
+				format.html{redirect_to @user, notice: "Updated profile!"}
+			else
+				format.html{render :edit}
+			end
+		end
+	end
+
 	def confirm
 		@user = User.find_by_auth_token!(params[:id])
 		if @user
@@ -24,5 +41,9 @@ class UsersController < ApplicationController
 		else
 			redirect_to root_path, alert: "Unable to activate account."
 		end
+	end
+
+	def change_avatar
+		@user = User.find_by_username(params[:id])
 	end
 end

@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :username, :password, :password_confirmation, :admin, :activated
+  attr_accessible :email, :username, :password, :password_confirmation, :admin, :activated, :image
   has_secure_password
   
   before_save :downcase_email
@@ -8,6 +8,12 @@ class User < ActiveRecord::Base
   validates :password, presence: true, on: :create
   validates :email, presence: true, uniqueness: true, on: :create
   validates :username, presence: true, uniqueness: true, on: :create
+
+  dragonfly_accessor :image
+
+  def to_param
+  	"#{self.username}"
+  end
 
   def downcase_email
 	  self.email.downcase! if self.email
