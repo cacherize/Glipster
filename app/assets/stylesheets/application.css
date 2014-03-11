@@ -12,6 +12,8 @@
  *= require_tree .
  */
 body, html {height:100%; padding:0; margin:0; font-family:sans-serif, arial; color:#444;}
+a {border:0; text-decoration:none; outline:0;}
+img {outline:0; border:0;}
 #wrapper {
 	min-height:100%;
 	position:relative;
@@ -112,3 +114,4 @@ body, html {height:100%; padding:0; margin:0; font-family:sans-serif, arial; col
 }
 .center {text-align:center;}
 .clear {clear:both;}
+.placeholder{color:#888;}
