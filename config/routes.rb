@@ -10,6 +10,7 @@ Glipster::Application.routes.draw do
     end
   end
   resources :password_resets
+  resources :categories
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

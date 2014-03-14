@@ -1,0 +1,12 @@
+<div class="center">
+	<%= form_for @category, html: {class: 'form'} do |f| %>
+		<h2 class="form_header"><%= controller.action_name.titleize %> Category</h2>
+		<div class="form_field">
+			<%= f.label :name %><br/>
+			<%= f.text_field :name %>
+		</div>
+		<div class="form_submit">
+			<%= f.submit %>
+		</div>
+	<% end %>
+</div>
