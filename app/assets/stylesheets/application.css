@@ -21,7 +21,7 @@ img {outline:0; border:0;}
 	background-repeat:repeat;
 	min-width:750px;
 }
-#header {height:50px; background:#333; margin-bottom:25px;}
+#header {height:50px; background:#333; margin-bottom:30px;}
 #logo_container {width:240px; margin-left:10px; display:inline-block;}
 #logo_wrapper{width:215px; display:inline-block;}
 #logo_rounded_corner_left, #logo_rounded_corner_right {
