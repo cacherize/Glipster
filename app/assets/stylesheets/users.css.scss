@@ -8,7 +8,7 @@
 	box-shadow:0 0 8px #ccc;
 	position:relative;
 	margin:50px 0;
-	border:1px solid #aaa;
+	border:1px solid #ccc;
 	.form_header {
 		position:absolute;
 		top:-70px;
@@ -64,8 +64,47 @@
 		}
 	}
 }
-.profile_pic {
-	img {
-		border-radius:10px;
+#user_show {
+	background:#fff;
+	display:inline-block;
+	padding: 15px 15px 15px 175px;
+	border:1px solid #ccc;
+	text-align:left;
+	min-width:325px;
+	min-height:300px;
+	-moz-box-shadow:0 0 8px #ccc;
+	-webkit-box-shadow:0 0 8px #ccc;
+	box-shadow:0 0 8px #ccc;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	margin-bottom:20px;
+	position:relative;
+	.profile_pic {
+		display:inline-block;
+		text-align:center;
+		position:absolute;
+		left:15px;
+		top:15px;
+		img {
+			border-radius:10px;
+			border:1px solid #ccc;
+		}
+		a {
+			padding:3px 5px;
+			background:#ededed;
+			color:#444;
+			border:1px solid #ccc;
+			border-radius:4px;
+			font-size:0.7em;
+			&:hover {background:#dedede;}
+		}
+	}
+	#user_header {
+		display:inline-block;
+		vertical-align: top;
+		margin: 0;
+		width:100%;
+		border-bottom:solid 1px #444;
 	}
 }

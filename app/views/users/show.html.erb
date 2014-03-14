@@ -1,2 +1,9 @@
-<div class="profile_pic"><%= avatar_large(@user) %></div>
-<%= link_to("change avatar", change_avatar_user_path(current_user)) %>
+<div class="center">
+	<div id="user_show">
+		<span class="profile_pic">
+			<%= avatar_large(@user) %><br/>
+			<%= link_to("Change Avatar", change_avatar_user_path(current_user)) %>
+		</span>
+		<h2 id="user_header"><%= @user.username %></h2>
+	</div>
+</div>
