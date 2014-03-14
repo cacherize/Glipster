@@ -16,4 +16,14 @@
 //= require_tree .
 $(document).ready(function(){
 	$('input, textarea').placeholder();
+
+	$('li.submenu_container').hover(function () {
+	if ($('> ul.submenu',this).length > 0) {
+	    $('> ul.submenu',this).stop().slideDown('fast');
+	}
+	},function () {
+		if ($('> ul.submenu',this).length > 0) {
+			$('> ul.submenu',this).stop().slideUp('fast');
+		}
+	});
 });

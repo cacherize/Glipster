@@ -112,7 +112,7 @@ img {outline:0; border:0;}
 	overflow:visible;
 }
 #menu li .submenu {
-	display:inline-block;
+	display:none;
 	width:100%;
 	width:-moz-calc(100% - 2px);
 	width:-webkit-calc(100% - 2px);
@@ -157,6 +157,7 @@ img {outline:0; border:0;}
 	text-shadow:none;
 	padding:8px 18px;
 	display:block;
+	font-size:0.9em;
 }
 .sub_arrow {
 	font-size:0.5em;
