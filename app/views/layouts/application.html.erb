@@ -17,16 +17,22 @@
 		<ul id="menu">
 			<li><%= link_to "New Games", root_path, class: cp(root_path) %></li>
 	    <li><%= link_to "Top Games", class: cp(users_path) %></li>
-	    <li><%= link_to "Categories <span class='sub_arrow'>&#x25bc;</span>".html_safe, class: cp(users_path) %></li>
+	    <li class="submenu_container">
+	    	<%= link_to "Categories <span class='sub_arrow'>&#x25bc;</span>".html_safe, class: cp(users_path) %>
+	    	<ul class="submenu">
+	    		<li style="border-top:0;"></li>
+	    		<% Category.all.each do |cat| %>
+	    			<li><%= link_to cat.name, cat %></li>
+	    		<% end %>
+	    	</ul>
+	    </li>
 		</ul>
 		<div id="sessions_links">
 			<% if current_user.present? %>
-					<span class="submenu_container">
-						<%= link_to avatar_thumb(current_user) + " #{current_user.username}", user_path(current_user), class: cp(current_user) %>
-					</span><%= link_to "Logout", logout_path, method: :delete %>
-				<% else %>
-					<%= link_to "Login", login_path, class: cp(login_path) %>
-				<% end %>
+				<%= link_to avatar_thumb(current_user) + " #{current_user.username}", user_path(current_user), class: cp(current_user) %> <%= link_to "Logout", logout_path, method: :delete %>
+			<% else %>
+				<%= link_to "Login", login_path, class: cp(login_path) %>
+			<% end %>
 		</div>
 	</div>
 	<div id="body">
