@@ -10,8 +10,9 @@ Glipster::Application.routes.draw do
       get 'change_avatar'
     end
   end
-  resources :password_resets
   resources :categories
+  resources :games
+  resources :password_resets
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
