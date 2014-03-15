@@ -101,6 +101,8 @@ img {outline:0; border:0;}
 #menu li a.current, #menu li a:hover, #sessions_links a.current, #sessions_links a:hover {
 	background:none;
 	background-color:#111;
+	-moz-box-shadow:0 0 15px #000 inset;
+	-webkit-box-shadow:0 0 15px #000 inset;
 	box-shadow:0 0 15px #000 inset;
 	border-left:1px solid #444;
 	border-right:1px solid #444;
