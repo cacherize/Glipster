@@ -14,4 +14,7 @@ class GamesController < ApplicationController
 			end
 		end
 	end
+
+	def upload
+	end
 end
