@@ -16,5 +16,7 @@ class GamesController < ApplicationController
 	end
 
 	def upload
+		@uploader = Game.new.flash_file
+		@uploader.success_action_redirect = new_game_url
 	end
 end
