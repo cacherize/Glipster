@@ -1,6 +1,10 @@
 <div class="center">
 	<%= form_for @game, html: {class: "form"} do |f| %>
 		<h2 class="form_header"><%= params[:action].titleize %> Game</h2>
+		<%= f.hidden_field :key %>
+		<div class="form_field">
+			File: <%= @game.flash_file_name %>
+		</div>
 		<div class="form_field">
 			<%= f.label :title %><br/>
 			<%= f.text_field :title %>

@@ -1,10 +1,10 @@
 class GamesController < ApplicationController
 	def new
-		@game = Game.new
+		@game = Game.new(key: params[:key])
 	end
 
 	def create
-		@game = Game.new(param[:id])
+		@game = Game.new(params[:game])
 
 		respond_to do |format|
 			if @game.save
