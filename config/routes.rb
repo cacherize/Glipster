@@ -2,6 +2,7 @@ Glipster::Application.routes.draw do
   match 'login', to: 'sessions#new', via: :get
   match 'logout', to: 'sessions#destroy', via: :delete
   match 'signup', to: 'users#new', via: :get
+  match 'reset_password', to: 'password_resets#new', via: :get
   resources :sessions, only: [:new, :create, :destroy]
   resources :users do 
     member do
