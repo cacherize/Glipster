@@ -22,6 +22,7 @@ end
 
 gem 'jquery-rails', '3.1.0'
 gem 'dragonfly', "~>1.0.3"
+gem 'carrierwave_direct'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2'

@@ -33,6 +33,15 @@ GEM
     bcrypt-ruby (3.1.2)
     bcrypt-ruby (3.1.2-x86-mingw32)
     builder (3.0.4)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
+    carrierwave_direct (0.0.13)
+      carrierwave
+      fog
+      uuidtools
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -44,7 +53,18 @@ GEM
       multi_json (~> 1.0)
       rack
     erubis (2.7.0)
+    excon (0.31.0)
     execjs (2.0.2)
+    fog (1.20.0)
+      builder
+      excon (~> 0.31.0)
+      formatador (~> 0.2.0)
+      mime-types
+      multi_json (~> 1.0)
+      net-scp (~> 1.1)
+      net-ssh (>= 2.1.3)
+      nokogiri (>= 1.5.11)
+    formatador (0.2.4)
     hike (1.2.3)
     i18n (0.6.9)
     journey (1.0.4)
@@ -61,7 +81,13 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_portile (0.5.2)
     multi_json (1.8.4)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.8.0)
+    nokogiri (1.6.1-x86-mingw32)
+      mini_portile (~> 0.5.0)
     pg (0.17.1)
     pg (0.17.1-x86-mingw32)
     polyglot (0.3.4)
@@ -114,12 +140,14 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    uuidtools (2.1.4)
 
 PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
   bcrypt-ruby (= 3.1.2)
+  carrierwave_direct
   coffee-rails (~> 3.2.1)
   dragonfly (~> 1.0.3)
   jquery-rails (= 3.1.0)
