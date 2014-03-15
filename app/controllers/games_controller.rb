@@ -15,6 +15,10 @@ class GamesController < ApplicationController
 		end
 	end
 
+	def show
+		@game = Game.find(params[:id])
+	end
+
 	def upload
 		@uploader = Game.new.flash_file
 		@uploader.success_action_redirect = new_game_url
