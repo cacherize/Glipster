@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.placeholder
-//= require_tree .
 $(document).ready(function(){
 	$('input, textarea').placeholder();
 
