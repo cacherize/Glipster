@@ -1,2 +1,9 @@
-<%= @game.title %>
-<%= game_thumb(@game) %>
+<div class="center">
+	<div id="game_show">
+		<div id="game_header">
+			<%= game_thumb(@game) %>
+			<h1><%= @game.title %> <span><%= @game.developer %></span></h1>
+		</div>
+		<div id="game_body"><embed src="<%= @game.flash_file_url %>" width="700px" height="550px" /></div>
+	</div>
+</div>
