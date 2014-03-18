@@ -193,7 +193,7 @@ img {outline:0; border:0;}
 }
 .form_errors ul li {color:#FF0000; font-size:0.9em;}
 .flash {
-	padding:10px;
+	padding:10px 50px 10px 10px;
 	font-weight:bold;
 	background-position: right center;
 	background-repeat:no-repeat;
