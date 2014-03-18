@@ -1,3 +1,24 @@
-// Place all the styles related to the developers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#link_tester {
+	width:12px;
+	height:12px;
+	display:inline-block;
+	padding:6px;
+	background:#ededed;
+	border:1px solid #ccc;
+	border-left:1px solid #efefef;
+	-moz-border-radius-bottomright:5px;
+	-moz-border-radius-topright:5px;
+	-webkit-border-bottom-right-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;
+	background:-webkit-linear-gradient(#ededed, #dedede);
+	background:-moz-linear-gradient(#ededed, #dedede);;
+	background:linear-gradient(#ededed, #dedede);
+	img {width:12px; height:12px; display:block;}
+	&:hover {
+		background:-webkit-linear-gradient(#dedede, #ededed);
+		background:-moz-linear-gradient(#dedede, #ededed);;
+		background:linear-gradient(#dedede, #ededed);
+	}
+}
