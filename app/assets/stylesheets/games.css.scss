@@ -1,3 +1,43 @@
-// Place all the styles related to the games controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#game_show {
+	background:#fff;
+	display:inline-block;
+	padding: 20px;
+	border:1px solid #ccc;
+	text-align:left;
+	min-width:325px;
+	min-height:300px;
+	-moz-box-shadow:0 0 8px #ccc;
+	-webkit-box-shadow:0 0 8px #ccc;
+	box-shadow:0 0 8px #ccc;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	margin-bottom:20px;
+	position:relative;
+	#game_header {
+		max-width:100%;
+		width:auto;
+		height:76px;
+		padding-left:90px;
+		position:relative;
+		margin-bottom:10px;
+		img {
+			position:absolute;
+			top:0;
+			left:0;
+			border:1px solid #ccc;
+			-moz-border-radius:8px;
+			-webkit-border-radius:8px;
+			border-radius:8px;
+		}
+		h1 {
+			margin:0;
+			border-bottom:1px solid #ccc;
+		}
+	}
+	#game_body {
+		embed {
+			border:1px solid #ccc;
+		}
+	}
+}
