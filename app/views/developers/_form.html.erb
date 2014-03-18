@@ -17,10 +17,11 @@
 		</div>
 		<div class="form_field">
 			<%= f.label :link %><br/>
-			<%= f.text_field :link %>
+			<%= f.text_field :link, style: 'width:179px; border-top-right-radius:0; border-bottom-right-radius:0; padding-right:0;' %><%= link_to image_tag('link.png'), "", id: 'link_tester', target: '_blank', title: 'test link' %>
 		</div>
 		<div class="form_submit">
 			<%= f.submit %>
 		</div>
 	<% end %>
 </div>
+<%= javascript_include_tag params[:controller] %>
