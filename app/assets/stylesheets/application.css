@@ -192,3 +192,24 @@ img {outline:0; border:0;}
 	text-align: left;
 }
 .form_errors ul li {color:#FF0000; font-size:0.9em;}
+.flash {
+	padding:10px;
+	font-weight:bold;
+	background-position: right center;
+	background-repeat:no-repeat;
+}
+.notice{
+	background-color:#E8EECC;
+	border:1px solid #a2d42f;
+	border-top:3px solid #a2d42f;
+	color:#a2d42f;
+	background-image:url('check.png');
+}
+.alert {
+	background-color:#FEDEDE;
+	border:1px solid #f50000;
+	border-top:3px solid #f50000;
+	color:#f50000;
+	background-image:url('cross.png');
+
+}
