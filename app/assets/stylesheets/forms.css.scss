@@ -72,8 +72,8 @@
 			-webkit-border-radius:3px;
 			border-radius:3px;
 			background: #FFFFE6;
+			vertical-align: top;
 			&:focus{background:#fff;}
-			&:active {position:relative; top:1px;}
 		}
 		input[type="checkbox"] {
 			padding:0;
@@ -81,6 +81,7 @@
 		}	
 	}
 	.form_submit {
+		margin-top:15px;
 		input[type=submit] {
 			padding:4px;
 			border:1px solid #ccc;
@@ -91,6 +92,7 @@
 			border-radius:3px;
 			width:210px;
 			&:hover{background:#dedede; cursor:pointer;}
+			&:active {position:relative; top:1px;}
 		}
 	}
 	label {display:inline-block; font-size:0.9em;}
