@@ -14,6 +14,7 @@ Glipster::Application.routes.draw do
   resources :categories
   resources :games
   resources :password_resets
+  resources :developers
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
