@@ -2,11 +2,14 @@
 	<%= form_for @developer, html: {class: 'form'} do |f| %>
 		<h2 class="form_header"><%= params[:action].titleize %> Developer</h2>
 		<% if @developer.errors.any? %>
-			<ul>
-				<% for message in @developer.errors.full_messages %>
-					<li><%= message %></li>
-				<% end %>
-			</ul>
+			<fieldset class="form_errors">
+				<legend>Form Errors</legend>
+				<ul>
+					<% for message in @developer.errors.full_messages %>
+						<li><%= message %></li>
+					<% end %>
+				</ul>
+			</fieldset>
 		<% end %>
 		<div class="form_field">
 			<%= f.label :name %><br/>
