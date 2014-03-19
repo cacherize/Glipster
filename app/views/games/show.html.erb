@@ -5,7 +5,7 @@
 			<h1><%= @game.title %> 
 				<% if @developer.present? %>
 					<span>
-						By: <%= link_to_if(@developer.link.present?, @developer.name, @developer.link) %>
+						By: <%= link_to_if(@developer.link.present?, @developer.name, @developer.link, target: '_blank') %>
 					</span>
 				<% end %>
 			</h1>
