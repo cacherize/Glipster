@@ -18,6 +18,19 @@
 			<%= f.text_field :controls %>
 		</div>
 		<div class="form_field">
+			<%= f.label :height %><br/>
+			<%= f.text_field :height %>
+		</div>
+		<div class="form_field">
+			<%= f.label :width %><br/>
+			<%= f.text_field :width %>
+		</div>
+		<div class="form_field">
+			<%= f.label :developer_id %><br/>
+			<%= f.select :developer_id, options_from_collection_for_select(Developer.all, :id, :name, @game.developer_id), include_blank: true %>
+		</div>
+		<div class="form_field">
+			<%= f.label :image %><br/>
 			<%= f.file_field :image %>
 		</div>
 		<div class="form_submit">
