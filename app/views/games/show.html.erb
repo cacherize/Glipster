@@ -11,7 +11,7 @@
 			</h1>
 		</div>
 		<div id="game_body">
-			<%= content_tag :embed, "", src: @game.flash_file.url, width: '700px', height: '550px' %>
+			<%= content_tag :embed, "", src: @game.flash_file.url, width: @game.width, height: @game.height %>
 		</div>
 	</div>
 </div>
