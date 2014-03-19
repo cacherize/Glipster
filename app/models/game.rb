@@ -4,7 +4,7 @@ class Game < ActiveRecord::Base
   dragonfly_accessor :image
 
   def to_param
-  	"#{id} #{title}".paramatize
+  	"#{id} #{title}".parameterize
   end
 
   def flash_file_name
