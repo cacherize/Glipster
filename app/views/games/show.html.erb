@@ -2,8 +2,16 @@
 	<div id="game_show">
 		<div id="game_header">
 			<%= game_thumb(@game) %>
-			<h1><%= @game.title %> <span><%= @game.developer %></span></h1>
+			<h1><%= @game.title %> 
+				<% if @developer.present? %>
+					<span>
+						By: <%= link_to_if(@developer.link.present?, @developer.name, @developer.link) %>
+					</span>
+				<% end %>
+			</h1>
 		</div>
-		<div id="game_body"><embed src="<%= @game.flash_file_url %>" width="700px" height="550px" /></div>
+		<div id="game_body">
+			<%= content_tag :embed, "", src: @game.flash_file.url, width: '700px', height: '550px' %>
+		</div>
 	</div>
 </div>

@@ -33,6 +33,20 @@
 		h1 {
 			margin:0;
 			border-bottom:1px solid #ccc;
+			position:relative;
+			span {
+				position:absolute;
+				bottom:4px;
+				right:0;
+				font-weight:normal;
+				font-size:0.4em;
+				color:#999;
+				a{
+					color:#999;
+					text-decoration: none;
+					&:hover {color:#444;}
+				}
+			}
 		}
 	}
 	#game_body {
