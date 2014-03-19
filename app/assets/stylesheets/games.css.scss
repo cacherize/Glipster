@@ -52,6 +52,8 @@
 	#game_body {
 		text-align:center;
 		embed {
+			position:relative;
+			z-index:100;
 			border:1px solid #ccc;
 		}
 	}
