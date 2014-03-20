@@ -1,4 +1,13 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
-
-<%= link_to("change avatar", change_avatar_user_path(current_user)) if current_user.present? %>
+<div class="center">
+	<div class="games_container">
+		<h3>Featured Games</h3>
+		<% @games.each do |game| %>
+			<div class="game_wrapper">
+				<span>
+					<%= link_to game_thumb(game), game, title: game.title %>
+					<%= link_to game.title, game, class: 'game_link', title: game.title %>
+				</span>
+			</div>
+		<% end %>
+	</div>
+</div>

@@ -35,10 +35,7 @@ img {outline:0; border:0;}
 }
 #logo_rounded_corner_left {background-position:-7px 0;}
 #logo_rounded_corner_right {background-position:0 0;}
-#body {
-	padding-bottom:90px;
-	margin:0 10px;
-}
+#body {padding-bottom:90px; margin:0 10px;}
 #footer {
 	height:90px;
 	width:100%;
@@ -53,10 +50,7 @@ img {outline:0; border:0;}
 	background-repeat:repeat-x;
 	background:url('triangles.png');
 }
-#footer_content {
-	height:75px;
-	background:#333;
-}
+#footer_content {height:75px; background:#333;}
 #menu {
 	padding:0;
 	margin:0;
@@ -82,10 +76,7 @@ img {outline:0; border:0;}
 	border-right:1px solid #333;
 	border-left:1px solid #333;
 }
-#sessions_links {
-	float:right;
-	width:auto;
-}
+#sessions_links {float:right; width:auto;}
 #sessions_links a {
 	text-align:center;
 	display:inline-block;
@@ -157,14 +148,8 @@ img {outline:0; border:0;}
 	border-top:1px solid #444;
 	border-bottom:1px solid #222;
 }
-#menu li .submenu li a:hover {
-	border-top:1px solid #111;
-	border-bottom:1px solid #333;
-}
-.sub_arrow {
-	font-size:0.5em;
-	vertical-align:top;
-}
+#menu li .submenu li a:hover {border-top:1px solid #111; border-bottom:1px solid #333;}
+.sub_arrow {font-size:0.5em; vertical-align:top;}
 .center {text-align:center;}
 .clear {clear:both;}
 .placeholder{color:#888;}
