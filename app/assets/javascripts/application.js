@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.placeholder
+//= require jquery.dotdotdot.min
 $(document).ready(function(){
 	$('input, textarea').placeholder();
 
@@ -25,4 +26,5 @@ $(document).ready(function(){
 			$('> ul.submenu',this).stop().slideUp('fast');
 		}
 	});
+	$(".game_link").dotdotdot({});
 });
