@@ -19,7 +19,7 @@ img {outline:0; border:0;}
 	position:relative;
 	background-image:url('xword.png');
 	background-repeat:repeat;
-	min-width:750px;
+	min-width:1000px;
 }
 #header {height:50px; background:#333; margin-bottom:30px; overflow:visible;}
 #logo_container {width:240px; margin-left:10px; display:inline-block;}
