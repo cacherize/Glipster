@@ -1,7 +1,7 @@
 #slideshow {
     height: 200px;
     overflow:hidden;
-    width:75%;
+    width:100%;
     position:relative;
     margin:40px auto 0 auto;
     border-radius:8px;
@@ -57,7 +57,7 @@
     }
 }
 hr.divider {
-    width:75%;
+    width:100%;
     border:0;
     background:#ccc;
     background:-moz-linear-gradient(left center, #fff, #ccc, #fff);

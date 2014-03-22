@@ -60,8 +60,8 @@
 }
 .games_container {
 	padding:20px;
-	display:inline-block;
-	margin:10px auto;
+	margin:20px auto;
+	display:block;
 	background:#fff;
 	border:1px solid #ccc;
 	-webkit-border-radius:12px;
@@ -70,7 +70,7 @@
 	-moz-box-shadow:0 0 8px #CCCCCC;
 	-webkit-box-shadow:0 0 8px #CCCCCC;
 	box-shadow:0 0 8px #CCCCCC;
-	width:75%;
+	width:auto;
 	max-width:1230px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
