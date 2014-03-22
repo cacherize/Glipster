@@ -1,4 +1,6 @@
 <div class="center">
+	<%= render partial: 'slideshow' %>
+	<hr class="divider"/>
 	<div class="games_container">
 		<h3>Featured Games</h3>
 		<%= render partial: 'game_list', locals: {games: @games} %>
@@ -9,3 +11,4 @@
 		<%= render partial: 'game_list', locals: {games: @random_games} %>
 	</div>
 </div>
+<%= javascript_include_tag 'jquery.tinycarousel' %>
