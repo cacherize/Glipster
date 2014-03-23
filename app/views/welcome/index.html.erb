@@ -3,21 +3,27 @@
 	<hr class="divider"/>
 	<div class="games_container">
 		<h3>Featured Games</h3>
-		<%= render partial: 'game_list', locals: {games: @games} %>
+		<% if @games.present? %>
+			<%= render partial: 'game_list', locals: {games: @games} %>
+		<% end %>
 	</div>
 
 	<div style="display:inline-block; width:70%;">
 		<div style="padding-right:20px;">
 			<div class="games_container">
 				<h3>New Games</h3>
-				<%= render partial: 'game_list', locals: {games: @recent_games} %>
+				<% if @recent_games.present? %>
+					<%= render partial: 'game_list', locals: {games: @recent_games} %>
+				<% end %>
 			</div>
 		</div>
 	</div><!--
 	--><div style="display:inline-block; width:30%;">
 		<div class="games_container">
 			<h3>Random Game</h3>
-			<%= render partial: 'game_list', locals: {games: @random_games} %>
+			<% if @random_games.present? %>
+				<%= render partial: 'game_list', locals: {games: @random_games} %>
+			<% end %>
 		</div>
 	</div>
 </div>
