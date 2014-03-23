@@ -70,7 +70,7 @@ img {outline:0; border:0;}
 	color:#dedede;
 	text-decoration:none;
 	font-weight:bold;
-	font-size:0.8em;
+	font-size:0.85em;
 	-moz-text-shadow:0 1px 0 #000;
 	-webkit-text-shadow:0 1px 0 #000;
 	text-shadow:0 1px 0 #000;
@@ -86,11 +86,11 @@ img {outline:0; border:0;}
 	color:#dedede;
 	text-decoration:none;
 	font-weight:bold;
-	font-size:0.8em;
+	font-size:0.85em;
 	border-right:1px solid #333;
 	border-left:1px solid #333;
 }
-#sessions_links a img {vertical-align: middle; margin-right:5px; border-radius:3px;}
+#sessions_links a img {vertical-align: middle; margin-right:5px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
 #menu li a.current, #menu li a:hover, #sessions_links a.current, #sessions_links a:hover {
 	background:none;
 	background-color:#111;
@@ -141,12 +141,9 @@ img {outline:0; border:0;}
 #menu li .submenu li a {
 	text-align:left;
 	border:0;
-	-moz-text-shadow:none;
-	-webkit-text-shadow:none;
-	text-shadow:none;
 	padding:8px 18px;
 	display:block;
-	font-size:0.7em;
+	font-size:0.65em;
 	border-top:1px solid #444;
 	border-bottom:1px solid #222;
 }
