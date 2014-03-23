@@ -26,7 +26,7 @@ gem 'dragonfly-s3_data_store', '1.0.3'
 gem 'carrierwave_direct', '0.0.13'
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '3.1.2'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
