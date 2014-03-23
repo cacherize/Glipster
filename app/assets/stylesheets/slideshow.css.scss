@@ -4,7 +4,6 @@
     width:100%;
     position:relative;
     margin:40px auto 0 auto;
-    border-radius:8px;
     max-width:1230px;
     display:block;
     .viewport {
@@ -13,7 +12,9 @@
         overflow: hidden;
         position: relative;
         margin:0 auto;
-        border-radius:8px;
+        -moz-border-radius:10px;
+        -webkit-border-radius:10px;
+        border-radius:10px;
     }
     .buttons {
         background: url('slider_nav_bg.png') no-repeat;
@@ -51,7 +52,7 @@
             width: 300px;
             a {
                 height:100%;
-                img {border-radius:8px;}
+                img {-moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px;}
             }
         }
     }
