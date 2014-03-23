@@ -1,3 +1,47 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#sign_up_message {
+	margin:40px auto -20px auto;
+	padding:10px;
+	background:#FFFFE0;
+	-moz-box-shadow:0 0 8px #CCCCCC;
+	-webkit-box-shadow:0 0 8px #CCCCCC;
+	box-shadow:0 0 8px #CCCCCC;
+	border:1px solid #ccc;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	text-align:left;
+	font-size:0.9em;
+	position:relative;
+	display:table;
+	width:100%;
+	p {
+		display:table-cell;
+		vertical-align: middle;
+		margin:0;
+		padding:0;
+	}
+	#signup_link {
+		float:right;
+		display:inline-block;
+		padding:0 20px;
+		height:28px;
+		line-height: 28px;
+		font-size:1em;
+		font-family:'Petita', "Arial Black", sans-serif;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		border-radius:10px;
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a2d42f), color-stop(1, #81ab1f) );
+		background:-moz-linear-gradient( center top, #a2d42f 5%, #81ab1f 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a2d42f', endColorstr='#81ab1f');
+		background-color:#a2d42f;
+		-moz-box-shadow:inset 0px 1px 0px 0px #c8eda8, 0 0 4px #aaa;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #c8eda8, 0 0 4px #aaa;
+		box-shadow:inset 0px 1px 0px 0px #c8eda8, 0 0 4px #aaa;
+		color:#F2F8E6;
+		border:1px solid #81ab1f;
+		-webkit-text-shadow:0px -1px 0px #689324;
+		-moz-text-shadow:0px -1px 0px #689324;
+		text-shadow:0px -1px 0px #689324;
+	}
+}

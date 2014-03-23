@@ -1,4 +1,10 @@
 <div class="center" style="width:80%; margin:0 auto; max-width:1230px;">
+	<% unless current_user.present? %>
+		<div id="sign_up_message">
+			<p>Don't have an account? Create one <%= link_to 'here', signup_path %>.</p>
+			<%= link_to "Sign Up", signup_path, id: 'signup_link' %><br class="clear"/>
+		</div>
+	<% end %>
 	<%= render partial: 'slideshow' %>
 	<hr class="divider"/>
 	<div class="games_container">
