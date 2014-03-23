@@ -18,6 +18,17 @@ class GamesController < ApplicationController
 
 	def show
 		@game = Game.find(params[:id])
+		if cookies[:viewed_games].present?
+			viewed_games = JSON.parse(cookies[:viewed_games])
+      unless viewed_games.include?(@game.id)
+      	viewed_games = viewed_games << @game.id
+        cookies[:viewed_games] = {value: JSON.generate(viewed_games)}
+        @game.increment!(:plays)
+      end
+    else
+      cookies[:viewed_games] = {value: JSON.generate([@game.id])}
+      @game.increment!(:plays)
+    end
 		@developer = @game.developer
 	end
 
