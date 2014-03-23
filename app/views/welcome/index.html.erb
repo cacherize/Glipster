@@ -18,8 +18,8 @@
 		<div style="padding-right:20px;">
 			<div class="games_container">
 				<h3>New Games</h3>
-				<% if @recent_games.present? %>
-					<%= render partial: 'game_list', locals: {games: @recent_games} %>
+				<% if @new_games.present? %>
+					<%= render partial: 'game_list', locals: {games: @new_games} %>
 				<% end %>
 			</div>
 		</div>
