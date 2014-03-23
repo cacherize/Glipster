@@ -123,3 +123,67 @@
 		}
 	}
 }
+#game_stats {
+	margin:0 auto 20px auto;
+	padding:20px;
+	background:#fff;
+	-moz-box-shadow:0 0 8px #CCCCCC;
+	-webkit-box-shadow:0 0 8px #CCCCCC;
+	box-shadow:0 0 8px #CCCCCC;
+	border:1px solid #ccc;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	text-align:left;
+	font-size:0.9em;
+	position:relative;
+	display:block;
+	width:auto;
+	height:18px;
+	.reputation {
+		position:absolute;
+		right:20px;
+		top:20px;
+		white-space:nowrap;
+		.reputation_bar {
+			width:150px;
+			margin:0;
+			padding:0;
+			display:inline-block;
+			.left_bar, .right_bar {
+				display:inline-block;
+				width:50%;
+				border-top:10px solid #98FB98;
+				border-bottom:10px solid #98FB98;
+				border-top-left-radius:3px;
+				border-bottom-left-radius:3px;
+			}
+			.left_bar {
+				width:50%;
+				border-color:#FA8072;
+				border-radius:0;
+				border-top-right-radius:3px;
+				border-bottom-right-radius:3px;
+			}
+		}	
+		a.up_link, a.down_link {
+			padding:2px;
+			vertical-align: top;
+			height:16px;
+			width:16px;
+			border:1px solid #FF6347;
+			display:inline-block;
+			border-radius:3px;
+			margin-top:-1px;
+			&:hover {background:#FA8072;}
+			img {
+				width:16px;
+				height:16px;
+			}
+		}
+		a.up_link {
+			border-color:#90EE90;
+			&:hover {background:#98FB98;}
+		}
+	}
+}
