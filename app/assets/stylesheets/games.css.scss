@@ -174,8 +174,11 @@
 			width:16px;
 			border:1px solid #FF6347;
 			display:inline-block;
+			-moz-border-radius:3px;
+			-webkit-border-radius:3px;
 			border-radius:3px;
-			&:hover, &.voted {background:#FA8072;}
+			background:#FA8072;
+			&:hover {background:#FCB3AA;}
 			img {
 				width:16px;
 				height:16px;
@@ -183,7 +186,9 @@
 		}
 		a.up_link {
 			border-color:#90EE90;
-			&:hover, &.voted {background:#98FB98;}
+			background:#98FB98;
+			&:hover {background:#CCFDCC;}
 		}
+		a.voted, a.voted:hover {background: #fffbc2; border-color:#fff000; cursor:default;}
 	}
 }
