@@ -4,6 +4,7 @@ Glipster::Application.routes.draw do
   match 'signup', to: 'users#new', via: :get
   match 'reset_password', to: 'password_resets#new', via: :get
   match 'games/upload', to: 'games#upload', via: :get
+  match 'games/:id/vote', to: 'games#vote', via: :post
   resources :sessions, only: [:new, :create, :destroy]
   resources :users do 
     member do
@@ -15,6 +16,7 @@ Glipster::Application.routes.draw do
   resources :games do
     member do
       post 'vote'
+      get  'vote'
     end
   end
   resources :password_resets
