@@ -39,7 +39,11 @@ class GamesController < ApplicationController
     value = params[:value] == "-1" ? -1 : 1
     @game = Game.find(params[:id])
     @game.create_or_update_reputation(value, current_user)
-    redirect_to @game, notice: "Thank you for voting"
+    reps = @game.reputations
+    @rep_percents = @game.generate_reputation_percentages(reps) if reps.present?
+    respond_to do |format|
+    	format.js
+    end
 	end
 
 	def upload
