@@ -1,4 +1,5 @@
 class GamesController < ApplicationController
+  before_filter :authorize, only: :vote
 	def new
 		redirect_to games_upload_url if params[:key].nil?
 		@game = Game.new(key: params[:key])
