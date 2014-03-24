@@ -1,4 +1,5 @@
 class GamesController < ApplicationController
+  before_filter :authorize, only: :vote
 	def new
 		redirect_to games_upload_url if params[:key].nil?
 		@game = Game.new(key: params[:key])
@@ -18,8 +19,26 @@ class GamesController < ApplicationController
 
 	def show
 		@game = Game.find(params[:id])
+		if cookies[:viewed_games].present?
+			viewed_games = JSON.parse(cookies[:viewed_games])
+      unless viewed_games.include?(@game.id)
+      	viewed_games = viewed_games << @game.id
+        cookies[:viewed_games] = {value: JSON.generate(viewed_games)}
+        @game.increment!(:plays)
+      end
+    else
+      cookies[:viewed_games] = {value: JSON.generate([@game.id])}
+      @game.increment!(:plays)
+    end
 		@developer = @game.developer
 	end
+
+  def vote
+    value = params[:value] == "-1" ? -1 : 1
+    @game = Game.find(params[:id])
+    @game.create_or_update_reputation(value, current_user)
+    redirect_to @game, notice: "Thank you for voting"
+  end
 
 	def upload
 		@uploader = Game.new.flash_file

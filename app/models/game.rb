@@ -4,6 +4,7 @@ class Game < ActiveRecord::Base
   dragonfly_accessor :image
 
   belongs_to :developer
+  has_many :reputations
 
   validates_presence_of :height, :width, :title
 
@@ -13,5 +14,17 @@ class Game < ActiveRecord::Base
 
   def flash_file_name
   	File.basename(flash_file.path || flash_file.filename) if flash_file
+  end
+
+  def create_or_update_reputation(val, user)
+    votes = self.reputations
+    if votes.present? && votes.map(&:user_id).include?(user.id)
+      updatable_vote = votes.where(user_id: user.id).first
+      updatable_vote.value = val
+      updatable_vote.save!
+    else
+      new_vote = self.reputations.build(user_id: user.id, value: val)
+      new_vote.save!
+    end
   end
 end
