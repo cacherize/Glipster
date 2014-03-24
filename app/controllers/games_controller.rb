@@ -42,7 +42,11 @@ class GamesController < ApplicationController
     reps = @game.reputations
     @rep_percents = @game.generate_reputation_percentages(reps) if reps.present?
     respond_to do |format|
-    	format.js
+    	if request.referer.include?("login")
+    		format.html {redirect_to @game, notice: "Thank you for voting!"}
+    	else
+    		format.js
+    	end
     end
 	end
 
