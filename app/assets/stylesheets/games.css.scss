@@ -167,14 +167,13 @@
 			}
 		}	
 		a.up_link, a.down_link {
-			padding:2px;
+			padding:1px;
 			vertical-align: top;
 			height:16px;
 			width:16px;
 			border:1px solid #FF6347;
 			display:inline-block;
 			border-radius:3px;
-			margin-top:-1px;
 			&:hover {background:#FA8072;}
 			img {
 				width:16px;
