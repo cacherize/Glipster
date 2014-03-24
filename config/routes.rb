@@ -12,7 +12,11 @@ Glipster::Application.routes.draw do
     end
   end
   resources :categories
-  resources :games
+  resources :games do
+    member do
+      post 'vote'
+    end
+  end
   resources :password_resets
   resources :developers
 
