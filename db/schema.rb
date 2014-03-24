@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140323194225) do
+ActiveRecord::Schema.define(:version => 20140324000549) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(:version => 20140323194225) do
     t.integer  "width"
     t.integer  "height"
     t.integer  "plays",        :default => 0
+  end
+
+  create_table "reputations", :force => true do |t|
+    t.integer  "game_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
