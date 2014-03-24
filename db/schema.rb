@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140324001011) do
+ActiveRecord::Schema.define(:version => 20140324002651) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(:version => 20140324001011) do
     t.integer  "width"
     t.integer  "height"
     t.integer  "plays",        :default => 0
-    t.integer  "value"
   end
 
   create_table "reputations", :force => true do |t|
@@ -48,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20140324001011) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "value"
   end
 
   create_table "users", :force => true do |t|
