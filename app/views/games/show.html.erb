@@ -17,11 +17,11 @@
 	<div id="game_stats">
 		<span><b>Page Visits:</b> <%= @game.plays %></span>
 		<span class="reputation">
-			<%= link_to image_tag('thumbs_up.png'), '', class: 'up_link' %>
+			<%= link_to image_tag('thumbs_up.png'), vote_game_path(value: '1'), method: :post, class: "up_link #{highlight_vote(@game, 1)}" %>
 			<p class="reputation_bar">
 				<span class="right_bar"></span><span class="left_bar"></span>
 			</p>
-			<%= link_to image_tag('thumbs_down.png'), '', class: 'down_link' %>
+			<%= link_to image_tag('thumbs_down.png'), vote_game_path(value: '-1'), method: :post, class: "down_link #{highlight_vote(@game, -1)}" %>
 		</span>
 	</div>
 </div>
