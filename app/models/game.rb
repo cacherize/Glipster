@@ -4,6 +4,7 @@ class Game < ActiveRecord::Base
   dragonfly_accessor :image
 
   belongs_to :developer
+  has_many :reputations
 
   validates_presence_of :height, :width, :title
 
