@@ -32,6 +32,13 @@ class GamesController < ApplicationController
 		@developer = @game.developer
 	end
 
+  def vote
+    value = params[:value] == "-1" ? -1 : 1
+    @game = Game.find(params[:id])
+    @game.create_or_update_reputation(value, current_user)
+    redirect_to @game, notice: "Thank you for voting"
+  end
+
 	def upload
 		@uploader = Game.new.flash_file
 		@uploader.success_action_redirect = new_game_url
