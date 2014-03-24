@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_filter :store_location
+
   def new
   end
 
@@ -13,7 +15,8 @@ class SessionsController < ApplicationController
 	  		else
 	  			cookies[:auth_token] = user.auth_token
 	  		end
-	  		redirect_to root_path, notice: 'Logged in!'
+	  		redirect_back_or_default('/')
+        flash[:notice] = "Logged in!"
 	  	else
 	  		redirect_to login_path, alert: 'Please check you inbox for a confirmation email to activate your account'
 	  	end
