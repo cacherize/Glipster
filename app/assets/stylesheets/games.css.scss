@@ -147,23 +147,24 @@
 		white-space:nowrap;
 		.reputation_bar {
 			width:150px;
+			height:20px;
 			margin:0;
 			padding:0;
 			display:inline-block;
+			overflow:hidden;
+			-moz-border-radius:3px;
+			-webkit-border-radius:3px;
+			border-radius:3px;
+			white-space:nowrap;
 			.left_bar, .right_bar {
 				display:inline-block;
 				width:50%;
-				border-top:10px solid #98FB98;
-				border-bottom:10px solid #98FB98;
-				border-top-left-radius:3px;
-				border-bottom-left-radius:3px;
+				height:100%;
+				background-color: #98FB98;
 			}
 			.left_bar {
 				width:50%;
-				border-color:#FA8072;
-				border-radius:0;
-				border-top-right-radius:3px;
-				border-bottom-right-radius:3px;
+				background-color:#FA8072;
 			}
 		}	
 		a.up_link, a.down_link {
