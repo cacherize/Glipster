@@ -30,6 +30,8 @@ class GamesController < ApplicationController
 	    cookies[:viewed_games] = {value: JSON.generate([@game.id])}
 	    @game.increment!(:plays)
     end
+    reps = @game.reputations
+    @rep_percents = @game.generate_reputation_percentages(reps) if reps.present?
 		@developer = @game.developer
 	end
 

@@ -156,6 +156,7 @@
 			-webkit-border-radius:3px;
 			border-radius:3px;
 			white-space:nowrap;
+			position:relative;
 			.left_bar, .right_bar {
 				display:inline-block;
 				width:50%;
@@ -165,6 +166,28 @@
 			.left_bar {
 				width:50%;
 				background-color:#FA8072;
+			}
+			.full_bar {
+				height:100%;
+				display:block;
+				background:#ccc;
+				text-align:center;
+				line-height:20px;
+				font-size:0.8em;
+				font-style:italic;
+			}
+			p.percentage {
+				width:100%;
+				margin:0;
+				padding:0;
+				height:100%;
+				position:absolute;
+				z-index:5;
+				text-align:center;
+				font-size:0.8em;
+				font-weight:bold;
+				color:#444;
+				line-height:20px;
 			}
 		}	
 		a.up_link, a.down_link {
