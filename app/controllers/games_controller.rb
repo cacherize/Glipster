@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
-    before_filter :authorize, only: :vote
+  before_filter :authorize, only: :vote
 	def new
+		@categories = Category.all
 		redirect_to games_upload_url if params[:key].nil?
 		@game = Game.new(key: params[:key])
 	end
@@ -57,6 +58,7 @@ class GamesController < ApplicationController
 
 	def edit 
 		@game = Game.find(params[:id])
+		@categories = Category.all
 	end
 
 	def update
