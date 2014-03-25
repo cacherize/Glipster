@@ -78,7 +78,11 @@
 		input[type="checkbox"] {
 			padding:0;
 			width:auto;
-		}	
+		}
+		h5 {
+			margin:0 0 5px 0;
+			border-bottom:#ccc 1px solid;
+		}
 	}
 	.form_submit {
 		margin-top:15px;
