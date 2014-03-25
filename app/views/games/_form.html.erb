@@ -33,6 +33,15 @@
 			<%= f.label :image %><br/>
 			<%= f.file_field :image %>
 		</div>
+		
+		<div class="form_field" style="text-align:left; min-width:200px; display:inline-block;">
+			<h5>Categories:</h5>
+			<% for category in Category.find(:all) %>
+				<%= check_box_tag "game[category_ids][]", category.id, @game.categories.include?(category), id: "category_#{category.id}" %>
+				<%= label_tag "category_#{category.id}", category.name %><br/>
+			<% end %>
+		</div>
+
 		<div class="form_submit">
 			<%= f.submit %>
 		</div>	
