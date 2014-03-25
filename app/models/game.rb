@@ -1,9 +1,10 @@
 class Game < ActiveRecord::Base
-  attr_accessible :title, :description, :controls, :play_count, :flash_file, :image, :developer_id, :height, :width
+  attr_accessible :title, :description, :controls, :play_count, :flash_file, :image, :developer_id, :height, :width, :category_ids
   mount_uploader :flash_file, GameUploader
   dragonfly_accessor :image
 
   belongs_to :developer
+  has_many :game_categories
   has_many :categories, through: :game_categories
   has_many :reputations
 
