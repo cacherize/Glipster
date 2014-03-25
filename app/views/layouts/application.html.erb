@@ -19,7 +19,7 @@
 	    <li><%= link_to "Most Played", class: cp(users_path) %></li>
 	    <li><%= link_to "Highest Rated", class: cp(users_path) %></li>
 	    <li class="submenu_container">
-	    	<%= link_to "Categories <span class='sub_arrow'>&#x25bc;</span>".html_safe, class: cp(users_path) %>
+	    	<%= link_to "Categories <span class='sub_arrow'>&#x25bc;</span>".html_safe, categories_path, class: cp(categories_path) %>
 	    	<ul class="submenu">
 	    		<li style="border-top:0;"></li>
 	    		<% Category.all.each do |cat| %>
