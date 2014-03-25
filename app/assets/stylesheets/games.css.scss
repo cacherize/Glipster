@@ -56,6 +56,13 @@
 			z-index:100;
 			border:1px solid #ccc;
 		}
+		.categories {
+			text-align:left;
+			font-size:0.7em;
+			color:#999; 
+			font-weight:bold;
+			a {color:#999; font-weight:normal; &:hover{color:#444;}}
+		}
 	}
 }
 .games_container {

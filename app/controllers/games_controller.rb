@@ -33,6 +33,7 @@ class GamesController < ApplicationController
     reps = @game.reputations
     @rep_percents = @game.generate_reputation_percentages(reps) if reps.present?
 		@developer = @game.developer
+		@categories = @game.categories
 	end
 
 	def vote
