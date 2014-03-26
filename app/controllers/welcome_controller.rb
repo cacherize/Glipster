@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
-  	@games = Game.find(:all)
-  	@new_games = @games.last(12)
-  	@random_games = [Game.offset(rand(Game.count)).first] if @games.present?
+  	@featured = Game.where(featured: true)
+  	@new_games = Game.last(12)
+  	@random_game = [Game.offset(rand(Game.count)).first]
   end
 end

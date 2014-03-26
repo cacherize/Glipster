@@ -9,8 +9,8 @@
 	<hr class="divider"/>
 	<div class="games_container">
 		<h3>Featured Games</h3>
-		<% if @games.present? %>
-			<%= render partial: 'game_list', locals: {games: @games} %>
+		<% if @featured.present? %>
+			<%= render partial: 'game_list', locals: {games: @featured} %>
 		<% end %>
 	</div>
 
@@ -27,8 +27,8 @@
 	--><div style="display:inline-block; width:30%;">
 		<div class="games_container">
 			<h3>Random Game</h3>
-			<% if @random_games.present? %>
-				<%= render partial: 'game_list', locals: {games: @random_games} %>
+			<% if @random_game.present? %>
+				<%= render partial: 'game_list', locals: {games: @random_game} %>
 			<% end %>
 		</div>
 	</div>
