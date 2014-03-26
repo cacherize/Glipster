@@ -1,7 +1,10 @@
 <div class="center">
 	<div id="game_show">
 		<div id="game_header">
-			<%= game_thumb(@game) %>
+			<div>
+				<%= game_thumb(@game) %>
+				<%= image_tag("star.png", class: 'featured_icon') if @game.featured %>
+			</div>
 			<h1><%= @game.title %> 
 				<% if @developer.present? %>
 					<span>
