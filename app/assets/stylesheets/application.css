@@ -71,9 +71,9 @@ img {outline:0; border:0;}
 	text-decoration:none;
 	font-weight:bold;
 	font-size:0.85em;
-	-moz-text-shadow:0 1px 0 #000;
-	-webkit-text-shadow:0 1px 0 #000;
-	text-shadow:0 1px 0 #000;
+	-moz-text-shadow:0 -1px 0 #111;
+	-webkit-text-shadow:0 -1px 0 #111;
+	text-shadow:0 -1px 0 #111;
 	border-right:1px solid #333;
 	border-left:1px solid #333;
 }
@@ -85,14 +85,17 @@ img {outline:0; border:0;}
 	padding:0 10px;
 	color:#dedede;
 	text-decoration:none;
+	text-overflow:ellipsis;
 	font-weight:bold;
 	font-size:0.85em;
 	border-right:1px solid #333;
 	border-left:1px solid #333;
 	max-width:130px;
-	text-overflow:ellipsis;
 	overflow:hidden;
 	white-space: nowrap;
+	-moz-text-shadow:0 -1px 0 #111;
+	-webkit-text-shadow:0 -1px 0 #111;
+	text-shadow:0 -1px 0 #111;
 }
 #sessions_links a img {vertical-align: middle; margin-right:5px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
 #menu li a.current, #menu li a:hover, #sessions_links a.current, #sessions_links a:hover {
