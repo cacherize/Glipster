@@ -1,5 +1,5 @@
 class Game < ActiveRecord::Base
-  attr_accessible :title, :description, :controls, :play_count, :flash_file, :image, :developer_id, :height, :width, :category_ids
+  attr_accessible :title, :description, :controls, :play_count, :flash_file, :image, :developer_id, :height, :width, :category_ids, :featured
   mount_uploader :flash_file, GameUploader
   dragonfly_accessor :image
 
@@ -7,6 +7,7 @@ class Game < ActiveRecord::Base
   has_many :game_categories
   has_many :categories, through: :game_categories
   has_many :reputations
+  has_many :featured_category_games
 
   validates_presence_of :height, :width, :title
 
