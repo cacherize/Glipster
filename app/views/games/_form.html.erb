@@ -1,39 +1,46 @@
 <div class="center">
 	<%= form_for @game, html: {class: "form"} do |f| %>
-		<h2 class="form_header"><%= params[:action].titleize %> Game</h2>
+		<h2 class="form_header"><%= params[:action].titleize %> Game</h2><br/>
 		<%= f.hidden_field :key %>
-		<div class="form_field">
-			File: <%= @game.flash_file_name %>
-		</div>
-		<div class="form_field">
-			<%= f.label :title %><br/>
-			<%= f.text_field :title %>
-		</div>
+		<span class="form_field_wrapper" style="margin-right:20px;">
+			<div class="form_field">
+				File:<br/><%= @game.flash_file_name %>
+			</div>
+			<div class="form_field">
+				<%= f.label :title %><br/>
+				<%= f.text_field :title %>
+			</div>
+			<div class="form_field">
+				<%= f.label :controls %><br/>
+				<%= f.text_field :controls %>
+			</div>
+			<div class="form_field">
+				<%= f.label :image %><br/>
+				<%= f.file_field :image %>
+			</div>
+		</span><!--
+		--><span class="form_field_wrapper">
+			<div class="form_field">
+				<%= f.label :height %><br/>
+				<%= f.text_field :height %>
+			</div>
+			<div class="form_field">
+				<%= f.label :width %><br/>
+				<%= f.text_field :width %>
+			</div>
+			<div class="form_field">
+				<%= f.label :developer_id %><br/>
+				<%= f.select :developer_id, options_from_collection_for_select(Developer.all, :id, :name, @game.developer_id), include_blank: true %>
+			</div>
+			<div class="form_field">
+				<%= f.check_box :featured, value: 1, checked: @game.featured %>
+				<%= f.label :featured %>
+			</div>
+		</span>
 		<div class="form_field">
 			<%= f.label :description %><br/>
 			<%= f.text_area :description %>
 		</div>
-		<div class="form_field">
-			<%= f.label :controls %><br/>
-			<%= f.text_field :controls %>
-		</div>
-		<div class="form_field">
-			<%= f.label :height %><br/>
-			<%= f.text_field :height %>
-		</div>
-		<div class="form_field">
-			<%= f.label :width %><br/>
-			<%= f.text_field :width %>
-		</div>
-		<div class="form_field">
-			<%= f.label :developer_id %><br/>
-			<%= f.select :developer_id, options_from_collection_for_select(Developer.all, :id, :name, @game.developer_id), include_blank: true %>
-		</div>
-		<div class="form_field">
-			<%= f.label :image %><br/>
-			<%= f.file_field :image %>
-		</div>
-		
 		<div class="form_field" style="text-align:left; min-width:200px; display:inline-block;">
 			<h5>Categories:</h5>
 			<% for category in Category.find(:all) %>
