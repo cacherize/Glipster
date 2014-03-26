@@ -39,15 +39,15 @@ ActiveRecord::Schema.define(:version => 20140326215054) do
     t.text     "description"
     t.string   "controls"
     t.integer  "play_count"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
     t.string   "flash_file"
     t.string   "image_uid"
     t.integer  "developer_id"
     t.integer  "width"
     t.integer  "height"
     t.integer  "plays",        :default => 0
-    t.boolean  "featured"
+    t.boolean  "featured",     :default => false
   end
 
   create_table "reputations", :force => true do |t|
