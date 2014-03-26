@@ -3,7 +3,7 @@
 		<div class="game_wrapper">
 			<span>
 				<div>
-					<%= game_thumb(game) %>
+					<%= link_to game_thumb(game), game %>
 					<%= image_tag("star.png", class: 'featured_icon') if game.featured %>
 				</div>
 				<%= link_to game.title, game, class: 'game_link', title: game.title %>
