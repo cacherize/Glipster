@@ -20,6 +20,7 @@ Glipster::Application.routes.draw do
       get  'render_reputation_partial'
     end
   end
+  resources :comments
   resources :password_resets
   resources :developers
 
