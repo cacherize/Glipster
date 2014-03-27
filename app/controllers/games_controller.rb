@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
   before_filter :authorize, only: :vote
+  skip_filter :store_location, only: [:render_reputation_partial, :vote]
 	def new
 		redirect_to games_upload_url if params[:key].nil?
 		@game = Game.new(key: params[:key])
