@@ -25,12 +25,13 @@
 		</div>
 	</div>
 	<div id="game_stats">
+		<%= image_tag("spinner.gif", class: 'spinner') %>
 		<script>
 			$.ajax({
 			  type: "GET",
 			  url: "<%= vote_game_path(@game) %>" ,
 			});
-			</script>
+		</script>
 	</div>
 	<div id="game_details">
 		<%= render partial: 'description' %>
