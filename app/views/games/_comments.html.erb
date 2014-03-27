@@ -1,0 +1,6 @@
+<div id="comments">
+	<%= form_for @comment do |f| %>
+		<%= f.hidden_field :game_id, value: @game.id %>
+		<%= f.label :message %>
+	<% end %>
+</div>

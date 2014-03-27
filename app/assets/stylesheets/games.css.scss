@@ -200,6 +200,23 @@
 		}
 	}
 }
+#comments_wrapper {
+	display:block;
+	background:#fff;
+	border:1px solid #ccc;
+	-moz-box-shadow:0 0 8px #ccc;
+	-webkit-box-shadow:0 0 8px #ccc;
+	box-shadow:0 0 8px #ccc;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	font-size:0.8em;
+	text-align:left;
+	margin:20px auto;
+	#comments {
+		margin:20px;
+	}
+}
 .games_container {
 	padding:20px;
 	margin:20px auto;

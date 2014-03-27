@@ -33,6 +33,7 @@ class GamesController < ApplicationController
     end
 		@developer = @game.developer
 		@categories = @game.categories
+		@comment = Comment.new
 	end
 
 	def vote

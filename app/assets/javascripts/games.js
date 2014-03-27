@@ -6,5 +6,5 @@ $(document).ready(function(){
 
 function game_show() {
 	var width = $("#game_show").width();
-	$("#game_stats, #game_details").width(width);
+	$("#game_stats, #game_details, #comments_wrapper").width(width);
 }
