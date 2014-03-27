@@ -17,6 +17,7 @@ Glipster::Application.routes.draw do
     member do
       post 'vote'
       get  'vote'
+      get  'render_reputation_partial'
     end
   end
   resources :password_resets

@@ -49,6 +49,15 @@ class GamesController < ApplicationController
     end
 	end
 
+	def render_reputation_partial
+		@game = Game.find(params[:id])
+    reps = @game.reputations
+    @rep_percents = @game.generate_reputation_percentages(reps) if reps.present?
+    respond_to do |format|
+    	format.js
+    end
+  end
+
 	def upload
 		@uploader = Game.new.flash_file
 		@uploader.success_action_redirect = new_game_url

@@ -2,7 +2,7 @@
 	<div id="game_show">
 		<div id="game_header">
 			<div>
-				<%= link_to_if(current_user.admin?, game_thumb(@game), edit_game_path(@game)) %>
+				<%= link_to_if(current_user && current_user.admin?, game_thumb(@game), edit_game_path(@game)) %>
 				<%= image_tag("star.png", class: 'featured_icon') if @game.featured %>
 			</div>
 			<h1><%= @game.title %> 
@@ -29,7 +29,7 @@
 		<script>
 			$.ajax({
 			  type: "GET",
-			  url: "<%= vote_game_path(@game) %>" ,
+			  url: "<%= render_reputation_partial_game_path(@game) %>" ,
 			});
 		</script>
 	</div>
