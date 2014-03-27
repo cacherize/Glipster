@@ -25,7 +25,12 @@
 		</div>
 	</div>
 	<div id="game_stats">
-		<%= render partial: 'reputation' %>
+		<script>
+			$.ajax({
+			  type: "GET",
+			  url: "<%= vote_game_path(@game) %>" ,
+			});
+			</script>
 	</div>
 	<div id="game_details">
 		<%= render partial: 'description' %>
