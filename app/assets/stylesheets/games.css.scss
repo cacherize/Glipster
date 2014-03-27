@@ -71,86 +71,7 @@
 			text-align:left;
 			font-size:0.8em;
 			color:#999; 
-			font-weight:bold;
 			a {color:#999; font-weight:normal; &:hover{color:#444;}}
-		}
-	}
-}
-.games_container {
-	padding:20px;
-	margin:20px auto;
-	display:block;
-	background:#fff;
-	border:1px solid #ccc;
-	-webkit-border-radius:12px;
-	-moz-border-radius:12px;
-	border-radius:12px;
-	-moz-box-shadow:0 0 8px #CCCCCC;
-	-webkit-box-shadow:0 0 8px #CCCCCC;
-	box-shadow:0 0 8px #CCCCCC;
-	width:auto;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box; 
-	h3 {margin-top:0; border-bottom:1px solid #ccc; text-align:left;}
-	.games_list {
-		white-space: nowrap;
-		overflow-x:auto;
-		.game_wrapper {
-			padding:5px;
-			display:inline-block;
-			padding:10px;
-			background:#ededed;
-			border:1px solid #ccc;
-			-moz-border-radius:8px;
-			-webkit-border-radius:8px;
-			border-radius:8px;
-			font-size:0.75em;
-			text-align:center;
-			vertical-align: middle;
-			margin:5px;
-			span{
-				div{
-					display:inline-block;
-					position:relative;
-					img {
-						border:1px solid #ccc;
-						-moz-border-radius:8px;
-						-webkit-border-radius:8px;
-						border-radius:8px;
-						cursor:pointer;
-					}
-					.featured_icon {
-						position:absolute;
-						top:-8px;
-						left:-8px;
-						-moz-border-radius:0;
-						-webkit-border-radius:0;
-						border-radius:0;
-						border:0;
-					}
-				}
-				a {
-					display:block;
-					height:77px;
-					width:77px;
-					&.game_link {
-						color:#999;
-						width:75px;
-						height:32px;
-						background:#f7f7f7;
-						margin-top:5px;
-						-moz-border-radius:8px;
-						-webkit-border-radius:8px;
-						border-radius:8px;
-						border:1px solid #ccc;
-					}
-				}
-				&:hover a.game_link {
-					color:#444;
-					background:#fff;
-				}
-			}
 		}
 	}
 }
@@ -158,9 +79,9 @@
 	margin:0 auto 20px auto;
 	padding:20px;
 	background:#fff;
-	-moz-box-shadow:0 0 8px #CCCCCC;
-	-webkit-box-shadow:0 0 8px #CCCCCC;
-	box-shadow:0 0 8px #CCCCCC;
+	-moz-box-shadow:0 0 8px #ccc;
+	-webkit-box-shadow:0 0 8px #ccc;
+	box-shadow:0 0 8px #ccc;
 	border:1px solid #ccc;
 	-moz-border-radius:12px;
 	-webkit-border-radius:12px;
@@ -244,5 +165,109 @@
 			&:hover {background:#CCFDCC;}
 		}
 		a.voted, a.voted:hover {background: #fffbc2; border-color:#fff000; cursor:default;}
+	}
+}
+#game_details {
+	margin:0 auto;
+	span {
+		width:65%;
+		display:inline-block;
+		#game_description, #game_controls {
+			width:auto;
+			display:block;
+			padding:20px;
+			background:#fff;
+			border:1px solid #ccc;
+			-moz-box-shadow:0 0 8px #ccc;
+			-webkit-box-shadow:0 0 8px #ccc;
+			box-shadow:0 0 8px #ccc;
+			-moz-border-radius:12px;
+			-webkit-border-radius:12px;
+			border-radius:12px;
+			font-size:0.8em;
+			text-align:left;
+			h3 {border-bottom:#ccc solid 1px; margin:0 0 5px 0; font-size:1.1em;}
+		}
+		#game_description {
+			margin-right:20px;
+		}
+	}
+}
+.games_container {
+	padding:20px;
+	margin:20px auto;
+	display:block;
+	background:#fff;
+	border:1px solid #ccc;
+	-webkit-border-radius:12px;
+	-moz-border-radius:12px;
+	border-radius:12px;
+	-moz-box-shadow:0 0 8px #ccc;
+	-webkit-box-shadow:0 0 8px #ccc;
+	box-shadow:0 0 8px #ccc;
+	width:auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+	h3 {margin-top:0; border-bottom:1px solid #ccc; text-align:left;}
+	.games_list {
+		white-space: nowrap;
+		overflow-x:auto;
+		.game_wrapper {
+			padding:5px;
+			display:inline-block;
+			padding:10px;
+			background:#ededed;
+			border:1px solid #ccc;
+			-moz-border-radius:8px;
+			-webkit-border-radius:8px;
+			border-radius:8px;
+			font-size:0.75em;
+			text-align:center;
+			vertical-align: middle;
+			margin:5px;
+			span{
+				div{
+					display:inline-block;
+					position:relative;
+					img {
+						border:1px solid #ccc;
+						-moz-border-radius:8px;
+						-webkit-border-radius:8px;
+						border-radius:8px;
+						cursor:pointer;
+					}
+					.featured_icon {
+						position:absolute;
+						top:-8px;
+						left:-8px;
+						-moz-border-radius:0;
+						-webkit-border-radius:0;
+						border-radius:0;
+						border:0;
+					}
+				}
+				a {
+					display:block;
+					height:77px;
+					width:77px;
+					&.game_link {
+						color:#999;
+						width:75px;
+						height:32px;
+						background:#f7f7f7;
+						margin-top:5px;
+						-moz-border-radius:8px;
+						-webkit-border-radius:8px;
+						border-radius:8px;
+						border:1px solid #ccc;
+					}
+				}
+				&:hover a.game_link {
+					color:#444;
+					background:#fff;
+				}
+			}
+		}
 	}
 }
