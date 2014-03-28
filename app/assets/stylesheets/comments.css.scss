@@ -44,3 +44,30 @@ hr#comment_divider {
 	width:100%;
 	border:0;
 }
+#comments {
+	.comment {
+		margin:20px 0;
+		min-height:32px;
+		position:relative;
+		padding:5px 5px 25px 45px;
+		border:1px solid #ccc;
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px;
+		border-radius:5px;
+		box-shadow:0 0 3px #ccc;
+		background:#fff;
+		img {
+			position:absolute; top:5px; left:5px;
+			border:1px solid #ccc;
+			-moz-border-radius:3px;
+			-webkit-border-radius:3px;
+			border-radius:3px;
+		}
+		.comment_details {
+			position:absolute;
+			bottom:5px;
+			left:5px;
+			color:#999;
+		}
+	}
+}

@@ -10,4 +10,11 @@
 		</div>
 	<% end %>
 	<hr id="comment_divider" />
+	<% @comments.each do |comment| %>
+		<div class="comment">
+			<%= avatar_thumb(comment.user) %>
+			<%= comment.message %>
+			<div class="comment_details"><%= comment.created_at.localtime.strftime("%b %e, %Y %l:%M %p %Z") %></div>
+		</div>
+	<% end %>
 </div>
