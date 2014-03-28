@@ -34,7 +34,8 @@ class GamesController < ApplicationController
 		@developer = @game.developer
 		@categories = @game.categories
 		@comment = Comment.new
-		@comments = @game.comments
+		@comments = @game.comments.sort_by(&:created_at).reverse
+
 	end
 
 	def vote
