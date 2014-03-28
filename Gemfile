@@ -25,6 +25,7 @@ gem 'dragonfly', "~>1.0.3"
 gem 'dragonfly-s3_data_store', '1.0.3'
 gem 'carrierwave_direct', '0.0.13'
 gem 'rails_12factor'
+gem 'will_paginate', '~> 3.0'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
