@@ -34,8 +34,8 @@ class GamesController < ApplicationController
 		@developer = @game.developer
 		@categories = @game.categories
 		@comment = Comment.new
-		@comments = @game.comments.sort_by(&:created_at).reverse
-
+		games_comments = @game.comments
+		@comments = games_comments.paginate(per_page: 10, page: params[:page]) if games_comments
 	end
 
 	def vote
