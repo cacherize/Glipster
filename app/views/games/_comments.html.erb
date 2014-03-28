@@ -16,13 +16,9 @@
 	<% end %>
 	<hr id="comment_divider" />
 	<% if @comments.present? %>
-		<% @comments.each do |comment| %>
-			<div class="comment">
-				<%= avatar_thumb(comment.user) %>
-				<%= comment.message %>
-				<div class="comment_details"><%= comment.created_at.localtime.strftime("%b %e, %Y %l:%M %p %Z") %></div>
-			</div>
-		<% end %>
+		<div id="comments_container">
+			<%= render partial: 'comments_container' %>
+		</div>
 	<% else %>
 		<p><i>No Comments</i></p>
 	<% end %>
