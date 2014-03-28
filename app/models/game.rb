@@ -8,6 +8,7 @@ class Game < ActiveRecord::Base
   has_many :categories, through: :game_categories
   has_many :reputations
   has_many :featured_category_games
+  has_many :comments
 
   validates_presence_of :height, :width, :title
 

@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   before_save :downcase_email
   before_create { generate_token(:auth_token) }
 
+  has_many :comments
+
   validates :password, presence: true, on: :create
   validates :email, presence: true, uniqueness: true, on: :create
   validates :username, presence: true, uniqueness: true, on: :create
