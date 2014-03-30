@@ -18,6 +18,7 @@ Glipster::Application.routes.draw do
       post 'vote'
       get  'vote'
       get  'render_reputation_partial'
+      get  'load_comments'
     end
   end
   resources :comments

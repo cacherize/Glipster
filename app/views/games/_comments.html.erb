@@ -15,9 +15,15 @@
 		<p><%= link_to "Please log in to post comments.", login_path %></p>
 	<% end %>
 	<hr id="comment_divider" />
-	<% if @comments.present? %>
+	<% if @game.comments.present? %>
 		<div id="comments_container">
-			<%= render partial: 'comments_container' %>
+			<div class="center"><%= image_tag 'spinner.gif' %></div>
+			<script>
+				$.ajax({
+				  type: "GET",
+				  url: "<%= load_comments_game_path(@game) %>" ,
+				});
+			</script>
 		</div>
 	<% else %>
 		<p><i>No Comments</i></p>
