@@ -60,7 +60,7 @@ class GamesController < ApplicationController
     end
 	end
 
-	def render_reputation_partial
+	def load_reputation
 		@game = Game.find(params[:id])
     reps = @game.reputations
     @rep_percents = @game.generate_reputation_percentages(reps) if reps.present?
