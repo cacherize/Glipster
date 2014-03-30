@@ -1,7 +1,7 @@
 <%= will_paginate @comments %>
 <% @comments.each do |comment| %>
 	<div class="comment">
-		<%= avatar_thumb(comment.user) %>
+		<%= link_to avatar_thumb(comment.user), comment.user %>
 		<%= comment.message %>
 		<div class="comment_details"><%= comment.created_at.localtime.strftime("%b %e, %Y %l:%M %p %Z") %></div>
 	</div>
