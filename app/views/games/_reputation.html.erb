@@ -4,7 +4,7 @@
 	<div class="reputation_bar">
 		<% if @rep_percents.present? %>
 			<p class="percentage"><%= @rep_percents.first.round %>%</p>
-			<span class="right_bar" style="width:<%= number_to_percentage(@rep_percents.first) %>;"></span><span class="left_bar" style="width:<%= number_to_percentage(@rep_percents.last) %>;"></span>
+			<span class="right_bar" style="width:<%= @rep_percents.first %>%;"></span><span class="left_bar" style="width:<%= @rep_percents.last %>%;"></span>
 		<% else %>
 			<span class="full_bar">No Votes</span>
 		<% end %>
