@@ -33,8 +33,8 @@ class Game < ActiveRecord::Base
   end
 
   def generate_reputation_percentages(reps)
-    rep_counts = reps.length
-    positive_votes = reps.where(value: 1).length
+    rep_counts = reps.size
+    positive_votes = reps.where(value: 1).size
     first_percentage = ((positive_votes.to_f / rep_counts) * 100).round(3)
     second_percentage = (100 - first_percentage)
     percentage = [first_percentage, second_percentage]
