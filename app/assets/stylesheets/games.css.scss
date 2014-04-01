@@ -97,6 +97,19 @@
 	#page_visits {
 		margin:20px;
 		display:block;
+		color:#A2D42F;
+		font-weight:bold;
+		span {
+			font-weight:normal;
+			font-size:0.9em;
+			color:#444;
+			background:#FFFBC2;
+			padding:2px 4px;
+			-moz-border-radius:4px;
+			-webkit-border-radius:4px;
+			border-radius:4px;
+			border:1px solid #FFF000;
+		}
 	}
 	.reputation {
 		position:absolute;
@@ -193,7 +206,7 @@
 			border-radius:12px;
 			font-size:0.8em;
 			text-align:left;
-			h3 {border-bottom:#ccc solid 1px; margin:0 0 5px 0; font-size:1.1em;}
+			h3 {border-bottom:#ccc solid 1px; margin:0 0 5px 0; font-size:1.1em; color:#A2D42F;}
 		}
 		#game_description {
 			margin-right:15px;
