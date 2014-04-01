@@ -33,4 +33,6 @@
 		</div>
 	</div>
 </div>
-<%= javascript_include_tag 'jquery.tinycarousel' %>
+<% content_for :head do %>
+	<%= javascript_include_tag 'jquery.tinycarousel' %>
+<% end %>
