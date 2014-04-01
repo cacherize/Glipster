@@ -3,10 +3,13 @@ class CommentsController < ApplicationController
 	def create
 		@comment = Comment.new(params[:comment])
 		@comment.user_id = current_user.id
-		@comment.save
 
 		respond_to do |format|
-			format.html {redirect_to game_path(@comment.game, anchor: "comments"), notice: "Successfully submitted comment!"}
+			if @comment.save
+				format.html {redirect_to game_path(@comment.game, anchor: "comments"), notice: "Successfully submitted comment!"}
+			else
+				format.html {redirect_to @comment.game, alert: "Unable to post comment, please try again."}
+			end
 		end			
 	end
 
