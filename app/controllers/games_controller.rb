@@ -39,7 +39,7 @@ class GamesController < ApplicationController
 	def load_comments
 		@game = Game.find(params[:id])
 		games_comments = @game.comments
-		@comments = games_comments.paginate(per_page: 5, page: params[:page]) if games_comments
+		@comments = games_comments.paginate(per_page: 10, page: params[:page]) if games_comments
 		respond_to do |format|
 			format.js
 		end
