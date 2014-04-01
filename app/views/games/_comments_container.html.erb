@@ -2,9 +2,18 @@
 <%= will_paginate @comments %>
 <% @comments.each do |comment| %>
 	<div class="comment">
-		<%= link_to avatar_thumb(comment.user), comment.user %>
-		<%= comment.message %>
-		<div class="comment_details"><%= comment.created_at.localtime.strftime("%b %e, %Y %l:%M %p %Z") %></div>
-		<div class="comment_action"><%= link_to "Delete", comment, method: :delete %></div>
+		<div class="comment_header">
+			<%= link_to avatar_thumb(comment.user), comment.user, class: 'comment_user_link' %>
+			<span><%= link_to comment.user.username, comment.user %></span>
+			<span class="comment_details">
+				<%= comment.created_at.localtime.strftime("%b %e, %Y %l:%M %p %Z") %>
+			</span>
+			<% if current_user == comment.user %>
+				<div class="comment_delete">
+					<%= link_to image_tag("delete.png"), comment, method: :delete, title: 'delete', confirm: 'Are you sure?' %>
+				</div>
+			<% end %>
+		</div>
+		<p class="comment_message"><%= comment.message %></p>
 	</div>
 <% end %>
