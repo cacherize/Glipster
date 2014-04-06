@@ -1,5 +1,5 @@
 <div class="center constraint">
-	<h1 class="category_title"><%= @category.name %></h1>
+	<h1 class="category_title"><%= @category.name %></h1><br/>
 	<% if current_user && current_user.admin? %>
 		<%= link_to "Set Featured Games", featured_category_game_path(@category), id: 'ft_game_link' %><br/>
 	<% end %>
