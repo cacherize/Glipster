@@ -42,4 +42,12 @@ class Game < ActiveRecord::Base
 
     return percentage
   end
+
+  def self.search(term)
+    if term
+      where('lower(title) LIKE ?', "%#{term.downcase}%")
+    else
+      scoped
+    end    
+  end
 end
