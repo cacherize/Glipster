@@ -6,7 +6,7 @@ class FeaturedCategoryGamesController < ApplicationController
 
 	def show
 		@category = Category.find(params[:id])
-		@games = @category.games.order('created_at desc')
+		@games = @category.games.search(params[:search]).order('created_at desc')
 		@featured_games = @category.featured_category_games
 	end
 

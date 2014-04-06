@@ -1,0 +1,23 @@
+<% if @games.present? %>
+	<% @games.each do |g| %>
+		<div class="game_wrapper">
+			<span>
+				<div class="game_img">
+					<%= link_to game_thumb(g), g %>
+					<%= image_tag("star.png", class: 'featured_icon') if g.featured %>
+				</div>
+				<%= link_to g, class: 'vertical_game_link', title: g.title do %>
+					<h4><%= g.title %></h4>
+					<p><%= g.description.present? ? g.description : "<i>No Description</i>".html_safe %></p>
+				<% end %>
+			</span>
+			<% if @featured_games.map(&:game_id).include?(g.id) %>
+				<%= link_to(image_tag("delete.png"), featured_category_game_url(g.featured_category_game), method: :delete, class: 'action') %>	
+			<% else %>
+				<%= link_to(image_tag("add.png"), featured_category_games_path(object: {game_id: g.id, category_id: @category.id}), method: :post, class: 'action') %>
+			<% end %>
+		</div>
+	<% end %>
+<% else %>
+	<i>Couldn't find any games :(</i>
+<% end %>
