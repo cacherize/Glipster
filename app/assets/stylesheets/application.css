@@ -159,6 +159,7 @@ img {outline:0; border:0;}
 .center {text-align:center;}
 .clear {clear:both;}
 .placeholder{color:#888;}
+.inline-block{display:inline-block;}
 .flash {
 	padding:10px 50px 10px 10px;
 	font-weight:normal;
