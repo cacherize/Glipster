@@ -2,7 +2,7 @@
 	<% games.each do |game| %>
 		<div class="game_wrapper">
 			<span>
-				<div>
+				<div class="game_img">
 					<%= link_to game_thumb(game), game %>
 					<%= image_tag("star.png", class: 'featured_icon') if game.featured %>
 				</div>

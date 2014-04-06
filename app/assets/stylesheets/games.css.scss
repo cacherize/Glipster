@@ -253,61 +253,61 @@
 	.games_list {
 		white-space: nowrap;
 		overflow-x:auto;
-		.game_wrapper {
-			padding:5px;
+	}
+}
+.game_wrapper {
+	padding:5px;
+	display:inline-block;
+	padding:10px;
+	background:#ededed;
+	border:1px solid #ccc;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	font-size:0.75em;
+	text-align:center;
+	vertical-align: middle;
+	margin:5px;
+	span{
+		.game_img {
 			display:inline-block;
-			padding:10px;
-			background:#ededed;
-			border:1px solid #ccc;
-			-moz-border-radius:8px;
-			-webkit-border-radius:8px;
-			border-radius:8px;
-			font-size:0.75em;
-			text-align:center;
-			vertical-align: middle;
-			margin:5px;
-			span{
-				div{
-					display:inline-block;
-					position:relative;
-					img {
-						border:1px solid #ccc;
-						-moz-border-radius:8px;
-						-webkit-border-radius:8px;
-						border-radius:8px;
-						cursor:pointer;
-					}
-					.featured_icon {
-						position:absolute;
-						top:-8px;
-						left:-8px;
-						-moz-border-radius:0;
-						-webkit-border-radius:0;
-						border-radius:0;
-						border:0;
-					}
-				}
-				a {
-					display:block;
-					height:77px;
-					width:77px;
-					&.game_link {
-						color:#999;
-						width:75px;
-						height:32px;
-						background:#f7f7f7;
-						margin-top:5px;
-						-moz-border-radius:8px;
-						-webkit-border-radius:8px;
-						border-radius:8px;
-						border:1px solid #ccc;
-					}
-				}
-				&:hover a.game_link {
-					color:#444;
-					background:#fff;
-				}
+			position:relative;
+			img {
+				border:1px solid #ccc;
+				-moz-border-radius:8px;
+				-webkit-border-radius:8px;
+				border-radius:8px;
+				cursor:pointer;
 			}
+			.featured_icon {
+				position:absolute;
+				top:-8px;
+				left:-8px;
+				-moz-border-radius:0;
+				-webkit-border-radius:0;
+				border-radius:0;
+				border:0;
+			}
+		}
+		a {
+			display:block;
+			height:77px;
+			width:77px;
+			&.game_link {
+				color:#999;
+				width:75px;
+				height:32px;
+				background:#f7f7f7;
+				margin-top:5px;
+				-moz-border-radius:8px;
+				-webkit-border-radius:8px;
+				border-radius:8px;
+				border:1px solid #ccc;
+			}
+		}
+		&:hover a.game_link {
+			color:#444;
+			background:#fff;
 		}
 	}
 }
