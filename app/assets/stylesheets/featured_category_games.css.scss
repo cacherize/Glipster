@@ -23,8 +23,6 @@
 		padding:10px; 
 		display:block;
 		width:598px;
-		/*-moz*/
-		/*border-radius:8px;*/
 	}
 	input[type=submit] {
 		background:none;
@@ -41,4 +39,11 @@
 		cursor:pointer;
 		&:hover {background-color:rgba(237, 237, 237, 0.5); border-left:1px solid #ccc;}
 	}
+}
+.game_search_pagination {
+	width:620px;
+	text-align:right;
+	display:block;
+	margin:10px auto;
+	.pagination {float:none;}
 }

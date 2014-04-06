@@ -1,8 +1,7 @@
 <div class="center constraint">
 	<h2 class="featured_category_title">Featured <%= @category.name %> Games</h2>
 	<% if @featured_games.present? %>
-		<% @featured_games.each do |featured_category| %>
-			<% game = featured_category.game %>
+		<% @featured_games.each do |game| %>
 			<div class="game_wrapper">
 				<span>
 					<div class="game_img">
@@ -14,7 +13,7 @@
 						<p><%= game.description.present? ? game.description : "<i>No Description</i>".html_safe %></p>
 					<% end %>
 				</span>
-				<%= link_to(image_tag("delete.png"), featured_category_game_url(featured_category), method: :delete, class: 'action') %>
+				<%= link_to(image_tag("delete.png"), featured_category_game_url(game.featured_category_game), method: :delete, class: 'action') %>
 			</div>
 		<% end %>
 	<% else %>

@@ -1,4 +1,5 @@
 <% if @games.present? %>
+	<div class="game_search_pagination"><%= will_paginate @games %></div>
 	<% @games.each do |g| %>
 		<div class="game_wrapper">
 			<span>
@@ -11,13 +12,14 @@
 					<p><%= g.description.present? ? g.description : "<i>No Description</i>".html_safe %></p>
 				<% end %>
 			</span>
-			<% if @featured_games.map(&:game_id).include?(g.id) %>
+			<% if @featured_games.include?(g) %>
 				<%= link_to(image_tag("delete.png"), featured_category_game_url(g.featured_category_game), method: :delete, class: 'action') %>	
 			<% else %>
 				<%= link_to(image_tag("add.png"), featured_category_games_path(object: {game_id: g.id, category_id: @category.id}), method: :post, class: 'action') %>
 			<% end %>
 		</div>
 	<% end %>
+	<div class="game_search_pagination"><%= will_paginate @games %></div>
 <% else %>
 	<span class="no_results">Couldn't find any games <%= "with the term \"#{params[:search]}\" " if params[:search] %></span>
 <% end %>

@@ -5,5 +5,10 @@ $(function(){
 			$.get($('.feature_game_search').attr('action'), $(".feature_game_search").serialize(), null, 'script');
 		}, 1000 );
 		return false;
-	})
+	});
+	$("#search_wrapper").on("click", '.game_search_pagination .pagination a', function() {
+		$(".pagination").html("<image src='/assets/spinner.gif'/>");
+    $.getScript(this.href);
+    return false;
+  });
 });

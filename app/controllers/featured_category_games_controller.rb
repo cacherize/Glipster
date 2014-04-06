@@ -6,8 +6,8 @@ class FeaturedCategoryGamesController < ApplicationController
 
 	def show
 		@category = Category.find(params[:id])
-		@games = @category.games.search(params[:search]).order('created_at desc')
-		@featured_games = @category.featured_category_games
+		@games = @category.games.search(params[:search]).order('created_at desc').paginate(per_page: 10, page: params[:page])
+		@featured_games = Game.find(@category.featured_category_games_ids)
 	end
 
 	def create
