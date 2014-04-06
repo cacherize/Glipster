@@ -29,3 +29,11 @@ $(document).ready(function(){
 	$(".game_link").dotdotdot({});
 	$(".vertical_game_link p").dotdotdot({});
 });
+
+var delay = (function(){
+  var timer = 0;
+  return function(callback, ms){
+    clearTimeout (timer);
+    timer = setTimeout(callback, ms);
+  };
+})();
