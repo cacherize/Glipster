@@ -210,13 +210,17 @@ img {outline:0; border:0;}
 .pagination {margin-top:5px; display:inline-block; float:right;}
 .pagination a, .pagination em, .pagination .disabled {
 	padding:3px 4px;
-	border-radius:3px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
 	color:#444;
+	font-size:0.9em;
+	border:1px solid #fff;
 }
 .pagination em {
 	color:#fff;
 	font-weight:bold;
 	background:#A2D42F;
 }
-.pagination a:hover {text-decoration:underline;}
+.pagination a:hover {border:1px solid #A2D42F; background:#e2ff9d;}
 .pagination .disabled {color:#ccc;}
