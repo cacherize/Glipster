@@ -1,3 +1,29 @@
-// Place all the styles related to the categories controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.category_title {
+	background:#32CD32;
+	color:#D0ECD0;
+	float:right;
+	display:inline-block;
+	padding:15px 30px;
+	margin-top:-30px;
+	text-shadow:0 -1px 0 #00a000;
+	-moz-box-shadow:0 2px 3px #ccc;
+	-webkit-box-shadow:0 2px 3px #ccc;
+	box-shadow:0 2px 3px #ccc;
+	-moz-border-radius-bottomright:20px;
+	-moz-border-radius-bottomleft:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+}
+#ft_game_link {
+	padding:15px 19px;
+	color:#fff;
+	border-radius:8px;
+	font-weight:bold;
+	background:#32cd32;
+	text-shadow:0 -1px 0 #00a000;
+	-moz-box-shadow:0 2px 3px #ccc;
+	-webkit-box-shadow:0 2px 3px #ccc;
+	box-shadow:0 2px 3px #ccc;
+}
