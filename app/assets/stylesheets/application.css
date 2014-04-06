@@ -155,6 +155,7 @@ img {outline:0; border:0;}
 	border-bottom:1px solid #222;
 }
 #menu li .submenu li a:hover {border-top:1px solid #111; border-bottom:1px solid #333;}
+.constraint {width:80%; margin:0 auto; max-width:1230px;}
 .sub_arrow {font-size:0.5em; vertical-align:top;}
 .center {text-align:center;}
 .clear {clear:both;}
