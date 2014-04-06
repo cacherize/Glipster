@@ -1,7 +1,6 @@
 .category_title {
 	background:#32CD32;
 	color:#D0ECD0;
-	float:right;
 	display:inline-block;
 	padding:15px 30px;
 	margin-top:-30px;
@@ -15,6 +14,9 @@
 	-webkit-border-bottom-left-radius:20px;
 	border-bottom-right-radius:20px;
 	border-bottom-left-radius:20px;
+	position:absolute;
+	right:10%;
+	top:80px;
 }
 #ft_game_link {
 	padding:15px 19px;
