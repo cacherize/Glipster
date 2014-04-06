@@ -7,6 +7,7 @@ class CategoriesController < ApplicationController
 		@category = Category.find(params[:id])
 
 		@games = @category.games
+		@featured_games = Game.find(@category.featured_category_games_ids)
 	end
 
 	def new

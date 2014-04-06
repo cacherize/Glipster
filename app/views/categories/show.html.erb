@@ -1,7 +1,15 @@
-<h1><%= @category.name %></h1>
-<% if current_user && current_user.admin? %>
-	<%= link_to "Set Featured Games", featured_category_game_path(@category) %><br/>
-<% end %>
-<% @games.each do |game| %>
-<%= game.title %>
-<% end %>
+<div class="center constraint">
+	<h1><%= @category.name %></h1>
+	<% if current_user && current_user.admin? %>
+		<%= link_to "Set Featured Games", featured_category_game_path(@category) %><br/>
+	<% end %>
+	<div class="games_container">
+		<h3>Featured Games</h3>
+		<% if @featured_games.present? %>
+			<%= render partial: 'welcome/game_list', locals: {games: @featured_games} %>
+		<% end %>
+	</div>
+	<% @games.each do |game| %>
+	<%= game.title %>
+	<% end %>
+</div>
