@@ -45,7 +45,7 @@ class Game < ActiveRecord::Base
 
   def self.search(term)
     if term
-      where('lower(title) LIKE ?', "%#{term.downcase}%")
+      where('lower(title) LIKE ?', "%#{term.downcase.gsub(' ', '%')}%")
     else
       scoped
     end    
