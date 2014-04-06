@@ -1,7 +1,7 @@
 <span>
 	<div id="game_description">
 		<h3>Description:</h3>
-		<%= @game.description.present? ? @game.description.html_safe : "<i>No Description</i>" %>
+		<%= @game.description.present? ? @game.description.html_safe : "<i>No Description</i>".html_safe %>
 	</div>
 </span><!--
 --><span style="width:35%;">
