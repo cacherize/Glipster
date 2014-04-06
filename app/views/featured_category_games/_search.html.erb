@@ -19,5 +19,5 @@
 		</div>
 	<% end %>
 <% else %>
-	<i>Couldn't find any games :(</i>
+	<span class="no_results">Couldn't find any games <%= "with the term \"#{params[:search]}\" " if params[:search] %></span>
 <% end %>

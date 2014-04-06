@@ -18,7 +18,7 @@
 			</div>
 		<% end %>
 	<% else %>
-		<i>No Featured Games</i>
+		<span class="no_results">No Featured Games</span>
 	<% end %><br/>
 	<%= form_tag featured_category_game_path(@category), method: :get, class: 'feature_game_search' do %>
 		<%= text_field_tag :search, nil, id: 'game_name_search', placeholder: 'Search Category...' %>
