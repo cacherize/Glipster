@@ -4,8 +4,9 @@ class FeaturedCategoryGamesController < ApplicationController
 		@games = featured_games.group_by{|game| game.category.name }.sort
 	end
 
-	def edit
+	def show
 		@category = Category.find(params[:id])
 		@games = @category.games
+		@featured_games = @category.featured_category_games
 	end
 end
