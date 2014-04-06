@@ -1,4 +1,7 @@
 <h1><%= @category.name %></h1>
+<% if current_user && current_user.admin? %>
+	<%= link_to "Set Featured Games", featured_category_game_path(@category) %><br/>
+<% end %>
 <% @games.each do |game| %>
 <%= game.title %>
 <% end %>
