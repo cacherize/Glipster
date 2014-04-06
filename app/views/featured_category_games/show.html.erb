@@ -1,6 +1,28 @@
 <div class="center">
 	<h2 class="featured_category_title">Featured <%= @category.name %> Games</h2>
-	<% @featured_games.each do |game| %>
+	<% if @featured_games.present? %>
+		<% @featured_games.each do |game| %>
+			<div class="game_wrapper">
+				<span>
+					<div class="game_img">
+						<%= link_to game_thumb(game), game %>
+						<%= image_tag("star.png", class: 'featured_icon') if game.featured %>
+					</div>
+					<%= link_to game, class: 'vertical_game_link', title: game.title do %>
+						<h4><%= game.title %></h4>
+						<p><%= game.description.present? ? game.description : "<i>No Description</i>".html_safe %></p>
+					<% end %>
+				</span>
+			</div>
+		<% end %>
+	<% else %>
+		<i>No Featured Games</i>
+	<% end %><br/>
+	<%= form_tag featured_category_game_path(@category), method: :get, class: 'feature_game_search' do %>
+		<%= text_field_tag :search, nil, id: 'game_name_search', placeholder: 'Search Category...' %>
+		<%= submit_tag '' %>
+	<% end %>
+	<% @games.each do |game| %>
 		<div class="game_wrapper">
 			<span>
 				<div class="game_img">

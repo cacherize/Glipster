@@ -3,8 +3,42 @@
 	background:white;
 	border:1px solid #ccc;
 	margin:50px auto 10px auto;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
 	border-radius:10px;
 	font-family:'Petita', sans-serif;
 	font-weight:normal;
+	-moz-box-shadow:0 0 3px #ccc;
+	-webkit-box-shadow:0 0 3px #ccc;
 	box-shadow:0 0 3px #ccc;
+}
+.feature_game_search {
+	width:620px;
+	margin:30px auto 10px auto;
+	position:relative;
+	#game_name_search {
+		background-color: #fff;
+	  background-color: rgba(255, 255, 255, 0.5);
+		border:1px solid #ccc;
+		padding:10px; 
+		display:block;
+		width:598px;
+		/*-moz*/
+		/*border-radius:8px;*/
+	}
+	input[type=submit] {
+		background:none;
+		background-image:url('search.png');
+		background-position:center center;
+		background-repeat:no-repeat;
+		height:37px;
+		width:40px;
+		position:absolute;
+		top:1px;
+		right:1px;
+		border:0;
+		padding:0;
+		cursor:pointer;
+		&:hover {background-color:rgba(237, 237, 237, 0.5); border-left:1px solid #ccc;}
+	}
 }
