@@ -6,8 +6,11 @@
 					<%= link_to game_thumb(game), game %>
 					<%= image_tag("star.png", class: 'featured_icon') if game.featured %>
 				</div>
-				<%= link_to game.title, game, class: 'game_link', title: game.title %>
+				<%= link_to game, class: 'vertical_game_link', title: game.title do %>
+					<h4><%= game.title %></h4>
+					<p><%= game.description.present? ? game.description : "<i>No Description</i>".html_safe %></p>
+				<% end %>
 			</span>
-		</div><br/>
+		</div>
 	<% end %>
 </div>

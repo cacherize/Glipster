@@ -278,6 +278,7 @@
 				-webkit-border-radius:8px;
 				border-radius:8px;
 				cursor:pointer;
+				vertical-align: top;
 			}
 			.featured_icon {
 				position:absolute;
@@ -293,7 +294,7 @@
 			display:block;
 			height:77px;
 			width:77px;
-			&.game_link {
+			&.game_link, &.vertical_game_link {
 				color:#999;
 				width:75px;
 				height:32px;
@@ -303,11 +304,26 @@
 				-webkit-border-radius:8px;
 				border-radius:8px;
 				border:1px solid #ccc;
+				&:hover {
+					color:#444;
+					background:#fff;
+				}
 			}
-		}
-		&:hover a.game_link {
-			color:#444;
-			background:#fff;
+			&.vertical_game_link {
+				display:inline-block;
+				margin-top:0;
+				margin-left:5px;
+				vertical-align: top;
+				text-align:left;
+				padding:5px;
+				height:65px;
+				width:400px;
+				h4 {
+					margin:0;
+					border-bottom:1px solid #999;
+				}
+				p {margin:5px 0 0 0; height:45px; width:100%;}
+			}	
 		}
 	}
 }
