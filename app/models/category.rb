@@ -6,6 +6,8 @@ class Category < ActiveRecord::Base
 
   dragonfly_accessor :image
 
+  default_scope{ order('name') }
+
   def to_param
   	"#{id}-#{name}".parameterize
   end
