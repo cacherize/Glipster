@@ -4,8 +4,6 @@ class Category < ActiveRecord::Base
   has_many :games, through: :game_categories
   has_many :featured_category_games
 
-  dragonfly_accessor :image
-
   default_scope{ order('name') }
 
   def to_param

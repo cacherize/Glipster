@@ -114,7 +114,7 @@ img {outline:0; border:0;}
 	overflow:visible;
 }
 #menu li .submenu {
-	display:none;
+	/*display:none;*/
 	width:100%;
 	width:-moz-calc(100% - 2px);
 	width:-webkit-calc(100% - 2px);
@@ -148,12 +148,15 @@ img {outline:0; border:0;}
 #menu li .submenu li a {
 	text-align:left;
 	border:0;
-	padding:3px 18px;
+	padding:3px 10px;
 	display:block;
 	font-size:0.65em;
 	border-top:1px solid #444;
 	border-bottom:1px solid #222;
+	position:relative;
 }
+#menu li .submenu li a img {position:absolute; right:0; top:0; background:#111; border-left:1px solid #444; padding: 5px;}
+#menu li .submenu li a:hover img {background:none; border-left:0;}
 #menu li .submenu li a#top {padding:0; border-top:0}
 #menu li .submenu li a:hover {border-top:1px solid #111; border-bottom:1px solid #333;}
 .constraint {width:80%; margin:0 auto; max-width:1230px;}
