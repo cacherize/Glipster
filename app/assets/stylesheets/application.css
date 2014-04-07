@@ -114,7 +114,7 @@ img {outline:0; border:0;}
 	overflow:visible;
 }
 #menu li .submenu {
-	/*display:none;*/
+	display:none;
 	width:100%;
 	width:-moz-calc(100% - 2px);
 	width:-webkit-calc(100% - 2px);
