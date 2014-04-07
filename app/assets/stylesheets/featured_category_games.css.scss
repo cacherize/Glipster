@@ -11,6 +11,20 @@
 	-moz-box-shadow:0 0 3px #ccc;
 	-webkit-box-shadow:0 0 3px #ccc;
 	box-shadow:0 0 3px #ccc;
+	position:relative;
+	#toggle {
+		position:absolute;
+		right:10px;
+		font-size:0.5em;
+		font-weight:normal;
+		top:11px;
+		color:#444;
+		border-radius:4px;
+		padding:5px 7px;
+		&:hover {
+			background:#ededed;
+		}
+	}
 }
 .feature_game_search {
 	width:620px;

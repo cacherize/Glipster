@@ -12,3 +12,15 @@ $(function(){
     return false;
   });
 });
+$("#toggle").click(function (event){
+	$("#featured_games_list").slideFadeToggle();
+	if ($(this).text() == "collapse ↑") {
+		$(this).text("show ↓").html();
+	} else {
+		$(this).text("collapse ↑").html();
+	}
+	event.preventDefault();
+});
+$.fn.slideFadeToggle = function(speed, easing, callback) {
+  return this.animate({opacity: 'toggle', height: 'toggle'}, speed, easing, callback);
+};
