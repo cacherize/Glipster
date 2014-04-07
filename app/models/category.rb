@@ -1,8 +1,10 @@
 class Category < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :image
   has_many :game_categories
   has_many :games, through: :game_categories
   has_many :featured_category_games
+
+  dragonfly_accessor :image
 
   def to_param
   	"#{id}-#{name}".parameterize
