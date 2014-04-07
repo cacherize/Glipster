@@ -24,7 +24,7 @@
 	    	<ul class="submenu">
 	    		<li><a id="top"></a></li>
 	    		<% Category.all.each do |cat| %>
-	    			<li><%= link_to "#{cat.name} #{category_image(cat)}".html_safe, cat %></li>
+	    			<li><%= link_to "#{cat.name} #{category_image(cat)}".html_safe, cat, class: cp(category_path(cat)) %></li>
 	    		<% end %>
 	    	</ul>
 	    </li>
