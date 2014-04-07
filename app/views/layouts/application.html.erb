@@ -22,7 +22,7 @@
 	    <li class="submenu_container">
 	    	<%= link_to "Categories <span class='sub_arrow'>&#x25bc;</span>".html_safe, categories_path, class: cp(categories_path) %>
 	    	<ul class="submenu">
-	    		<li style="border-top:0;"></li>
+	    		<li><a id="top"></a></li>
 	    		<% Category.all.each do |cat| %>
 	    			<li><%= link_to cat.name, cat %></li>
 	    		<% end %>

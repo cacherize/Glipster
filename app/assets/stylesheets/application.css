@@ -148,12 +148,13 @@ img {outline:0; border:0;}
 #menu li .submenu li a {
 	text-align:left;
 	border:0;
-	padding:8px 18px;
+	padding:3px 18px;
 	display:block;
 	font-size:0.65em;
 	border-top:1px solid #444;
 	border-bottom:1px solid #222;
 }
+#menu li .submenu li a#top {padding:0; border-top:0}
 #menu li .submenu li a:hover {border-top:1px solid #111; border-bottom:1px solid #333;}
 .constraint {width:80%; margin:0 auto; max-width:1230px;}
 .sub_arrow {font-size:0.5em; vertical-align:top;}
