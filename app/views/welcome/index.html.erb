@@ -6,6 +6,7 @@
 		</div>
 	<% end %>
 	<%= form_tag new_search_path, id: 'search' do %>
+		<%= label_tag :search, "Search Games" %>
 		<%= text_field_tag :search, '', placeholder: 'Search games...', id: 'title_search' %>
 		<%= submit_tag '' %>
 	<% end %>
