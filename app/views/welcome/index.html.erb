@@ -5,7 +5,7 @@
 			<%= link_to "Sign Up", signup_path, id: 'signup_link' %><br class="clear"/>
 		</div><br class="clear"/>
 	<% end %>
-	<%= form_tag new_search_path, id: 'search' do %>
+	<%= form_tag new_search_path, method: :get, id: 'search' do %>
 		<%= label_tag :search, "Search Games" %>
 		<%= text_field_tag :search, '', placeholder: 'Enter search here...', id: 'title_search' %>
 		<div class="form_submit"><%= submit_tag '' %></div>
