@@ -25,6 +25,7 @@ Glipster::Application.routes.draw do
   resources :password_resets
   resources :developers
   resources :featured_category_games
+  match 'search/games', to: 'search#games', via: :get
   resources :search, only: :new
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -7,7 +7,7 @@
 	<% end %>
 	<%= form_tag new_search_path, method: :get, id: 'search' do %>
 		<%= label_tag :search, "Search Games" %>
-		<%= text_field_tag :search, '', placeholder: 'Enter search here...', id: 'title_search' %>
+		<%= text_field_tag :search, '', placeholder: 'Enter search here...', id: 'title_search', data: {autocomplete: search_games_path} %>
 		<div class="form_submit"><%= submit_tag '' %></div>
 	<% end %>
 	<hr class="divider"/>
@@ -41,4 +41,5 @@
 </div>
 <% content_for :head do %>
 	<%= javascript_include_tag 'jquery.tinycarousel' %>
+	<%= javascript_include_tag params[:controller] %>
 <% end %>
