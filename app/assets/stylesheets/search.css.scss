@@ -1,3 +1,40 @@
-// Place all the styles related to the search controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.search_result {
+	width:100%;
+	text-align:left;
+	position:relative;
+	height:75px;
+	margin:25px 0;
+	.search_result_img {
+		display:inline-block;
+		position:absolute;
+		top:-10px;
+		left:-10px;
+		img {
+			border:1px solid #ccc;
+			border-radius:8px;
+			box-shadow:0 0 3px #ccc;
+		}
+	}
+	.search_result_content {
+		background:white;
+		height:67px;
+		padding:5px 10px 5px 75px;
+		box-shadow:0 0 3px #ccc;
+		font-size:0.85em;
+		border:1px solid #ccc;
+		h2 {
+			margin:0 0 5px 0;
+			font-size:1em;
+			font-weight:normal;
+			.date_stamp {
+				float:right;
+				font-size:0.8em;
+			}
+		}
+		p.search_result_description {
+			margin:0;
+			font-size:0.85em;
+			height:45px;
+		}
+	}
+}

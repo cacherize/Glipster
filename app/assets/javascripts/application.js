@@ -28,6 +28,7 @@ $(document).ready(function(){
 	});
 	$(".game_link").dotdotdot({});
 	$(".vertical_game_link p").dotdotdot({});
+	$(".search_result_description").dotdotdot({});
 });
 
 var delay = (function(){

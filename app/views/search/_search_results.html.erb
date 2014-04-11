@@ -1,0 +1,17 @@
+<%= will_paginate @games %><%= tag("br", class: 'clear') if @games.size > 15 %>
+<% @games.each do |game| %>
+	<div class="search_result">
+		<%= link_to game_thumb(game), game, class: 'search_result_img' %>
+		<div class="search_result_content">
+			<h2><%= link_to game.title, game %>
+				<span class="date_stamp">
+					Added: <%= game.created_at.localtime.strftime("%b %e, %Y %l:%M %p %Z") %>
+				</span>
+			</h2>
+			<p class="search_result_description">
+				<%= game.description.present? ? game.description : "<i>No Description</i>".html_safe %>
+			</p>
+		</div>
+	</div>
+<% end %>
+<%= will_paginate @games %><%= tag("br", class: 'clear') %>
