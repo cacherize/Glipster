@@ -5,3 +5,8 @@ $('#title_search').keyup(function (){
 	}, 1000 );
 	return false;
 });
+$("#results").on("click", '.pagination a', function() {
+	$(".pagination").html("<image src='/assets/spinner.gif'/>");
+  $.getScript(this.href);
+  return false;
+});
