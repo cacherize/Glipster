@@ -10,15 +10,22 @@
 		top:-10px;
 		left:-10px;
 		img {
+			background:#fff;
 			border:1px solid #ccc;
+			-moz-border-radius:8px;
+			-webkit-border-radius:8px;
 			border-radius:8px;
+			-moz-box-shadow:0 0 3px #ccc;
+			-webkit-box-shadow:0 0 3px #ccc;
 			box-shadow:0 0 3px #ccc;
 		}
 	}
 	.search_result_content {
-		background:white;
+		background:#fff;
 		height:67px;
 		padding:5px 10px 5px 75px;
+		-moz-box-shadow:0 0 3px #ccc;
+		-webkit-box-shadow:0 0 3px #ccc;
 		box-shadow:0 0 3px #ccc;
 		font-size:0.85em;
 		border:1px solid #ccc;
@@ -26,10 +33,7 @@
 			margin:0 0 5px 0;
 			font-size:1em;
 			font-weight:normal;
-			.date_stamp {
-				float:right;
-				font-size:0.8em;
-			}
+			.date_stamp {float:right; font-size:0.8em;}
 		}
 		p.search_result_description {
 			margin:0;
