@@ -274,6 +274,7 @@
 			display:inline-block;
 			position:relative;
 			img {
+				background:#fff;
 				border:1px solid #ccc;
 				-moz-border-radius:8px;
 				-webkit-border-radius:8px;
@@ -289,6 +290,7 @@
 				-webkit-border-radius:0;
 				border-radius:0;
 				border:0;
+				background:none;
 			}
 		}
 		a.game_link, a.vertical_game_link {

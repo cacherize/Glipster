@@ -3,8 +3,14 @@
 		<div id="sign_up_message">
 			<p>Don't have an account? Create one <%= link_to 'here', signup_path %>.</p>
 			<%= link_to "Sign Up", signup_path, id: 'signup_link' %><br class="clear"/>
-		</div>
+		</div><br class="clear"/>
 	<% end %>
+	<%= form_tag new_search_path, method: :get, id: 'search' do %>
+		<%= label_tag :search, "Search Games" %>
+		<%= text_field_tag :search, '', placeholder: 'Enter search here...', id: 'title_search', data: {autocomplete: search_games_path} %>
+		<div class="form_submit"><%= submit_tag '' %></div>
+	<% end %>
+	<hr class="divider"/>
 	<%= render partial: 'slideshow' %>
 	<hr class="divider"/>
 	<div class="games_container">
@@ -35,4 +41,5 @@
 </div>
 <% content_for :head do %>
 	<%= javascript_include_tag 'jquery.tinycarousel' %>
+	<%= javascript_include_tag params[:controller] %>
 <% end %>

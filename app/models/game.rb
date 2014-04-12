@@ -1,4 +1,5 @@
 class Game < ActiveRecord::Base
+  include Rails.application.routes.url_helpers
   attr_accessible :title, :description, :controls, :play_count, :flash_file, :image, :developer_id, :height, :width, :category_ids, :featured
   mount_uploader :flash_file, GameUploader
   dragonfly_accessor :image
@@ -15,6 +16,13 @@ class Game < ActiveRecord::Base
 
   def to_param
   	"#{id} #{title}".parameterize
+  end
+
+  def to_autocomplete_hash
+    {
+      value: game_path(self),
+      label: self.title
+    }
   end
 
   def flash_file_name

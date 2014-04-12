@@ -21,6 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails', '3.1.0'
+gem 'jquery-ui-rails'
 gem 'dragonfly', "~>1.0.3"
 gem 'dragonfly-s3_data_store', '1.0.3'
 gem 'carrierwave_direct', '0.0.13'

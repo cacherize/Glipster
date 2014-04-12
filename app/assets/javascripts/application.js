@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require jquery.placeholder
 //= require jquery.dotdotdot.min
 $(document).ready(function(){
@@ -28,6 +29,7 @@ $(document).ready(function(){
 	});
 	$(".game_link").dotdotdot({});
 	$(".vertical_game_link p").dotdotdot({});
+	$(".search_result_description").dotdotdot({});
 });
 
 var delay = (function(){
