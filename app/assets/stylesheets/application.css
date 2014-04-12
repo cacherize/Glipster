@@ -71,12 +71,13 @@ img {outline:0; border:0;}
 	color:#fff;
 	text-decoration:none;
 	font-weight:bold;
-	font-size:0.85em;
+	font-size:0.75em;
 	-moz-text-shadow:0 -1px 0 #222;
 	-webkit-text-shadow:0 -1px 0 #111;
 	text-shadow:0 -1px 0 #111;
 	border-right:1px solid #333;
 	border-left:1px solid #333;
+	text-transform:uppercase;
 }
 #sessions_links {float:right; width:auto;}
 #sessions_links a {
@@ -88,7 +89,7 @@ img {outline:0; border:0;}
 	text-decoration:none;
 	text-overflow:ellipsis;
 	font-weight:bold;
-	font-size:0.85em;
+	font-size:0.75em;
 	border-right:1px solid #333;
 	border-left:1px solid #333;
 	max-width:130px;
@@ -97,6 +98,7 @@ img {outline:0; border:0;}
 	-moz-text-shadow:0 -1px 0 #111;
 	-webkit-text-shadow:0 -1px 0 #111;
 	text-shadow:0 -1px 0 #111;
+	text-transform:uppercase;
 }
 #sessions_links a img {vertical-align: middle; margin-right:5px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
 #menu li a.current, #menu li a:hover, #sessions_links a.current, #sessions_links a:hover {
@@ -151,11 +153,12 @@ img {outline:0; border:0;}
 	border:0;
 	padding:3px 10px;
 	display:block;
-	font-size:0.65em;
+	font-size:0.6em;
 	border-top:1px solid #444;
 	border-bottom:1px solid #222;
 	position:relative;
 	color:#fff;
+	text-transform: uppercase;
 }
 #menu li .submenu li a img {position:absolute; right:0; top:0; background:#111; border-left:1px solid #444; padding: 5px;}
 #menu li .submenu li a:hover img, #menu li .submenu li a.current img {background:none; border-left:0;}
