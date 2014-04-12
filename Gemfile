@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-
 gem 'rails', '3.2.14'
 
 # Bundle edge Rails instead:
@@ -19,6 +18,8 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
+
+gem 'sass', '3.2.13'
 
 gem 'jquery-rails', '3.1.0'
 gem 'jquery-ui-rails'
