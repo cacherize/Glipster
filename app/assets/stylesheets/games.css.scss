@@ -249,7 +249,14 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box; 
-	h3 {margin-top:0; border-bottom:1px solid #ccc; text-align:left; color:#8ab327; font-family:'Petita', sans-serif;}
+	h3 {
+		margin-top:0;
+		border-bottom:1px solid #ccc;
+		text-align:left;
+		color:#8ab327;
+		font-family:'Petita', sans-serif;
+		text-shadow:0 1px 0 #008000;
+	}
 	.games_list {
 		white-space: nowrap;
 		overflow-x:auto;
