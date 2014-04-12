@@ -5,7 +5,7 @@ class SearchController < ApplicationController
 
 	def games
 		@games = Game.search(params[:term])
-		@games = @games.map{|game| game.to_hash }
+		@games = @games.map{|game| game.to_autocomplete_hash }
 
 		render json: @games
 	end

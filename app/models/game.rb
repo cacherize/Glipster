@@ -18,7 +18,7 @@ class Game < ActiveRecord::Base
   	"#{id} #{title}".parameterize
   end
 
-  def to_hash
+  def to_autocomplete_hash
     {
       value: game_path(self),
       label: self.title
