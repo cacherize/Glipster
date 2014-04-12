@@ -44,3 +44,23 @@
 		}
 	}
 }
+.ui-autocomplete {
+	font-size:0.9em;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;
+	border:1px solid #ccc;
+	padding:5px;
+	-moz-box-shadow:0 0 3px #ccc;
+	-webkit-box-shadow:0 0 3px #ccc;
+	box-shadow:0 0 3px #ccc;
+	margin-bottom:1px;
+	.ui-state-focus {
+		border:1px solid #ccc;
+		-moz-border-radius:0;
+		-webkit-border-radius:0;
+		border-radius:0;
+		background:#ededed;
+		cursor:pointer;
+	}
+}

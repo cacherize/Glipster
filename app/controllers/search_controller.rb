@@ -4,7 +4,9 @@ class SearchController < ApplicationController
 	end
 
 	def games
-		@games = Game.search(params[:term]).map(&:title)
+		@games = Game.search(params[:term])
+		@games = @games.map{|game| game.to_hash }
+
 		render json: @games
 	end
 end
