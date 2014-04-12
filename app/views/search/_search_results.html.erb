@@ -17,5 +17,5 @@
 	<% end %>
 	<%= will_paginate @games %><%= tag("br", class: 'clear') %>
 <% else %>
-	No title contains "<%= params[:search] %>"
+	<p id="no_results_placeholder">No title contains "<%= params[:search] %>"</p>
 <% end %>
