@@ -1,9 +1,8 @@
-<div class="center constraint">
-	<h1 class="category_title"><%= @category.name %></h1><br/>
+<div class="center constraint category_constraint">
+	<h1 class="category_title"><%= @category.name %></h1>
 	<% if current_user && current_user.admin? %>
-		<%= link_to "Set Featured Games", featured_category_game_path(@category), id: 'ft_game_link' %><br/>
+		<%= link_to "Set Featured Games", featured_category_game_path(@category), id: 'ft_game_link' %>
 	<% end %>
-	<br class="clear"/>
 	<div class="games_container yellow_bg">
 		<h3>Featured Games</h3>
 		<% if @featured_games.present? %>
@@ -27,5 +26,11 @@
 				<%= render partial: 'welcome/game_list', locals: {games: @random_game} %>
 			<% end %>
 		</div>
+	</div>
+	<div class="games_container">
+		<h3>All Games</h3>
+		<% if @games.present? %>
+			<%= render partial: 'welcome/game_list', locals: {games: @games} %>
+		<% end %>
 	</div>
 </div>
