@@ -14,14 +14,18 @@
 		<div style="padding-right:20px;">
 			<div class="games_container">
 				<h3>New Games</h3>
-				<%= render partial: 'welcome/game_list', locals: {games: @new_games} %>
+				<% if @new_games.present? %>
+					<%= render partial: 'welcome/game_list', locals: {games: @new_games} %>
+				<% end %>
 			</div>
 		</div>
 	</div><!--
 	--><div class="inline-block" style="width:30%;">
 		<div class="games_container">
 			<h3>Random Game</h3>
-			<%= render partial: 'welcome/game_list', locals: {games: @random_game} %>
+			<% if @random_game.first %><!-- must use 'first' because of 'sample'-->
+				<%= render partial: 'welcome/game_list', locals: {games: @random_game} %>
+			<% end %>
 		</div>
 	</div>
 </div>
