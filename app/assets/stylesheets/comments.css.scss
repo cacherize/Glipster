@@ -84,14 +84,16 @@ hr#comment_divider {
 				border-top-right-radius:3px;
 				border-top-left-radius:3px;
 				padding:3px;
-				max-height:30px;
-				max-width:30px;
+				height:30px;
+				width:30px;
 				box-shadow:3px 0 3px -3px #ccc, -3px 0 3px -3px #ccc, 0 -3px 3px -3px #ccc;
+				text-align:center;
+				line-height:30px;
 				img {
 					-moz-border-radius:3px;
 					-webkit-border-radius:3px;
 					border-radius:3px;
-					vertical-align:middle;
+					vertical-align: middle;
 				}
 			}
 			span {
