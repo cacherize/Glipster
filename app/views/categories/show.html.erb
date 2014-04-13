@@ -10,7 +10,8 @@
 			<%= render partial: 'welcome/game_list', locals: {games: @featured_games} %>
 		<% end %>
 	</div>
-	<% @games.each do |game| %>
-	<%= game.title %>
-	<% end %>
+	<div class="games_container">
+		<h3>New Games</h3>
+		<%= render partial: 'welcome/game_list', locals: {games: @new_games} %>
+	</div>
 </div>

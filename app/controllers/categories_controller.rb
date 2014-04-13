@@ -8,6 +8,7 @@ class CategoriesController < ApplicationController
 
 		@games = @category.games
 		@featured_games = Game.find(@category.featured_category_games_ids)
+		@new_games = @games.last(15)
 	end
 
 	def new
