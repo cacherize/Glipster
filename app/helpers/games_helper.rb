@@ -13,4 +13,12 @@ module GamesHelper
 			"voted" if (reps.present? && (val == reps.first.value))
 		end
 	end
+
+	def special_status_image(game)
+		if game.featured
+			image_tag("star.png", class: 'featured_icon')
+		elsif game.featured_category_games.present?
+			image_tag("blue_star.png", class: 'featured_icon')
+		end
+	end
 end
