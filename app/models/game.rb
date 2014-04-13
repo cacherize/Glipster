@@ -1,6 +1,6 @@
 class Game < ActiveRecord::Base
   include Rails.application.routes.url_helpers
-  attr_accessible :title, :description, :controls, :play_count, :flash_file, :image, :developer_id, :height, :width, :category_ids, :featured
+  attr_accessible :title, :description, :controls, :flash_file, :image, :developer_id, :height, :width, :category_ids, :featured
   mount_uploader :flash_file, GameUploader
   dragonfly_accessor :image
 
