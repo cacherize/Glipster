@@ -6,10 +6,12 @@ class CategoriesController < ApplicationController
 	def show
 		@category = Category.find(params[:id])
 
-		@games = @category.games
+		games = @category.games
 		@featured_games = Game.find(@category.featured_category_games_ids)
-		@new_games = @games.last(15)
-		@random_game = [@games.sample]
+		@new_games = games.last(15)
+		@random_game = [games.sample]
+
+		@categories_games = games.paginate(per_page: 15, page: params[:page])
 	end
 
 	def new
