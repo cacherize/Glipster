@@ -12,29 +12,31 @@
 
 <div id="wrapper">
 	<div id="header">
-		<div id="logo_container">
-			<div id="logo_rounded_corner_left"></div><div id="logo_wrapper"><%= link_to image_tag('logo.png'), root_path %></div><div id="logo_rounded_corner_right"></div>
-		</div>
-		<ul id="menu">
-			<li><%= link_to "Featured", root_path, class: cp(root_path) %></li>
-	    <li><%= link_to "Most Played", class: cp(users_path) %></li>
-	    <li><%= link_to "Highest Rated", class: cp(users_path) %></li>
-	    <li class="submenu_container">
-	    	<%= link_to "Categories <span class='sub_arrow'>&#x25bc;</span>".html_safe, categories_path, class: cp(categories_path) %>
-	    	<ul class="submenu">
-	    		<li><a id="top"></a></li>
-	    		<% Category.all.each do |cat| %>
-	    			<li><%= link_to "#{cat.name} #{category_image(cat)}".html_safe, cat, class: cp(category_path(cat)) %></li>
-	    		<% end %>
-	    	</ul>
-	    </li>
-		</ul>
-		<div id="sessions_links">
-			<% if current_user.present? %>
-				<%= link_to avatar_thumb(current_user) + " #{current_user.username}", user_path(current_user), class: cp(current_user) %> <%= link_to "Logout", logout_path, method: :delete %>
-			<% else %>
-				<%= link_to "Login", login_path, class: cp(login_path) %>
-			<% end %>
+		<div id="linkbar">
+			<div id="logo_container">
+				<div id="logo_rounded_corner_left"></div><div id="logo_wrapper"><%= link_to image_tag('logo.png'), root_path %></div><div id="logo_rounded_corner_right"></div>
+			</div>
+			<ul id="menu">
+				<li><%= link_to "Featured", root_path, class: cp(root_path) %></li>
+		    <li><%= link_to "Most Played", class: cp(users_path) %></li>
+		    <li><%= link_to "Highest Rated", class: cp(users_path) %></li>
+		    <li class="submenu_container">
+		    	<%= link_to "Categories <span class='sub_arrow'>&#x25bc;</span>".html_safe, categories_path, class: cp(categories_path) %>
+		    	<ul class="submenu">
+		    		<li><a id="top"></a></li>
+		    		<% Category.all.each do |cat| %>
+		    			<li><%= link_to "#{cat.name} #{category_image(cat)}".html_safe, cat, class: cp(category_path(cat)) %></li>
+		    		<% end %>
+		    	</ul>
+		    </li>
+			</ul>
+			<div id="sessions_links">
+				<% if current_user.present? %>
+					<%= link_to avatar_thumb(current_user) + " #{current_user.username}", user_path(current_user), class: cp(current_user) %> <%= link_to "Logout", logout_path, method: :delete %>
+				<% else %>
+					<%= link_to "Login", login_path, class: cp(login_path) %>
+				<% end %>
+			</div>
 		</div>
 	</div>
 	<div id="body">
