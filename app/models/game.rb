@@ -19,10 +19,7 @@ class Game < ActiveRecord::Base
   end
 
   def to_autocomplete_hash
-    {
-      value: game_path(self),
-      label: self.title
-    }
+    {value: game_path(self), label: self.title}
   end
 
   def flash_file_name
