@@ -2,7 +2,7 @@
 	<%= form_tag sessions_path, class: "form" do %>
 		<h2 class="form_header" style="margin-left:-75%;">Sign In</h2>
 		<div class="form_field">
-			<%= label_tag :username, "Username:" %><br/><%= text_field_tag :username %>
+			<%= label_tag :login, "Username/Email:" %><br/><%= text_field_tag :login %>
 		</div>
 		<div class="form_field">
 			<%= label_tag :password, "Password:" %><br/><%= password_field_tag :password %>
