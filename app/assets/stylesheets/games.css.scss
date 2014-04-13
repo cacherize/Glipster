@@ -45,6 +45,9 @@
 			margin:0;
 			border-bottom:1px solid #ccc;
 			position:relative;
+			color:#A2D42F;
+			text-shadow:0 1px 0 #008000;
+			font-family:'Petita', sans-serif;
 			span {
 				position:absolute;
 				bottom:4px;
@@ -52,6 +55,7 @@
 				font-weight:normal;
 				font-size:0.4em;
 				color:#999;
+				text-shadow:none;
 				a{
 					color:#999;
 					text-decoration: none;
@@ -99,9 +103,13 @@
 		display:block;
 		color:#A2D42F;
 		font-weight:bold;
+		text-shadow:0 1px 0 #008000;
+		font-family:'Petita', sans-serif;
 		span {
+			font-family:sans-serif;
 			font-weight:normal;
 			font-size:0.9em;
+			text-shadow:none;
 			color:#444;
 			background:#FFFBC2;
 			padding:2px 4px;
@@ -209,28 +217,18 @@
 			border-radius:12px;
 			font-size:0.8em;
 			text-align:left;
-			h3 {border-bottom:#ccc solid 1px; margin:0 0 5px 0; font-size:1.1em; color:#A2D42F;}
+			h3 {
+				border-bottom:#ccc solid 1px;
+				margin:0 0 5px 0;
+				font-size:1.1em;
+				color:#A2D42F;
+				text-shadow:0 1px 0 #008000;
+				font-family:'Petita', sans-serif;
+			}
 		}
 		#game_description {
 			margin-right:15px;
 		}
-	}
-}
-#comments_wrapper {
-	display:block;
-	background:#fff;
-	border:1px solid #ccc;
-	-moz-box-shadow:0 0 8px #ccc;
-	-webkit-box-shadow:0 0 8px #ccc;
-	box-shadow:0 0 8px #ccc;
-	-moz-border-radius:12px;
-	-webkit-border-radius:12px;
-	border-radius:12px;
-	font-size:0.8em;
-	text-align:left;
-	margin:15px auto;
-	#comments {
-		margin:20px;
 	}
 }
 .games_container {
