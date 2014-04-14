@@ -19,8 +19,12 @@ class ApplicationController < ActionController::Base
   	@current_user ||= User.find_by_auth_token!(cookies[:auth_token]) if cookies[:auth_token]
   end
 
-  def authorize
+  def authenticate
 		redirect_to login_path, alert: 'Please log in to complete that action' unless current_user.present?  
+  end
+
+  def authorize
+    raise 'Not authorized' unless current_user && current_user.admin?
   end
 
   helper_method :current_user

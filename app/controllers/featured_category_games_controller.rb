@@ -1,4 +1,5 @@
 class FeaturedCategoryGamesController < ApplicationController
+	before_filter :authorize
 	def index
 		featured_games = FeaturedCategoryGame.all
 		@games = featured_games.group_by{|game| game.category.name }.sort
