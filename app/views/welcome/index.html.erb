@@ -33,7 +33,7 @@
 	--><div class="inline-block" style="width:30%; vertical-align:top;">
 		<div class="games_container">
 			<h3>Random Game</h3>
-			<% if @random_game.present? %>
+			<% if @random_game.first %>
 				<%= render partial: 'game_list', locals: {games: @random_game} %>
 			<% end %>
 		</div>
