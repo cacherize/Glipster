@@ -24,8 +24,22 @@ img {outline:0; border:0;}
 }
 #header {width:100%; height:75px;}
 #linkbar { width:100%; height:50px; background:#333; overflow:visible;}
-#logo_container {width:240px; margin-left:10px; display:inline-block;}
-#logo_wrapper{width:215px; display:inline-block;}
+#logo_container {width:229px; margin-left:10px; display:inline-block;}
+#logo_wrapper{width:215px; display:inline-block; height:75px;}
+#logo_wrapper a{
+	display:block;
+	height:100%;
+	width:100%;
+	line-height:75px;
+	text-align:center;
+	font-size:2.8em;
+	border-radius:10px;
+	background:#333;
+	color:#fff;
+	font-family:'Petita', sans-serif;
+	letter-spacing:2px;
+	text-shadow:0 -1px 0 #111, 0 0 2px #888;
+}
 #logo_rounded_corner_left, #logo_rounded_corner_right {
 	width:7px;
 	height:7px;
@@ -73,12 +87,10 @@ img {outline:0; border:0;}
 	text-decoration:none;
 	font-weight:bold;
 	font-size:0.75em;
-	-moz-text-shadow:0 -1px 0 #222;
-	-webkit-text-shadow:0 -1px 0 #111;
-	text-shadow:0 -1px 0 #111;
 	border-right:1px solid #333;
 	border-left:1px solid #333;
 	text-transform:uppercase;
+	text-shadow:0 -1px 0 #111, 0 0 2px #888;
 }
 #sessions_links {float:right; width:auto;}
 #sessions_links a {
@@ -96,10 +108,8 @@ img {outline:0; border:0;}
 	max-width:130px;
 	overflow:hidden;
 	white-space: nowrap;
-	-moz-text-shadow:0 -1px 0 #111;
-	-webkit-text-shadow:0 -1px 0 #111;
-	text-shadow:0 -1px 0 #111;
 	text-transform:uppercase;
+	text-shadow:0 -1px 0 #111, 0 0 2px #888;
 }
 #sessions_links a img {vertical-align: middle; margin-right:5px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
 #menu li a.current, #menu li a:hover, #sessions_links a.current, #sessions_links a:hover {
@@ -110,6 +120,7 @@ img {outline:0; border:0;}
 	box-shadow:0 0 15px #000 inset;
 	border-left:1px solid #444;
 	border-right:1px solid #444;
+	text-shadow:none;
 }
 #menu li.submenu_container {
 	position:relative;
