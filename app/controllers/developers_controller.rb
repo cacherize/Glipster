@@ -1,4 +1,5 @@
 class DevelopersController < ApplicationController
+	before_filter :authorize, only: [:new, :create, :edit, :update, :destroy]
 	def new
 		@developer = Developer.new
 	end
