@@ -167,6 +167,8 @@ img {outline:0; border:0;}
 #menu li .submenu li a img {position:absolute; right:0; top:0; background:#111; border-left:1px solid #444; padding: 5px;}
 #menu li .submenu li a:hover img, #menu li .submenu li a.current img {background:none; border-left:0;}
 #menu li .submenu li a#top {padding:0; border-top:0}
+::-moz-selection { color: #fff; text-shadow:none; background: #7cc6ff; }
+::selection      { color: #fff; text-shadow:none; background: #7cc6ff; } 
 .constraint {width:80%; margin:0 auto; max-width:1230px;}
 .sub_arrow {font-size:0.5em; vertical-align:top;}
 .center {text-align:center;}
