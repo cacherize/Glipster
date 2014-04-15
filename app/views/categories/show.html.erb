@@ -30,11 +30,7 @@
 	<div class="games_container">
 		<h3>All <%= @category.name %> Games</h3>
 		<% if @categories_games.present? %>
-      <% if @group_games %>
-        <%= render "category_games" %>
-      <% else %>
-        <%= render partial: 'welcome/game_list', locals: {games: @categories_games} %>
-      <% end %>
+      <%= render "category_games" %>
 		<% end %>
 	</div>
 </div>

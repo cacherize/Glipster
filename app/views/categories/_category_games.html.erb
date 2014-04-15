@@ -1,23 +1,38 @@
 <div class="games_list">
-  <table class="games_list_table">
-    <tbody>
-      <% @categories_games.each do |row| %>
-      <tr>
-        <% row.each do |game| %>
-          <td>
-            <div class="game_wrapper">
-              <span>
-                <div class="game_img">
-                  <%= link_to game_thumb(game), game %>
-                  <%= special_status_image(game) %>
-                </div>
-                <%= link_to game.title, game, class: 'game_link', title: game.title %>
-              </span>
-            </div>
-          </td>
+  <% if @group_games %>
+    <table class="games_list_table">
+      <tbody>
+        <% @categories_games.each do |row| %>
+        <tr>
+          <% row.each do |game| %>
+            <td>
+              <div class="game_wrapper">
+                <span>
+                  <div class="game_img">
+                    <%= link_to game_thumb(game), game %>
+                    <%= special_status_image(game) %>
+                  </div>
+                  <%= link_to game.title, game, class: 'game_link', title: game.title %>
+                </span>
+              </div>
+            </td>
+          <% end %>
+        </tr>
         <% end %>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  </div>
+  <% else %>
+    <% @categories_games.each do |game| %>
+      <div class="game_wrapper">
+        <span>
+          <div class="game_img">
+            <%= link_to game_thumb(game), game %>
+            <%= special_status_image(game) %>
+          </div>
+          <%= link_to game.title, game, class: 'game_link', title: game.title %>
+        </span>
+      </div>
+    <% end %>
+  <% end %>
 </div>
