@@ -13,6 +13,8 @@ class CategoriesController < ApplicationController
 		@random_game = [games.sample]
 
 		@categories_games = games.paginate(per_page: 15, page: params[:page])
+    @group_games = @categories_games.size > 9
+    @categories_games = @categories_games.in_groups(2, false) if @group_games
 	end
 
 	def new

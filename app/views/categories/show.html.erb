@@ -28,9 +28,13 @@
 		</div>
 	</div>
 	<div class="games_container">
-		<h3>All Games</h3>
+		<h3>All <%= @category.name %> Games</h3>
 		<% if @categories_games.present? %>
-			<%= render partial: 'welcome/game_list', locals: {games: @categories_games} %>
+      <% if @group_games %>
+        <%= render "category_games" %>
+      <% else %>
+        <%= render partial: 'welcome/game_list', locals: {games: @categories_games} %>
+      <% end %>
 		<% end %>
 	</div>
 </div>
