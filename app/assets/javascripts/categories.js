@@ -10,3 +10,4 @@ $("#search").on("click", '.pagination a', function() {
   $.getScript(this.href);
   return false;
 });
+$("#search").placeholder();
