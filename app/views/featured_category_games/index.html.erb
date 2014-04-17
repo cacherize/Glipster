@@ -1,11 +1,30 @@
-<% @games.each do |game| %>
-	<div class="game_wrapper">
-		<span>
-			<div class="game_img">
-				<%= link_to game_thumb(game), game %>
-				<%= image_tag("star.png", class: 'featured_icon') if game.featured %>
-			</div>
-			<%= link_to game.title, game, class: 'game_link', title: game.title %>
-		</span>
-	</div>
-<% end %>
+<div class="center constraint">
+  <h2 class="featured_category_title">
+    Featured  Games
+    <%= link_to "collapse &uarr;".html_safe, '', id: 'toggle' %>
+  </h2>
+  <% if @games_by_category.present? %>
+    <div id="featured_games_list">
+      <% @games_by_category.each do |category, games| %>
+        <h2 class="featured_category_name"><%= link_to category.name, featured_category_game_path(category) %></h2>
+        <hr class="divider"/>
+        <% games.each do |ft| %>
+        	<div class="game_wrapper">
+              <span>
+                <div class="game_img">
+                  <%= link_to game_thumb(ft.game), ft.game %>
+                  <%= image_tag("star.png", class: 'featured_icon') if ft.game.featured %>
+                </div>
+                <%= link_to ft.game, class: 'vertical_game_link', title: ft.game.title do %>
+                  <h4><%= ft.game.title %></h4>
+                  <p><%= ft.game.description.present? ? ft.game.description : "<i>No Description</i>".html_safe %></p>
+                <% end %>
+              </span>
+              <%= link_to(image_tag("delete.png"), featured_category_game_url(ft), method: :delete, class: 'action') %>
+            </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<%= javascript_include_tag params[:controller] %>

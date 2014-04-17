@@ -61,3 +61,22 @@
 	margin:10px auto;
 	.pagination {float:none;}
 }
+.featured_category_name {
+  margin:0 auto;
+  position:relative;
+  width:540px;
+  a {color:#444;}
+  a:hover {
+    color:#777;
+    &:after {
+      content:"Go →";
+      position:absolute;
+      right:0;
+      top:8px;
+      font-size:0.6em;
+    }
+  }
+}
+#featured_games_list {
+  .divider {margin:5px 0;}
+}

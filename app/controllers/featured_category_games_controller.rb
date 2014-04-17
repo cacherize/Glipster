@@ -2,7 +2,7 @@ class FeaturedCategoryGamesController < ApplicationController
 	before_filter :authorize
 	def index
 		featured_games = FeaturedCategoryGame.all
-		@games = featured_games.group_by{|game| game.category.name }.sort
+		@games_by_category = featured_games.group_by(&:category)
 	end
 
 	def show
@@ -26,7 +26,7 @@ class FeaturedCategoryGamesController < ApplicationController
 		@featured_game = FeaturedCategoryGame.find(params[:id])
 		@featured_game.destroy
 		respond_to do |format|
-			format.html{redirect_to featured_category_game_path(@featured_game.category), notice: 'Successfully deleted!'}
+			format.html{redirect_to request.referer, notice: 'Successfully deleted!'}
 		end
 	end
 end
