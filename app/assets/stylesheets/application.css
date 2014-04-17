@@ -70,6 +70,7 @@ img {outline:0; border:0;}
 	line-height:50px;
 	display:inline-block;
 	color:#fff;
+  position:relative;
 }
 #menu li a {
 	display:block;
@@ -83,6 +84,29 @@ img {outline:0; border:0;}
 	border-left:1px solid #333;
 	text-transform:uppercase;
 	text-shadow:0 -1px 0 #111, 0 0 2px #888;
+}
+#menu li span.coming_soon {
+  background:#8B0000;
+  position:absolute;
+  top:0;
+  right:15px;
+  height:7px;
+  font-size:0.5em;
+  line-height:7px;
+  padding:4px;
+  font-weight:bold;
+  display:inline-block;
+  text-shadow: 0 -1px 0 #111;
+  -moz-border-radius-bottomright:3px;
+  -moz-border-radius-bottomleft:3px;
+  -webkit-border-bottom-right-radius:3px;
+  -webkit-border-bottom-left-radius:3px;
+  border-bottom-right-radius:3px;
+  border-bottom-left-radius:3px;
+  -moz-box-shadow:0 0 2px #111;
+  -webkit-box-shadow:0 0 2px #111;
+  box-shadow:0 0 2px #111;
+  letter-spacing:0.5px;
 }
 #sessions_links {float:right; width:auto;}
 #sessions_links a {
