@@ -172,32 +172,32 @@
 				-webkit-text-shadow:0 -1px 0 #999;
 				text-shadow:0 -1px 0 #999;
 			}
-		}	
-		a.up_link, a.down_link {
-			padding:1px;
-			vertical-align: top;
-			height:16px;
-			width:16px;
-			border:1px solid #DB4E10;
-			display:inline-block;
-			-moz-border-radius:3px;
-			-webkit-border-radius:3px;
-			border-radius:3px;
-			background:#DB4E10;
-			&:hover {background:#FCB3AA;}
-			img {
-				width:16px;
-				height:16px;
-			}
-		}
-		a.up_link {
-			border-color:#A2D42F;
-			background:#A2D42F;
-			&:hover {background:#ddf99a;}
-		}
-		a.voted, a.voted:hover {background: #fffbc2; border-color:#fff000; cursor:default;}
+		}		
 	}
 }
+.up_link, .down_link {
+  padding:1px;
+  vertical-align: top;
+  height:16px;
+  width:16px;
+  border:1px solid #DB4E10;
+  display:inline-block;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  background:#DB4E10;
+  &:hover {background:#FCB3AA;}
+  img {
+    width:16px;
+    height:16px;
+  }
+}
+.up_link {
+  border-color:#A2D42F;
+  background:#A2D42F;
+  &:hover {background:#ddf99a;}
+}
+.voted, .voted:hover {background: #fffbc2; border-color:#fff000; cursor:default;}
 #game_details {
 	margin:0 auto;
 	span {
