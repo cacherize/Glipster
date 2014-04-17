@@ -30,11 +30,16 @@
 	<div class="games_container">
 		<h3>All <%= @category.name %> Games</h3>
     <%= form_tag category_path(@category), id: 'category_search' do %>
-      <%= text_field_tag :search %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search #{@category.name} Games..." %>
       <%= submit_tag "" %>
     <% end %>
-		<% if @categories_games.present? %>
-      <%= render "category_games" %>
-		<% end %>
+
+    <div id="category_game_search_results">
+  		<% if @categories_games.present? %>
+        <%= render "category_games" %>
+  		<% end %>
+    </div>
 	</div>
 </div>
+<%= javascript_include_tag params[:controller] %>
+<br class="clear">
