@@ -1,4 +1,8 @@
 <div class="center">
+  <div id="sign_up_message">
+    <p>Don't have an account? Sign up <%= link_to 'here', signup_path %>.</p>
+    <%= link_to "Sign Up", signup_path, id: 'signup_link' %><br class="clear"/>
+  </div>
 	<%= form_tag sessions_path, class: "form" do %>
 		<h2 class="form_header" style="margin-left:-75%;">Sign In</h2>
 		<div class="form_field">
