@@ -13,6 +13,7 @@ Glipster::Application.routes.draw do
     end
   end
   resources :categories
+  match 'games/highest_rated', to: 'games#highest_rated', via: :get
   resources :games do
     member do
       post 'vote'

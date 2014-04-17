@@ -2,22 +2,6 @@ class GamesController < ApplicationController
   before_filter :authenticate, only: :vote
   before_filter :authorize, only: [:new, :create, :edit, :update, :upload]
   skip_filter :store_location, only: [:load_reputation, :load_comments, :vote]
-	def new
-		redirect_to games_upload_url if params[:key].nil?
-		@game = Game.new(key: params[:key])
-	end
-
-	def create
-		@game = Game.new(params[:game])
-
-		respond_to do |format|
-			if @game.save
-				format.html{redirect_to @game}
-			else
-				format.html{render :new}
-			end
-		end
-	end
 
 	def show
 		@game = Game.find(params[:id])
@@ -67,6 +51,26 @@ class GamesController < ApplicationController
     @rep_percents = @game.generate_reputation_percentages(reps) if reps.present?
     respond_to do |format|
     	format.js
+    end
+  end
+
+  def highest_rated
+  end
+
+  def new
+    redirect_to games_upload_url if params[:key].nil?
+    @game = Game.new(key: params[:key])
+  end
+
+  def create
+    @game = Game.new(params[:game])
+
+    respond_to do |format|
+      if @game.save
+        format.html{redirect_to @game}
+      else
+        format.html{render :new}
+      end
     end
   end
 
