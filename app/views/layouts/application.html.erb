@@ -5,6 +5,12 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= yield :head %>
+  <!--[if IE 9]>
+    <%= stylesheet_link_tag 'browsers/ie9.css.scss' %>
+  <![endif]-->
+  <!--[if IE 8]>
+    <%= stylesheet_link_tag 'browsers/ie8.css.scss' %>
+  <![endif]-->
   <!--[if lt IE 9]>
     <%= javascript_include_tag 'corners.min' %>
   <![endif]-->
