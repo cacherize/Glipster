@@ -337,7 +337,12 @@
   h1 {margin:10px 0; font-size:3em;}
   p {font-size:1.5em; line-height:40px;}
   .divider {width:1000px;}
-  .up_link, .down_link {vertical-align:middle; line-height:20px;}
+  .up_link, .down_link {
+    vertical-align:middle;
+    line-height:20px;
+  }
+  .down_link:hover {background:#DB4E10;}
+  .up_link:hover {background:#A2D42F;}
   .construction {
     margin:20px 0;
     -moz-border-radius:5px;
