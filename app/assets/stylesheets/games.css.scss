@@ -331,11 +331,12 @@
 	}
 }
 #under_development {
-  font-size:3em;
   text-shadow:0 1px 3px #999;
-  line-height:40px;
   margin:30px auto;
-  span {font-size:0.5em;}
+  width:1000px;
+  h1 {margin:10px 0; font-size:3em;}
+  p {font-size:1.5em; line-height:40px;}
+  .divider {width:1000px;}
   .up_link, .down_link {vertical-align:middle; line-height:20px;}
   .construction {
     margin:20px 0;
