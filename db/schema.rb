@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140419015249) do
+ActiveRecord::Schema.define(:version => 20140419021628) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -62,9 +62,9 @@ ActiveRecord::Schema.define(:version => 20140419015249) do
     t.integer  "height"
     t.integer  "plays",         :default => 0
     t.boolean  "featured",      :default => false
-    t.integer  "weekly_plays"
-    t.integer  "monthly_plays"
-    t.integer  "daily_plays"
+    t.integer  "weekly_plays",  :default => 0
+    t.integer  "monthly_plays", :default => 0
+    t.integer  "daily_plays",   :default => 0
   end
 
   create_table "reputations", :force => true do |t|
