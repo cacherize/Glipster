@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140419013144) do
+ActiveRecord::Schema.define(:version => 20140419015249) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20140419013144) do
     t.boolean  "featured",      :default => false
     t.integer  "weekly_plays"
     t.integer  "monthly_plays"
+    t.integer  "daily_plays"
   end
 
   create_table "reputations", :force => true do |t|
