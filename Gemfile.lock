@@ -48,6 +48,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    delayed_job (4.0.1)
+      activesupport (>= 3.0, < 4.2)
+    delayed_job_active_record (4.0.1)
+      activerecord (>= 3.0, < 4.2)
+      delayed_job (>= 3.0, < 4.1)
     dragonfly (1.0.4)
       multi_json (~> 1.0)
       rack
@@ -166,6 +171,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   carrierwave_direct (= 0.0.13)
   coffee-rails (~> 3.2.1)
+  delayed_job_active_record (~> 4.0.1)
   dragonfly (~> 1.0.3)
   dragonfly-s3_data_store (= 1.0.3)
   jquery-rails (= 3.1.0)
