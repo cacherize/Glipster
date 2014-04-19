@@ -10,11 +10,11 @@ class GamesController < ApplicationController
     	unless viewed_games.include?(@game.id)
       	viewed_games = viewed_games << @game.id
         cookies[:viewed_games] = {value: JSON.generate(viewed_games)}
-        @game.increment!(:plays)
+        @game.increment_plays!([:all])
 	    end
     else
 	    cookies[:viewed_games] = {value: JSON.generate([@game.id])}
-	    @game.increment!(:plays)
+	    @game.increment_plays!([:all])
     end
 		@developer = @game.developer
 		@categories = @game.categories

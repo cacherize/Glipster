@@ -55,4 +55,14 @@ class Game < ActiveRecord::Base
       scoped
     end    
   end
+
+  def increment_plays!(columns)
+    if columns.include?(:all)
+      columns = [:plays, :daily_plays, :weekly_plays, :monthly_plays]
+    end
+    columns.each do |col|
+      self[col]= self[col] + 1
+    end
+    self.save!
+  end
 end
