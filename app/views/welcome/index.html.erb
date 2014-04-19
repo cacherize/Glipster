@@ -10,9 +10,9 @@
 		<%= text_field_tag :search, '', placeholder: 'Enter search here...', id: 'title_search', data: {autocomplete: search_games_path} %>
 		<div class="form_submit"><%= submit_tag '' %></div>
 	<% end %>
-	<hr class="divider"/>
+	<hr class="divider no_mar_bottom-"/>
 	<%= render partial: 'slideshow' %>
-	<hr class="divider"/>
+	<hr class="divider no_mar_top-"/>
 	<div class="games_container yellow_bg">
 		<h3>Featured Games</h3>
 		<% if @featured.present? %>
