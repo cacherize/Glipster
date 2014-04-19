@@ -113,11 +113,12 @@
 			border:1px solid #FFF000;
 		}
     #stats_toggle {
-      height:16px;
+      min-height:16px;
       min-width:16px;
       vertical-align:middle;
+      display:inline-block;
       img {vertical-align:middle;}
-      p {display:none; font-size:0.7em; color: #A2D42F; text-shadow:none;}
+      p {display:none; font-size:0.7em; color: #A2D42F; text-shadow:none; vertical-align:middle;}
       &:hover {
         background:#DDF99A;
         -webkit-border-radius:4px;
