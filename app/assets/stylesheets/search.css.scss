@@ -161,11 +161,7 @@
 			margin-top:1px;
 			margin-left:1px;
 		}
-		&:before {
-			border-right-color:#ccc;
-			border-width:8px;
-			margin-left:1px;
-		}
+		&:before {border-right-color:#ccc; border-width:8px; margin-left:1px;}
 		&:hover:after{border-right-color:#dedede;}
 	}
 }

@@ -2,10 +2,7 @@
 	width:100%;
 	.form_field {
 		width:100%;
-		label {
-			font-weight:bold;
-			font-size:1.1em;
-		}
+		label {font-weight:bold; font-size:1.1em;}
 		#comment_message {
 			width:100%;
 			resize:none;
@@ -107,11 +104,7 @@ hr#comment_divider {
 						vertical-align: middle;
 					}
 				}
-				span {
-					font-size:0.8em;
-					float:left;
-					margin-left:50px;
-				}
+				span {font-size:0.8em; float:left; margin-left:50px;}
 				.comment_details {
 					font-size:0.8em;
 					display:inline-block;
@@ -127,11 +120,7 @@ hr#comment_divider {
 					top:-8px;
 				}
 			}
-			.comment_message {
-				padding:10px;
-				display:block;
-				margin:0;
-			}
+			.comment_message {padding:10px; display:block; margin:0;}
 		}
 		.comments_header { font-family:'Petita', sans-serif; text-shadow:0 1px 0 #008000; color:#A2D42F; font-size:1.1em;}
 	}

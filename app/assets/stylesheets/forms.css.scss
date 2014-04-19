@@ -76,14 +76,8 @@
 			font-size:0.9em;
 			&:focus{background:#fff;}
 		}
-		input[type="checkbox"] {
-			padding:0;
-			width:auto;
-		}
-		h5 {
-			margin:0 0 5px 0;
-			border-bottom:#ccc 1px solid;
-		}
+		input[type="checkbox"] {padding:0; width:auto;}
+		h5 {margin:0 0 5px 0; border-bottom:#ccc 1px solid;}
 		textarea {
 			width:100%;
 			height:100px;

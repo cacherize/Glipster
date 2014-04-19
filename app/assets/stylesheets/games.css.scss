@@ -137,10 +137,7 @@
 				height:100%;
 				background-color: #A2D42F;
 			}
-			.left_bar {
-				width:50%;
-				background-color:#DB4E10;
-			}
+			.left_bar {width:50%; background-color:#DB4E10;}
 			.full_bar {
 				height:100%;
 				display:block;
@@ -181,10 +178,7 @@
   border-radius:5px;
   background:#DB4E10;
   &:hover {background:#FCB3AA;}
-  img {
-    width:16px;
-    height:16px;
-  }
+  img {width:16px; height:16px;}
 }
 .up_link {
   border-color:#A2D42F;
@@ -218,9 +212,7 @@
 				font-family:'Petita', sans-serif;
 			}
 		}
-		#game_description {
-			margin-right:15px;
-		}
+		#game_description {margin-right:15px;}
 	}
 }
 .games_container {
@@ -349,10 +341,7 @@
   .divider {width:1000px;}
   .top_hr {margin-bottom:0;}
   .bottom_hr {margin-top:0;}
-  .up_link, .down_link {
-    vertical-align:middle;
-    line-height:20px;
-  }
+  .up_link, .down_link {vertical-align:middle; line-height:20px;}
   .down_link:hover {background:#DB4E10;}
   .up_link:hover {background:#A2D42F;}
   .construction {
