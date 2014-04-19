@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140413000924) do
+ActiveRecord::Schema.define(:version => 20140419013144) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -53,15 +53,17 @@ ActiveRecord::Schema.define(:version => 20140413000924) do
     t.string   "title"
     t.text     "description"
     t.string   "controls"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
     t.string   "flash_file"
     t.string   "image_uid"
     t.integer  "developer_id"
     t.integer  "width"
     t.integer  "height"
-    t.integer  "plays",        :default => 0
-    t.boolean  "featured",     :default => false
+    t.integer  "plays",         :default => 0
+    t.boolean  "featured",      :default => false
+    t.integer  "weekly_plays"
+    t.integer  "monthly_plays"
   end
 
   create_table "reputations", :force => true do |t|
