@@ -232,9 +232,24 @@
         text-align:center;
         line-height:150px;
         font-size:4em;
-        &.today {background:#E6F4C5;}
-        &.this_week {background:#C2D98C;}
-        &.this_month {background:#A2D42F;}
+        &.today {
+          background:#E6F4C5;
+          -moz-box-shadow: 0 3px 3px #DEDEDE;
+          -webkit-box-shadow: 0 3px 3px #DEDEDE;
+          box-shadow: 0 3px 3px #DEDEDE;
+        }
+        &.this_week {
+          background:#C2D98C;
+          -moz-box-shadow: 0 3px 3px #DEDEDE;
+          -webkit-box-shadow: 0 3px 3px #DEDEDE;
+          box-shadow: 0 3px 3px #DEDEDE;
+        }
+        &.this_month {
+          background:#A2D42F;
+          -moz-box-shadow: 0 3px 3px #DEDEDE;
+          -webkit-box-shadow: 0 3px 3px #DEDEDE;
+          box-shadow: 0 3px 3px #DEDEDE;
+        }
       }
     }
   }
