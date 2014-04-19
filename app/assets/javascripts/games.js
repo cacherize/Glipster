@@ -2,6 +2,18 @@ $(document).ready(function(){
 	if ($("#game_show").length > 0) {
 		game_show();
 	}
+
+  $("#game_stats").on('click', '#stats_toggle, #hide', function(event){
+    if ($("#stats_toggle").text() == "More Info") {
+      $("#stats_toggle").html("<a id='stats_toggle'><img src='/assets/toggle_up.png'/><p>Hide Info</p></a>");
+      $("#ext_stats").slideDown();
+      $(".play_count").textFit({alignHoriz:true, maxFontSize: 55});
+    } else {
+      $("#stats_toggle").html("<a id='stats_toggle'><img src='/assets/toggle_down.png'/><p>More Info</p></a>");
+      $("#ext_stats").slideUp();
+    }
+    return false;
+  });
 });
 
 function game_show() {

@@ -1,4 +1,7 @@
-<span id="page_visits">Page Visits: <span><%= @game.plays %></span></span>
+<span id="page_visits">
+  Total Plays: <span><%= @game.plays %></span>
+  <%= link_to image_tag("toggle_down.png") + "<p>More Info</p>".html_safe, '', id: 'stats_toggle' %>
+</span>
 <span class="reputation">
 	<%= link_to image_tag('thumbs_up.png'), vote_game_path(value: '1'), method: :post, class: "up_link #{highlight_vote(@game, 1)}", remote: current_user.nil? ? false : true, title: '+1' %>
 	<div class="reputation_bar">

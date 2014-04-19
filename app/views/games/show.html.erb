@@ -25,6 +25,7 @@
 		</div>
 	</div>
 	<div id="game_stats">
+    <div id="placeholder">
 		<%= image_tag("spinner.gif", class: 'spinner') %>
 		<script>
 			$.ajax({
@@ -32,6 +33,31 @@
 			  url: "<%= load_reputation_game_path(@game) %>"
 			});
 		</script>
+    </div>
+    <div id="ext_stats">
+      <div class="wrapper">
+        <p class="plays_stat_box">
+          Today's Plays<br/>
+          <span class="play_count today">
+            <%= number_with_delimiter(@game.daily_plays, delimiter: '.') %>
+          </span>
+        </p>
+        <p class="plays_stat_box">
+          This Week's Plays<br/>
+          <span class="play_count this_week">
+            <%= number_with_delimiter(@game.weekly_plays, delimiter: ",") %>
+          </span>
+        </p>
+        <p class="plays_stat_box">
+          This Month's Plays<br/>
+          <span class="play_count this_month">
+            <%= number_with_delimiter(@game.monthly_plays, delimiter: '.') %>
+          </span>
+        </p>
+        <br class="clear"/>
+      </div>
+      <%= link_to "Hide &#8593;".html_safe, '', id: 'hide' %>
+    </div>
 	</div>
 	<div id="game_details">
 		<%= render partial: 'description' %>
@@ -41,5 +67,6 @@
  	</div>
 </div>
 <% content_for :head do %>
+  <%= javascript_include_tag 'jquery.textFit.min' %>
   <%= javascript_include_tag params[:controller] %>
 <% end %>
