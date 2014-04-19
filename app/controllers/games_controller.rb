@@ -57,6 +57,9 @@ class GamesController < ApplicationController
   def highest_rated
   end
 
+  def most_played
+  end
+
   def new
     redirect_to games_upload_url if params[:key].nil?
     @game = Game.new(key: params[:key])
