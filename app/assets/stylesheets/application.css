@@ -13,7 +13,9 @@
  *= require_directory .
  */
 body, html {height:100%; padding:0; margin:0; font-family: sans-serif, arial; color:#444;}
-a {border:0; text-decoration:none; outline:0;}
+a {border:0; text-decoration:none; outline:0; color:#8AB327;}
+a:hover {color:#a7db2c;}
+a:active {color:#5b881a;}
 img {outline:0; border:0;}
 #wrapper {
 	min-height:100%;
