@@ -65,4 +65,19 @@ class Game < ActiveRecord::Base
     end
     self.save!
   end
+
+  def self.reset_game_plays
+    yesterday = Time.now.in_time_zone('Central Time (US & Canada)').to_date.prev_day
+    last_of_month = yesterday.end_of_month
+    last_of_week = yesterday.end_of_week
+    if (yesterday == last_of_month) && (yesterday == last_of_week)
+      Game.delay.update_all([monthly_plays: 0, weekly_plays: 0, daily_plays: 0])
+    elsif yesterday == last_of_month
+      Game.delay.update_all([monthly_plays: 0, daily_plays: 0])
+    elsif yesterday == last_of_week
+      Game.delay.update_all([weekly_plays: 0, daily_plays: 0])
+    else
+      Game.delay.update_all([daily_plays: 0])
+    end
+  end
 end
