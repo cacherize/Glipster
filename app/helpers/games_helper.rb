@@ -7,6 +7,14 @@ module GamesHelper
 		end
 	end
 
+  def small_game_thumb(game)
+    if game.image.present?
+      image_tag(game.image.thumb('40x40#').url, alt: "#{game.title} image")
+    else
+      image_tag('small_default_game.png', alt: "#{game.title} image")
+    end
+  end
+
 	def highlight_vote(game, val)
 		if current_user.present?
 			reps = game.reputations.where(user_id: current_user.id)
