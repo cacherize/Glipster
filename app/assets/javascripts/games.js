@@ -3,6 +3,10 @@ $(document).ready(function(){
 		game_show();
 	}
 
+  if ($("#most_played").length > 0) {
+    most_played_games();
+  }
+
   $("#game_stats").on('click', '#stats_toggle, #hide', function(event){
     if ($("#stats_toggle").text() == "More Info") {
       $("#stats_toggle").html("<a id='stats_toggle'><img src='/assets/toggle_up.png'/><p>Hide Info</p></a>");
@@ -19,6 +23,22 @@ $(document).ready(function(){
 function game_show() {
 	var width = $("#game_show").width();
 	$("#game_stats, #game_details, #comments_wrapper").width(width);
+}
+
+function most_played_games() {
+  $(".tab").hide();
+  $(".tab").first().show();
+  $(".tab_link a").first().addClass('current')
+
+  $(".tab_link").click(function(){
+    var id = $("a", this).attr("href");
+    $(".tab_link a").removeClass("current");
+    $("a", this).addClass("current");
+    $(".tab").hide();
+    $(id).show();
+
+    return false;
+  });
 }
 
 $(function(){

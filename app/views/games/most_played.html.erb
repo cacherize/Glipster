@@ -1,26 +1,31 @@
 <div class="center constraint" style="width:70%;">
   <div id="most_played">
-    <h1>Top 25 Most Played</h1>
-    <hr class="divider"/>
-    <% if @games.present? %>
-      <% @games.each do |game| %>
-        <div class="item">
-          <%= link_to small_game_thumb(game), game, class: 'item_img' %>
-          <div class="item_content">
-            <h2><%= link_to game.title, game %>
-              <span class="item_categories">|
-                <%= game.categories.map{|cat| "#{link_to(cat.name, cat)}" }.join(", ").html_safe %>
-              </span>
-              <span class="date_stamp">
-                Added: <%= game.created_at.localtime.strftime("%b %e, %Y %l:%M %p %Z") %>
-              </span>
-            </h2>
-            <p class="item_description">
-              <%= game.description.present? ? game.description : "<i>No Description</i>".html_safe %>
-            </p>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
+    <h1><span class="title">Top 25 Most Played</span></h1>
+    <div id="tabs">
+      <ul>
+        <li class="tab_link"><%= link_to "Daily", "#Daily" %></li>
+        <li class="tab_link"><%= link_to "Weekly", "#Weekly" %></li>
+        <li class="tab_link"><%= link_to "Monthly", "#Monthly" %></li>
+        <li class="tab_link"><%= link_to "All Time", "#All" %></li>
+        <hr class="divider">
+      </ul>
+      <div class="tab" id="Daily">
+        <h2 class="tab_header">Today's Most Played</h2>
+        <%= render partial: 'most_played_games', locals: {games: @daily_games} %>
+      </div>
+      <div class="tab" id="Weekly">
+        <h2 class="tab_header">This Week's Most Played</h2>
+        <%= render partial: 'most_played_games', locals: {games: @weekly_games} %>
+      </div>
+      <div class="tab" id="Monthly">
+        <h2 class="tab_header">This Month's Most Played</h2>
+        <%= render partial: 'most_played_games', locals: {games: @monthly_games} %>
+      </div>
+      <div class="tab" id="All">
+        <h2 class="tab_header">All Time Most Played</h2>
+        <%= render partial: 'most_played_games', locals: {games: @all_top_games} %>
+      </div>
+    </div>
   </div>
 </div>
+<%= javascript_include_tag params[:controller] %>

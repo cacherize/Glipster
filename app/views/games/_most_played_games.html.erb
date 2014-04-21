@@ -1,0 +1,18 @@
+<% games.each do |game| %>
+  <div class="item">
+    <%= link_to small_game_thumb(game), game, class: 'item_img' %>
+    <div class="item_content">
+      <h2><%= link_to game.title, game %>
+        <span class="item_categories">|
+          <%= game.categories.map{|cat| "#{link_to(cat.name, cat)}" }.join(", ").html_safe %>
+        </span>
+        <span class="date_stamp">
+          Added: <%= game.created_at.localtime.strftime("%b %e, %Y %l:%M %p %Z") %>
+        </span>
+      </h2>
+      <p class="item_description">
+        <%= game.description.present? ? game.description : "<i>No Description</i>".html_safe %>
+      </p>
+    </div>
+  </div>
+<% end %>
