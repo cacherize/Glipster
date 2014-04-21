@@ -471,6 +471,8 @@
         font-size:1em;
         font-weight:normal;
         .date_stamp {float:right; font-size:0.8em;}
+        .search_result_categories, .search_result_categories a {color:#ccc;}
+        .search_result_categories a:hover {color:#888;}
       }
       p.search_result_description {
         margin:0;

@@ -5,6 +5,9 @@
 			<%= link_to game_thumb(game), game, class: 'search_result_img' %>
 			<div class="search_result_content">
 				<h2><%= link_to game.title, game %>
+          <span class="search_result_categories">|
+            <%= game.categories.map{|cat| "#{link_to(cat.name, cat)}" }.join(", ").html_safe %>
+          </span>
 					<span class="date_stamp">
 						Added: <%= game.created_at.localtime.strftime("%b %e, %Y %l:%M %p %Z") %>
 					</span>
