@@ -58,6 +58,7 @@ class GamesController < ApplicationController
   end
 
   def most_played
+    @games = Game.all
   end
 
   def new
