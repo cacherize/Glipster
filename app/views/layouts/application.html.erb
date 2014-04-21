@@ -27,7 +27,7 @@
 			</div>
 			<ul id="menu">
 				<li><%= link_to "Featured", root_path, class: cp(root_path) %></li>
-		    <li><%= link_to "Most Played", games_most_played_path, class: cp(games_most_played_path) %></li>
+		    <li><%= link_to "Most Played", most_played_game_path(25), class: cp(most_played_game_path(25)) %></li>
 		    <li>
           <%= link_to "Highest Rated", games_highest_rated_path, class: cp(games_highest_rated_path) %>
           <span class="coming_soon">Coming Soon!</span>
