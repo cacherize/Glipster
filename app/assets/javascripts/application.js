@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.all
+//= require jquery.ui.autocomplete
 //= require jquery.placeholder
 //= require jquery.dotdotdot.min
 $(document).ready(function(){
