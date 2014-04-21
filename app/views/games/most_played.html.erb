@@ -1,6 +1,6 @@
 <div class="center constraint" style="width:70%;">
   <div id="most_played">
-    <h1><span class="title">Top 25 Most Played</span></h1>
+    <h1><span class="title">Top <%= @quantity %> Most Played</span></h1>
     <div id="tabs">
       <ul>
         <li class="tab_link"><%= link_to "Daily", "#Daily" %></li>
@@ -10,19 +10,27 @@
         <hr class="divider">
       </ul>
       <div class="tab" id="Daily">
-        <h2 class="tab_header">Today's Most Played</h2>
+        <h2 class="tab_header">Today's Most Played
+          <%= render partial: 'quantity_links', locals: {anchor: "Daily"} %>
+        </h2>
         <%= render partial: 'most_played_games', locals: {games: @daily_games} %>
       </div>
       <div class="tab" id="Weekly">
-        <h2 class="tab_header">This Week's Most Played</h2>
+        <h2 class="tab_header">This Week's Most Played
+          <%= render partial: 'quantity_links', locals: {anchor: "Weekly"} %>
+        </h2>
         <%= render partial: 'most_played_games', locals: {games: @weekly_games} %>
       </div>
       <div class="tab" id="Monthly">
-        <h2 class="tab_header">This Month's Most Played</h2>
+        <h2 class="tab_header">This Month's Most Played
+          <%= render partial: 'quantity_links', locals: {anchor: "Monthly"} %>
+        </h2>
         <%= render partial: 'most_played_games', locals: {games: @monthly_games} %>
       </div>
       <div class="tab" id="All">
-        <h2 class="tab_header">All Time Most Played</h2>
+        <h2 class="tab_header">All Time Most Played
+          <%= render partial: 'quantity_links', locals: {anchor: "All"} %>
+        </h2>
         <%= render partial: 'most_played_games', locals: {games: @all_top_games} %>
       </div>
     </div>

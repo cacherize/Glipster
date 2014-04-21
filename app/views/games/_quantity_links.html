@@ -1,0 +1,5 @@
+<span class="per_page_links">Top:
+  <%= link_to "25", most_played_game_path(25, anchor: anchor), class: "#{'current' if @quantity == 25}" %>
+  <%= link_to "50", most_played_game_path(50, anchor: anchor), class: "#{'current' if @quantity == 50}" %>
+  <%= link_to "100", most_played_game_path(100, anchor: anchor), class: "#{'current' if @quantity == 100}" %>
+</span>

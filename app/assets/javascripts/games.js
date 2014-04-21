@@ -26,9 +26,17 @@ function game_show() {
 }
 
 function most_played_games() {
+  var current = window.location.hash.substring(1);
   $(".tab").hide();
-  $(".tab").first().show();
-  $(".tab_link a").first().addClass('current')
+
+  if (current.length > 0) {
+    var current_id = "#"+current
+    $(current_id).show()
+    $(".tab_link a[href="+current_id+"]").addClass("current");
+  } else {
+    $(".tab").first().show();
+    $(".tab_link a").first().addClass('current');
+  }
 
   $(".tab_link").click(function(){
     var id = $("a", this).attr("href");
