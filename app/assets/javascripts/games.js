@@ -23,6 +23,17 @@ $(document).ready(function(){
 function game_show() {
 	var width = $("#game_show").width();
 	$("#game_stats, #game_details, #comments_wrapper").width(width);
+
+  $("#comment_message").keyup(function(){
+    var max = 255;
+    var len = $(this).val().length;
+    if (len >= max) {
+      $('#char_count').text(' No characters left');
+    } else {
+      var char = max - len;
+      $('#char_count').text(char + ' characters left');
+    }
+  });
 }
 
 function most_played_games() {
