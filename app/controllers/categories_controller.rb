@@ -1,7 +1,13 @@
 class CategoriesController < ApplicationController
 	before_filter :authorize, only: [:new, :create, :edit, :update]
 	def index
-		@categories = Category.all
+    @featured_category_games = []
+		Category.all.each do |category|
+      if category.featured_category_games.present?
+        @featured_category_games << {category => category.featured_category_games.map(&:game)}
+      end
+    end
+    @featured_category_games = @featured_category_games.in_groups(4, false)
 	end
 
 	def show

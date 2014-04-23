@@ -69,3 +69,11 @@
     border:0;
   }
 }
+.category_section {
+  width:25%;
+  display:inline-block;
+  float:left;
+  .games_container {
+    margin:10px 20px;
+  }
+}
