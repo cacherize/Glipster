@@ -44,3 +44,8 @@ var delay = (function(){
 $.fn.slideFadeToggle = function(speed, easing, callback) {
   return this.animate({opacity: 'toggle', height: 'toggle'}, speed, easing, callback);
 };
+
+jQuery.fn.random = function() {
+    var randomIndex = Math.floor(Math.random() * this.length);  
+    return jQuery(this[randomIndex]);
+};
