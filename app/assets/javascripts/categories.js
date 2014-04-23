@@ -23,4 +23,20 @@ function categoriesIndex() {
   $(".games_container").each(function(){
     $(this).find(".game_wrapper").hide().first().show();
   })
+  rotateSlideshow()
+}
+
+function rotateSlideshow(){
+  var interval = (Math.ceil(Math.random() * 3) + 1) * 1000;
+  var target = $(".games_container").random().find(".game_wrapper:visible");
+  setTimeout(function() {
+    target.fadeOut(function(){
+      if ($(this).is(":last-child")) {
+        $(this).parent().children(".game_wrapper:first-child").fadeIn()
+      } else {
+        $(this).next().fadeIn();
+      }
+    });
+    rotateSlideshow()
+  }, interval);
 }
