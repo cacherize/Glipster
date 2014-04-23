@@ -111,6 +111,7 @@ hr#comment_divider {
 					display:inline-block;
 					float:right;
 					margin:0 10px 0 0;
+          color:#999;
 				}
 				.comment_delete {
 					display:inline-block;
@@ -121,7 +122,15 @@ hr#comment_divider {
 					top:-8px;
 				}
 			}
-			.comment_message {padding:10px; display:block; margin:0;}
+			.comment_message {
+        padding:0;
+        display:block;
+        margin:10px;
+        overflow:hidden;
+        a.read_more {display:none; cursor:pointer;}
+        a.hide {cursor:pointer; float:right;}
+      }
+      .collapsed {max-height:60px;}
 		}
 		.comments_header { font-family:'Petita', sans-serif; text-shadow:0 1px 0 #008000; color:#A2D42F; font-size:1.1em;}
 	}

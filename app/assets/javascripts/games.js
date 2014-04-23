@@ -33,6 +33,25 @@ function game_show() {
       var char = max - len;
       $('#char_count').text(char + ' characters left');
     }
+  }); 
+
+  $("#comments_container").on("click", ".read_more", function() {
+    var parent = $(this).parent(".comment_message"),
+        content = parent.triggerHandler("originalContent");
+    parent.removeClass('collapsed');
+    $(parent).append( content );
+    parent.trigger("destroy");
+    parent.append("<br/><a class='hide'>Hide</a>")
+  })
+  $("#comments_container").on("click", ".hide", function(){
+    var parent = $(this).parent(".comment_message");
+    $("br:last", parent).remove();
+    $(this).remove();
+    parent.addClass('collapsed');
+    parent.dotdotdot({
+      ellipsis : '',
+      after: "a.read_more"
+    });
   });
 }
 
@@ -72,3 +91,10 @@ $(function(){
 	//   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
 	// });
 });
+
+function commentOverflow(){
+  $(".comment_message").dotdotdot({
+    ellipsis : '',
+    after: "a.read_more"
+  });
+}

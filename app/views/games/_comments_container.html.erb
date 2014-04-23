@@ -14,7 +14,9 @@
 				</div>
 			<% end %>
 		</div>
-		<p class="comment_message"><%= h(comment.message).gsub(/\n/, '<br/>').html_safe %></p>
+		<p class="comment_message collapsed"><%= h(comment.message).gsub(/\n/, '<br/>').html_safe %>
+      <a class="read_more">... Read More</a>
+    </p>
 	</div>
 <% end %>
 <%= will_paginate @comments %><br class="clear"/>

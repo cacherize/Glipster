@@ -21,7 +21,10 @@
 			<script>
 				$.ajax({
 				  type: "GET",
-				  url: "<%= load_comments_game_path(@game) %>"
+				  url: "<%= load_comments_game_path(@game) %>",
+          success: function commentsActions(){
+            commentOverflow()
+          }
 				});
 			</script>
 		</div>
