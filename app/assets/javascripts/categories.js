@@ -23,16 +23,20 @@ function categoriesIndex() {
   $(".games_container").each(function(){
     $(this).find(".game_wrapper").hide().first().show();
   })
+  $(".game_count_graphic").textFit({alignHoriz:true, maxFontSize: 35});
   rotateSlideshow()
 }
 
 function rotateSlideshow(){
-  var interval = (Math.ceil(Math.random() * 2) + 1) * 1000;
-  var target = $(".games_container").random().find(".game_wrapper:visible");
+  var interval = (Math.ceil(Math.random() * 2) + 1) * 1000,
+      target = $(".games_container").random(),
+      targetWrapper = target.find(".game_wrapper:visible"),
+      lastDivId = target.find(".game_wrapper:last").attr("id");
+
   setTimeout(function() {
-    target.fadeOut(function(){
-      if ($(this).is(":last-child")) {
-        $(this).parent().children(".game_wrapper:first-child").fadeIn()
+    targetWrapper.fadeOut(function(){
+      if (this.id == lastDivId) {
+        $(this).parent().children(".game_wrapper:first").fadeIn()
       } else {
         $(this).next().fadeIn();
       }

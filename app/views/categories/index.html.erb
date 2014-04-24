@@ -9,18 +9,24 @@
               <%= link_to "&#8594;".html_safe, category, class: 'cat_link' %>
             </h3>
             <% if games.present? %>
-              <div class="center">
-                <% games.each do |game| %>
-                  <div class="game_wrapper">
-                    <span>
-                      <div class="game_img">
-                        <%= link_to game_thumb(game), game %>
-                        <%= special_status_image(game) %>
-                      </div>
-                      <%= link_to game.title, game, class: 'game_link', title: game.title %>
-                    </span>
-                  </div>
-                <% end %>
+              <% games.each do |game| %>
+                <div class="game_wrapper" id="game_<%= game.id %>_category_<%= category.id %>">
+                  <span>
+                    <div class="game_img">
+                      <%= link_to game_thumb(game), game %>
+                      <%= special_status_image(game) %>
+                    </div>
+                    <%= link_to game.title, game, class: 'game_link', title: game.title %>
+                  </span>
+                </div>
+              <% end %>
+              <div class="cat_stats">
+                <p class="cat_game_count">
+                  Games<br/>
+                  <span class="game_count_graphic">
+                    <%= number_with_delimiter(category.games.size, delimiter:',') %>
+                  </span>
+                </p>
               </div>
             <% end %>
           </div>
@@ -30,4 +36,5 @@
   <% end %>
 </div>
 <br class="clear"/>
+<%= javascript_include_tag 'jquery.textFit.min' %>
 <%= javascript_include_tag params[:controller] %>

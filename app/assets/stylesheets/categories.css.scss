@@ -91,6 +91,32 @@
           }
         }
       }
+      .cat_stats {
+        display:inline-block;
+        float:right;
+        vertical-align:top;
+        .cat_game_count {
+          margin:10px 0;
+          font-size:0.8em;
+          text-align:center;
+          .game_count_graphic {
+            margin:10px 0 0 0;
+            padding:10px;
+            display:inline-block;
+            width:80px;
+            height:80px;
+            -moz-border-radius:50px;
+            -webkit-border-radius:50px;
+            border-radius:50px;
+            background:#E6F4C5;
+            line-height:80px;
+            text-align:center;
+            -moz-box-shadow:0 3px 3px #DEDEDE;
+            -webkit-box-shadow:0 3px 3px #DEDEDE;
+            box-shadow:0 3px 3px #DEDEDE;
+          }
+        }
+      }
     }
   }
 }
