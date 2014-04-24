@@ -1,36 +1,34 @@
 <div id="all_categories">
-  <% @featured_category_games.each do |group| %>
+  <% @featured_category_games.each do |category_games| %>
     <div class="category_section">
-      <% group.each do |category_games| %>
-        <% category_games.each do |category, games| %>
-          <div class="games_container">
-            <h3>
-              <%= link_to "#{category.name} Games", category %>
-              <%= link_to "&#8594;".html_safe, category, class: 'cat_link' %>
-            </h3>
-            <% if games.present? %>
-              <% games.each do |game| %>
-                <div class="game_wrapper" id="game_<%= game.id %>_category_<%= category.id %>">
-                  <span>
-                    <div class="game_img">
-                      <%= link_to game_thumb(game), game %>
-                      <%= special_status_image(game) %>
-                    </div>
-                    <%= link_to game.title, game, class: 'game_link', title: game.title %>
-                  </span>
-                </div>
-              <% end %>
-              <div class="cat_stats">
-                <p class="cat_game_count">
-                  Games<br/>
-                  <span class="game_count_graphic">
-                    <%= number_with_delimiter(category.games.size, delimiter:',') %>
-                  </span>
-                </p>
+      <% category_games.each do |category, games| %>
+        <div class="games_container">
+          <h3>
+            <%= link_to "#{category.name} Games", category %>
+            <%= link_to "&#8594;".html_safe, category, class: 'cat_link' %>
+          </h3>
+          <% if games.present? %>
+            <% games.each do |game| %>
+              <div class="game_wrapper" id="game_<%= game.id %>_category_<%= category.id %>">
+                <span>
+                  <div class="game_img">
+                    <%= link_to game_thumb(game), game %>
+                    <%= special_status_image(game) %>
+                  </div>
+                  <%= link_to game.title, game, class: 'game_link', title: game.title %>
+                </span>
               </div>
             <% end %>
-          </div>
-        <% end %>
+            <div class="cat_stats">
+              <p class="cat_game_count">
+                Games<br/>
+                <span class="game_count_graphic <%= cycle('first', 'second', 'third') %>">
+                  <%= number_with_delimiter(category.games.size, delimiter:',') %>
+                </span>
+              </p>
+            </div>
+          <% end %>
+        </div>
       <% end %>
     </div>
   <% end %>

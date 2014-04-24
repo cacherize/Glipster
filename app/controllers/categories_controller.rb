@@ -7,7 +7,6 @@ class CategoriesController < ApplicationController
         @featured_category_games << {category => category.featured_category_games.map(&:game)}
       end
     end
-    @featured_category_games = @featured_category_games.in_groups(4, false)
 	end
 
 	def show
