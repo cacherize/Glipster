@@ -4,7 +4,10 @@
       <% group.each do |category_games| %>
         <% category_games.each do |category, games| %>
           <div class="games_container">
-            <h3><%= category.name %> Games</h3>
+            <h3>
+              <%= link_to "#{category.name} Games", category %>
+              <%= link_to "&#8594;".html_safe, category, class: 'cat_link' %>
+            </h3>
             <% if games.present? %>
               <div class="center">
                 <% games.each do |game| %>

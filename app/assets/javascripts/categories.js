@@ -27,7 +27,7 @@ function categoriesIndex() {
 }
 
 function rotateSlideshow(){
-  var interval = (Math.ceil(Math.random() * 3) + 1) * 1000;
+  var interval = (Math.ceil(Math.random() * 2) + 1) * 1000;
   var target = $(".games_container").random().find(".game_wrapper:visible");
   setTimeout(function() {
     target.fadeOut(function(){
