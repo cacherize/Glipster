@@ -43,8 +43,4 @@ class UsersController < ApplicationController
 			redirect_to root_path, alert: "Unable to activate account."
 		end
 	end
-
-	def change_avatar
-		@user = User.find_by_username(params[:id])
-	end
 end

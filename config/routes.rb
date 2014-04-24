@@ -9,7 +9,6 @@ Glipster::Application.routes.draw do
   resources :users do 
     member do
       get 'confirm'
-      get 'change_avatar'
     end
   end
   resources :categories
