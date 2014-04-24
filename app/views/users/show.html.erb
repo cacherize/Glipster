@@ -2,8 +2,22 @@
 	<div id="user_show">
 		<span class="profile_pic">
 			<%= avatar_large(@user) %><br/>
-			<%= link_to("Change Avatar", change_avatar_user_path(current_user)) if current_user == @user %>
+			<%= link_to("Change Avatar", '#', id: 'change_av_link') if current_user == @user %>
 		</span>
 		<h2 id="user_header"><%= @user.username %></h2>
 	</div>
 </div>
+<div id="change_prof_pic" title="Update Profile Picture">
+  <%= form_for @user, html: {multipart: true} do |f| %>
+    <a href="#" onclick="openFileBrowser()">Browse Files</a><br/>
+    File: <span id="pending_file"></span><br/>
+    <%= f.file_field :image, style: 'display:none;' %><br/>
+    <%= f.submit "Change Avatar" %>
+  <% end %>
+</div>
+<%= javascript_include_tag params[:controller] %>
+<script>
+function openFileBrowser() {
+  $("#user_image").click()
+}
+</script>
