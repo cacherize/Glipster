@@ -39,7 +39,7 @@
         <p class="plays_stat_box">
           Today's Plays<br/>
           <span class="play_count today">
-            <%= number_with_delimiter(@game.daily_plays, delimiter: '.') %>
+            <%= number_with_delimiter(@game.daily_plays, delimiter: ',') %>
           </span>
         </p>
         <p class="plays_stat_box">
@@ -51,7 +51,7 @@
         <p class="plays_stat_box">
           This Month's Plays<br/>
           <span class="play_count this_month">
-            <%= number_with_delimiter(@game.monthly_plays, delimiter: '.') %>
+            <%= number_with_delimiter(@game.monthly_plays, delimiter: ',') %>
           </span>
         </p>
         <br class="clear"/>
