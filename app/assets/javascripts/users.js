@@ -2,7 +2,7 @@ $(document).ready(function(){
   $("#change_av_link").click(function(){
     $("#change_prof_pic").dialog({
       modal: true,
-      height: 350,
+      height: 320,
       width: 400,
       resizable: false
     });
