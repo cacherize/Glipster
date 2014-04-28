@@ -275,5 +275,6 @@ hr.divider {
   height:1px;
   margin:25px auto 20px auto;
 }
+.featured_star_icon {float:right;}
 .no_mar_bottom- {margin-bottom:0 !important;}
 .no_mar_top- {margin-top:0 !important;}

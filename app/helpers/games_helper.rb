@@ -29,4 +29,8 @@ module GamesHelper
 			image_tag("blue_star.png", class: 'featured_icon')
 		end
 	end
+
+  def featured_cat_header_icon
+    "<span class='featured_star_icon'><img src='/assets/star.png' alt='featured star icon' /></span>".html_safe
+  end
 end
