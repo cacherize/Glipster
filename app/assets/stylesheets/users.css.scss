@@ -116,9 +116,35 @@
   display:none;
   color:#444;
   font-size:0.8em;
+  text-align:center;
   a {color:#8AB327;}
   a:hover {color:#a7db2c;}
   a:active {color:#5b881a;}
+  #pending_filename {font-weight:normal;}
+  .form_submit {
+    text-align:center;
+    input[type=submit]{
+      text-align:center;
+      padding:4px;
+      border:1px solid #ccc;
+      margin-bottom:10px;
+      background:#ededed;
+      -moz-border-radius:3px;
+      -webkit-border-radius:3px;
+      border-radius:3px;
+      &:hover{background:#dedede; cursor:pointer;}
+      &:active {position:relative; top:1px;}
+    }
+  }
+  #userImgPrev {
+    width:150px;
+    height:150px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    margin:5px 0;
+  }
 }
 .ui-dialog {
   border-radius:0;

@@ -7,17 +7,15 @@
 		<h2 id="user_header"><%= @user.username %></h2>
 	</div>
 </div>
-<div id="change_prof_pic" title="Update Profile Picture">
+<div id="change_prof_pic" title="Update Avatar">
   <%= form_for @user, html: {multipart: true} do |f| %>
-    <a href="#" onclick="openFileBrowser()">Browse Files</a><br/>
-    File: <span id="pending_file"></span><br/>
-    <%= f.file_field :image, style: 'display:none;' %><br/>
-    <%= f.submit "Change Avatar" %>
+    <%= link_to image_tag('browse_files.png')+" Select File", '#', onclick: 'openFileBrowser()' %><br/>
+    <span id="pending_filename"></span><br/>
+    <%= f.file_field :image, style: 'display:none;' %>
+    <%= image_tag 'large_default_avatar.png', id: 'userImgPrev' %>
+    <div class="form_submit">
+      <%= f.submit "Update Avatar" %>
+    </div>
   <% end %>
 </div>
 <%= javascript_include_tag params[:controller] %>
-<script>
-function openFileBrowser() {
-  $("#user_image").click()
-}
-</script>
