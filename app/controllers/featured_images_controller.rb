@@ -16,5 +16,13 @@ class FeaturedImagesController < ApplicationController
   end
 
   def destroy
+    @image = FeaturedImage.find(params[:id])
+    respond_to do |format|
+      if @image.destroy
+        format.html{redirect_to featured_images_path, notice: 'Removed image!'}
+      else
+        format.html{redirect_to featured_images_path, alert: 'Unable to remove image.'}
+      end
+    end
   end
 end
