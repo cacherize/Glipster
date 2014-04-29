@@ -1,5 +1,5 @@
 <div class="center">
-  <%= form_for @new_image, method: :post, html: {class: 'form'} do |f| %>
+  <%= form_for @new_image, method: :post, html: {class: 'form', multipart: true} do |f| %>
     <h2 class="form_header">Featured Images</h2><br/>
     <div class="inline-block">
       <div class="form_field">
@@ -19,6 +19,17 @@
       <div class="form_submit">
         <%= f.submit 'Add Image' %>
       </div>
+    </div>
+  <% end %>
+</div>
+<div class="center">
+  <% @grouped_images.each do |images| %>
+    <div class="inline-block">
+      <% images.each do |img| %>
+        <% if img.present? %>
+          <%= featured_image(img) %>
+        <% end %>
+      <% end %>
     </div>
   <% end %>
 </div>
