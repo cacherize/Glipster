@@ -4,5 +4,6 @@ class WelcomeController < ApplicationController
   	@all_games = Game.all
   	@new_games = @all_games.last(12)
   	@random_game = [@all_games.sample]
+    @images = FeaturedImage.all
   end
 end
