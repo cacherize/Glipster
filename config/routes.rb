@@ -28,6 +28,7 @@ Glipster::Application.routes.draw do
   resources :featured_category_games
   match 'search/games', to: 'search#games', via: :get
   resources :search, only: :new
+  resources :featured_images, only: [:index, :create, :delete]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
