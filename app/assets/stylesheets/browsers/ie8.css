@@ -4,3 +4,8 @@
 #under_development .divider {
   width:600px;
 }
+.games_container, #search #title_search, #results .search_result .search_result_content, #game_show, #game_stats, #game_details span #game_description, #game_details span #game_controls, #comments_wrapper, #most_played .item .item_content, #signup-form {
+  background: transparent;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF)"; /* IE8 */    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF);
+  zoom: 1;
+}
