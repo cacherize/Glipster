@@ -23,17 +23,24 @@
   <% end %>
 </div>
 <div id="featured_image_list_wrapper">
-  <% @images.each do |img| %>
+  <%= form_tag featured_images_update_position_path, method: :put do %>
+    <div class="form_submit">
+      <%= submit_tag "Update Order" %>
+    </div>
     <ul id="featured_image_list">
-      <% if img.present? %>
-        <li class="featured_image">
-          <%= featured_image(img) %>
-          <span class="delete_featured_image">
-            <%= link_to image_tag('delete.png'), img, method: :delete %>
-          </span>
-        </li>
-      <% end %>
+      <% @images.each do |img| %>
+        <% if img.present? %>
+          <li class="featured_image">
+            <%= featured_image(img) %>
+            <span class="delete_featured_image">
+              <%= link_to image_tag('delete.png'), img, method: :delete %>
+            </span>
+            <span class="image_position"><%= img.display_position %></span>
+            <%= hidden_field_tag "featured_image[#{img.id}]", img.position, id: "image_position_#{img.id}" %>
+          </li>
+        <% end %>
+      <% end %><br class="clear"/>
     </ul>
-  <% end %><br class="clear"/>
+  <% end %>
 </div>
 <%= javascript_include_tag params[:controller] %>
