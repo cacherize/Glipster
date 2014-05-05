@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   
   before_save :downcase_email
   before_create { generate_token(:auth_token) }
-
+  after_validation { self.errors.messages.delete(:password_digest) }
+  
   has_many :comments
 
   validates :password, presence: true, on: :create
