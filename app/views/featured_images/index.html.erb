@@ -22,20 +22,18 @@
     </div>
   <% end %>
 </div>
-<div class="center">
-  <% @grouped_images.each do |images| %>
-    <div class="inline-block">
-      <% images.each do |img| %>
-        <% if img.present? %>
-          <div class="featured_image">
-            <%= featured_image(img) %>
-            <span class="delete_featured_image">
-              <%= link_to image_tag('delete.png'), img, method: :delete %>
-            </span>
-          </div>
-        <% end %>
+<div id="featured_image_list_wrapper">
+  <% @images.each do |img| %>
+    <ul id="featured_image_list">
+      <% if img.present? %>
+        <li class="featured_image">
+          <%= featured_image(img) %>
+          <span class="delete_featured_image">
+            <%= link_to image_tag('delete.png'), img, method: :delete %>
+          </span>
+        </li>
       <% end %>
-    </div>
-  <% end %>
+    </ul>
+  <% end %><br class="clear"/>
 </div>
 <%= javascript_include_tag params[:controller] %>

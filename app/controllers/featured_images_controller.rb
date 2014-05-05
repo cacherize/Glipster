@@ -1,7 +1,7 @@
 class FeaturedImagesController < ApplicationController
   def index
     @new_image = FeaturedImage.new
-    @grouped_images = FeaturedImage.all.in_groups(3)
+    @images = FeaturedImage.all
   end
 
   def create
