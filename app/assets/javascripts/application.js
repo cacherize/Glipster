@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery.ui.dialog
 //= require jquery.ui.autocomplete
+//= require jquery.ui.sortable
 //= require jquery.placeholder
 //= require jquery.dotdotdot.min
 $(document).ready(function(){
