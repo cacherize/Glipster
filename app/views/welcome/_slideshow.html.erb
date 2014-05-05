@@ -4,7 +4,10 @@
 	<div class="viewport">
 		<ul class="overview">
       <% @images.each do |img| %>
-		  	<li><%= link_to featured_image(img), img.link, title: img.title %></li>
+		  	<li>
+          <%= featured_image(img) %>
+          <%= link_to "&#8594;".html_safe, img.link, class: 'slideshowLink', title: img.title %>
+        </li>
       <% end %>
 		</ul>
 	</div>
