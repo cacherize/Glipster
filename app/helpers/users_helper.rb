@@ -1,9 +1,9 @@
 module UsersHelper
 	def avatar_thumb(user)
 		if user.image.present?
-			image_tag(user.image.thumb('30x30#').url, alt: "#{user.username} image")
+			image_tag(user.image.thumb('30x30#').url, alt: "#{user.username} image", class: 'u_img')
 		else
-			image_tag('thumb_default_avatar.png', alt: "#{user.username} image")
+			image_tag('thumb_default_avatar.png', alt: "#{user.username} image", class: 'u_img')
 		end
 	end
 
