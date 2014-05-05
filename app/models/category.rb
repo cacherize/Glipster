@@ -3,7 +3,7 @@ class Category < ActiveRecord::Base
   has_many :game_categories
   has_many :games, through: :game_categories
   has_many :featured_category_games
-
+  validates_presence_of :name
   default_scope{ order('name') }
 
   def to_param
