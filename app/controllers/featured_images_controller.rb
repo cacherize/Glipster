@@ -1,4 +1,5 @@
 class FeaturedImagesController < ApplicationController
+  before_filter :authorize
   def index
     @new_image = FeaturedImage.new
     @images = FeaturedImage.all
