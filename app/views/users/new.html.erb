@@ -1,6 +1,16 @@
 <div class="center">
 	<%= form_for @user, html: {id: 'signup-form'} do |f| %>
 		<h2 class="form_header">Sign Up</h2>
+    <% if @user.errors.any? %>
+      <fieldset class="form_errors">
+        <legend>Form Errors</legend>
+        <ul>
+          <% for message in @user.errors.full_messages %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </fieldset>
+    <% end %>
 		<div class="form_field">
 			<br/>
 			<%= f.text_field :username, placeholder: "Username" %>
