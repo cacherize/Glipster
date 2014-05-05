@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140429013557) do
+ActiveRecord::Schema.define(:version => 20140505024738) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -62,8 +62,9 @@ ActiveRecord::Schema.define(:version => 20140429013557) do
     t.string   "image_uid"
     t.string   "title"
     t.string   "link"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.integer  "position",   :default => 0
   end
 
   create_table "game_categories", :force => true do |t|
