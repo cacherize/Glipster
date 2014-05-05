@@ -198,6 +198,7 @@ img {outline:0; border:0;}
 .placeholder{color:#888;}
 .inline-block{display:inline-block;}
 .no_results {font-style:italic; font-size:0.8em;}
+.vertical-top{vertical-align: top;}
 .flash {
 	margin:10px 0 0 0;
 	padding:10px 100px 10px 100px;
