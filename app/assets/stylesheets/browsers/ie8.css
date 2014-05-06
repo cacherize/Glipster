@@ -10,4 +10,5 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF);
   zoom: 1;
 }
-#sessions_links a:hover img, #sessions_links a.current .u_img {border:1px solid #444444;}
+#sessions_links .ui_img {border:1px solid transparent;}
+#sessions_links a:hover .u_img, #sessions_links a.current .u_img {border:1px solid #444444;}
