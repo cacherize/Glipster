@@ -555,12 +555,14 @@
       .tab_header {
         margin:20px 0;
         position:relative;
+        text-shadow:0 1px 3px #999999;
         .per_page_links {
           position:absolute;
           right:0;
           bottom:0;
           font-size:0.6em;
           font-weight:normal;
+          text-shadow:0 1px 3px #dedede;
           a {
             padding:4px;
             border:1px solid transparent;
