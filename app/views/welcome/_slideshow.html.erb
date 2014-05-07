@@ -6,7 +6,9 @@
       <% @images.each do |img| %>
 		  	<li>
           <%= featured_image(img) %>
-          <%= link_to "&#8594;".html_safe, img.link, class: 'slideshowLink', title: img.title %>
+          <%= link_to img.link, class: 'slideshowLink', title: img.title do %>
+            <p class="linkExt">GO! </p>&#8594;
+          <% end %>
         </li>
       <% end %>
 		</ul>
