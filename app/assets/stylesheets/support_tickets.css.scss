@@ -1,3 +1,10 @@
-// Place all the styles related to the support_tickets controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#contact_us_form {
+  #contact_reason_right_radius {
+    margin-left:20px;
+    display:inline-block;
+    float:right;
+    vertical-align: top;
+  }
+  .form_header {margin-left:-60%;}
+  .form_field #support_ticket_message {height:50px; width:350px;}
+}
