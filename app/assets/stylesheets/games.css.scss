@@ -102,7 +102,9 @@
 		font-weight:bold;
 		text-shadow:0 1px 0 #008000;
 		font-family:'Petita', sans-serif;
+    letter-spacing: 1px;
 		span {
+      letter-spacing: normal;
 			font-family:sans-serif;
 			font-weight:normal;
 			font-size:0.9em;
@@ -116,6 +118,7 @@
 			border:1px solid #FFF000;
 		}
     #stats_toggle {
+      letter-spacing: normal;
       min-height:16px;
       min-width:16px;
       vertical-align:middle;
@@ -293,6 +296,7 @@
 				color:#A2D42F;
 				text-shadow:0 1px 0 #008000;
 				font-family:'Petita', sans-serif;
+        letter-spacing: 1px;
 			}
 		}
 		#game_description {margin-right:15px;}
