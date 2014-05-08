@@ -1,5 +1,5 @@
 <div class="center">
-	<%= form_tag password_resets_path, method: :post, class: 'form' do %>
+	<%= form_tag password_resets_path, method: :post, class: 'form', honeypot: true do %>
     <%= link_to "<span></span>".html_safe, login_path, title: 'Cancel', class: 'form_cancel' %>
 		<h2 class="form_header" style="margin-left:-40%;">Reset Password</h2>
 		<div class="form_field">

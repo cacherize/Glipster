@@ -1,6 +1,6 @@
 <div id="comments">
 	<% if current_user.present? %>
-		<%= form_for @comment, html: {class: 'comment_form'} do |f| %>
+		<%= form_for @comment, html: {class: 'comment_form', honeypot: true} do |f| %>
 			<%= f.hidden_field :game_id, value: @game.id %>
 			<div class="form_field">
 				<%= f.label :message, "Comments:", class: 'comments_header' %><span id="char_count"></span><br/>

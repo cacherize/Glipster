@@ -1,5 +1,5 @@
 <div class="center">
-	<%= form_for @user, html: {id: 'signup-form'} do |f| %>
+	<%= form_for @user, html: {id: 'signup-form', honeypot: true} do |f| %>
 		<h2 class="form_header">Sign Up</h2>
     <% if @user.errors.any? %>
       <fieldset class="form_errors">
