@@ -124,9 +124,21 @@
     color:#8ab327;
     font-family:'Petita', sans-serif;
     text-shadow:0 1px 0 #008000;
+    #change_un_link {
+      font-size:0.4em;
+      font-weight:normal;
+      text-shadow:none;
+      font-family: sans-serif, arial;
+      display:inline-block;
+      height:16px;
+      float:right;
+      margin-top:10px;
+      img {vertical-align:top; height:12px; width:12px;}
+      span {width:0; overflow:hidden; display:inline-block; white-space: nowrap; text-align:center;}
+    }
 	}
 }
-#change_prof_pic {
+#change_prof_pic, #change_username {
   display:none;
   color:#444;
   font-size:0.8em;
@@ -148,6 +160,20 @@
       border-radius:3px;
       &:hover{background:#dedede; cursor:pointer;}
       &:active {position:relative; top:1px;}
+    }
+  }
+  .form_field {
+    margin:20px 0;
+    input[type='text'] {
+      width:200px;
+      background:#FFFFE6;
+      border:1px solid #CCCCCC;
+      padding:4px;
+      font-size:0.9em;
+      -moz-border-radius:3px;
+      -webkit-border-radius:3px;
+      border-radius:3px;
+      &:focus {background:#fff;}
     }
   }
   #userImgPrev {
