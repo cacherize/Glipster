@@ -7,15 +7,19 @@ $(document).ready(function() {
   $("[name='support_ticket[reason]']").change(function(){
     $("#support_ticket_other_reason").val('');
   });
-
+  countMessageCharacters("#support_ticket_message")
   $('#support_ticket_message').keyup(function () {
-    var max = 1000;
-    var len = $(this).val().length;
-    if (len >= max) {
-      $('#messageCharCount').text('No characters left');
-    } else {
-      var char = max - len;
-      $('#messageCharCount').text(char + ' characters left');
-    }
+    countMessageCharacters(this);
   });
 });
+
+function countMessageCharacters(input){
+  var max = 1000;
+  var len = $(input).val().length;
+  if (len >= max) {
+    $('#messageCharCount').text('No characters left');
+  } else {
+    var char = max - len;
+    $('#messageCharCount').text(char + ' characters left');
+  }
+}
