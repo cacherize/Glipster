@@ -9,6 +9,8 @@ Glipster::Application.routes.draw do
   resources :users do 
     member do
       get 'confirm'
+      get 'change_password'
+      put 'update_password'
     end
   end
   resources :categories

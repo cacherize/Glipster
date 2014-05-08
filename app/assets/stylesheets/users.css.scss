@@ -92,7 +92,7 @@
 			border:1px solid #ccc;
 		}
 		a {
-			padding:3px 5px;
+			padding:5px;
 			background:#ededed;
 			color:#444;
 			border:1px solid #ccc;
@@ -100,7 +100,18 @@
 			-webkit-border-radius:4px;
 			border-radius:4px;
 			font-size:0.7em;
+      width:140px;
+      text-align:center;
+      display:block;
+      margin-bottom:5px;
 			&:hover {background:#dedede;}
+      img {
+        -moz-border-radius:0;
+        -webkit-border-radius:0;
+        border-radius:0;
+        border:0;
+        vertical-align: middle;
+      }
 		}
 	}
 	#user_header {
