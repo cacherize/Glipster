@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140508014348) do
+ActiveRecord::Schema.define(:version => 20140508022941) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -103,11 +103,11 @@ ActiveRecord::Schema.define(:version => 20140508014348) do
   create_table "support_tickets", :force => true do |t|
     t.string   "email"
     t.string   "reason"
-    t.string   "message"
+    t.string   "message",      :limit => 2048
     t.boolean  "stickied"
     t.datetime "archived_at"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
     t.string   "other_reason"
     t.string   "name"
   end
