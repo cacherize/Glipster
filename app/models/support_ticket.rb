@@ -1,5 +1,16 @@
 class SupportTicket < ActiveRecord::Base
   attr_accessible :email, :reason, :message, :stickied, :archive, :other_reason, :name
+  validates :message, presence: {message: 'must be provided'}
+  validates :reason, presence: {message: 'must be selected'}
+  validates :email, presence: {message: 'must be provided'}
+  validates_format_of :email, with: /[-0-9a-z.+_]+@[-0-9a-z.+_]+\.[a-z]{2,4}/i, if: lambda{self.email.present?}
+  validate :other_reason_is_present
+
+  def other_reason_is_present
+    if self.reason.present? && (self.reason == "other") && self.other_reason.blank?
+      errors.add(:base,'Provide a reason if "Other" is selected')
+    end
+  end
 
   def archive
     self.archived_at
