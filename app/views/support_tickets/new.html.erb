@@ -2,9 +2,17 @@
   <%= form_for @support_ticket, html: {class: 'form', id: "contact_us_form"} do |f| %>
     <h1 class="form_header">Contact Us</h1>
     <div class="form_container">
-      <div class="form_field">
-        <%= f.label :email %><br/>
-        <%= f.text_field :email %>
+      <div class="inline-block">
+        <div class="form_field">
+          <%= f.label :name %><br/>
+          <%= f.text_field :name, value: @support_ticket.name, placeholder: "Enter your fullname" %>
+        </div>
+      </div>
+      <div class="inline-block">
+        <div class="form_field">
+          <%= f.label :email %><br/>
+          <%= f.email_field :email, value: @support_ticket.email, placeholder: "Email to respond to" %>
+        </div>
       </div>
       <div class="form_field">
         <fieldset id="contact_us_reason">
@@ -14,14 +22,14 @@
             <%= f.label :reason, "Report A Bug", value: 'report bug' %><br/>
             <%= f.radio_button :reason, "general comment" %>
             <%= f.label :reason, "General Comment", value: 'general comment' %><br/>
-            <%= f.radio_button :reason, "making a suggestion" %>
-            <%= f.label :reason, "Making A Suggestion", value: 'making a suggestion' %><br/>
+            <%= f.radio_button :reason, "make a suggestion" %>
+            <%= f.label :reason, "Make A Suggestion", value: 'make a suggestion' %><br/>
             <%= f.radio_button :reason, "trouble registering" %>
             <%= f.label :reason, "Trouble Registering", value: 'trouble registering' %>
           </div>
           <div id="contact_reason_right_radius">
-            <%= f.radio_button :reason, "cant log in" %>
-            <%= f.label :reason, "Can't Log In", value: 'cant log in' %><br/>
+            <%= f.radio_button :reason, "game doesnt play" %>
+            <%= f.label :reason, "Game Doesn't Play", value: 'game doesnt play' %><br/>
             <%= f.radio_button :reason, "other" %>
             <%= f.label :reason, "Other:", value: 'other' %><br/>
             <%= f.text_field :other_reason %>
