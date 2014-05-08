@@ -8,9 +8,14 @@ class User < ActiveRecord::Base
   
   has_many :comments
 
-  validates :password, presence: true, on: :create
-  validates :email, presence: true, uniqueness: true, on: :create
-  validates :username, presence: true, uniqueness: true, on: :create
+  validates :password, presence: {message: 'must be provided'}, on: :create
+  validates :email, presence: {message: 'must be provided'}, uniqueness: true, on: :create
+  validates :username, presence: {message: 'must be provided'}, uniqueness: true, on: :create
+  validates_format_of :email, with: /[-0-9a-z.+_]+@[-0-9a-z.+_]+\.[a-z]{2,4}/i, if: lambda{self.email.present?}
+  validates_format_of :username,
+    with: /^[a-z0-9_-]*$/i,
+    message: 'must only contain alphanumeric characters',
+    if: lambda{self.username.present?}
 
   dragonfly_accessor :image
 
