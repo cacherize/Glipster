@@ -21,6 +21,7 @@
 	-webkit-box-shadow:0 0 3px #E1E1E1;
 	-moz-box-shadow:0 0 3px #E1E1E1;
 	box-shadow:0 0 3px #E1E1E1;
+  position:relative;
 	.form_header {
 		margin:-25px auto 20px auto;
 		background:#ededed;
@@ -123,4 +124,28 @@
 			white-space: nowrap;
 		}
 	}
+  .form_cancel {
+    background:#ededed;
+    position:absolute;
+    line-height:16px;
+    height:16px;
+    width:16px;
+    padding:7px;
+    top:-15px;
+    right:-15px;
+    border:2px solid #999999;
+    border-radius:50px;
+    span {
+      background-image:url("/assets/jquery-ui/ui-icons_888888_256x240.png");
+      background-repeat:none;
+      background-position:-96px -128px;
+      overflow:hidden;
+      height:16px;
+      width:16px;
+      display:inline-block;
+      vertical-align: top;
+    }
+    &:hover {border-color:#555;}
+    &:hover span {background-image:url("/assets/jquery-ui/ui-icons_454545_256x240.png");}
+  }
 }
