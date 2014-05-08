@@ -1,5 +1,5 @@
 class SupportTicket < ActiveRecord::Base
-  attr_accessible :email, :reason, :message, :stickied, :archive, :other_reason
+  attr_accessible :email, :reason, :message, :stickied, :archive, :other_reason, :name
 
   def archive
     self.archived_at
