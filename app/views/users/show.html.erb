@@ -1,7 +1,7 @@
 <div class="center">
 	<div id="user_show">
 		<span class="profile_pic">
-			<%= avatar_large(@user) %><br/>
+			<%= avatar_large(@user, 'userImage') %><br/>
 			<%= link_to("Change Avatar", '#', id: 'change_av_link') if current_user == @user %>
 		</span>
 		<h2 id="user_header"><%= @user.username %></h2>
@@ -12,7 +12,7 @@
     <%= link_to image_tag('browse_files.png')+" Select File", '#', onclick: 'openFileBrowser()' %><br/>
     <span id="pending_filename"></span><br/>
     <%= f.file_field :image, style: 'display:none;' %>
-    <%= image_tag 'large_default_avatar.png', id: 'userImgPrev' %>
+    <%= avatar_large(@user,'userImgPrev') %>
     <div class="form_submit">
       <%= f.submit "Update Avatar" %>
     </div>

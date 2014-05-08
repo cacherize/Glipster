@@ -7,11 +7,11 @@ module UsersHelper
 		end
 	end
 
-	def avatar_large(user)
+	def avatar_large(user, id)
 		if user.image.present?
-			image_tag(user.image.thumb('150x150#').url, alt: "#{user.username} image")
+			image_tag(user.image.thumb('150x150#').url, alt: "#{user.username} image", id: id)
 		else
-			image_tag('large_default_avatar.png', alt: "#{user.username} image")
+			image_tag('large_default_avatar.png', alt: "#{user.username} image", id: id)
 		end
 	end
 end
