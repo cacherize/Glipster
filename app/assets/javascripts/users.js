@@ -8,6 +8,7 @@ $(document).ready(function(){
     });
     return false;
   });
+
   $("#change_un_link").click(function(){
     $("#change_username").dialog({
       modal: true,
@@ -17,9 +18,11 @@ $(document).ready(function(){
     });
     return false;
   });
+
   $("#user_image").change(function(){
     validateFileType(this)
   });
+
   $("#change_un_link").hover(function(){
     $(this).children("span").stop().animate({width: '100px'})
   }, function(){
