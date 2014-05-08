@@ -30,6 +30,8 @@ Glipster::Application.routes.draw do
   resources :search, only: :new
   match 'featured_images/update_position', to: 'featured_images#update_position', via: :put
   resources :featured_images, only: [:index, :create, :destroy]
+  match 'contact_us', to: 'support_tickets#new', via: :get
+  resources :support_tickets, only: [:index, :new, :create, :update]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
