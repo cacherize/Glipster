@@ -45,6 +45,7 @@ class UsersController < ApplicationController
 	end
 
   def change_password
+    @user = User.find_by_username(params[:id])
   end
 
   def update_password

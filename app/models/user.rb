@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :username, :password, :password_confirmation, :admin, :activated, :image
+  attr_accessible :email, :username, :password, :password_confirmation, :admin, :activated, :image, :current_password
   has_secure_password
   
   before_save :downcase_email
@@ -18,6 +18,10 @@ class User < ActiveRecord::Base
     if: lambda{self.username.present?}
 
   dragonfly_accessor :image
+
+  def current_password=(password)
+    password
+  end
 
   def to_param
   	"#{self.username}"
