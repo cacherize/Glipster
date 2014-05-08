@@ -18,6 +18,8 @@ function countMessageCharacters(input){
   var len = $(input).val().length;
   if (len >= max) {
     $('#messageCharCount').text('No characters left');
+  } else if(len == 0) {
+    $('#messageCharCount').text('1000 characters max')
   } else {
     var char = max - len;
     $('#messageCharCount').text(char + ' characters left');
