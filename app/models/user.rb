@@ -41,7 +41,7 @@ class User < ActiveRecord::Base
 		if arg.match(/^[a-z0-9_.+-]+@[a-z0-9-]+\.[a-z0-9-.]+$/i)
 			find_by_email(arg.downcase)
 		else
-			find_by_username(arg.downcase)
+      find(:first, :conditions => ["lower(username) = ?", arg.downcase])
 		end
 	end
 
