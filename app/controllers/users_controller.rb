@@ -65,4 +65,21 @@ class UsersController < ApplicationController
       end
     end
   end
+
+  def check_username
+    @username_invalid = false
+    if params[:username].present?
+      if params[:username].length < 3
+        @username_invalid = "invalid length"
+      else
+        user = User.find(:all, :conditions => ["lower(username) = ?", params[:username].downcase])
+        @username_invalid = true if user.present?
+      end
+    else
+      @username_invalid = nil
+    end
+    respond_to do |format|
+      format.js
+    end
+  end
 end

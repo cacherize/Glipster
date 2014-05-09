@@ -1,0 +1,17 @@
+<% if @username_invalid.nil? %>
+  <span id="invalid">Username can't be blank.
+    <span class="symbol">&#10007;</span>
+  </span>
+<% elsif @username_invalid == "invalid length" %>
+  <span id="invalid">Too short (must be 3-20 characters).
+    <span class="symbol">&#10007;</span>
+  </span>
+<% elsif @username_invalid %>
+  <span id="invalid">Username is already being used.
+    <span class="symbol">&#10007;</span>
+  </span>
+<% else %>
+  <span id="valid">Username is valid!
+    <span class="symbol">&#10003;</span>
+  </span>
+<% end %>

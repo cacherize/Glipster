@@ -8,6 +8,8 @@ $(document).ready(function(){
     });
     return false;
   });
+  
+  var current_username = $("#user_username").attr('value');
 
   $("#change_un_link").click(function(){
     $("#change_username").dialog({
@@ -16,6 +18,8 @@ $(document).ready(function(){
       width: 400,
       resizable: false
     });
+    $("#user_username").val(current_username);
+    $("#username_check").html('&nbsp;')
     return false;
   });
 
@@ -28,7 +32,30 @@ $(document).ready(function(){
   }, function(){
     $(this).children("span").stop().animate({width: '0'})
   });
+
+  var timer;
+  $("#user_username").keyup(function(){
+    var username = $(this).val();
+    delay(function(){
+      $.ajax({
+        type: "GET",
+        url: "check_username",
+        data: "username=" + username,
+        success: function(){
+          enabledSubmitIfValid();
+        }
+      });
+    }, 750 );
+  });
 });
+
+function enabledSubmitIfValid(){
+  if ($("#username_check #valid").length > 0) {
+    $("#un_submit_btn").removeAttr('disabled');
+  } else {
+    $("#un_submit_btn").attr('disabled', 'disabled');
+  }
+}
 
 function openFileBrowser() {
   $("#user_image").click();

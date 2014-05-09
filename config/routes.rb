@@ -12,6 +12,9 @@ Glipster::Application.routes.draw do
       get 'change_password'
       put 'update_password'
     end
+    collection do 
+      get 'check_username'
+    end
   end
   resources :categories
   match 'games/highest_rated', to: 'games#highest_rated', via: :get
