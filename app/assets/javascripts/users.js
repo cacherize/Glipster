@@ -14,7 +14,7 @@ $(document).ready(function(){
   $("#change_un_link").click(function(){
     $("#change_username").dialog({
       modal: true,
-      height: 200,
+      height: 250,
       width: 400,
       resizable: false
     });
@@ -39,7 +39,7 @@ $(document).ready(function(){
     delay(function(){
       $.ajax({
         type: "GET",
-        url: "check_username",
+        url: current_username+"/check_username",
         data: "username=" + username,
         success: function(){
           enabledSubmitIfValid();

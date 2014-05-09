@@ -10,7 +10,13 @@ class User < ActiveRecord::Base
 
   validates :password, presence: {message: 'must be provided'}, on: :create
   validates :email, presence: {message: 'must be provided'}, uniqueness: true, on: :create
-  validates :username, presence: {message: 'must be provided'}, uniqueness: true, length: {minimum: 3, maximum: 20}
+  validates :username, 
+    presence: {message: 'must be provided'}, 
+    uniqueness: {case_sensitive: false}, 
+    length: {minimum: 3, maximum: 30,
+      too_long:  "is too long (max 30 chars)",
+      too_short: "is too short (min 3 chars)"
+    }
   validates_format_of :email, with: /[-0-9a-z.+_]+@[-0-9a-z.+_]+\.[a-z]{2,4}/i, if: lambda{self.email.present?}
   validates_format_of :username,
     with: /^[a-z0-9_-]*$/i,
@@ -58,5 +64,11 @@ class User < ActiveRecord::Base
 
   def check_password_matches(password)
     self.authenticate(password) == self
+  end
+
+  def validate_attribute(attribute_name)
+    unless self.valid?
+      return self.errors[attribute_name]
+    end
   end
 end

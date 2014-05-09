@@ -11,8 +11,6 @@ Glipster::Application.routes.draw do
       get 'confirm'
       get 'change_password'
       put 'update_password'
-    end
-    collection do 
       get 'check_username'
     end
   end

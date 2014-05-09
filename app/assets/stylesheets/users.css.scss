@@ -183,9 +183,14 @@
       display:inline-block;
       width:210px;
       text-align:left;
-      .symbol{float:right;}
       #invalid {color:red;}
       #valid {color:green;}
+      #valid, #invalid {
+        position:relative;
+        display:block;
+        padding-right:15px;
+        .symbol{position:absolute; top:0; right:0;}
+      }
     }
   }
   #userImgPrev {
