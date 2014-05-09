@@ -71,4 +71,8 @@ class User < ActiveRecord::Base
       return self.errors[attribute_name]
     end
   end
+
+  def add_comment(comment)
+    self.comments.build(comment)
+  end
 end

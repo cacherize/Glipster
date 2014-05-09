@@ -1,8 +1,19 @@
 class CommentsController < ApplicationController
 	before_filter :authenticate
 	def create
-		@comment = Comment.new(params[:comment])
-		@comment.user_id = current_user.id
+    comments = current_user.comments
+    if comments.length > 10
+      timer = 5.minutes.ago - comments[10].created_at
+    else
+      timer = 0
+    end
+
+    @comment = current_user.add_comment(params[:comment])
+    unless timer >= 0
+      countdown = (-timer/60).ceil
+      redirect_to(game_path(@comment.game), alert: "You must wait #{countdown} more minutes to post a comment.")
+      return
+    end
 
 		respond_to do |format|
 			if @comment.save
