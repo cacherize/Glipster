@@ -12,6 +12,9 @@
 	margin:10px auto 15px auto;
 	padding-bottom:20px;
 	position:relative;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
 	#game_header {
 		max-width:100%;
 		width:auto;
@@ -94,6 +97,9 @@
 	position:relative;
 	display:block;
 	width:auto;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
 	.spinner {margin:20px auto; display:block;}
 	#page_visits {
 		margin:20px;
@@ -289,6 +295,9 @@
 			box-shadow:0 0 8px #ccc;
 			font-size:0.8em;
 			text-align:left;
+      -moz-border-radius:5px;
+      -webkit-border-radius:5px;
+      border-radius:5px;
 			h3 {
 				border-bottom:#ccc solid 1px;
 				margin:0 0 5px 0;
@@ -315,7 +324,10 @@
 	width:auto;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box; 
+	box-sizing: border-box;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
 	h3 {
 		margin-top:0;
 		border-bottom:1px solid #ccc;
@@ -609,6 +621,9 @@
       box-shadow:0 0 3px #ccc;
       font-size:0.85em;
       border:1px solid #ccc;
+      -moz-border-radius:5px;
+      -webkit-border-radius:5px;
+      border-radius:5px;
       h2 {
         margin:0 0 5px 0;
         font-size:1em;

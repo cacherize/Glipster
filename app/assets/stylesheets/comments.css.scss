@@ -48,6 +48,9 @@ hr#comment_divider {
 	background:#fff;
   background:rgba(255, 255, 255, 0.5);
 	border:1px solid #ccc;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
 	-moz-box-shadow:0 0 8px #ccc;
 	-webkit-box-shadow:0 0 8px #ccc;
 	box-shadow:0 0 8px #ccc;

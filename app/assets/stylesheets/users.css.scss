@@ -6,6 +6,9 @@
   -moz-box-shadow:0 0 8px #ccc;
   -webkit-box-shadow:0 0 8px #ccc;
 	box-shadow:0 0 8px #ccc;
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  border-radius:8px;
 	position:relative;
 	margin:50px 0;
 	border:1px solid #ccc;
@@ -77,6 +80,9 @@
 	-moz-box-shadow:0 0 8px #ccc;
 	-webkit-box-shadow:0 0 8px #ccc;
 	box-shadow:0 0 8px #ccc;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
 	margin:20px 0;
 	position:relative;
 	.profile_pic {
@@ -204,7 +210,9 @@
   }
 }
 .ui-dialog {
-  border-radius:0;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
   box-shadow:0 0 5px #999;
   padding:20px;
   .ui-widget-header {
