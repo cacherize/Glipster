@@ -260,7 +260,7 @@ img {outline:0; border:0;}
 	text-align: left;
 }
 .form_errors ul li {color:#FF0000; font-size:0.75em;}
-.pagination {margin-top:5px; display:inline-block; float:right;}
+.pagination {display:inline-block; float:right;}
 .pagination a, .pagination em, .pagination .disabled {
 	padding:3px 4px;
 	-moz-border-radius:5px;
