@@ -81,7 +81,7 @@
 			font-size:0.9em;
 			&:focus{background:#fff;}
 		}
-		input[type="radio"],input[type="checkbox"] {padding:0; width:auto;}
+		input[type="radio"],input[type="checkbox"] {padding:0; width:auto; margin:0 5px 5px 0;}
     input[type="radio"] {margin:0 0 5px 0;}
 		h5 {margin:0 0 5px 0; border-bottom:#ccc 1px solid;}
 		textarea {
