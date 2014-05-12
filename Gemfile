@@ -31,6 +31,7 @@ gem 'rails_12factor', '~> 0.0.2'
 gem 'will_paginate', '~> 3.0'
 gem 'delayed_job_active_record', '~> 4.0.1'
 gem 'honeypot-captcha', '~> 0.0.2'
+gem 'meta-tags', '~> 2.0.0'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
