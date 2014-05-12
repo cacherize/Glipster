@@ -56,8 +56,9 @@ img {outline:0; border:0;}
 	background-repeat:repeat-x;
 	background:url('triangles.png');
 }
-#footer_content {height:75px; background:#333; text-align:center;}
-#footer_content a {color:#888; font-size:2em;}
+#footer_content {height:75px; background:#333; text-align:center; font-family:'Petita', sans-serif;}
+#footer_content a {color:#555; font-size:2em;}
+#footer_content a:hover {color:#777;}
 #menu {
 	padding:0;
 	margin:0;
