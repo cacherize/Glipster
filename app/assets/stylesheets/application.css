@@ -56,9 +56,25 @@ img {outline:0; border:0;}
 	background-repeat:repeat-x;
 	background:url('triangles.png');
 }
-#footer_content {height:75px; background:#333; text-align:center; font-family:'Petita', sans-serif;}
+#footer_content {height:75px; background:#333; text-align:center; font-family:'Petita', sans-serif; line-height:65px;}
 #footer_content a {color:#555; font-size:2em;}
 #footer_content a:hover {color:#777;}
+#footer_content .middle_dot {font-size:1.2em; color:#555; margin:0 20px;}
+#addGameLk, #contactUsLk, #FaqLk {height:48px; line-height:48px; display:inline-block;}
+#addGameLk span, #contactUsLk span, #FaqLk span {
+  background-image:url('footer_icons.png');
+  background-repeat:no-repeat;
+  display:inline-block;
+  height:48px;
+  width:48px;
+  vertical-align: middle;
+}
+#addGameLk span {background-position:-48px 0;}
+#addGameLk:hover span {background-position:0 0;}
+#FaqLk span {background-position:-144px 0;}
+#FaqLk:hover span {background-position:-96px 0;}
+#contactUsLk span {background-position:-240px 0;}
+#contactUsLk:hover span {background-position:-192px 0;}
 #menu {
 	padding:0;
 	margin:0;
