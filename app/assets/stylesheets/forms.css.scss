@@ -11,7 +11,7 @@
 	     asset-url('petitabold-webfont.svg#Petita', font) format('svg')
 }
 .form {
-	padding:0 35px 20px 35px;
+	padding:50px 35px 20px 35px;
 	background:#fff;
   background:rgba(255, 255, 255, 0.5);
 	display:inline-block;
@@ -26,16 +26,7 @@
   -webkit-border-radius:5px;
   border-radius:5px;
 	.form_header {
-		margin:-25px auto 20px auto;
 		background:#ededed;
-		padding:10px;
-		border:1px solid #ccc;
-		-webkit-box-shadow:0 0 3px #E1E1E1;
-		-moz-box-shadow:0 0 3px #E1E1E1;
-		box-shadow:0 0 3px #E1E1E1;
-		-webkit-border-radius:5px;
-		-moz-border-radius:5px;
-		border-radius:5px;
 		-moz-box-shadow:inset 0px 1px 0px 0px #c8eda8, 0 0 7px #aaa;
 		-webkit-box-shadow:inset 0px 1px 0px 0px #c8eda8, 0 0 7px #aaa;
 		box-shadow:inset 0px 1px 0px 0px #c8eda8, 0 0 7px #aaa;
@@ -62,7 +53,10 @@
 		-webkit-text-shadow:0px -1px 0px #689324;
 		-moz-text-shadow:0px -1px 0px #689324;
 		text-shadow:0px -1px 0px #689324;
-		margin-left:-50%;
+    position:absolute;
+    top:-25px;
+    left:-25px;
+    margin:0;
 	}
 	.form_field {
 		min-height:60px;

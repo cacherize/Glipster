@@ -1,7 +1,7 @@
 <div class="center">
-	<%= form_tag password_resets_path, method: :post, class: 'form', honeypot: true do %>
+	<%= form_tag password_resets_path, method: :post, class: 'form', style: 'min-width:300px;', honeypot: true do %>
     <%= link_to "<span></span>".html_safe, login_path, title: 'Cancel', class: 'form_cancel' %>
-		<h2 class="form_header" style="margin-left:-40%;">Reset Password</h2>
+		<h2 class="form_header">Reset Password</h2>
 		<div class="form_field">
 			<%= label_tag :email, "Enter your email:" %><br/>
 			<%= text_field_tag :email, params[:email] %>

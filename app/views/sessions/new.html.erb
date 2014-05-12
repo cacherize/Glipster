@@ -4,7 +4,7 @@
     <%= link_to "Sign Up", signup_path, id: 'signup_link' %><br class="clear"/>
   </div>
 	<%= form_tag sessions_path, class: "form", honeypot: true do %>
-		<h2 class="form_header" style="margin-left:-75%;">Sign In</h2>
+		<h2 class="form_header">Sign In</h2>
 		<div class="form_field">
 			<%= label_tag :login, "Username/Email:" %><br/><%= text_field_tag :login %>
 		</div>
