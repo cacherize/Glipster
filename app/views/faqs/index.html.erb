@@ -14,8 +14,12 @@
     <% end %><br class="clear"/>
   </div>
   <% @faqs.each do |faq| %>
-    <div id="faq_<%= faq.id %>" style="text-align:left;">
-      <h3><%= faq.question %></h3>
+    <div class="faq_item" id="faq_<%= faq.id %>">
+      <div class="symbols">
+        <span class="q">Q</span>
+        <span>A</span>
+      </div>
+      <div class="faq_question"><%= faq.question %></div>
       <p><%= faq.answer %></p>
     </div>
   <% end %>
