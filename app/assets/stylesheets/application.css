@@ -322,6 +322,14 @@ hr.divider {
   -webkit-border-radius:5px;
   border-radius:5px;
 }
+.wrapper .heading {
+  border-bottom:1px solid #ccc;
+  color:#8AB327;
+  font-family:'Petita', sans-serif, arial, times;
+  text-shadow:0 1px 0 #008000;
+  text-align:left;
+  margin:0 0 10px 0;
+}
 .featured_star_icon {float:right;}
 .no_mar_bottom- {margin-bottom:0 !important;}
 .no_mar_top- {margin-top:0 !important;}
