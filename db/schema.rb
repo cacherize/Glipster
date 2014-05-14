@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140514022131) do
+ActiveRecord::Schema.define(:version => 20140514023134) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -52,11 +52,11 @@ ActiveRecord::Schema.define(:version => 20140514022131) do
   end
 
   create_table "faqs", :force => true do |t|
-    t.string   "question"
-    t.string   "answer"
-    t.integer  "position",   :default => 0
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+    t.string   "question",   :limit => 512
+    t.string   "answer",     :limit => 2048
+    t.integer  "position",                   :default => 0
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
   create_table "featured_category_games", :force => true do |t|
