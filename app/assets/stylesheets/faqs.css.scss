@@ -47,16 +47,21 @@
       span {display:block; margin:0;}
       .q {margin:0 0 4px 0;}
     }
+    &:target {
+      -moz-border-radius:12px;
+      -webkit-border-radius:12px;
+      border-radius:12px;
+      background:rgba(255,255,255,0.5);
+      border:1px solid #ccc;
+      -moz-box-shadow:0 0 3px #ccc;
+      -webkit-box-shadow:0 0 3px #ccc;
+      box-shadow:0 0 3px #ccc;
+    }
   }
-  :target {
-    -moz-border-radius:12px;
-    -webkit-border-radius:12px;
-    border-radius:12px;
-    background:rgba(255,255,255,0.5);
-    border:1px solid #ccc;
-    -moz-box-shadow:0 0 3px #ccc;
-    -webkit-box-shadow:0 0 3px #ccc;
-    box-shadow:0 0 3px #ccc;
+  #bottom_faq {
+    margin-bottom:20px;
+    .divider {margin-bottom:5px;}
+    .topLink {font-size:0.9em;}
   }
 }
 .best_in_place {

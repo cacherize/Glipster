@@ -27,5 +27,9 @@
       <p><%= best_in_place_if current_user && current_user.admin?, faq, :answer, path: "/faqs/#{faq.id}", type: :textarea, sanitize: false %></p>
     </div>
   <% end %>
+  <div id="bottom_faq">
+    <hr class="divider"/>
+    <%= link_to "Top of Page &#8593;".html_safe, "#header", class: 'topLink' %>
+  </div>
 </div>
 <%= javascript_include_tag params[:controller] %>
