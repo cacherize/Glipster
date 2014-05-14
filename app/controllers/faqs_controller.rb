@@ -1,6 +1,8 @@
 class FaqsController < ApplicationController
   def index
     @new_faq = Faq.new
+    @faqs = Faq.all
+    @grouped_faqs = @faqs.in_groups(3, false)
   end
 
   def create

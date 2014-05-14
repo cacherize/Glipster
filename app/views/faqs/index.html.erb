@@ -1,5 +1,25 @@
-<div class="center constraint">
+<div class="faq_constraint">
   <% if current_user && current_user.admin? %>
     <%= render 'form' %>
+  <% end %>
+  <h1 id="faq_header">
+    F<span>requently</span>
+    A<span>sked </span>
+    Q<span>uestions</span>
+  </h1>
+  <div class="wrapper">
+    <% @grouped_faqs.each do |group| %>
+      <ul class="faq_link_list">
+        <% group.each do |faq| %>
+          <li><%= link_to faq.question, "#faq_#{faq.id}" %></li>
+        <% end %>
+      </ul>
+    <% end %><br class="clear"/>
+  </div>
+  <% @faqs.each do |faq| %>
+    <div id="faq_<%= faq.id %>" style="text-align:left;">
+      <h3><%= faq.question %></h3>
+      <p><%= faq.answer %></p>
+    </div>
   <% end %>
 </div>
