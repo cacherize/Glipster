@@ -64,11 +64,14 @@
 	<div id="footer">
 		<div id="footer_border"></div>
 		<div id="footer_content">
-      <%= link_to "<span></span> Add Game".html_safe, '', id: 'addGameLk' %>   
-      <span class="middle_dot">&#8226;</span>
-      <%= link_to "<span></span> Contact Us".html_safe, contact_us_path, id: 'contactUsLk' %>
-      <span class="middle_dot">&#8226;</span>
-      <%= link_to "<span></span> FAQ".html_safe, faq_path, id: 'FaqLk' %> 
+      <div id="links">
+        <%= link_to "<span></span> Add Game".html_safe, '', id: 'addGameLk' %>   
+        <span class="middle_dot">&#8226;</span>
+        <%= link_to "<span></span> Contact Us".html_safe, contact_us_path, id: 'contactUsLk' %>
+        <span class="middle_dot">&#8226;</span>
+        <%= link_to "<span></span> FAQ".html_safe, faq_path, id: 'FaqLk' %> 
+      </div>
+      <div id="copyright">Glipster &copy; 2014</div>
     </div>
 	</div>
 </div>

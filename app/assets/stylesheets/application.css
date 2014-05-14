@@ -56,10 +56,12 @@ img {outline:0; border:0;}
 	background-repeat:repeat-x;
 	background:url('triangles.png');
 }
-#footer_content {height:75px; background:#333; text-align:center; font-family:'Petita', sans-serif; line-height:65px;}
+#footer_content {height:75px; background:#333; text-align:center; font-family:'Petita', sans-serif; position:relative;}
 #footer_content a {color:#555; font-size:2em;}
 #footer_content a:hover {color:#777;}
 #footer_content .middle_dot {font-size:1.2em; color:#555; margin:0 20px;}
+#footer_content #links {padding:10px 0; display:inline-block;}
+#footer_content #copyright {position:absolute; right:5px; bottom:5px; color:#555; font-size:0.8em;}
 #addGameLk, #contactUsLk, #FaqLk {height:48px; line-height:48px; display:inline-block;}
 #addGameLk span, #contactUsLk span, #FaqLk span {
   background-image:url('footer_icons.png');
