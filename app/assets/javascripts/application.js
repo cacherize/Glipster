@@ -17,6 +17,8 @@
 //= require jquery.ui.sortable
 //= require jquery.placeholder
 //= require jquery.dotdotdot.min
+//= require jquery.purr
+//= require best_in_place
 $(document).ready(function(){
 	$('input, textarea').placeholder();
 

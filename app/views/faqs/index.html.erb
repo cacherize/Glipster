@@ -20,8 +20,11 @@
         <span class="q">Q</span>
         <span>A</span>
       </div>
-      <div class="faq_question"><%= faq.question %></div>
-      <p><%= faq.answer %></p>
+      <div class="faq_question">
+        <%= best_in_place_if current_user && current_user.admin?, faq, :question, path: "/faqs/#{faq.id}" %>
+      </div>
+      <p><%= best_in_place_if current_user && current_user.admin?, faq, :answer, type: :textarea %></p>
     </div>
   <% end %>
 </div>
+<%= javascript_include_tag params[:controller] %>

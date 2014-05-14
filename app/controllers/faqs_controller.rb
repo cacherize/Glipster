@@ -1,4 +1,5 @@
 class FaqsController < ApplicationController
+  respond_to :html, :json
   def index
     @faqs = Faq.all
     @grouped_faqs = @faqs.in_groups(3, false)
@@ -21,6 +22,10 @@ class FaqsController < ApplicationController
   end
 
   def update
+    @faq = Faq.find(params[:id])
+
+    @faq.update_attributes(params[:faq])
+    respond_with @faq
   end
 
   def destroy
