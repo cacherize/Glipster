@@ -1,8 +1,11 @@
 class FaqsController < ApplicationController
   def index
-    @new_faq = Faq.new
     @faqs = Faq.all
     @grouped_faqs = @faqs.in_groups(3, false)
+  end
+
+  def new
+    @new_faq = Faq.new
   end
 
   def create
@@ -12,7 +15,7 @@ class FaqsController < ApplicationController
       if @new_faq.save
         format.html{redirect_to faq_path, notice: "Successfully added new FAQ!"}
       else
-        format.html{render :index}
+        format.html{render :new}
       end
     end
   end

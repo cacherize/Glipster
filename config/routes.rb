@@ -36,7 +36,7 @@ Glipster::Application.routes.draw do
   match 'contact_us', to: 'support_tickets#new', via: :get
   resources :support_tickets, only: [:index, :new, :create, :update]
   match 'faq', to: 'faqs#index', via: :get
-  resources :faqs, only: [:index, :create, :update, :destroy]
+  resources :faqs, only: [:index, :create, :update, :destroy, :new]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
