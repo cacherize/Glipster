@@ -24,7 +24,7 @@
       <div class="faq_question">
         <%= best_in_place_if current_user && current_user.admin?, faq, :question, path: "/faqs/#{faq.id}" %>
       </div>
-      <p><%= best_in_place_if current_user && current_user.admin?, faq, :answer, type: :textarea %></p>
+      <p><%= best_in_place_if current_user && current_user.admin?, faq, :answer, path: "/faqs/#{faq.id}", type: :textarea, sanitize: false %></p>
     </div>
   <% end %>
 </div>
