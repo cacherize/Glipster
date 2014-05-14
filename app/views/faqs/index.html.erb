@@ -1,5 +1,6 @@
 <div class="faq_constraint">
   <h1 id="faq_header">
+    <%= link_to(image_tag('add.png', class: 'middle')+" Add FAQ", new_faq_path) if current_user && current_user.admin?%>
     F<span>requently</span>
     A<span>sked </span>
     Q<span>uestions</span>
