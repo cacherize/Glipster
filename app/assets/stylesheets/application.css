@@ -304,6 +304,24 @@ hr.divider {
   height:1px;
   margin:25px auto 20px auto;
 }
+.wrapper {
+  padding:20px;
+  margin:20px auto;
+  display:block;
+  border:1px solid #ccc;
+  background:#fff;
+  background:rgba(255, 255, 255, 0.5);
+  -moz-box-shadow:0 0 8px #ccc;
+  -webkit-box-shadow:0 0 8px #ccc;
+  box-shadow:0 0 8px #ccc;
+  width:auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+}
 .featured_star_icon {float:right;}
 .no_mar_bottom- {margin-bottom:0 !important;}
 .no_mar_top- {margin-top:0 !important;}
