@@ -35,6 +35,8 @@ Glipster::Application.routes.draw do
   resources :featured_images, only: [:index, :create, :destroy]
   match 'contact_us', to: 'support_tickets#new', via: :get
   resources :support_tickets, only: [:index, :new, :create, :update]
+  match 'faq', to: 'faqs#index', via: :get
+  resources :faqs, only: [:index, :create, :update, :destroy]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
