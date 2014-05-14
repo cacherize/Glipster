@@ -44,6 +44,8 @@
     }
   }
   :target {
+    -moz-border-radius:12px;
+    -webkit-border-radius:12px;
     border-radius:12px;
     background:rgba(255,255,255,0.5);
     border:1px solid #ccc;
