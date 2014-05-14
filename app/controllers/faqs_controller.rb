@@ -1,4 +1,5 @@
 class FaqsController < ApplicationController
+  before_filter :authorize, only: [:new, :create, :update, :destroy]
   respond_to :html, :json
   def index
     @faqs = Faq.all
