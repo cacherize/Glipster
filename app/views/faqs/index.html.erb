@@ -2,6 +2,16 @@
   <% if current_user && current_user.admin? %>
     <%= form_for @new_faq, html: {class: 'form'} do |f| %>
       <h1 class="form_header">New FAQ</h1>
+      <% if @new_faq.errors.any? %>
+        <fieldset class="form_errors">
+          <legend>Form Errors</legend>
+          <ul>
+            <% for message in @new_faq.errors.full_messages %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </fieldset>
+      <% end %>
       <div class="form_field">
         <%= f.label :question %><br/>
         <%= f.text_field :question, style: 'width:100%;' %>
