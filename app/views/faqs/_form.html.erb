@@ -1,0 +1,24 @@
+<%= form_for @new_faq, html: {class: 'form'} do |f| %>
+  <h1 class="form_header">New FAQ</h1>
+  <% if @new_faq.errors.any? %>
+    <fieldset class="form_errors">
+      <legend>Form Errors</legend>
+      <ul>
+        <% for message in @new_faq.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </fieldset>
+  <% end %>
+  <div class="form_field">
+    <%= f.label :question %><br/>
+    <%= f.text_field :question, style: 'width:100%;' %>
+  </div>
+  <div class="form_field">
+    <%= f.label :answer %><br/>
+    <%= f.text_area :answer %>
+  </div>
+  <div class="form_submit">
+    <%= f.submit 'Submit', style: 'width:100%;' %>
+  </div>
+<% end %>
