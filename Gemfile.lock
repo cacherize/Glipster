@@ -31,6 +31,9 @@ GEM
     addressable (2.3.6)
     arel (3.0.3)
     bcrypt-ruby (3.0.1)
+    best_in_place (2.1.0)
+      jquery-rails
+      rails (~> 3.1)
     builder (3.0.4)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
@@ -172,6 +175,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
+  best_in_place
   carrierwave_direct (= 0.0.13)
   coffee-rails (~> 3.2.1)
   delayed_job_active_record (~> 4.0.1)
