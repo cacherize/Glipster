@@ -25,6 +25,9 @@
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
   border-radius:5px;
+  -moz-box-shadow:0 0 8px #ccc;
+  -webkit-box-shadow:0 0 8px #ccc;
+  box-shadow:0 0 8px #ccc;
 	.form_header {
 		background:#ededed;
 		-moz-box-shadow:inset 0px 1px 0px 0px #c8eda8, 0 0 7px #aaa;
