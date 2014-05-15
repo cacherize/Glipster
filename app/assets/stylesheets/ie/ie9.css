@@ -18,3 +18,9 @@
 #under_development .divider {
   width:600px;
 }
+#most_played #tabs .divider {
+  left:0;
+  right:0;
+  width:600px;
+  margin:auto !important;
+}
