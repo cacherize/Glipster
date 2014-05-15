@@ -19,4 +19,28 @@
 			<%= submit_tag 'Login' %>
 		</div>
 	<% end %>
+
+  <div class="wrapper" id="cookies_disabled">
+    <h3>Your browser's cookies are disabled &#9785;</h3>
+    <p>
+      Please enable them to log in.<br/>
+      <br/>
+      Need help? Choose your browser for instructions:
+    </p>
+    <ul id="browser_list">
+      <li>
+        <a href="http://windows.microsoft.com/en-us/windows-vista/block-or-allow-cookies">Internet Explorer</a>
+      </li>
+      <li>
+        <a href="https://support.google.com/chrome/answer/95647?hl=en">Google Chrome</a>
+      </li>
+      <li>
+        <a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences">Mozilla Firefox</a>
+      </li>
+      <li>
+        <a href="http://support.apple.com/kb/PH11913">Safari (OSX Mountain Lion)</a>
+      </li>
+    </ul>
+  </div>
 </div>
+<%= javascript_include_tag params[:controller] %>

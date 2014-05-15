@@ -1,3 +1,12 @@
-// Place all the styles related to the sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#cookies_disabled {
+  width:500px;
+  display:none;
+  h3, p {margin:5px 0;}
+  h3 {margin-top:15px;}
+  #browser_list {
+    display:inline-block;
+    text-align:left;
+    margin-top:0;
+    font-size:0.9em;
+  }
+}
