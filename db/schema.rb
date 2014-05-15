@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140514023134) do
+ActiveRecord::Schema.define(:version => 20140515042026) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -118,6 +118,14 @@ ActiveRecord::Schema.define(:version => 20140514023134) do
     t.datetime "updated_at",                   :null => false
     t.string   "other_reason"
     t.string   "name"
+  end
+
+  create_table "uploads", :force => true do |t|
+    t.string   "title"
+    t.string   "game"
+    t.string   "note",       :limit => 2048
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   create_table "users", :force => true do |t|
