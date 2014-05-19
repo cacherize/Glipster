@@ -1,0 +1,23 @@
+<div class="center">
+  <div class="form_wrapper">
+    <%= form_for @upload, html: {class: 'form', style: 'min-width:300px;'} do |f| %>
+      <h1 class="form_header">Upload Game</h1>
+      <div class="form_field">
+        <%= label_tag :title, "Game Title" %><br/>
+        <%= text_field_tag :title %>
+      </div>
+      <div class="form_field">
+        <%= label_tag :note, 'Note (Optional)' %><br/>
+        <%= text_area_tag :note %>
+      </div>
+      <div class="form_submit">
+        <%= f.submit "Go to File Upload".html_safe %>
+      </div>
+    <% end %>
+    <ol class="steps">-Steps-
+      <li class="first current"><span class="int">1</span> Provide Info</li>
+      <li class="last"><span class="int">2</span> Upload File</li>
+      <br class="clear"/>
+    </ol>
+  </div>
+</div>
