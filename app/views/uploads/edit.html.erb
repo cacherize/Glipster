@@ -2,6 +2,16 @@
   <div class="form_wrapper">
     <%= direct_upload_form_for @file, html: {class: 'form', style: 'min-width:300px;'} do |f| %>
       <h1 class="form_header">Upload Game</h1>
+      <% if @upload.errors.any? %>
+        <fieldset class="form_errors">
+          <legend>Form Errors</legend>
+          <ul>
+            <% for message in @upload.errors.full_messages %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </fieldset>
+      <% end %>
       <div class="form_field">
         <%= f.file_field :game %>
       </div>

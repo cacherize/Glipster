@@ -1,4 +1,5 @@
 class UploadsController < ApplicationController
+  before_filter :authenticate
   def new
     @upload = Upload.new
   end
@@ -23,10 +24,15 @@ class UploadsController < ApplicationController
 
   def update
     @upload = Upload.find(params[:id])
-    @upload.update_attributes(key: params[:key])
 
     respond_to do |format|
-      format.html{redirect_to root_path, notice: "Thank you for uploading! Your contribution is greatly appreciated!"}
+      if @upload.update_attributes(key: params[:key])
+        format.html{redirect_to root_path, notice: "Thank you for uploading! Your contribution is greatly appreciated!"}
+      else
+        @file = @upload.game
+        @file.success_action_redirect = upload_update_url(@upload)
+        format.html{render :edit}
+      end
     end
   end
 end
