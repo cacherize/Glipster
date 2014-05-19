@@ -112,6 +112,7 @@
 			width:210px;
 			&:hover{background:#ededed; cursor:pointer;}
 			&:active {position:relative; top:1px;}
+      &:disabled {background:#dedede;}
 		}
 	}
 	label {display:inline-block; font-size:0.9em;}
