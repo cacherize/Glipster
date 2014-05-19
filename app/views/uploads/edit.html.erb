@@ -13,7 +13,8 @@
         </fieldset>
       <% end %>
       <div class="form_field">
-        <%= f.file_field :game %><br/>
+        <%= link_to image_tag('browse_files.png')+" Select File", '#', onclick: 'openFileBrowser()' %>
+        <%= f.file_field :game, value: '', style: 'display:none;' %><br/><br/>
         <div id="fileName">File: <span><i>No file selected</i></span></div>
         <div class="val" id="val_file_size">File is too big (maximum 50 MB)</div>
         <div class="val" id="val_file_type">File is wrong type (must be .swf)</div>
@@ -70,5 +71,10 @@
   }
   function undisable(element) {
     $(element).removeAttr('disabled')
+  }
+
+  function openFileBrowser() {
+    $("#game_uploader_game").click();
+    return false;
   }
 </script>
