@@ -3,5 +3,4 @@ class Upload < ActiveRecord::Base
   mount_uploader :game, GameUploader
   belongs_to :user
   validates :title, presence: true
-  validates :game, presence: true, on: :update
 end
