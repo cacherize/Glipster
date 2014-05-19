@@ -16,8 +16,17 @@ class UploadsController < ApplicationController
   end
 
   def edit
+    @upload = Upload.find(params[:id])
+    @file = @upload.game
+    @file.success_action_redirect = upload_update_url(@upload)
   end
 
   def update
+    @upload = Upload.find(params[:id])
+    @upload.update_attributes(key: params[:key])
+
+    respond_to do |format|
+      format.html{redirect_to root_path, notice: "Thank you for uploading! Your contribution is greatly appreciated!"}
+    end
   end
 end
