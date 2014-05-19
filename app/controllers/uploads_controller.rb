@@ -4,7 +4,7 @@ class UploadsController < ApplicationController
   end
 
   def create
-    @upload = Upload.new(params[:upload])
+    @upload = current_user.uploads.build(params[:upload])
 
     respond_to do |format|
       if @upload.save

@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   after_validation { self.errors.messages.delete(:password_digest) }
   
   has_many :comments
+  has_many :uploads
 
   validates :password, presence: {message: 'must be provided'}, on: :create
   validates :email, presence: {message: 'must be provided'}, uniqueness: true, on: :create
