@@ -13,12 +13,12 @@
         </fieldset>
       <% end %>
       <div class="form_field">
-        <%= label_tag :title, "Game Title" %><br/>
-        <%= text_field_tag :title %>
+        <%= f.label :title, "Game Title" %><br/>
+        <%= f.text_field :title %>
       </div>
       <div class="form_field">
-        <%= label_tag :note, 'Note (Optional)' %><br/>
-        <%= text_area_tag :note %>
+        <%= f.label :note, 'Note (Optional)' %><br/>
+        <%= f.text_area :note %>
       </div>
       <div class="form_submit">
         <%= f.submit "Go to File Upload".html_safe %>
