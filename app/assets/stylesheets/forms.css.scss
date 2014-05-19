@@ -176,6 +176,10 @@
       display:list-item;
       width:180px;
       text-align:left;
+      -moz-border-radius-topright:6px;
+      -moz-border-radius-bottomright:6px;
+      -webkit-border-top-right-radius:6px;
+      -webkit-border-bottom-right-radius:6px;
       border-top-right-radius:6px;
       border-bottom-right-radius:6px;
       margin-top:5px;
@@ -187,6 +191,8 @@
         width:40px;
         height:40px;
         line-height:40px;
+        -moz-border-radius:20px;
+        -webkit-border-radius:20px;
         border-radius:20px;
         color:#eee;
         font-weight:normal;
@@ -196,6 +202,8 @@
       &.current {
         background:#fff;
         background:rgba(255,255,255,0.5);
+        -moz-box-shadow:0 0 3px #ccc;
+        -webkit-box-shadow:0 0 3px #ccc;
         box-shadow:0 0 3px #ccc;
         border:1px solid #ccc;
         border-left:0;
