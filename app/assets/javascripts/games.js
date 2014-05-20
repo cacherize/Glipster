@@ -8,15 +8,15 @@ $(document).ready(function(){
   }
 
   $("#game_stats").on('click', '#stats_toggle, #hide', function(event){
-    if ($("#stats_toggle").text() == "More Info") {
-      $("#stats_toggle").html("<a id='stats_toggle'><img src='/assets/toggle_up.png'/><p>Hide Info</p></a>");
-      $("#ext_stats").slideFadeToggle();
+    if ($("#stats_toggle span").text() == "More Info") {
+      $("#stats_toggle").html("<img src='/assets/toggle_up.png'/><span>Hide Info</span>");
+      $("#ext_stats").stop().slideFadeToggle();
       $(".play_count").textFit({alignHoriz:true, maxFontSize: 55});
     } else {
-      $("#stats_toggle").html("<a id='stats_toggle'><img src='/assets/toggle_down.png'/><p>More Info</p></a>");
-      $("#ext_stats").slideFadeToggle();
+      $("#stats_toggle").html("<img src='/assets/toggle_down.png'/><span>More Info</span>");
+      $("#ext_stats").stop().slideFadeToggle();
     }
-    return false;
+    event.preventDefault();
   });
 });
 
