@@ -242,18 +242,22 @@ img {outline:0; border:0;}
 	-webkit-text-shadow:0 1px 0 #F4F7E8;
 	text-shadow:0 1px 0 #F4F7E8;
 	display:inline-block;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
+  -moz-box-shadow:0 0 8px #ccc;
+  -webkit-box-shadow:0 0 8px #ccc;
+  box-shadow:0 0 8px #ccc;
 }
 .notice{
 	background-color:#E8EECC;
 	border:1px solid #a2d42f;
-	border-top:3px solid #a2d42f;
 	color:#a2d42f;
 	background-image:url('check.png');
 }
 .alert {
 	background-color:#FEDEDE;
 	border:1px solid #f50000;
-	border-top:3px solid #f50000;
 	color:#f50000;
 	background-image:url('cross.png');
 }
