@@ -17,12 +17,13 @@ class User < ActiveRecord::Base
     length: {minimum: 3, maximum: 30,
       too_long:  "is too long (max 30 chars)",
       too_short: "is too short (min 3 chars)"
+    },
+    format: {
+      with: /^[a-z0-9_-]*$/i,
+      message: 'must only contain alphanumeric characters',
+      if: lambda{self.username.present?}
     }
   validates_format_of :email, with: /[-0-9a-z.+_]+@[-0-9a-z.+_]+\.[a-z]{2,4}/i, if: lambda{self.email.present?}
-  validates_format_of :username,
-    with: /^[a-z0-9_-]*$/i,
-    message: 'must only contain alphanumeric characters',
-    if: lambda{self.username.present?}
 
   dragonfly_accessor :image
 
