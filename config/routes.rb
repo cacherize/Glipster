@@ -21,9 +21,9 @@ Glipster::Application.routes.draw do
       get  'vote'
       get  'load_reputation'
       get  'load_comments'
-      get  'most_played'
     end
   end
+  resources :most_played, only: :show
   resources :comments, only: [:create, :destroy]
   resources :password_resets
   resources :developers
