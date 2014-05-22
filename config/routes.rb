@@ -24,7 +24,7 @@ Glipster::Application.routes.draw do
       get  'most_played'
     end
   end
-  resources :comments
+  resources :comments, only: [:create, :destroy]
   resources :password_resets
   resources :developers
   resources :featured_category_games
