@@ -4,7 +4,7 @@
 			<%= avatar_large(@user, 'userImage') %>
       <% if current_user == @user %>
   			<%= link_to(image_tag('image.png')+" Change Avatar", '#', id: 'change_av_link') %>
-        <%= link_to(image_tag('lock.png')+" Change Password", change_password_user_path, id: 'change_pw_link') %>
+        <%= link_to(image_tag('lock.png')+" Change Password", edit_password_update_path(@user), id: 'change_pw_link') %>
       <% end %>
 		</span>
 		<h2 id="user_header">

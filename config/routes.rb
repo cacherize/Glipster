@@ -9,11 +9,10 @@ Glipster::Application.routes.draw do
   resources :users do 
     member do
       get 'confirm'
-      get 'change_password'
-      put 'update_password'
       get 'check_username'
     end
   end
+  resources :password_update, only: [:edit, :update]
   resources :categories
   match 'games/highest_rated', to: 'games#highest_rated', via: :get
   resources :games do
