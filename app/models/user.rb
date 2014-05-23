@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   
   has_many :comments
   has_many :uploads
+  has_many :reputations
 
   validates :password, presence: {message: 'must be provided'}, on: :create
   validates :email, presence: {message: 'must be provided'}, uniqueness: true, on: :create
