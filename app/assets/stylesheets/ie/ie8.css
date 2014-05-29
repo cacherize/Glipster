@@ -10,6 +10,12 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF);
   zoom: 1;
 }
+#user_show #user_content {
+  background: transparent;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF,endColorstr=#99FFFFFF)";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF,endColorstr=#99FFFFFF);
+  zoom: 1;
+}
 .form .form_field #contact_us_reason {background:none;}
 .form .form_field #contact_us_reason input[type="radio"] {border:0; background:none;}
 #sessions_links .ui_img {border:1px solid transparent;}
