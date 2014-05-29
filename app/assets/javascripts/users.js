@@ -34,7 +34,7 @@ $(document).ready(function(){
   });
 
   $(".ext_list_link").hover(function(){
-    $(this).children("span").stop().animate({width: '45px'})
+    $(this).children("span").stop().animate({width: '58px'})
   }, function(){
     $(this).children("span").stop().animate({width: '0'})
   });

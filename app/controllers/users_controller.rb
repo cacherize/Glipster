@@ -19,7 +19,16 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find_by_username(params[:id])
 
-    @likes = @user.reputations.positive_reps.last(5)
+    reps = @user.reputations
+    
+    @likes = reps.find(
+      :all,
+      conditions: ['value = ?', 1],
+      order: 'created_at DESC',
+      limit: 5
+    ).map(&:game)
+
+    @recently_played = @likes
 	end
 
 	def edit

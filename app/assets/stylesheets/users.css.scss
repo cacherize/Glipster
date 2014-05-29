@@ -147,21 +147,22 @@
   .game_wrapper {
     margin:5px 5px 0 0;
   }
-  #user_content {
+  .user_content {
     padding:10px;
     background:#fff;
     background:rgba(255,255,255,0.6);
-    margin-top:10px;
+    margin-top:15px;
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     border-radius:5px;
     .user_section_header {
-      margin:0;
-      font-size:1.1em;
+      margin:0 0 5px 0;
+      font-size:1.0em;
       font-weight:normal;
       color:#ccc;
       border-bottom:1px solid;
       text-shadow:0 1px 0 #999;
+      padding-bottom:4px;
       .ext_list_link {
         float:right;
         display:inline-block;
@@ -177,7 +178,7 @@
           position:absolute;
           right:100%;
           top:4px;
-          font-size:0.5em;
+          font-size:0.55em;
           text-shadow:none;
           text-align:left;
           display:inline-block;
