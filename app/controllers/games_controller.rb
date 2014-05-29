@@ -19,6 +19,7 @@ class GamesController < ApplicationController
 		@developer = @game.developer
 		@categories = @game.categories
 		@comment = Comment.new
+    @game.record_user_game_view_for(current_user)
 	end
 
 	def load_comments

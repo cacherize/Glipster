@@ -28,7 +28,11 @@ class UsersController < ApplicationController
       limit: 5
     ).map(&:game)
 
-    @recently_played = @likes
+    @recently_played = @user.game_users.find(
+      :all,
+      order: 'created_at DESC',
+      limit: 5
+    ).map(&:game)
 	end
 
 	def edit

@@ -13,7 +13,7 @@
     </h1>
     <div class="user_content">
       <h2 class="user_section_header">Recently Played <%= link_to "<span>Show More</span>".html_safe, '', class: 'ext_list_link' %></h2>
-      <%= render partial: '/games/game', collection: @likes %>
+      <%= render partial: '/games/game', collection: @recently_played %>
     </div>
     <div class="user_content">
       <h2 class="user_section_header">Likes <%= link_to "<span>Show More</span>".html_safe, '', class: 'ext_list_link' %></h2>

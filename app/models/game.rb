@@ -82,4 +82,14 @@ class Game < ActiveRecord::Base
       Game.delay.update_all([daily_plays: 0])
     end
   end
+
+  def record_user_game_view_for(user)
+    if user.present?
+      view = GameUser.new(user_id: user.id, game_id: self.id)
+     
+      user.game_users.where(game_id: self.id).destroy_all unless view.valid?
+      
+      view.save
+    end
+  end
 end
