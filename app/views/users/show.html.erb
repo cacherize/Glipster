@@ -13,11 +13,23 @@
     </h1>
     <div class="user_content">
       <h2 class="user_section_header">Recently Played <%= link_to "<span>Show More</span>".html_safe, '', class: 'ext_list_link' %></h2>
-      <%= render partial: '/games/game', collection: @recently_played %>
+      <% if @recently_played.present? %>
+        <%= render partial: '/games/game', collection: @recently_played %>
+      <% else %>
+        <p class="no_user_content">
+          <%= "#{(current_user == @user) ? "You have" : (@user.username+" has")} no recently played games :( " %>
+        </p>
+      <% end %>
     </div>
     <div class="user_content">
       <h2 class="user_section_header">Likes <%= link_to "<span>Show More</span>".html_safe, '', class: 'ext_list_link' %></h2>
-      <%= render partial: '/games/game', collection: @likes %>
+      <% if @likes.present? %>
+        <%= render partial: '/games/game', collection: @likes %>
+      <% else %>
+        <p class="no_user_content">
+          <%= "#{(current_user == @user) ? "You have" : (@user.username+" has")} no liked games :( " %>
+        </p>
+      <% end %>
     </div>
 	</div>
 </div>
