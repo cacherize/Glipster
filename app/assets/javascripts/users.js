@@ -33,6 +33,12 @@ $(document).ready(function(){
     $(this).children("span").stop().animate({width: '0'})
   });
 
+  $(".ext_list_link").hover(function(){
+    $(this).children("span").stop().animate({width: '45px'})
+  }, function(){
+    $(this).children("span").stop().animate({width: '0'})
+  });
+
   var timer;
   $("#user_username").keyup(function(){
     var username = $(this).val();

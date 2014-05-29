@@ -18,6 +18,8 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find_by_username(params[:id])
+
+    @likes = @user.reputations.positive_reps.last(5)
 	end
 
 	def edit
