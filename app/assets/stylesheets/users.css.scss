@@ -91,7 +91,17 @@
 		position:absolute;
 		left:15px;
 		top:15px;
-		img {
+    .settings_header {
+      width:150px;
+      border-bottom:2px dotted;
+      display:block;
+      color:#aaa;
+      margin:8px 0;
+      text-align:left;
+      font-size:0.75em;
+      padding-bottom:5px;
+    }
+		#userImage {
 			-moz-border-radius:10px;
 			-webkit-border-radius:10px;
 			border-radius:10px;

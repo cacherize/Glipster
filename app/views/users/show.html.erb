@@ -3,6 +3,9 @@
 		<span class="profile_pic">
 			<%= avatar_large(@user, 'userImage') %>
       <% if current_user == @user %>
+        <span class="settings_header">Settings
+          <%= image_tag('gear.png', alt: 'settings', title: 'Settings', class: 'right') %>
+        </span>
   			<%= link_to(image_tag('image.png')+" Change Avatar", '#', id: 'change_av_link') %>
         <%= link_to(image_tag('lock.png')+" Change Password", edit_password_update_path(@user), id: 'change_pw_link') %>
       <% end %>
