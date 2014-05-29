@@ -12,7 +12,11 @@
       <%= link_to "<span>Change Username</span> #{image_tag('wand.gif')}".html_safe, "#", id: 'change_un_link' %>
     </h1>
     <div class="user_content">
-      <h2 class="user_section_header">Recently Played <%= link_to "<span>Show More</span>".html_safe, '', class: 'ext_list_link' %></h2>
+      <h2 class="user_section_header">Recently Played
+        <% if @recently_played.size == 5 %>
+          <%= link_to "<span>Show More</span>".html_safe, '', class: 'ext_list_link' %>
+        <% end %>
+      </h2>
       <% if @recently_played.present? %>
         <%= render partial: '/games/game', collection: @recently_played %>
       <% else %>
@@ -22,7 +26,11 @@
       <% end %>
     </div>
     <div class="user_content">
-      <h2 class="user_section_header">Likes <%= link_to "<span>Show More</span>".html_safe, '', class: 'ext_list_link' %></h2>
+      <h2 class="user_section_header">Likes
+        <% if @likes.size == 5 %>
+          <%= link_to "<span>Show More</span>".html_safe, '', class: 'ext_list_link' %>
+        <% end %>
+      </h2>
       <% if @likes.present? %>
         <%= render partial: '/games/game', collection: @likes %>
       <% else %>
