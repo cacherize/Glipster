@@ -305,4 +305,13 @@
     }
   }
 }
+#likes_list {display:none;}
+.user_content_pagination {
+  text-align:center;
+  margin-top:5px;
+  .pagination {
+    float:none;
+    font-size:0.9em;
+  }
+}
 .ui-widget-overlay, .ui-front {z-index:1001;}

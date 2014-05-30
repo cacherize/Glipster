@@ -1,4 +1,20 @@
 $(document).ready(function(){
+
+  $("#likesAll").click(function(){
+    $("#likes_list").dialog({
+      modal: true,
+      width: 500,
+      resizable: false
+    });
+    return false;
+  });
+
+  $("#likes_list").on('click', '.pagination a', function(){
+    $(".pagination").html("<image src='/assets/spinner.gif'/>");
+    $.getScript(this.href)
+    return false;
+  });
+
   $("#change_av_link").click(function(){
     $("#change_prof_pic").dialog({
       modal: true,

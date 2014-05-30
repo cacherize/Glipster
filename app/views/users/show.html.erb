@@ -31,7 +31,7 @@
     <div class="user_content">
       <h2 class="user_section_header">Likes
         <% if @likes.size == 5 %>
-          <%= link_to "<span>Show More</span>".html_safe, '', class: 'ext_list_link' %>
+          <%= link_to "<span>Show More</span>".html_safe, '', class: 'ext_list_link', id: 'likesAll' %>
         <% end %>
       </h2>
       <% if @likes.present? %>
@@ -44,6 +44,16 @@
     </div>
 	</div>
 </div>
+<% if @likes.size == 5 %>
+  <div id="likes_list" title="All Likes">
+    <script>
+      $.ajax({
+        type: "GET",
+        url: "<%= user_likes_path(@user) %>"
+      });
+    </script>
+  </div>
+<% end %>
 <%= render 'user_image_form' %>
 <%= render 'username_form' %>
 <%= javascript_include_tag params[:controller] %>
