@@ -44,27 +44,6 @@
     </div>
 	</div>
 </div>
-<div id="change_prof_pic" title="Update Avatar">
-  <%= form_for @user, html: {multipart: true} do |f| %>
-    <%= link_to image_tag('browse_files.png')+" Select File", '#', onclick: 'openFileBrowser()' %><br/>
-    <span id="pending_filename"></span><br/>
-    <%= f.file_field :image, style: 'display:none;' %>
-    <%= avatar_large(@user,'userImgPrev') %>
-    <div class="form_submit">
-      <%= f.submit "Update Avatar" %>
-    </div>
-  <% end %>
-</div>
-<div id="change_username" title="Change Username">
-  <%= form_for @user, html: {honeypot: true} do |f| %>
-    <div class="form_field">
-      <%= f.label :username, "New Username" %><br/>
-      <%= f.text_field :username, value: @user.username, autocomplete: 'off' %><br/>
-      <span id="username_check">&nbsp;</span>
-    </div>
-    <div class="form_submit">
-      <%= f.submit "Change Username", id: 'un_submit_btn', disabled: true %>
-    </div>
-  <% end %>
-</div>
+<%= render 'user_image_form' %>
+<%= render 'username_form' %>
 <%= javascript_include_tag params[:controller] %>
