@@ -40,6 +40,7 @@ Glipster::Application.routes.draw do
   match 'uploads/:id/update', to: 'uploads#update', as: 'upload_update', via: :get
   resources :uploads, only: [:new, :create]
   get 'load_user_likes/:id' => 'user_content_load#likes', as: 'user_likes'
+  get 'load_user_recents/:id' => 'user_content_load#recents', as: 'user_recents'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

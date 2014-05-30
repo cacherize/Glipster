@@ -305,7 +305,10 @@
     }
   }
 }
-#likes_list {display:none;}
+#likes_list, #recently_played_list {
+  display:none;
+  #recents_wrapper, #likes_wrapper {text-align:center;}
+}
 .user_content_pagination {
   text-align:center;
   margin-top:5px;

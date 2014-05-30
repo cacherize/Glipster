@@ -17,7 +17,7 @@
     <div class="user_content">
       <h2 class="user_section_header">Recently Played
         <% if @recently_played.size == 5 %>
-          <%= link_to "<span>Show More</span>".html_safe, '', class: 'ext_list_link' %>
+          <%= link_to "<span>Show More</span>".html_safe, '', class: 'ext_list_link', id: 'recentsAll' %>
         <% end %>
       </h2>
       <% if @recently_played.present? %>
@@ -44,6 +44,7 @@
     </div>
 	</div>
 </div>
+
 <% if @likes.size == 5 %>
   <div id="likes_list" title="All Likes">
     <script>
@@ -54,6 +55,18 @@
     </script>
   </div>
 <% end %>
+
+<% if @recently_played.size == 5 %>
+  <div id="recently_played_list" title="All Recently Played">
+    <script>
+      $.ajax({
+        type: "GET",
+        url: "<%= user_recents_path(@user) %>"
+      });
+    </script>
+  </div>
+<% end %>
+
 <%= render 'user_image_form' %>
 <%= render 'username_form' %>
 <%= javascript_include_tag params[:controller] %>

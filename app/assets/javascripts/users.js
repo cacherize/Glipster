@@ -10,7 +10,22 @@ $(document).ready(function(){
   });
 
   $("#likes_list").on('click', '.pagination a', function(){
-    $(".pagination").html("<image src='/assets/spinner.gif'/>");
+    $("#likes_list .pagination").html("<image src='/assets/spinner.gif'/>");
+    $.getScript(this.href)
+    return false;
+  });
+
+  $("#recentsAll").click(function(){
+    $("#recently_played_list").dialog({
+      modal: true,
+      width: 500,
+      resizable: false
+    });
+    return false;
+  });
+
+  $("#recently_played_list").on('click', '.pagination a', function(){
+    $("#recently_played_list .pagination").html("<image src='/assets/spinner.gif'/>");
     $.getScript(this.href)
     return false;
   });
