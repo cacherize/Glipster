@@ -5,7 +5,7 @@ class UserContentLoadController < ApplicationController
       reputations.
       positive_reps.
       order('created_at DESC').
-      paginate(per_page: 6, page: params[:likes])
+      paginate(per_page: 8, page: params[:likes])
 
     respond_to do |format|
       format.js
