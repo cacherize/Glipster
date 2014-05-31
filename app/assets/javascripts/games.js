@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 function game_show() {
 	var width = $("#game_show").width();
-	$("#game_stats, #game_details, #comments_wrapper").width(width);
+	$("#game_stats, #game_details, #comments_wrapper, .wrapper").width(width);
 
   $("#comment_message").keyup(function(){
     var max = 255;

@@ -68,6 +68,16 @@
 	<div id="comments_wrapper">
  		<%= render partial: 'comments' %>
  	</div>
+  <div class="wrapper" id="recommendations">
+    <h3>Users Who Liked <%= @game.title %> Also Liked...</h3>
+    <div id="recommendations_wrapper">
+      <% if @game.recommends.present? %>
+        <%= render partial: '/games/game', collection: @game.recommends %>
+      <% else %>
+        <p id="no_recommendations">There are no recommendations for "<%= @game.title %>" yet.</p>
+      <% end %>
+    </div>
+  </div>
 </div>
 <% content_for :head do %>
   <%= javascript_include_tag 'jquery.textFit.min' %>

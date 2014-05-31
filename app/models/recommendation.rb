@@ -1,7 +1,7 @@
 class Recommendation < ActiveRecord::Base
   attr_accessible :game_id, :recommendation_id
-  belongs_to :game
-  belongs_to :recommend, class_name: 'game'
+  belongs_to :game, foreign_key: 'game_id'
+  belongs_to :recommend, class_name: 'Game', foreign_key: 'recommendation_id'
 
   def self.generate_game_recommendations
     games = Game.all
