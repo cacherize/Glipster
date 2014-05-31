@@ -13,6 +13,7 @@ class Game < ActiveRecord::Base
   has_many :game_users
   has_many :users, through: :game_users
   has_many :recommendations
+  has_many :recommends, through: :recommendations
   has_one :featured_category_game
 
   validates_presence_of :height, :width, :title
@@ -91,6 +92,32 @@ class Game < ActiveRecord::Base
       user.game_users.where(game_id: self.id).destroy_all unless view.valid?
       
       view.save
+    end
+  end
+
+  def find_recommendations
+    reps = self.reputations.positive_reps.last(50)
+
+    if reps.present?
+      user_reps = reps.
+        map{|rep| 
+          rep.user.reputations.
+          find(:all, limit: 20, conditions: ["value = ? AND game_id != ?", 1, self.id])
+        }.flatten
+
+      if user_reps.present?
+        grouped_reps = user_reps.group_by(&:game).sort_by{|k,v| v.size}.last(10)
+
+        recommended_games = []
+        grouped_reps.each do |k,v|
+          recommended_games << k
+        end
+        return recommended_games.reverse
+      else
+        false
+      end
+    else
+      false
     end
   end
 end
