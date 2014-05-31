@@ -17,6 +17,7 @@ a {border:0; text-decoration:none; outline:0; color:#8AB327;}
 a:hover {color:#a7db2c;}
 a:active {color:#5b881a;}
 img {outline:0; border:0;}
+li {list-style-type:square;}
 #wrapper {
 	min-height:100%;
 	position:relative;
