@@ -14,10 +14,7 @@
 			</h1>
 		</div>
 		<div id="game_body">
-      <object>
-      <param name="wmode" value="transparent">
-      <%= content_tag :embed, "", src: @game.flash_file.url, width: @game.width, height: @game.height, wmode: 'transparent' %>
-      </object>
+      <%= content_tag :embed, "", src: @game.flash_file.url, width: @game.width, height: @game.height, wmode: 'opaque' %>
 			<% if @categories.present? %>
 				<br/>
 				<div class="categories">
