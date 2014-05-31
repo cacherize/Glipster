@@ -12,6 +12,7 @@ class Game < ActiveRecord::Base
   has_many :comments
   has_many :game_users
   has_many :users, through: :game_users
+  has_many :recommendations
   has_one :featured_category_game
 
   validates_presence_of :height, :width, :title
