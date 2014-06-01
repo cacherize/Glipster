@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140531022150) do
+ActiveRecord::Schema.define(:version => 20140601234359) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -163,6 +163,7 @@ ActiveRecord::Schema.define(:version => 20140531022150) do
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
     t.string   "image_uid"
+    t.integer  "plays",                  :default => 0
   end
 
   add_index "users", ["username"], :name => "index_users_on_username", :unique => true
