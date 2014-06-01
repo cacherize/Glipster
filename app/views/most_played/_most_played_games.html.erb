@@ -11,7 +11,7 @@
         </span>
       </h2>
       <p class="item_description">
-        <%= game.description.present? ? game.description : "<i>No Description</i>".html_safe %>
+        <%= link_to game.description.present? ? game.description : "<i>No Description</i>".html_safe, game %>
       </p>
     </div>
   </div>
