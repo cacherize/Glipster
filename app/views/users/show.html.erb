@@ -16,7 +16,7 @@
     </h1>
     <div class="user_col">
       <div class="user_content user_stats" style="margin-right:7.5px;">
-        Plays: <%= @user.plays %>
+        Plays: <%= number_with_delimiter(@user.plays, delimiter: ',') %>
         <div class="rank">
           <p class="lvl">Level</p>
           <div class="lvl_bar">
@@ -28,7 +28,7 @@
     </div><!--
     --><div class="user_col">
       <div class="user_content user_stats" style="margin-left:7.5px;">
-        Comments: <%= @user.comments.size %>
+        Comments: <%= number_with_delimiter(@user.comments.size, delimiter: ',') %>
         <div class="rank">
           <p class="lvl">Level</p>
           <div class="lvl_bar">

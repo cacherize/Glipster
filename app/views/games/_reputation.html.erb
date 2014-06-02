@@ -1,5 +1,5 @@
 <p id="page_visits">
-  Total Plays: <span id="visits_count"><%= @game.plays %></span>
+  Total Plays: <span id="visits_count"><%= number_with_delimiter(@game.plays, delimiter: ',') %></span>
   <%= link_to "#{image_tag('toggle_down.png')} <span>More Info</span>".html_safe, '', id: 'stats_toggle' %>
 </p>
 <span class="reputation">
