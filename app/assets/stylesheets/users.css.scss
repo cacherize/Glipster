@@ -157,13 +157,13 @@
         border-top-right-radius:5px;
         border-bottom-right-radius:5px;
         line-height:normal;
-        font-size:0.8em;
+        font-size:0.7em;
         text-align:center;
         .lvl {
           margin:4px 0;
           color:#fff;
           line-height:normal;
-          font-size:0.8em;
+          font-size:0.9em;
         }
         .lvl_bar {
           margin:0;
@@ -181,6 +181,8 @@
             margin:0;
             position:relative;
             z-index:26;
+            font-size:1.1em;
+            font-weight:bold;
           }
           .progress {
             position:absolute;
