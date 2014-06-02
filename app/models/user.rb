@@ -82,8 +82,17 @@ class User < ActiveRecord::Base
   end
 
   def level(value)
-    level = Level.find(:all, conditions: ["min < ? AND max > ?", value, value]).first
+    level = Level.find(:all, conditions: ["min <= ? AND max >= ?", value, value]).first
     level = Level.last unless level.present?
     return level
+  end
+
+  def level_progress(value)
+    level = self.level(value)
+    den = (level.max - level.min) + 0.0
+    num = (level.max - value)
+    value = (1 - (num / den)) * 100
+
+    return "#{value}%"
   end
 end

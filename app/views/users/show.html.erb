@@ -19,7 +19,10 @@
         Plays: <%= @user.plays %>
         <div class="rank">
           <p class="lvl">Level</p>
-          <div class="lvl_bar"><%= @user.level(@user.plays).stage %></div>
+          <div class="lvl_bar">
+            <p class="stage"><%= @user.level(@user.plays).stage %></p>
+            <span class="progress" style="width:<%= @user.level_progress(@user.plays) %>;"></span>
+          </div>
         </div>
       </div>
     </div><!--
@@ -28,7 +31,10 @@
         Comments: <%= @user.comments.size %>
         <div class="rank">
           <p class="lvl">Level</p>
-          <div class="lvl_bar"><%= @user.level(@user.comments.size).stage %></div>
+          <div class="lvl_bar">
+            <p class="stage"><%= @user.level(@user.comments.size).stage %></p>
+            <span class="progress" style="width:<%= @user.level_progress(@user.comments.size) %>;"></span>
+          </div>
         </div>
       </div>
     </div>
