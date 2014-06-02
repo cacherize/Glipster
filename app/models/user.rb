@@ -84,6 +84,6 @@ class User < ActiveRecord::Base
   def level(value)
     level = Level.find(:all, conditions: ["min < ? AND max > ?", value, value]).first
     level = Level.last unless level.present?
-    return level.stage
+    return level
   end
 end
