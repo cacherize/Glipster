@@ -14,6 +14,22 @@
       <%= @user.username %>
       <%= link_to "<span>Change Username</span> #{image_tag('wand.gif')}".html_safe, "#", id: 'change_un_link' %>
     </h1>
+    <div class="user_col">
+      <div class="user_content user_stats" style="margin-right:7.5px;">
+        Plays: <%= @user.plays %>
+        <div class="rank">
+          
+        </div>
+      </div>
+    </div><!--
+    --><div class="user_col">
+      <div class="user_content user_stats" style="margin-left:7.5px;">
+        Comments: <%= @user.comments.size %>
+        <div class="rank">
+        
+        </div>
+      </div>
+    </div>
     <div class="user_content">
       <h2 class="user_section_header">Recently Played
         <% if @recently_played.size == 5 %>

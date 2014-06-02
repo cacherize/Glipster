@@ -130,6 +130,17 @@
       }
 		}
 	}
+  .user_col {
+    width:50%;
+    display:inline-block;
+    vertical-align: top;
+    .user_stats {
+      font-size:0.8em;
+      .rank {
+        float:right;
+      }
+    }
+  }
 	#user_header {
 		display:inline-block;
 		vertical-align: top;
