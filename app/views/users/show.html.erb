@@ -19,7 +19,7 @@
         Plays: <%= @user.plays %>
         <div class="rank">
           <p class="lvl">Level</p>
-          <p class="lvl_value">1</p>
+          <p class="lvl_value"><%= @user.level(@user.plays) %></p>
         </div>
       </div>
     </div><!--
@@ -28,7 +28,7 @@
         Comments: <%= @user.comments.size %>
         <div class="rank">
           <p class="lvl">Level</p>
-          <p class="lvl_value">4</p>
+          <p class="lvl_value"><%= @user.level(@user.comments.size) %></p>
         </div>
       </div>
     </div>

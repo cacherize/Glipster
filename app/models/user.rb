@@ -80,4 +80,10 @@ class User < ActiveRecord::Base
   def add_comment(comment)
     self.comments.build(comment)
   end
+
+  def level(value)
+    level = Level.find(:all, conditions: ["min < ? AND max > ?", value, value]).first
+    level = Level.last unless level.present?
+    return level.stage
+  end
 end
