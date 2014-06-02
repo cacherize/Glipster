@@ -136,8 +136,42 @@
     vertical-align: top;
     .user_stats {
       font-size:0.8em;
+      padding:0 10px;
+      display:block;
+      width:auto;
+      height:40px;
+      line-height:40px;
+      position:relative;
       .rank {
-        float:right;
+        position:absolute;
+        right:0;
+        top:0;
+        padding:0 5px;
+        height:100%;
+        background:#A2D42F;
+        box-shadow:0 0 3px #ccc;
+        -moz-border-radius-bottomright:5px;
+        -moz-border-radius-topright:5px;
+        -webkit-border-top-right-radius:5px;
+        -webkit-border-bottom-right-radius:5px;
+        border-top-right-radius:5px;
+        border-bottom-right-radius:5px;
+        line-height:normal;
+        font-size:0.8em;
+        text-align:center;
+        .lvl {
+          margin:4px 0;
+          color:#fff;
+          line-height:normal;
+          font-size:0.8em;
+        }
+        .lvl_value {
+          margin:0;
+          padding:2px;
+          background:#f3ffd7;
+          min-width:50px;
+          border-radius:3px;
+        }
       }
     }
   }
