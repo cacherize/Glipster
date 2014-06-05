@@ -16,6 +16,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF,endColorstr=#99FFFFFF);
   zoom: 1;
 }
+#user_show .user_col .user_stats .rank .lvl {letter-spacing:1px; font-size:0.95em;}
 .form .form_field #contact_us_reason {background:none;}
 .form .form_field #contact_us_reason input[type="radio"] {border:0; background:none;}
 #sessions_links .ui_img {border:1px solid transparent;}
