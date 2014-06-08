@@ -1,13 +1,22 @@
+<% grouped_comments = @comments.group_by(&:game) %>
 <div class="center">
   <h1 id="pageHeader"><%= @user.username.possessive %> Comments</h1>
   <br/>
-  <% @grouped_comments.each do |game, comments| %>
-    <fieldset class="game_comment_list">
-      <legend><%= link_to small_game_thumb(game) + game.title, game %></legend>
-      <% comments.each do |comment| %>
-        <%= render partial: 'comment', locals: {comment: comment} %>
-      <% end %>
-    </fieldset>
+  <% if @comments.present? %>
+    <div id="top_comment_pagination">
+      <%= will_paginate @comments %><br class="clear"/>
+    </div>
+    <% grouped_comments.each do |game, comments| %>
+      <fieldset class="game_comment_list">
+        <legend><%= link_to small_game_thumb(game) + game.title, game %></legend>
+        <% comments.each do |comment| %>
+          <%= render partial: 'comment', locals: {comment: comment} %>
+        <% end %>
+      </fieldset>
+    <% end %>
+    <div id="bottom_comment_pagination">
+      <%= will_paginate @comments %><br class="clear"/>
+    </div>
   <% end %>
 </div>
 <%= javascript_include_tag params[:controller] %>

@@ -38,6 +38,6 @@ class CommentsController < ApplicationController
 
   def index
     @user = User.find_by_username(params[:user_id])
-    @grouped_comments = @user.comments.group_by(&:game)
+    @comments = @user.comments.paginate(per_page: 15, page: params[:page])
   end
 end

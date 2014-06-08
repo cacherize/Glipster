@@ -183,3 +183,9 @@ hr#comment_divider {
     }
   }
 }
+#top_comment_pagination, #bottom_comment_pagination {
+  width:730px;
+  margin:0 auto 20px auto;
+  font-size:0.85em;
+}
+#top_comment_pagination {margin:25px auto 0 auto;}
