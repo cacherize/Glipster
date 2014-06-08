@@ -68,10 +68,10 @@ function most_played_games() {
     $(".tab_link a").first().addClass('current');
   }
 
-  $(".tab_link").click(function(){
-    var id = $("a", this).attr("href");
+  $(".tab_link a").click(function(){
+    var id = $(this).attr("href");
     $(".tab_link a").removeClass("current");
-    $("a", this).addClass("current");
+    $(this).addClass("current");
     $(".tab").hide();
     $(id).show();
 
