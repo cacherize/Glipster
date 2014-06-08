@@ -157,7 +157,7 @@ hr#comment_divider {
   legend {
     position:absolute;
     left:-15px;
-    top:-25px;
+    top:-20px;
     padding:0;
     a {
       font-size:0.8em;
@@ -170,8 +170,8 @@ hr#comment_divider {
         -moz-box-shadow:0 0 3px #ccc;
         -webkit-box-shadow:0 0 3px #ccc;
         box-shadow:0 0 3px #ccc;
-        vertical-align:top;
-        margin-right:5px;
+        vertical-align:bottom;
+        margin-right:8px;
       }
     }
   }
