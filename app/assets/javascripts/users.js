@@ -73,15 +73,21 @@ $(document).ready(function(){
   var timer;
   $("#user_username").keyup(function(){
     var username = $(this).val();
+
     delay(function(){
-      $.ajax({
-        type: "GET",
-        url: current_username+"/check_username",
-        data: "username=" + username,
-        success: function(){
-          enabledSubmitIfValid();
-        }
-      });
+      if (username.search('#') >= 0) {
+        $("#username_check").html('<span id="invalid">Username must only contain alphanumeric characters<span class="symbol">&#10007;</span></span>')
+        $("#un_submit_btn").attr('disabled', 'disabled');
+      } else {
+        $.ajax({
+          type: "GET",
+          url: current_username+"/check_username",
+          data: "username=" + username,
+          success: function(){
+            enabledSubmitIfValid();
+          }
+        });
+      }
     }, 750 );
   });
 });
