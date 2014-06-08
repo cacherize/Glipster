@@ -156,7 +156,7 @@ hr#comment_divider {
   box-shadow:0 0 3px #ccc;
   legend {
     position:absolute;
-    right:-15px;
+    left:-15px;
     top:-25px;
     padding:0;
     a {
@@ -171,7 +171,7 @@ hr#comment_divider {
         -webkit-box-shadow:0 0 3px #ccc;
         box-shadow:0 0 3px #ccc;
         vertical-align:top;
-        margin-left:5px;
+        margin-right:5px;
       }
     }
   }
