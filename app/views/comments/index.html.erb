@@ -17,6 +17,8 @@
     <div id="bottom_comment_pagination">
       <%= will_paginate @comments %><br class="clear"/>
     </div>
+  <% else %>
+    <p id="no_comments"><%= link_to @user.username, @user %> has no comments :(</p>
   <% end %>
 </div>
 <%= javascript_include_tag params[:controller] %>

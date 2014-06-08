@@ -189,3 +189,16 @@ hr#comment_divider {
   font-size:0.85em;
 }
 #top_comment_pagination {margin:25px auto 0 auto;}
+#no_comments {
+  line-height:150px;
+  text-align:center;
+  width:800px;
+  background:rgba(255,255,255,0.5);
+  padding:15px;
+  height:150px;
+  margin:20px auto;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius:10px;
+  font-size:0.9em;
+}
