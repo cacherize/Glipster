@@ -1,3 +1,9 @@
+<%= 
+  metamagic(
+    title: "All Categories", 
+    keywords: %w(flash game free play categories category list) + Category.pluck(:name)
+  ) 
+%>
 <div id="all_categories">
   <% @featured_category_games.each do |category_games| %>
     <div class="category_section">

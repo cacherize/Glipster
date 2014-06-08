@@ -1,3 +1,9 @@
+<%= 
+  metamagic(
+    title: "Glipster | #{@category.name} Games", 
+    keywords: %w(flash game free play categories category) << @category.name
+  )
+%>
 <h1 class="category_title"><%= @category.name %></h1>
 <div class="center constraint category_constraint">
 	<% if current_user && current_user.admin? %>
