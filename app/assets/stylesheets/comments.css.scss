@@ -139,66 +139,75 @@ hr#comment_divider {
   }
   .collapsed {max-height:60px;}
 }
-.game_comment_list {
-  width:700px;
-  margin:20px auto;
-  display:inline-block;
-  border-width:2px;
+#comments_list {
   position:relative;
-  padding:15px;
-  -moz-border-radius:8px;
-  -webkit-border-radius:8px;
-  border-radius:8px;
-  border:1px solid #ccc;
-  background:rgba(255,255,255,0.5);
-  -moz-box-shadow:0 0 3px #ccc;
-  -webkit-box-shadow:0 0 3px #ccc;
-  box-shadow:0 0 3px #ccc;
-  legend {
-    position:absolute;
-    left:-15px;
-    top:-20px;
-    padding:0;
-    a {
+  .game_comment_list {
+    width:700px;
+    margin:20px auto;
+    display:inline-block;
+    border-width:2px;
+    position:relative;
+    padding:15px;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    background:rgba(255,255,255,0.5);
+    -moz-box-shadow:0 0 3px #ccc;
+    -webkit-box-shadow:0 0 3px #ccc;
+    box-shadow:0 0 3px #ccc;
+    legend {
+      position:absolute;
+      left:-15px;
+      top:-20px;
+      padding:0;
+      a {
+        font-size:0.8em;
+        img {
+          background:#fff;
+          border:1px solid #ccc;
+          -moz-border-radius:8px;
+          -webkit-border-radius:8px;
+          border-radius:8px;
+          -moz-box-shadow:0 0 3px #ccc;
+          -webkit-box-shadow:0 0 3px #ccc;
+          box-shadow:0 0 3px #ccc;
+          vertical-align:bottom;
+          margin-right:8px;
+        }
+      }
+    }
+    .comment {
+      margin:15px 0 0 0;
       font-size:0.8em;
-      img {
-        background:#fff;
-        border:1px solid #ccc;
-        -moz-border-radius:8px;
-        -webkit-border-radius:8px;
-        border-radius:8px;
-        -moz-box-shadow:0 0 3px #ccc;
-        -webkit-box-shadow:0 0 3px #ccc;
-        box-shadow:0 0 3px #ccc;
-        vertical-align:bottom;
-        margin-right:8px;
+      .comment_header {
+        .comment_username, .comment_user_link {display:none;}
       }
     }
   }
-  .comment {
-    margin:15px 0 0 0;
-    font-size:0.8em;
-    .comment_header {
-      .comment_username, .comment_user_link {display:none;}
-    }
+  #top_comment_pagination, #bottom_comment_pagination {
+    width:730px;
+    margin:0 auto 20px auto;
+    font-size:0.85em;
   }
-}
-#top_comment_pagination, #bottom_comment_pagination {
-  width:730px;
-  margin:0 auto 20px auto;
-  font-size:0.85em;
-}
-#top_comment_pagination {margin:25px auto 0 auto;}
-#no_comments {
-  line-height:150px;
-  text-align:center;
-  width:800px;
-  background:rgba(255,255,255,0.5);
-  padding:15px;
-  height:150px;
-  margin:20px auto;
-  -moz-border-radius:10px;
-  -webkit-border-radius:10px;
-  border-radius:10px;
-  font-size:0.9em;
+  #top_comment_pagination {margin:25px auto 0 auto;}
+  #no_comments {
+    line-height:150px;
+    text-align:center;
+    width:800px;
+    background:rgba(255,255,255,0.5);
+    padding:15px;
+    height:150px;
+    margin:20px auto;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+    font-size:0.9em;
+  }
+  #user_prof_link {
+    position:absolute;
+    right:5px;
+    top:-10px;
+    font-size:0.8em;
+  }
 }

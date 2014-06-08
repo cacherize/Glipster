@@ -5,7 +5,8 @@
   ) 
 %>
 <% grouped_comments = @comments.group_by(&:game) %>
-<div class="center">
+<div class="center" id="comments_list">
+  <%= link_to "Back to #{@user.username.possessive} Profile", @user, id: 'user_prof_link' %>
   <h1 id="pageHeader"><%= @user.username.possessive %> Comments</h1>
   <br/>
   <% if @comments.present? %>
