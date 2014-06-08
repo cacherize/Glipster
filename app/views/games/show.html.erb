@@ -1,3 +1,9 @@
+<%= 
+  metamagic(
+    title: "Glipster | #{@game.title}", 
+    keywords: %w(flash game free play online) + @game.categories.map(&:name) 
+  ) 
+%>
 <div class="center">
 	<div id="game_show">
 		<div id="game_header">
