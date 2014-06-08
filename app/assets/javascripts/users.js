@@ -15,7 +15,7 @@ $(document).ready(function(){
     return false;
   });
 
-  $("#recentsAll").click(function(){
+  $("#recentsAll, #playsLink").click(function(){
     $("#recently_played_list").dialog({
       modal: true,
       width: 500,

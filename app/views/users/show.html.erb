@@ -16,7 +16,7 @@
     </h1>
     <div class="user_col">
       <div class="user_content user_stats" style="margin-right:7.5px;">
-        Plays: <%= number_with_delimiter(@user.plays, delimiter: ',') %>
+        Plays: <%= link_to number_with_delimiter(@user.plays, delimiter: ','), '', id: 'playsLink' %>
         <div class="rank">
           <p class="lvl">Level</p>
           <div class="lvl_bar">
