@@ -11,6 +11,7 @@ Glipster::Application.routes.draw do
       get 'confirm'
       get 'check_username'
     end
+    resources :comments, only: :index
   end
   resources :password_update, only: [:edit, :update]
   resources :categories

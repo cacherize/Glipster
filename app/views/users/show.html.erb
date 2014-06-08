@@ -28,7 +28,7 @@
     </div><!--
     --><div class="user_col">
       <div class="user_content user_stats" style="margin-left:7.5px;">
-        Comments: <%= number_with_delimiter(@user.comments.size, delimiter: ',') %>
+        Comments: <%= link_to number_with_delimiter(@user.comments.size, delimiter: ','), user_comments_path(@user) %>
         <div class="rank">
           <p class="lvl">Level</p>
           <div class="lvl_bar">

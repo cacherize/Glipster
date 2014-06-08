@@ -35,4 +35,7 @@ class CommentsController < ApplicationController
 			end
 		end
 	end
+
+  def index
+  end
 end
