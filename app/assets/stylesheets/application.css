@@ -232,6 +232,15 @@ li {list-style-type:square;}
 .text-left {text-align:left;}
 .vertical-top{vertical-align: top;}
 .middle {vertical-align: middle;}
+.green_link {
+  display:inline-block;
+  vertical-align: middle;
+  margin-top:-1px;
+  width: 10px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAEQkAABEJABiazSuAAAAAd0SU1FB94GCBIfB+KI5pMAAAECSURBVBjTXZChTsJxHMQ/9/XnoDhfwEZk/JnRQjOqwWASNfgAaLBRKEZ9A2QzmJzNNzAZFDRB0PEIjqH+/Z8B2JyXLtw+uzvxT73n+p3D2xhLEgD2mwB6g2ytKFwKaWnqNCzpuwvalwS2kRRX/awJGkXE0HBZ0k8VYmMBY24ScGH7xPY9aFXBrUzF2DKyQMgBlIVfDrP+CNHBrgDGyGYsc22jJIQ9wwsekDaBZeBd0q5dfhSTlfR3cZHn55GSgIZQG7kNk9Nmrb+TECx6H62/5kAHoDuoVYLYArUAkvEHptEb1GeXYYRsUy1UfOH4nK229oAbzBkCWfMwU6zjg+xpDPALBX5tWPmB0KAAAAAASUVORK5CYII=);
+}
 .flash {
 	margin:10px 0 0 0;
 	padding:10px 100px 10px 100px;
