@@ -61,7 +61,7 @@ function most_played_games() {
 
   if (current.length > 0) {
     var current_id = "#"+current
-    $(current_id).show()
+    $(current_id+"_list").show()
     $(".tab_link a[href="+current_id+"]").addClass("current");
   } else {
     $(".tab").first().show();
@@ -73,7 +73,7 @@ function most_played_games() {
     $(".tab_link a").removeClass("current");
     $(this).addClass("current");
     $(".tab").hide();
-    $(id).show();
+    $(id+"_list").show();
 
     return false;
   });
