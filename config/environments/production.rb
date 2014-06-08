@@ -46,7 +46,7 @@ Glipster::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += ['users.js', 'support_tickets.js', 'featured_images.js', 'jquery.textFit.min.js', 'jquery.tinycarousel.js', 'games.js', 'featured_category_games.js', 'welcome.js', 'search.js', 'categories.js', 'corners.min.js', 'developers.js', 'faqs.js', 'ie/*.css', 'sessions.js', 'uploads.js']
+  config.assets.precompile += ['users.js', 'support_tickets.js', 'featured_images.js', 'jquery.textFit.min.js', 'jquery.tinycarousel.js', 'games.js', 'featured_category_games.js', 'welcome.js', 'search.js', 'categories.js', 'corners.min.js', 'developers.js', 'faqs.js', 'ie/*.css', 'sessions.js', 'uploads.js', 'comments.js']
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
