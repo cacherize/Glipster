@@ -1,3 +1,9 @@
+<%= 
+  metamagic(
+    title: "Support", 
+    keywords: %w(flash game free play support help email)
+  ) 
+%>
 <div class="center">
   <%= form_for @support_ticket, html: {class: 'form', id: "contact_us_form", honeypot: true} do |f| %>
     <h1 class="form_header">Contact Us</h1>
