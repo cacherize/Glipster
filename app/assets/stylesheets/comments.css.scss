@@ -112,7 +112,7 @@ hr#comment_divider {
         vertical-align: middle;
       }
     }
-    span {font-size:0.8em; float:left; margin-left:50px;}
+    .comment_username {font-size:0.8em; float:left; margin-left:50px;}
     .comment_details {
       font-size:0.8em;
       display:inline-block;
@@ -156,7 +156,7 @@ hr#comment_divider {
   box-shadow:0 0 3px #ccc;
   legend {
     position:absolute;
-    right:-25px;
+    right:-15px;
     top:-25px;
     padding:0;
     a {
@@ -176,7 +176,10 @@ hr#comment_divider {
     }
   }
   .comment {
-    margin:25px 0 0 0;
+    margin:15px 0 0 0;
     font-size:0.8em;
+    .comment_header {
+      .comment_username, .comment_user_link {display:none;}
+    }
   }
 }
