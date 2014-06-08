@@ -37,5 +37,7 @@ class CommentsController < ApplicationController
 	end
 
   def index
+    @user = User.find_by_username(params[:user_id])
+    @grouped_comments = @user.comments.group_by(&:game)
   end
 end
