@@ -1,3 +1,9 @@
+<%= 
+  metamagic(
+    title: "Glipster | #{@user.username.possessive} Comments", 
+    keywords: %w(flash game free play online comments) 
+  ) 
+%>
 <% grouped_comments = @comments.group_by(&:game) %>
 <div class="center">
   <h1 id="pageHeader"><%= @user.username.possessive %> Comments</h1>
