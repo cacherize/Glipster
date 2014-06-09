@@ -29,7 +29,7 @@ class CommentsController < ApplicationController
 
 		respond_to do |format|
 			if @comment.destroy
-				format.html{redirect_to game_path(@comment.game, anchor: 'comments'), notice: "Successfully removed comment!"}
+				format.html{redirect_to request.referer, notice: "Successfully removed comment!"}
 			else
 				format.html{redirect_to @comment.game, alert: "Unable to delete comment, please try again."}
 			end
