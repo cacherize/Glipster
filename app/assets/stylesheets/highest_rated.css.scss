@@ -1,0 +1,32 @@
+#under_development {
+  text-shadow:0 1px 3px #999;
+  margin:30px auto;
+  width:1000px;
+  h1 {margin:10px 0; font-size:3em;}
+  p {
+    font-size:1.5em;
+    line-height:40px;
+    &#dev_exp {
+      margin:0;
+      padding:20px 0;
+      background:-moz-linear-gradient(left center, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
+      background:-webkit-linear-gradient(left,rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
+      background:linear-gradient(left center, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
+    }
+  }
+  .divider {width:1000px;}
+  .top_hr {margin-bottom:0;}
+  .bottom_hr {margin-top:0;}
+  .up_link, .down_link {vertical-align:middle; line-height:20px;}
+  .down_link:hover {background:#DB4E10;}
+  .up_link:hover {background:#A2D42F;}
+  .construction {
+    margin:20px 0;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    -moz-box-shadow:0 1px 3px #999;
+    -webkit-box-shadow:0 1px 3px #999;
+    box-shadow:0 1px 3px #999;
+  }
+}
