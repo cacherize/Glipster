@@ -19,7 +19,6 @@ Glipster::Application.routes.draw do
   resources :games do
     member do
       post 'vote'
-      get  'vote'
       get  'load_reputation'
       get  'load_comments'
     end
