@@ -27,8 +27,7 @@ Glipster::Application.routes.draw do
   resources :password_resets
   resources :developers
   resources :featured_category_games
-  match 'search/games', to: 'search#games', via: :get
-  resources :search, only: :new
+  resources :search, only: [:new, :index]
   match 'featured_images/update_position', to: 'featured_images#update_position', via: :put
   resources :featured_images, only: [:index, :create, :destroy]
   match 'contact_us', to: 'support_tickets#new', via: :get

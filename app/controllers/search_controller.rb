@@ -3,7 +3,7 @@ class SearchController < ApplicationController
 		@games = Game.search(params[:search]).paginate(per_page: 15, page: params[:page])
 	end
 
-	def games
+	def index
 		@games = Game.search(params[:term])
 		@games = @games.map{|game| game.to_autocomplete_hash }
 

@@ -24,7 +24,7 @@
     <div class="inline-block" style="vertical-align:top; margin-left:15px;">
       <div class="form_field">
         <%= f.label :link %><br/>
-        <%= f.text_field :link, value: @new_image.link, placeholder: 'search game titles', data: {autocomplete: search_games_path} %>
+        <%= f.text_field :link, value: @new_image.link, placeholder: 'search game titles', data: {autocomplete: search_index_path} %>
       </div>
       <div class="form_submit">
         <%= f.submit 'Add Image' %>
