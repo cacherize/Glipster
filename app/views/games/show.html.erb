@@ -7,11 +7,11 @@
 <div class="center">
 	<div id="game_show">
 		<div id="game_header">
-			<div>
+			<div id="game_img">
 				<%= link_to_if(current_user && current_user.admin?, game_thumb(@game), edit_game_path(@game)) %>
 				<%= special_status_image(@game) %>
 			</div>
-			<h1><%= @game.title %> 
+			<h1 id="title"><%= @game.title %> 
 				<% if @developer.present? %>
 					<span>
 						By: <%= link_to_if(@developer.link.present?, @developer.name, @developer.link, target: '_blank') %>
