@@ -119,6 +119,9 @@ hr#comment_divider {
       float:right;
       margin:0 10px 0 0;
       color:#999;
+      .liked {
+        font-weight:bold;
+      }
     }
     .comment_delete {
       display:inline-block;

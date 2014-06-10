@@ -13,12 +13,13 @@ module CommentsHelper
         )
       else
         like = comment.comment_likes.where(user_id: user.id).first
-        "#{link_text} (#{link_to(
-          "Unlike", 
+        link_to(
+          link_text, 
           comment_comment_like_path(comment.id, like.id), 
           method: :delete,
-          remote: true
-        )})".html_safe
+          remote: true,
+          class: 'liked'
+        )
       end
     else
       link_to(
