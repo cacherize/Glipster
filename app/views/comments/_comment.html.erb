@@ -3,7 +3,9 @@
     <%= link_to avatar_thumb(comment.user), comment.user, class: 'comment_user_link' %>
     <span class="comment_username"><%= link_to comment.user.username, comment.user %></span>
     <span class="comment_details">
-      Likes | <%= comment.created_at.localtime.strftime("%b %e, %Y %l:%M %p %Z") %>
+      <%= comment_like_link(current_user, comment) %> 
+      |
+      <%= comment.created_at.localtime.strftime("%b %e, %Y %l:%M %p %Z") %>
     </span>
     <% if current_user == comment.user %>
       <div class="comment_delete">
