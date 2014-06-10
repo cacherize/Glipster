@@ -189,6 +189,10 @@ hr#comment_divider {
     width:730px;
     margin:0 auto 20px auto;
     font-size:0.85em;
+    text-align:center;
+    .pagination {
+      float:none;
+    }
   }
   #top_comment_pagination {margin:25px auto 0 auto;}
   #no_comments {
