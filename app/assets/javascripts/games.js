@@ -53,6 +53,22 @@ function game_show() {
       after: "a.read_more"
     });
   });
+
+  $("#comments").on("click", ".comment_vote_link", function(){
+    var s = $(this).text();
+    
+    if (s == "Like") {
+      $(this).replaceWith('1 Like')
+    } else if (s == "1 Like") {
+      $(this).replaceWith('2 Likes')
+    } else {
+      var val = s.replace(/\d+/, function(n) {
+        return ++n;
+      });
+
+      $(this).replaceWith(val)
+    }
+  });
 }
 
 function most_played_games() {

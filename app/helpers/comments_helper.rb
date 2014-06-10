@@ -9,17 +9,11 @@ module CommentsHelper
           link_text, 
           comment_comment_likes_path(comment), 
           method: :post,
-          remote: true
+          remote: true,
+          class: 'comment_vote_link'
         )
       else
-        like = comment.comment_likes.where(user_id: user.id).first
-        link_to(
-          link_text, 
-          comment_comment_like_path(comment.id, like.id), 
-          method: :delete,
-          remote: true,
-          class: 'liked'
-        )
+        link_text
       end
     else
       link_to(
