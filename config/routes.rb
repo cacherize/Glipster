@@ -23,7 +23,9 @@ Glipster::Application.routes.draw do
   end
   resources :highest_rated, only: :index
   resources :most_played, only: :show
-  resources :comments, only: [:create, :destroy]
+  resources :comments, only: [:create, :destroy] do
+    resources :comment_likes, only: [:create, :destroy]
+  end
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :developers
   resources :featured_category_games
