@@ -21,7 +21,7 @@ $(document).ready(function(){
 });
 
 function game_show() {
-	var width = $("#game_show").width();
+	var width = $("#game_show").width(); 
 	$("#game_stats, #game_details, #comments_wrapper, .wrapper").width(width);
 
   $("#comment_message").keyup(function(){
@@ -98,3 +98,16 @@ function commentOverflow(){
     after: "a.read_more"
   });
 }
+
+jQuery(window).load(function(){
+  var desc_height = $("#game_description").height(),
+      ctrl_height = $("#game_controls").height();
+
+  if (desc_height > ctrl_height) {
+    $("#game_controls").height(desc_height);
+  }
+
+  if (desc_height < ctrl_height) {
+    $("#game_description").height(ctrl_height);
+  }
+});
