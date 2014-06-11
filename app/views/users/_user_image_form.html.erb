@@ -1,7 +1,10 @@
 <div id="change_prof_pic" title="Update Avatar">
   <%= form_for @user, html: {multipart: true} do |f| %>
-    <%= link_to image_tag('browse_files.png')+" Select File", '#', onclick: 'openFileBrowser()' %><br/>
-    <span id="pending_filename"></span><br/>
+    <%= link_to image_tag('browse_files.png')+" Select File", '#', onclick: 'openFileBrowser()' %>
+    <p id="avatar_requirements">
+      3 MB is max file size. Supports png, gif, jpg, and jpeg formats.
+    </p>
+    <span id="pending_filename">Image Preview</span><br/>
     <%= f.file_field :image, style: 'display:none;' %>
     <%= avatar_large(@user,'userImgPrev') %>
     <div class="form_submit">
