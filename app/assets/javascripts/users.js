@@ -113,7 +113,7 @@ function validateFileType(input) {
   if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
     alert('Please select an image file (gif, png, jpg, or jpeg)');
     $("#user_image").val('');
-    $("#pending_filename").text('');
+    $("#pending_filename").text('Image Preview');
     $("#userImgPrev").attr('src', img)
   } else {
     imgPrev(input);
