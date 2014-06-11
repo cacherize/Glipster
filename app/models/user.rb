@@ -30,8 +30,8 @@ class User < ActiveRecord::Base
       if: lambda{self.username.present?}
     }
   validates_format_of :email, with: /[-0-9a-z.+_]+@[-0-9a-z.+_]+\.[a-z]{2,4}/i, if: lambda{self.email.present?}
-  validates_size_of :image, maximum: 3.megabytes, if: :image_changed?
-  validates_property :format, of: :image, in: ['jpg', 'jpeg', 'png', 'gif'], if: :image_changed?
+  validates_size_of :image, maximum: 3.megabytes, message: "is too big (maximum is 3 MB)", if: :image_changed?
+  validates_property :format, of: :image, in: ['jpg', 'jpeg', 'png', 'gif'], message: 'file must be either png, gif, jpg, or jpeg format.', if: :image_changed?
 
   dragonfly_accessor :image
 
