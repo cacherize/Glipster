@@ -44,7 +44,8 @@ class UsersController < ApplicationController
 			if @user.update_attributes(params[:user])
 				format.html{redirect_to @user, notice: "Updated profile!"}
 			else
-				format.html{render :edit}
+        flash[:errors] = @user.errors.full_messages.join("<br/>")
+        format.html{redirect_to @user}
 			end
 		end
 	end
