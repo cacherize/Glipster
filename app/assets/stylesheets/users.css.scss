@@ -102,6 +102,7 @@
       padding-bottom:5px;
     }
 		#userImage {
+      max-height:150px;
 			-moz-border-radius:10px;
 			-webkit-border-radius:10px;
 			border-radius:10px;
@@ -283,6 +284,7 @@
   a {color:#8AB327;}
   a:hover {color:#a7db2c;}
   a:active {color:#5b881a;}
+  #avatar_requirements {font-size:0.7em; margin:0 0 10px 0;}
   #pending_filename {font-weight:normal;}
   .form_submit {
     text-align:center;
@@ -332,7 +334,7 @@
   }
   #userImgPrev {
     width:150px;
-    height:150px;
+    max-height:150px;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
     border-radius:10px;

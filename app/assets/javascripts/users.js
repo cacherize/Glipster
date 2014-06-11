@@ -33,7 +33,7 @@ $(document).ready(function(){
   $("#change_av_link").click(function(){
     $("#change_prof_pic").dialog({
       modal: true,
-      height: 320,
+      height: 340,
       width: 400,
       resizable: false
     });
@@ -55,7 +55,7 @@ $(document).ready(function(){
   });
 
   $("#user_image").change(function(){
-    validateFileType(this)
+    validateFile(this)
   });
 
   $("#change_un_link").hover(function(){
@@ -105,15 +105,21 @@ function openFileBrowser() {
   return false;
 }
 
-function validateFileType(input) {
+function validateFile(input) {
   var val = $(input).val(),
       ext = val.split('.').pop().toLowerCase(),
       img = $("#user_show .profile_pic img").attr('src');
-  
+      size = $(input)[0].files[0].size
+
   if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
     alert('Please select an image file (gif, png, jpg, or jpeg)');
     $("#user_image").val('');
-    $("#pending_filename").text('');
+    $("#pending_filename").text('Image Preview');
+    $("#userImgPrev").attr('src', img)
+  } else if (size > 3145728){
+    alert('File cannot be bigger than 3MB');
+    $("#user_image").val('');
+    $("#pending_filename").text('Image Preview');
     $("#userImgPrev").attr('src', img)
   } else {
     imgPrev(input);

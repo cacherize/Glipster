@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  extend Dragonfly::Model::Validations
   attr_accessible :email, :username, :password, :password_confirmation, :admin, :activated, :image, :current_password
   has_secure_password
   
@@ -29,6 +30,8 @@ class User < ActiveRecord::Base
       if: lambda{self.username.present?}
     }
   validates_format_of :email, with: /[-0-9a-z.+_]+@[-0-9a-z.+_]+\.[a-z]{2,4}/i, if: lambda{self.email.present?}
+  validates_size_of :image, maximum: 3.megabytes, if: :image_changed?
+  validates_property :format, of: :image, in: ['jpg', 'jpeg', 'png', 'gif'], if: :image_changed?
 
   dragonfly_accessor :image
 

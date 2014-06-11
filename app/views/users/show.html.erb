@@ -5,6 +5,9 @@
   ) 
 %>
 <div class="center">
+  <% if flash[:errors].present? %>
+    <p class="flash alert"><%= flash[:errors].gsub("3145728 characters", '3 MB').html_safe %></p>
+  <% end %>
 	<div id="user_show">
 		<span class="profile_pic">
 			<%= avatar_large(@user, 'userImage') %>
