@@ -26,6 +26,9 @@
 				<div class="categories">
 					<b>Categories:</b>
 					<%= @categories.map{|cat| link_to(cat.name, cat)}.join(", ").html_safe %>
+          <span class="date_stamp">
+            Added: <%= @game.created_at.localtime.strftime("%b %e, %Y %l:%M %p %Z") %>
+          </span>
 				</div>
 			<% end %>
 		</div>
