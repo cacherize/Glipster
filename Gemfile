@@ -47,6 +47,7 @@ end
 group :production do
 	# Use unicorn as the app server
 	gem 'unicorn'
+  gem 'postmark-rails'
 end
 
 group :development, :test do
