@@ -146,7 +146,7 @@ li {list-style-type:square;}
 	text-transform:uppercase;
 	text-shadow:0 -1px 0 #111, 0 0 2px #888;
 }
-#sessions_links a img {vertical-align: middle; margin-right:5px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
+#sessions_links a img {background:#fff; vertical-align: middle; margin-right:5px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
 #menu li a.current, #menu li a:hover, #sessions_links a.current, #sessions_links a:hover {
 	background:none;
 	background-color:#111;
