@@ -1,0 +1,14 @@
+<div style="padding:40px;">
+  <h1 style="margin:0; text-align:center; font-weight:normal; padding-bottom:40px;">
+    Thank You for Joining Glipster!
+  </h1>
+  <div style="text-align:center; background:#f7f7f7; border:1px solid #ccc; position:relative; margin:40px 0; padding-bottom:40px; margin:0;">
+   <!--  <p style="padding:8px; border-bottom:1px solid #ccc; margin:0; text-shadow:0 -1px 0 #bbb; background:#dcdcdc; text-align:left; color:#fff; font-weight:bold; margin:0;">Let's Get Started</p> -->
+    <p style="padding:40px 0 25px 0; font-size:0.9em; margin:0;">
+      Finish account sign up by confirming your account.
+    </p>
+
+    <%= link_to "Confirm", edit_password_reset_url(@user.password_reset_token), style: 'background:#a2d42f; padding:25px 40px; box-shadow:0 2px 3px #ccc; text-shadow:0 -1px 0 #8ab327; color:#f1f8df; display:inline-block; border-radius:20px; font-weight:bold; text-decoration:none; font-size:1.2em;' %>
+  </div>
+  <p style="text-align:center; font-size:0.7em; margin:0; padding-top:30px;">If you did not sign up for a Glipster account, please disregard this email and no further action is needed. Your user record will be deleted after 48 hours of no account confirmation.</p>
+</div>
