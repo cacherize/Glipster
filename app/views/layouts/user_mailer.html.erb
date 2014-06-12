@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    a:hover {
+      color:#a7db2c;
+      text-decoration:none;
+    }
+  </style>
+</head>
+<body>
+  <table style="border-collapse: collapse; font-family:sans-serif, arial; width:100%; color:#444; text-align:left;">
+    <thead>
+      <tr style="background:#333;">
+        <th style="padding:10px;"><%= link_to image_tag(attachments['logo.jpg'].url, alt: 'logo'), root_url %></th>
+        <th style="text-align:right; font-weight:bold; color:#fff; vertical-align:middle; padding-right:10px; font-size:0.70em; text-shadow:0 -1px 0 #111, 0 0 2px #888;">
+          <%= Time.now.localtime.strftime("%b %-d, %Y") %>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:#e5e5e5;">
+        <td colspan="2" style="padding:10px;">
+          <%= yield %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
