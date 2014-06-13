@@ -1,8 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :store_location
+  before_filter :redirect_to_under_dev_page
 
   APP_NAME = "glipster"
+
+  def redirect_to_under_dev_page
+    redirect_to 'http://www.glipster.com/under_development.html' if Rails.env.production? && request.ip == "209.182.121.65"
+  end
 
   def store_location
   	session["#{APP_NAME}_return_to"] = request.fullpath
