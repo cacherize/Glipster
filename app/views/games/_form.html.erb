@@ -22,8 +22,8 @@
 				<%= f.file_field :image %>
 			</div>
       <div class="form_field">
-        <%= f.check_box :featured, value: 1, checked: @game.featured %>
-        <%= f.label :featured %>
+        <%= f.label :developer_id %><br/>
+        <%= f.select :developer_id, options_from_collection_for_select(Developer.all, :id, :name, @game.developer_id), include_blank: true %>
       </div>
 		</span><!--
 		--><span class="form_field_wrapper">
@@ -35,10 +35,10 @@
 				<%= f.label :width %><br/>
 				<%= f.text_field :width %>
 			</div>
-			<div class="form_field">
-				<%= f.label :developer_id %><br/>
-				<%= f.select :developer_id, options_from_collection_for_select(Developer.all, :id, :name, @game.developer_id), include_blank: true %>
-			</div>
+      <div class="form_field">
+        <%= f.check_box :featured, value: 1, checked: @game.featured %>
+        <%= f.label :featured %>
+      </div>
 		</span>
     <div class="form_field">
       <%= f.label :controls %><br/>
