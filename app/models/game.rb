@@ -114,8 +114,14 @@ class Game < ActiveRecord::Base
                 <span>&#8593;</span><br/>
                 <span>&#8592;</span><span>&#8595;</span><span>&#8594;</span>
               </div>"
+
+    mouse = "<span class='mouse'></span>"
    
-    controls = string.gsub("<nav>", nav).gsub("<arrows>", arrows).html_safe
+    controls = string.
+               gsub("<nav>", nav).
+               gsub("<mouse>", mouse).
+               gsub("<arrows>", arrows).
+               html_safe
     return controls
   end
 
