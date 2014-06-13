@@ -342,6 +342,7 @@
         letter-spacing: 1px;
 			}
       pre {
+        font-family: Consolas,monospace;
         border:1px solid #ccc;
         -moz-box-shadow:0 -1px 1px #ccc inset;
         -webkit-box-shadow:0 -1px 1px #ccc inset;
@@ -378,6 +379,23 @@
           width:1px;
           left:6.5px;
           position:absolute;
+        }
+      }
+      .wasd, .arrows {
+        display:inline-block;
+        text-align:center;
+        font-size:0.7em;
+        vertical-align: middle;
+        span {
+          display:inline-block;
+          background:#fff;
+          border:1px solid #ccc;
+          color:#ccc;
+          text-align:center;
+          padding:1px 3px;
+          font-family: Consolas,monospace;
+          border-radius:2px;
+          box-shadow:0 -1px 1px #ccc inset;
         }
       }
 		}
