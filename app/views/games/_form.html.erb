@@ -22,8 +22,8 @@
 				<%= f.file_field :image %>
 			</div>
       <div class="form_field">
-        <%= f.label :developer_id %><br/>
-        <%= f.select :developer_id, options_from_collection_for_select(Developer.all, :id, :name, @game.developer_id), include_blank: true %>
+        <%= f.label :developer_name, "Developer" %><br/>
+        <%= f.text_field :developer_name, value: @game.developer_id.present? ? @game.developer.name : nil, data: {autocomplete_source: developers_path} %>
       </div>
 		</span><!--
 		--><span class="form_field_wrapper">
@@ -65,3 +65,4 @@
 		</div>	
 	<% end %>
 </div>
+<%= javascript_include_tag 'developers' %>
