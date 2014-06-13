@@ -1,10 +1,10 @@
-<span>
+<span id="left_description_col">
 	<div id="game_description">
 		<h3>Description:</h3>
 		<%= @game.description.present? ? @game.description.html_safe : "<i>No Description</i>".html_safe %>
 	</div>
 </span><!--
---><span style="width:35%;">
+--><span id="right_controls_col">
 	<div id="game_controls">
 		<h3>Controls:</h3>
 		<%= @game.controls.html_safe %>
