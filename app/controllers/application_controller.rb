@@ -6,7 +6,9 @@ class ApplicationController < ActionController::Base
   APP_NAME = "glipster"
 
   def redirect_to_under_dev_page
-    redirect_to 'http://www.glipster.com/under_development.html' unless !Rails.env.production? && request.remote_ip == "209.182.121.64"
+    if Rails.env.production?
+      redirect_to 'http://www.glipster.com/under_development.html' unless request.remote_ip == "209.182.121.64"
+    end
   end
 
   def store_location
