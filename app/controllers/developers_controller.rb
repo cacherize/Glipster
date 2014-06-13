@@ -17,7 +17,8 @@ class DevelopersController < ApplicationController
 	end
 
 	def index
-		@developers = Developer.all
+		@developers = Developer.order(:name).where("lower(name) like ?", "%#{params[:term].downcase}%")
+    render json: @developers.map(&:name)
 	end
 
 	def show

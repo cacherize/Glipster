@@ -1,6 +1,6 @@
 class Game < ActiveRecord::Base
   include Rails.application.routes.url_helpers
-  attr_accessible :title, :description, :controls, :flash_file, :image, :developer_id, :height, :width, :category_ids, :featured, :daily_plays, :weekly_plays, :monthly_plays
+  attr_accessible :title, :description, :controls, :flash_file, :image, :developer_name, :height, :width, :category_ids, :featured, :daily_plays, :weekly_plays, :monthly_plays
   mount_uploader :flash_file, GameUploader
   dragonfly_accessor :image
 
@@ -20,6 +20,14 @@ class Game < ActiveRecord::Base
 
   def to_param
   	"#{id} #{title}".parameterize
+  end
+
+  def developer_name
+    developer.try(:name)
+  end
+  
+  def developer_name=(name)
+    self.developer = Developer.find_or_create_by_name!(name) if name.present?
   end
 
   def to_autocomplete_hash
