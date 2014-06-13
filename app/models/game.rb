@@ -102,6 +102,27 @@ class Game < ActiveRecord::Base
     end
   end
 
+  def parsed_controls
+    string = self.controls
+
+    nav = "<div class='wasd'>
+            <span>W</span><br/>
+            <span>A</span>
+            <span>S</span>
+            <span>D</span>
+          </div>"
+
+    arrows = "<div class='arrows'>
+                <span>&#8593;</span><br/>
+                <span>&#8592;</span>
+                <span>&#8595;</span>
+                <span>&#8594;</span>
+              </div>"
+   
+    controls = string.gsub("<nav>", nav).gsub("<arrows>", arrows).html_safe
+    return controls
+  end
+
   def find_recommendations
     reps = self.reputations.positive_reps.last(50)
 
