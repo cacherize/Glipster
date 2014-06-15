@@ -169,11 +169,9 @@ li {list-style-type:square;}
 	overflow:visible;
 }
 #menu li .submenu {
-	display:none;
-	width:100%;
-	width:-moz-calc(100% - 2px);
-	width:-webkit-calc(100% - 2px);
-	width:calc(100% - 2px);
+  display:none;
+  width:245px;
+  height:141px;
 	top:100%;
 	top:-moz-calc(100% - 1px);
 	top:-webkit-calc(100% - 1px);
@@ -193,14 +191,16 @@ li {list-style-type:square;}
 	border-bottom-right-radius:5px;
 	border-bottom-left-radius:5px;
 }
-#menu li .submenu li {
+#menu li .submenu #first_submenu_list {border-right:1px solid #444;}
+#menu li .submenu ul {float:left; padding:0; width:122px; display:inline-block;}
+#menu li .submenu ul li {
 	background:#333;
 	line-height:20px;
 	padding:0;
 	display:list-item;
 	width:100%;
 }
-#menu li .submenu li a {
+#menu li .submenu ul li a {
 	text-align:left;
 	border:0;
 	padding:3px 10px;
@@ -211,10 +211,11 @@ li {list-style-type:square;}
 	position:relative;
 	color:#fff;
 	text-transform: uppercase;
+  height:20px;
 }
-#menu li .submenu li a img {position:absolute; right:0; top:0; background:#111; border-left:1px solid #444; padding: 5px;}
-#menu li .submenu li a:hover img, #menu li .submenu li a.current img {background:none; border-left:0;}
-#menu li .submenu li a#top {padding:0; border-top:0}
+#menu li .submenu ul li a img {position:absolute; right:0; top:0; background:#111; border-left:1px solid #444; padding: 5px;}
+#menu li .submenu ul li a:hover img, #menu li .submenu li a.current img {background:none; border-left:0;}
+#menu li .submenu ul li.top a {padding:0; border-top:0; height:0;}
 ::-moz-selection { color: #fff; text-shadow:none; background: #7cc6ff; }
 ::selection      { color: #fff; text-shadow:none; background: #7cc6ff; } 
 #bottom_page {margin-bottom:20px;}

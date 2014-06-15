@@ -34,12 +34,16 @@
         </li>
 		    <li class="submenu_container">
 		    	<%= link_to "Categories <span class='sub_arrow'>&#x25bc;</span>".html_safe, categories_path, class: cp(categories_path) %>
-		    	<ul class="submenu">
-		    		<li><a id="top"></a></li>
-		    		<% Category.all.each do |cat| %>
-		    			<li><%= link_to "#{cat.name} #{category_image(cat)}".html_safe, cat, class: cp(category_path(cat)) %></li>
-		    		<% end %>
-		    	</ul>
+		    	<div class="submenu">
+		    		<% Category.all.in_groups(2, false).each do |categories| %>
+              <ul id="<%= cycle('first_submenu_list', '') %>">
+                <li class="top"><a></a></li>
+                <% categories.each do |cat| %>
+  		    			 <li><%= link_to "#{cat.name} #{category_image(cat)}".html_safe, cat, class: cp(category_path(cat)) %></li>
+                <% end %>
+              </ul>
+            <% end %><br class="clear"/>
+		    	</div>
 		    </li>
 			</ul>
 			<div id="sessions_links">

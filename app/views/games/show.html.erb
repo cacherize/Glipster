@@ -20,7 +20,7 @@
 			</h1>
 		</div>
 		<div id="game_body">
-      <%= content_tag :embed, "", src: @game.flash_file.url, width: @game.width, height: @game.height, wmode: 'opaque' %>
+      <%= content_tag :embed, "", src: @game.flash_file.url, width: @game.width, height: @game.height %>
 			<% if @categories.present? %>
 				<br/>
 				<div class="categories">
