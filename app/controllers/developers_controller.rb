@@ -34,7 +34,7 @@ class DevelopersController < ApplicationController
 
 		respond_to do |format|
 			if @developer.update_attributes(params[:developer])
-				format.html{redirect_to :index, notice: "Successfully updated developer!"}
+				format.html{redirect_to @developer, notice: "Successfully updated developer!"}
 			else
 				format.html{render :edit}
 			end
