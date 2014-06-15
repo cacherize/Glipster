@@ -15,7 +15,7 @@
 		<span class="form_field_wrapper" style="margin-right:20px;">
 			<div class="form_field">
 				<%= f.label :title %><br/>
-				<%= f.text_field :title, value: @game.flash_file_name.gsub("_", " ").gsub(".swf","") %>
+				<%= f.text_field :title, value: @game.title.present? ? @game.title : @game.flash_file_name.gsub("_", " ").gsub(".swf","") %>
 			</div>
 			<div class="form_field">
 				<%= f.label :image %><br/>
