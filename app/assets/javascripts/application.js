@@ -23,12 +23,12 @@ $(document).ready(function(){
 	$('input, textarea').placeholder();
 
 	$('li.submenu_container').hover(function () {
-  	if ($('> ul.submenu',this).length > 0) {
-  	    $('> ul.submenu',this).stop().slideDown('fast');
+  	if ($('> div.submenu',this).length > 0) {
+  	    $('> div.submenu',this).stop().slideDown('fast');
   	}
 	},function () {
-		if ($('> ul.submenu',this).length > 0) {
-			$('> ul.submenu',this).stop().slideUp('fast');
+		if ($('> div.submenu',this).length > 0) {
+			$('> div.submenu',this).stop().slideUp('fast');
 		}
 	});
 	$(".game_link").dotdotdot({});
