@@ -31,6 +31,13 @@ $(document).ready(function(){
 			$('> div.submenu',this).stop().slideUp('fast');
 		}
 	});
+
+  $('#sidebar').hover(function () {
+      $(this).stop().animate({left: "0"});
+  },function () {
+      $(this).stop().animate({left: '-60'});
+  });
+
 	$(".game_link").dotdotdot({});
 	$(".vertical_game_link p").dotdotdot({});
 	$(".search_result_description").dotdotdot({});

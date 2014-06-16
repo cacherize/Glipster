@@ -235,7 +235,7 @@ li {list-style-type:square;}
 .middle {vertical-align: middle;}
 #sidebar {
   position:absolute;
-  left:0;
+  left:-60px;
   top:100px;
   padding:10px 3px 10px 10px;
   background:#333;
