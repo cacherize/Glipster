@@ -233,6 +233,32 @@ li {list-style-type:square;}
 .text-left {text-align:left;}
 .vertical-top{vertical-align: top;}
 .middle {vertical-align: middle;}
+#sidebar {
+  position:absolute;
+  left:0;
+  top:100px;
+  padding:10px 3px 10px 10px;
+  background:#333;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+}
+#sidebar #sidebar_links {
+  display:inline-block;
+  vertical-align: middle;
+}
+#sidebar #sidebar_handle {
+  display:inline-block;
+  color:#444;
+  vertical-align: middle;
+}
+#sidebar .sidebarLink {
+  background-position:-48px 0;
+  background-image:url("footer_icons.png");
+  background-repeat:no-repeat;
+  height:48px;
+  width:48px;
+  display:inline-block;
+}
 h1#pageHeader {
   margin: 0;
   background:#A2D42F;

@@ -66,6 +66,10 @@
 	    <div class="center"><p class="flash notice"><%= flash[:notice] %></p></div>
 	  <% end %>
 		<%= yield %>
+
+    <% if current_user && current_user.admin? %>
+      <%= render '/layouts/sidebar' %>
+    <% end %>
 	</div>
 
 	<%= render '/layouts/footer' %>
