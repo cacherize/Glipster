@@ -43,27 +43,32 @@
   		</div>
     </div>
 
-    <div class="inline-block" style="margin-left:20px; vertical-align:top;">
-      <div class="form_field">
-        <%= f.label :image %><br/>
-        <%= f.file_field :image %>
-      </div>
-
-  		<div class="form_field" style="text-align:left; min-width:200px; display:inline-block;">
-  			<h5>Categories:</h5>
-  			<% Category.find(:all).in_groups(3, false).each do |group| %>
+    <div id="game_form_right_column">
+      <div class="form_field inline-block text-left">
+        <h5>Categories:</h5>
+        <% Category.find(:all).in_groups(3, false).each do |group| %>
           <div class="inline-block vertical-top" style="<%= cycle('','margin:0 15px;','') %>">
             <% group.each do |category| %>
-      				<%= check_box_tag "game[category_ids][]", category.id, @game.categories.include?(category), id: "category_#{category.id}" %>
-      				<%= label_tag "category_#{category.id}", category.name %><br/>
+              <%= check_box_tag "game[category_ids][]", category.id, @game.categories.include?(category), id: "category_#{category.id}" %>
+              <%= label_tag "category_#{category.id}", category.name %><br/>
             <% end %>
           </div>
-  			<% end %>
-  		</div>
-      <div class="form_field">
+        <% end %>
+      </div>
+
+      <div class="form_field" id="game_form_image">
+        <%= f.label :image %><br/>
+        <%= f.file_field :image %><br/>
+
+        <%= game_thumb(@game) %>
+      </div>
+
+      <div class="form_field" id="game_featured_field">
         <%= f.check_box :featured, value: 1, checked: @game.featured %>
         <%= f.label :featured %>
       </div>
+
+
     </div>
 
 		<div class="form_submit">
