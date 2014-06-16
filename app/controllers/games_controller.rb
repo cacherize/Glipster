@@ -3,6 +3,10 @@ class GamesController < ApplicationController
   before_filter :authorize, only: [:new, :create, :edit, :update, :upload]
   skip_filter :store_location, only: [:load_reputation, :load_comments, :vote]
 
+  def index
+    redirect_to root_path
+  end
+
 	def show
 		@game = Game.find(params[:id])
 		if cookies[:viewed_games].present?
