@@ -13,6 +13,7 @@ Glipster::Application.routes.draw do
   end
   resources :password_update, only: [:edit, :update]
   resources :categories
+  match 'games/upload', to: 'games#upload', via: :get
   resources :games do
     member do
       post 'vote'
@@ -20,7 +21,6 @@ Glipster::Application.routes.draw do
       get  'load_comments'
     end
   end
-  match 'games/upload', to: 'games#upload', via: :get
   resources :highest_rated, only: :index
   resources :most_played, only: :show
   resources :comments, only: [:create, :destroy] do
