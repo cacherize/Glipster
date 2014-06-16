@@ -18,6 +18,13 @@ $(document).ready(function(){
     }
     event.preventDefault();
   });
+
+  $(".form_field_wrapper #game_title").autocomplete({
+    source: $("#game_title").data('autocomplete'),
+    select: function( event, ui ) { 
+      window.open(ui.item.value, '_blank');
+    }
+  });
 });
 
 function game_show() {
