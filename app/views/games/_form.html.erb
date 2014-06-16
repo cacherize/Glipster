@@ -12,53 +12,59 @@
       </fieldset>
     <% end %>
 		<%= f.hidden_field :key %>
-		<span class="form_field_wrapper" style="margin-right:20px;">
-			<div class="form_field">
-				<%= f.label :title %><br/>
-				<%= f.text_field :title, value: @game.title.present? ? @game.title : @game.flash_file_name.gsub("_", " ").gsub(".swf","") %>
-			</div>
-			<div class="form_field">
-				<%= f.label :image %><br/>
-				<%= f.file_field :image %>
-			</div>
+    <div class="inline-block">
+  		<span class="form_field_wrapper" style="margin-right:20px;">
+  			<div class="form_field">
+  				<%= f.label :title %><br/>
+  				<%= f.text_field :title, value: @game.title.present? ? @game.title : @game.flash_file_name.gsub("_", " ").gsub(".swf","") %>
+  			</div>
+        <div class="form_field">
+          <%= f.label :developer_name, "Developer" %><br/>
+          <%= f.text_field :developer_name, value: @game.developer_id.present? ? @game.developer.name : nil, data: {autocomplete_source: developers_path} %>
+        </div>
+  		</span><!--
+  		--><span class="form_field_wrapper">
+  			<div class="form_field">
+  				<%= f.label :height %><br/>
+  				<%= f.text_field :height %>
+  			</div>
+  			<div class="form_field">
+  				<%= f.label :width %><br/>
+  				<%= f.text_field :width %>
+  			</div>
+  		</span>
       <div class="form_field">
-        <%= f.label :developer_name, "Developer" %><br/>
-        <%= f.text_field :developer_name, value: @game.developer_id.present? ? @game.developer.name : nil, data: {autocomplete_source: developers_path} %>
+        <%= f.label :controls %><br/>
+        <%= f.text_area :controls %>
       </div>
-		</span><!--
-		--><span class="form_field_wrapper">
-			<div class="form_field">
-				<%= f.label :height %><br/>
-				<%= f.text_field :height %>
-			</div>
-			<div class="form_field">
-				<%= f.label :width %><br/>
-				<%= f.text_field :width %>
-			</div>
+  		<div class="form_field">
+  			<%= f.label :description %><br/>
+  			<%= f.text_area :description %>
+  		</div>
+    </div>
+
+    <div class="inline-block" style="margin-left:20px; vertical-align:top;">
+      <div class="form_field">
+        <%= f.label :image %><br/>
+        <%= f.file_field :image %>
+      </div>
+
+  		<div class="form_field" style="text-align:left; min-width:200px; display:inline-block;">
+  			<h5>Categories:</h5>
+  			<% Category.find(:all).in_groups(3, false).each do |group| %>
+          <div class="inline-block vertical-top" style="<%= cycle('','margin:0 15px;','') %>">
+            <% group.each do |category| %>
+      				<%= check_box_tag "game[category_ids][]", category.id, @game.categories.include?(category), id: "category_#{category.id}" %>
+      				<%= label_tag "category_#{category.id}", category.name %><br/>
+            <% end %>
+          </div>
+  			<% end %>
+  		</div>
       <div class="form_field">
         <%= f.check_box :featured, value: 1, checked: @game.featured %>
         <%= f.label :featured %>
       </div>
-		</span>
-    <div class="form_field">
-      <%= f.label :controls %><br/>
-      <%= f.text_area :controls %>
     </div>
-		<div class="form_field">
-			<%= f.label :description %><br/>
-			<%= f.text_area :description %>
-		</div>
-		<div class="form_field" style="text-align:left; min-width:200px; display:inline-block;">
-			<h5>Categories:</h5>
-			<% Category.find(:all).in_groups(3, false).each do |group| %>
-        <div class="inline-block vertical-top" style="<%= cycle('','margin:0 15px;','') %>">
-          <% group.each do |category| %>
-    				<%= check_box_tag "game[category_ids][]", category.id, @game.categories.include?(category), id: "category_#{category.id}" %>
-    				<%= label_tag "category_#{category.id}", category.name %><br/>
-          <% end %>
-        </div>
-			<% end %>
-		</div>
 
 		<div class="form_submit">
 			<%= f.submit %>
