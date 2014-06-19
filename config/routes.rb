@@ -41,6 +41,7 @@ Glipster::Application.routes.draw do
   resources :uploads, only: [:new, :create]
   get 'load_user_likes/:id' => 'user_content_load#likes', as: 'user_likes'
   get 'load_user_recents/:id' => 'user_content_load#recents', as: 'user_recents'
+  resources :game_sequels, only: :index
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
