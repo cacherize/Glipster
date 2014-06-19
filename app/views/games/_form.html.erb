@@ -55,7 +55,6 @@
           </div>
         <% end %>
       </div>
-      <br/><br/>
 
       <div class="form_field" id="game_form_image">
         <%= f.label :image %><br/>
@@ -67,6 +66,17 @@
       <div class="form_field" id="game_featured_field">
         <%= f.check_box :featured, value: 1, checked: @game.featured %>
         <%= f.label :featured %>
+      </div><br/>
+      <div class="form_field">
+        <%= label_tag :sequel_search, "Add A Sequel" %><br/>
+        <%= text_field_tag :sequel_search %><br/>
+        <% @game.sequels.each do |seq| %>
+          <div class="add_sequel">
+            <%= small_game_thumb(seq) %><br/>
+            <%= seq.title %>
+            <%= hidden_field_tag "game[sequel_ids]", seq.id %>
+          </div>
+        <% end %>
       </div>
     </div>
 
