@@ -9,6 +9,8 @@ class Game < ActiveRecord::Base
   has_many :categories, through: :game_categories
   has_many :reputations
   has_many :featured_category_games
+  has_many :game_sequels
+  has_many :sequels, through: :game_sequels
   has_many :comments
   has_many :game_users
   has_many :users, through: :game_users
