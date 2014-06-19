@@ -251,6 +251,7 @@ li {list-style-type:square;}
   color:#444;
   vertical-align: middle;
 }
+#sidebar #sidebar_handle:hover {color:#555; cursor:pointer;}
 #sidebar .sidebarLink {
   background-position:-48px 0;
   background-image:url("footer_icons.png");
@@ -259,6 +260,7 @@ li {list-style-type:square;}
   width:48px;
   display:inline-block;
 }
+#sidebar .sidebarLink:hover {background-position:0 0;}
 h1#pageHeader {
   margin: 0;
   background:#A2D42F;
