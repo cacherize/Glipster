@@ -72,12 +72,7 @@
         <%= text_field_tag :sequel_search, '', data: {autocomplete: search_index_path} %><br/>
         <%= hidden_field_tag "game[sequel_ids]" %>
         <% @game.sequels.each do |seq| %>
-          <div class="add_sequel">
-            <span class="delete_sequel"></span>
-            <%= small_game_thumb(seq) %><br/>
-            <%= seq.title %>
-            <%= hidden_field_tag "game[sequel_ids]", seq.id %>
-          </div>
+         <%= render partial: 'sequel', locals: {seq: seq} %>
         <% end %>
       </div>
     </div>
