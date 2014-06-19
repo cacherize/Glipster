@@ -1,6 +1,6 @@
 class Game < ActiveRecord::Base
   include Rails.application.routes.url_helpers
-  attr_accessible :title, :description, :controls, :flash_file, :image, :developer_name, :height, :width, :category_ids, :featured, :daily_plays, :weekly_plays, :monthly_plays
+  attr_accessible :title, :description, :controls, :flash_file, :image, :developer_name, :height, :width, :category_ids, :featured, :daily_plays, :weekly_plays, :monthly_plays, :sequel_ids
   mount_uploader :flash_file, GameUploader
   dragonfly_accessor :image
 
@@ -133,7 +133,7 @@ class Game < ActiveRecord::Base
                gsub("<nav>", nav).
                gsub("<mouse>", mouse).
                gsub("<arrows>", arrows).
-               gsub("<space>").
+               gsub("<space>", space).
                html_safe
     return controls
   end
