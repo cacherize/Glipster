@@ -70,8 +70,10 @@
       <div class="form_field">
         <%= label_tag :sequel_search, "Add A Sequel" %><br/>
         <%= text_field_tag :sequel_search %><br/>
+        <%= hidden_field_tag "game[sequel_ids]" %>
         <% @game.sequels.each do |seq| %>
           <div class="add_sequel">
+            <span class="delete_sequel"></span>
             <%= small_game_thumb(seq) %><br/>
             <%= seq.title %>
             <%= hidden_field_tag "game[sequel_ids]", seq.id %>

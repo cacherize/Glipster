@@ -721,5 +721,16 @@
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
     border-radius:4px;
+    position:relative;
+    .delete_sequel {
+      height:16px;
+      width:16px;
+      display:inline-block;
+      position:absolute;
+      top:-8px;
+      right:-8px;
+      background-image:url('delete.png');
+      cursor:pointer;
+    }
   }
 }

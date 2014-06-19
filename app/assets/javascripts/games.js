@@ -25,6 +25,10 @@ $(document).ready(function(){
       window.open(ui.item.value, '_blank');
     }
   });
+
+  $(".delete_sequel").click(function(){
+    $(this).parent().remove();
+  });
 });
 
 function game_show() {
