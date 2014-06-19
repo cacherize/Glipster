@@ -29,7 +29,7 @@ $(document).ready(function(){
   $("#game_form_right_column #sequel_search").autocomplete({
     source: $("#sequel_search").data('autocomplete'),
     select: function( event, ui ) { 
-      window.open(ui.item.value, '_blank');
+      load_sequel(ui.item.value)
     }
   });
 

@@ -82,5 +82,16 @@
 		</div>	
 	<% end %>
 </div>
+<script>
+function load_sequel(id){
+  var path = "<%= game_sequels_path %>",
+      game = id.split("/")[2]
+
+  $.ajax({
+    type: "GET",
+    url: path + "?id=" + game
+  });
+}
+</script>
 <%= javascript_include_tag 'developers' %>
 <%= javascript_include_tag params[:controller] %>
