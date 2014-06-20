@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140620031807) do
+ActiveRecord::Schema.define(:version => 20140619062235) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -100,9 +100,8 @@ ActiveRecord::Schema.define(:version => 20140620031807) do
   create_table "game_sequels", :force => true do |t|
     t.integer  "sequel_id"
     t.integer  "game_id"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
-    t.integer  "position",   :default => 0
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "game_sequels", ["sequel_id", "game_id"], :name => "index_game_sequels_on_sequel_id_and_game_id", :unique => true
