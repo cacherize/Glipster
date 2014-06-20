@@ -1,4 +1,5 @@
 class GameSequelsController < ApplicationController
+  before_filter :authorize
   def index
     @sequel = Game.find(params[:id])
 
