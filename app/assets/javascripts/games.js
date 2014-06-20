@@ -87,6 +87,19 @@ function game_show() {
       $(this).replaceWith(val)
     }
   });
+
+  $("#game_sequels").sortable({
+    axis: 'y',
+    update: function(e, index) {
+      update_list_index(index)
+    }
+  });
+}
+
+function update_list_index(index) {
+  $("#game_sequels li").each(function(index){
+    $(this).children("input[type=hidden]").val(index);
+  });
 }
 
 function most_played_games() {

@@ -1,12 +1,14 @@
-<ul id="game_sequels">
+<div id="sequel_list_container">
   <%= form_tag game_sequel_path(@game), method: :put do %>
-    <% @game.game_sequels.each do |game_seq| %>
-      <li>
-        <%= link_to small_game_thumb(game_seq.game), game_seq.game %>
-        <%= link_to "Play "+game_seq.game.title, game_seq.game %>
-        <%= hidden_field_tag "positions[#{game_seq.id}]", game_seq.position %>
-      </li>
-    <% end %>
-    <%= submit_tag "Update Order" %>
+    <ul id="game_sequels">
+      <% @game.game_sequels.each do |game_seq| %>
+        <li>
+          <%= link_to small_game_thumb(game_seq.sequel), game_seq.sequel %>
+          <%= link_to "Play "+game_seq.sequel.title, game_seq.sequel %>
+          <%= hidden_field_tag "positions[#{game_seq.id}]", game_seq.position %>
+        </li>
+      <% end %>
+      <%= submit_tag "Update Order" %>
+    </ul>
   <% end %>
-</ul>
+</div>
