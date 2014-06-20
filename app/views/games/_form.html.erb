@@ -70,12 +70,12 @@
       <div class="form_field">
         <%= label_tag :sequel_search, "Add A Sequel" %><br/>
         <%= text_field_tag :sequel_search, '', data: {autocomplete: search_index_path} %><br/>
-        <div id="sequels_list">
-          <%= hidden_field_tag "game[sequel_ids]" %>
+        <%= hidden_field_tag "game[sequel_ids]" %>
+        <ul id="sequels_list">
           <% @game.sequels.each do |seq| %>
             <%= render partial: 'sequel', locals: {seq: seq} %>
           <% end %>
-        </div>
+        </ul>
       </div>
     </div>
 
