@@ -6,6 +6,9 @@
 %>
 <div class="center">
 	<div id="game_show">
+    <% if @game.sequels.present? %>
+      <%= render 'sequels_list' %>
+    <% end %>
 		<div id="game_header">
 			<div id="game_img">
 				<%= link_to_if(current_user && current_user.admin?, game_thumb(@game), edit_game_path(@game)) %>

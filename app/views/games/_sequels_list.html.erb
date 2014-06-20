@@ -1,0 +1,8 @@
+<ul id="game_sequels">
+  <% @game.sequels.each do |seq| %>
+    <li>
+      <%= link_to small_game_thumb(seq), seq %>
+      <%= link_to "Play "+seq.title, seq %>
+    </li>
+  <% end %>
+</ul>
