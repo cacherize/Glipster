@@ -8,7 +8,9 @@
           <%= hidden_field_tag "positions[#{game_seq.id}]", game_seq.position %>
         </li>
       <% end %>
-      <%= submit_tag "Update Order" %>
+      <% if current_user && current_user.admin? %>
+        <%= submit_tag "Update Order", id: 'sequel_position_submit' %>
+      <% end %>
     </ul>
   <% end %>
 </div>

@@ -88,12 +88,14 @@ function game_show() {
     }
   });
 
-  $("#game_sequels").sortable({
-    axis: 'y',
-    update: function(e, index) {
-      update_list_index(index)
-    }
-  });
+  if ($("#sequel_position_submit").length > 0) {
+    $("#game_sequels").sortable({
+      axis: 'y',
+      update: function(e, index) {
+        update_list_index(index)
+      }
+    });
+  }
 }
 
 function update_list_index(index) {
