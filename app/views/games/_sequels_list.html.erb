@@ -1,8 +1,12 @@
 <ul id="game_sequels">
-  <% @game.sequels.each do |seq| %>
-    <li>
-      <%= link_to small_game_thumb(seq), seq %>
-      <%= link_to "Play "+seq.title, seq %>
-    </li>
+  <%= form_tag game_sequel_path(@game), method: :put do %>
+    <% @game.game_sequels.each do |game_seq| %>
+      <li>
+        <%= link_to small_game_thumb(game_seq.game), game_seq.game %>
+        <%= link_to "Play "+game_seq.game.title, game_seq.game %>
+        <%= hidden_field_tag "positions[#{game_seq.id}]", game_seq.position %>
+      </li>
+    <% end %>
+    <%= submit_tag "Update Order" %>
   <% end %>
 </ul>
