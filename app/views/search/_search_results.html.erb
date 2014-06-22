@@ -13,7 +13,7 @@
 					</span>
 				</h2>
 				<p class="search_result_description">
-					<%= game.description.present? ? game.description : "<i>No Description</i>".html_safe %>
+					<%= game.description.present? ? strip_tags(game.description) : "<i>No Description</i>".html_safe %>
 				</p>
 			</div>
 		</div>
