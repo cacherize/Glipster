@@ -47,6 +47,12 @@
 		    </li>
 			</ul>
 			<div id="sessions_links">
+        <div id="search_form">
+          <%= form_tag new_search_path, method: :get do %>
+            <%= search_field_tag :search, '', placeholder: 'Search Games', id: 'search_field' %>
+            <%= submit_tag '', id: 'search_submit' %>
+          <% end %>
+        </div>
 				<% if current_user.present? %>
 					<%= link_to avatar_thumb(current_user) + " #{current_user.username}", user_path(current_user), class: cp(current_user) %> <%= link_to "Logout", logout_path, method: :delete %>
 				<% else %>
