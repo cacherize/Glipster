@@ -133,7 +133,7 @@ li {list-style-type:square;}
 #sessions_links #search_form {
   display:inline-block;
   font-size:0;
-  background:#111;
+  background:#000;
   height:25px;
   vertical-align: top;
   margin:12px 10px 0 0;
@@ -141,9 +141,6 @@ li {list-style-type:square;}
   -webkit-border-radius:5px;
   border-radius:5px;
   border:1px solid #444;
-  -moz-box-shadow:0 0 10px #000 inset;
-  -webkit-box-shadow:0 0 10px #000 inset;
-  box-shadow:0 0 10px #000 inset;
 }
 #sessions_links #search_field {
   width:120px;
