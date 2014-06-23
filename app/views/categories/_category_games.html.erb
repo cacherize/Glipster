@@ -4,7 +4,7 @@
     <% if @group_games %>
       <table class="games_list_table">
         <tbody>
-          <% @categories_games.each do |row| %>
+          <% @grouped_games.each do |row| %>
           <tr>
             <% row.each do |game| %>
               <td>
@@ -23,7 +23,6 @@
           <% end %>
         </tbody>
       </table>
-    </div>
     <% else %>
       <% @categories_games.each do |game| %>
         <div class="game_wrapper">
@@ -37,8 +36,9 @@
         </div>
       <% end %>
     <% end %>
+  
+    <%= will_paginate @categories_games %><%= tag("br", class: 'clear') if @searched_games.size > 18 %>
   </div>
-   <%= will_paginate @categories_games %><%= tag("br", class: 'clear') if @categories_games.size > 18 %>
 <% else %>
   <p>No <%= @category.name.downcase %> games found with a title containing "<%= params[:search] %>"</p>
 <% end %>

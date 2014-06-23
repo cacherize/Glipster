@@ -11,15 +11,16 @@ class CategoriesController < ApplicationController
 
 	def show
 		@category = Category.find(params[:id])
+    @featured_games = Game.find(@category.featured_category_games_ids)
 
-		games = @category.games
-		@featured_games = Game.find(@category.featured_category_games_ids)
+		games = @category.games.order('created_at DESC')
 		@new_games = games.last(15)
 		@random_game = [games.sample]
-
-		@categories_games = games.search(params[:search]).paginate(per_page: 18, page: params[:page])
+		@searched_games = games.search(params[:search])
+    @categories_games = @searched_games.paginate(per_page: 18, page: params[:page])
+    
     @group_games = @categories_games.size > 9
-    @categories_games = @categories_games.in_groups(2, false) if @group_games
+    @grouped_games = @categories_games.in_groups(2, false) if @group_games
 	end
 
 	def new
