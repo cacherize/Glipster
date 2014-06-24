@@ -51,13 +51,13 @@
 			text-shadow:0 1px 0 #008000;
 			font-family:'Petita', sans-serif;
 			span {
-				position:absolute;
-				bottom:4px;
-				right:0;
 				font-weight:normal;
 				font-size:0.4em;
 				color:#999;
 				text-shadow:none;
+        float:right;
+        margin-top:20px;
+        display:inline-block;
 				a{
 					color:#999;
 					text-decoration: none;
