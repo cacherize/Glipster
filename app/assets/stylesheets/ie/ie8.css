@@ -6,8 +6,10 @@
 }
 .wrapper, .form, .games_container, #search #title_search, 
 #results .search_result .search_result_content, #game_show, 
-#game_stats, #game_details span #game_description, #game_details span #game_controls, 
+#game_stats, #game_details #left_description_col #game_description, 
+#game_details #right_controls_col #game_controls, 
 #comments_wrapper, #most_played .item .item_content, #signup-form, 
+#game_show #sequel_list_container #game_sequels li,
 .form_wrapper .steps li.current, #user_show, #no_comments, .game_comment_list {
   background: transparent;
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF)"; 
@@ -27,3 +29,4 @@
 #sessions_links a:hover .u_img, #sessions_links a.current .u_img {border:1px solid #444444;}
 .game_comment_list legend a img {vertical-align: middle;}
 .game_comment_list legend {padding-right:5px;}
+#game_show #game_header h1#title span {float:none;}
