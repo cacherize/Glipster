@@ -6,6 +6,7 @@ $(document).ready(function(){
       width: 500,
       resizable: false
     });
+    $(".game_link").dotdotdot({});
     return false;
   });
 
@@ -21,6 +22,7 @@ $(document).ready(function(){
       width: 500,
       resizable: false
     });
+    $(".game_link").dotdotdot({});
     return false;
   });
 
