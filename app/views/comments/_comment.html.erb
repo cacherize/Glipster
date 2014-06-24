@@ -5,7 +5,7 @@
     <span class="comment_details">
       <%= comment_like_link(current_user, comment) %> 
       |
-      <%= comment.created_at.utc.localtime.strftime("%b %e, %Y %l:%M %p %Z") %>
+      <%= comment.created_at.strftime("%b %e, %Y %l:%M %p %Z") %>
     </span>
     <% if current_user == comment.user %>
       <div class="comment_delete">
