@@ -1,5 +1,6 @@
 <% if game.present? %>
   <div class="game_wrapper">
+    <%= new_game_status(game) %>
     <span>
       <div class="game_img">
         <%= link_to game_thumb(game), game %>

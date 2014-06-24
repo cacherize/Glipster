@@ -33,4 +33,8 @@ module GamesHelper
   def featured_cat_header_icon
     "<span class='featured_star_icon'><img src='/assets/star.png' alt='featured star icon' /></span>".html_safe
   end
+
+  def new_game_status(game)
+    link_to('', game_path(game), class: 'new_status') if (game.created_at + 5.days) > DateTime.now
+  end
 end
