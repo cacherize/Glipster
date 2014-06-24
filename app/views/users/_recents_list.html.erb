@@ -1,15 +1,6 @@
 <div id="recents_wrapper">
   <% @all_recents.each do |recent| %>
-    <% game = recent.game %>
-    <div class="game_wrapper">
-      <span>
-        <div class="game_img">
-          <%= link_to game_thumb(game), game %>
-          <%= special_status_image(game) %>
-        </div>
-        <%= link_to game.title, game, class: 'game_link', title: game.title %>
-      </span>
-    </div>
+    <%= render partial: '/games/game', locals: {game: recent.game} %>
   <% end %>
 </div>
 <div class="user_content_pagination"><%= will_paginate @all_recents, param_name: :recents %></div>
