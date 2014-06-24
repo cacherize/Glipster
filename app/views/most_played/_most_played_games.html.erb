@@ -7,7 +7,7 @@
           <%= game.categories.map{|cat| "#{link_to(cat.name, cat)}" }.join(", ").html_safe %>
         </span>
         <span class="date_stamp">
-          Added: <%= game.created_at.localtime.strftime("%b %e, %Y %l:%M %p %Z") %>
+          Added: <%= game.created_at.utc.localtime.strftime("%b %e, %Y %l:%M %p %Z") %>
         </span>
       </h2>
       <p class="item_description">
