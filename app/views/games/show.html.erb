@@ -9,6 +9,7 @@
     <% if @game.sequels.present? %>
       <%= render 'sequels_list' %>
     <% end %>
+    <%= new_game_status(@game) %>
 		<div id="game_header">
 			<div id="game_img">
 				<%= link_to_if(current_user && current_user.admin?, game_thumb(@game), edit_game_path(@game)) %>
