@@ -1,5 +1,5 @@
 class SupportTicket < ActiveRecord::Base
-  attr_accessible :email, :reason, :message, :stickied, :archive, :other_reason, :name
+  attr_accessible :email, :reason, :message, :stickied, :archive, :other_reason, :name, :game_id
   validates :message, presence: {message: 'must be provided'}
   validates :reason, presence: {message: 'must be selected'}
   validates :email, presence: {message: 'must be provided'}
