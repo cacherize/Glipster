@@ -30,14 +30,16 @@
           <%= f.email_field :email, value: @support_ticket.email, placeholder: "Email to respond to" %>
         </div>
       </div>
-      <div class="form_field">
-        <%= f.label :game_id, "Game" %><br/>
-        <span id="bug_report_game_field">
-          <%= small_game_thumb(@game) %>
-          <span id="bug_report_game_title"><%= @game.title %></span>
-        </span>
-        <%= f.hidden_field :game_id, value: @game.id %>
-      </div>
+      <% if @game.present? %>
+        <div class="form_field">
+          <%= f.label :game_id, "Game" %><br/>
+          <span id="bug_report_game_field">
+            <%= small_game_thumb(@game) %>
+            <span id="bug_report_game_title"><%= @game.title %></span>
+          </span>
+          <%= f.hidden_field :game_id, value: @game.id %>
+        </div>
+      <% end %>
       <div class="form_field">
         <fieldset id="contact_us_reason">
           <legend>Select A Reason</legend>
