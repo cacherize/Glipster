@@ -128,12 +128,18 @@ class Game < ActiveRecord::Base
     mouse = "<span class='mouse'></span>"
 
     space = "<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</pre>"
+
+    esc = "<pre class='esc'>Esc</pre>"
+
+    shift = "<pre class='shift'>Shift</pre>"
    
     controls = string.
                gsub("<nav>", nav).
                gsub("<mouse>", mouse).
                gsub("<arrows>", arrows).
                gsub("<space>", space).
+               gsub("<esc>", esc).
+               gsub("<shift>", shift).
                html_safe
     return controls
   end
