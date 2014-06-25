@@ -10,6 +10,10 @@ class SupportTicketsController < ApplicationController
   def create
     @support_ticket = SupportTicket.new(params[:support_ticket])
 
+    if params[:support_ticket][:game_id].present?
+      @game = Game.find(params[:support_ticket][:game_id])
+    end
+
     respond_to do |format|
       if @support_ticket.save
         format.html{redirect_to root_path, notice: @support_ticket.success_message}
