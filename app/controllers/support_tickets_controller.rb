@@ -9,9 +9,7 @@ class SupportTicketsController < ApplicationController
 
   def create
     @support_ticket = SupportTicket.new(params[:support_ticket])
-    browser = Browser.new(:accept_language => "en-us")
-
-    @support_ticket.browser_version = "#{browser.name}-#{browser.full_version}"
+    @support_ticket.browser_version = request.user_agent
 
     if params[:support_ticket][:game_id].present?
       @game = Game.find(params[:support_ticket][:game_id])
