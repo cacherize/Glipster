@@ -33,7 +33,7 @@ $(document).ready(function(){
     }
   });
 
-  $(".delete_sequel").click(function(){
+  $("#sequels_list").on('click', ".delete_sequel", function(){
     $(this).parent().remove();
   });
 });
