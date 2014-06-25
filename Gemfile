@@ -33,6 +33,7 @@ gem 'delayed_job_active_record', '~> 4.0.1'
 gem 'honeypot-captcha', '~> 0.0.2'
 gem 'metamagic', '~> 2.0.6'
 gem 'best_in_place'
+gem 'browser'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
