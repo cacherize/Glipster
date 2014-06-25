@@ -22,6 +22,10 @@
 					</span>
 				<% end %>
 			</h1>
+      <div id="report_btns" style="">
+        <%= link_to "<span class='bug_img'></span> Report Bug".html_safe, '' %>
+        <%= link_to "<span class='flag_img'></span> Flag Game".html_safe, '' %>
+      </div>
 		</div>
 		<div id="game_body">
       <%= content_tag :embed, "", src: @game.flash_file.url, width: @game.width, height: @game.height %>
