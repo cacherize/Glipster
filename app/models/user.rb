@@ -29,7 +29,7 @@ class User < ActiveRecord::Base
       message: 'must only contain alphanumeric characters',
       if: lambda{self.username.present?}
     }
-  validates_format_of :email, with: /[-0-9a-z.+_]+@[-0-9a-z.+_]+\.[a-z]{2,4}/i, if: lambda{self.email.present?}
+  validates_format_of :email, with: /^[-0-9a-z.+_]+@[-0-9a-z.+_]+\.[a-z]{2,4}$/i, if: lambda{self.email.present?}
   validates_size_of :image, maximum: 3.megabytes, message: "is too big (maximum is 3 MB)", if: :image_changed?
   validates_property :format, of: :image, in: ['jpg', 'jpeg', 'png', 'gif'], message: 'file must be either png, gif, jpg, or jpeg format.', if: :image_changed?
 
@@ -48,7 +48,7 @@ class User < ActiveRecord::Base
 	end
 
 	def self.find_by_email_or_username(arg)
-		if arg.match(/^[a-z0-9_.+-]+@[a-z0-9-]+\.[a-z0-9-.]+$/i)
+		if arg.match(/^[-0-9a-z.+_]+@[-0-9a-z.+_]+\.[a-z]{2,4}$/i)
 			find_by_email(arg.downcase)
 		else
       find(:first, :conditions => ["lower(username) = ?", arg.downcase])
