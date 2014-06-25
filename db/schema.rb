@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140623010657) do
+ActiveRecord::Schema.define(:version => 20140625025338) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -158,13 +158,15 @@ ActiveRecord::Schema.define(:version => 20140623010657) do
   create_table "support_tickets", :force => true do |t|
     t.string   "email"
     t.string   "reason"
-    t.string   "message",      :limit => 2048
+    t.string   "message",         :limit => 2048
     t.boolean  "stickied"
     t.datetime "archived_at"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
     t.string   "other_reason"
     t.string   "name"
+    t.integer  "game_id"
+    t.string   "browser_version", :limit => 512
   end
 
   create_table "uploads", :force => true do |t|
