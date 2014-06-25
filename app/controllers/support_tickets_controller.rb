@@ -1,6 +1,10 @@
 class SupportTicketsController < ApplicationController
   def new
     @support_ticket = SupportTicket.new
+
+    if params[:game].present?
+      @game = Game.find(params[:game])
+    end
   end
 
   def create

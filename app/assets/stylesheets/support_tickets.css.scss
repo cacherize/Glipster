@@ -5,6 +5,32 @@
     float:right;
     vertical-align: top;
   }
-  .form_field #support_ticket_message {height:50px; width:420px; margin-bottom:5px;}
+  .form_field {
+    min-height:0;
+    #bug_report_game_field {
+      display:block;
+      background:#ffffe6;
+      border:1px solid #ccc;
+      -moz-border-radius:3px;
+      -webkit-border-radius:3px;
+      border-radius:3px;
+      margin-bottom:10px;
+      width:420px;
+      padding:10px 4px;
+      #bug_report_game_title {font-size:0.85em;}
+      label {display:inline-block; margin-bottom:5px;}
+      img {
+        background:#fff;
+        border:1px solid #ccc;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+        vertical-align:middle;
+        margin-right:5px;
+        font-size:0.9em;
+      }
+    }
+    #support_ticket_message {height:50px; width:420px; margin-bottom:5px;}
+  }
   #messageCharCount {float:right; font-size:0.75em; color:#888;}
 }

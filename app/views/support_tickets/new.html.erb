@@ -31,10 +31,18 @@
         </div>
       </div>
       <div class="form_field">
+        <%= f.label :game_id, "Game" %><br/>
+        <span id="bug_report_game_field">
+          <%= small_game_thumb(@game) %>
+          <span id="bug_report_game_title"><%= @game.title %></span>
+        </span>
+        <%= f.hidden_field :game_id, value: @game.id %>
+      </div>
+      <div class="form_field">
         <fieldset id="contact_us_reason">
           <legend>Select A Reason</legend>
           <div class="inline-block">
-            <%= f.radio_button :reason, "report bug" %>
+            <%= f.radio_button :reason, "report bug", checked: @game.present? %>
             <%= f.label :reason, "Report A Bug", value: 'report bug' %><br/>
             <%= f.radio_button :reason, "general comment" %>
             <%= f.label :reason, "General Comment", value: 'general comment' %><br/>
