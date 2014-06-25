@@ -23,8 +23,8 @@
 				<% end %>
 			</h1>
       <div id="report_btns" style="">
-        <%= link_to "<span class='bug_img'></span> Report Bug".html_safe, contact_us_path(game: @game.id) %>
-        <%= link_to "<span class='flag_img'></span> Flag Game".html_safe, '' %>
+        <%= link_to "<span class='report_img'></span> Report Bug".html_safe, contact_us_path(game: @game.id), class: 'bug_link' %>
+        <%= link_to "<span class='report_img'></span> Flag Game".html_safe, '', class: 'flag_link' %>
       </div>
 		</div>
 		<div id="game_body">

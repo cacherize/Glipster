@@ -69,7 +69,7 @@
       float:right;
       margin-top:8px;
       font-size:0.6em;
-      a {
+      .bug_link, .flag_link {
         display:inline-block;
         -moz-border-radius:4px;
         -webkit-border-radius:4px;
@@ -78,7 +78,7 @@
         background:#fff;
         background:rgba(255,255,255,0.6);
         padding:3px 5px;
-        .flag_img, .bug_img {
+        .report_img {
           background-image:url('report_icons.png');
           background-repeat:no-repeat;
           background-position:0 0;
@@ -87,13 +87,11 @@
           vertical-align: middle;
           display:inline-block;
         }
-        .bug_img {background-position:-28px 0;}
-        &:hover {
-          color:#999;
-          .flag_img {background-position:-14px 0;}
-          .bug_img {background-position:-42px 0;}
-        }
-      }  
+        &:hover {color:#999;}
+      }
+      .bug_link .report_img {background-position:-28px 0;} 
+      .bug_link:hover .report_img {background-position:-42px 0;}
+      .flag_link:hover .report_img {background-position:-14px 0;}
     }
 	}
 	#game_body {
