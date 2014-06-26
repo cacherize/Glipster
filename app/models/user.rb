@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
   has_many :liked_comments, through: :comment_likes, source: 'comment'
   has_many :flags
   has_many :flagged_games, through: 'flags', source: 'game'
+  has_many :support_tickets
 
   validates :password, presence: {message: 'must be provided'}, on: :create
   validates :email, presence: {message: 'must be provided'}, uniqueness: true, on: :create

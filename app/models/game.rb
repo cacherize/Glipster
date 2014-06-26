@@ -19,6 +19,7 @@ class Game < ActiveRecord::Base
   has_many :recommendations
   has_many :recommends, through: :recommendations
   has_one :featured_category_game
+  has_many :support_tickets
 
   validates_presence_of :height, :width, :title
 
