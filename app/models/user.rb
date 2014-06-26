@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   extend Dragonfly::Model::Validations
-  attr_accessible :email, :username, :password, :password_confirmation, :admin, :activated, :image, :current_password
+  attr_accessible :email, :username, :password, :password_confirmation, :admin, :activated, :image, :current_password, :user_id
   has_secure_password
   
   before_save :downcase_email

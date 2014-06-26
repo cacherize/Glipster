@@ -71,6 +71,7 @@
         <%= f.submit "Send Message" %>
       </div>
     </div>
+    <%= f.hidden_field(:user_id, value: current_user.id) if current_user.present? %>
   <% end %>
 </div>
 <%= javascript_include_tag params[:controller] %>
