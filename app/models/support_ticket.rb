@@ -6,8 +6,8 @@ class SupportTicket < ActiveRecord::Base
   validates_format_of :email, with: /[-0-9a-z.+_]+@[-0-9a-z.+_]+\.[a-z]{2,4}/i, if: lambda{self.email.present?}
   validate :other_reason_is_present
 
-  has_many :games
-  has_many :users
+  belongs_to :game
+  belongs_to :user
 
   def other_reason_is_present
     if self.reason.present? && (self.reason == "other") && self.other_reason.blank?

@@ -20,6 +20,7 @@ class Game < ActiveRecord::Base
   has_many :recommends, through: :recommendations
   has_one :featured_category_game
   has_many :support_tickets
+  has_many :reporters, through: :support_tickets, source: 'user'
 
   validates_presence_of :height, :width, :title
 
