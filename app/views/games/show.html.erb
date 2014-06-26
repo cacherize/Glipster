@@ -24,7 +24,7 @@
 			</h1>
       <div id="report_btns" style="">
         <%= link_to "<span class='report_img'></span> Report Bug".html_safe, contact_us_path(game: @game.id), class: 'bug_link' %>
-        <%= link_to "<span class='report_img'></span> Flag Game".html_safe, '', class: 'flag_link' %>
+        <%= link_to "<span class='report_img'></span> Flag Game".html_safe, flags_path(id: @game.id), method: :post, remote: true, class: 'flag_link' %>
       </div>
 		</div>
 		<div id="game_body">

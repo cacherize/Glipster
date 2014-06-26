@@ -92,6 +92,14 @@
       .bug_link .report_img {background-position:-28px 0;} 
       .bug_link:hover .report_img {background-position:-42px 0;}
       .flag_link:hover .report_img {background-position:-14px 0;}
+      .flagged {
+        color:#8ab327;
+        .report_img {background-position:-56px 0;}
+        &:hover {
+          color:#8ab327;
+          .report_img {background-position:-56px 0;}
+        }
+      }
     }
 	}
 	#game_body {
