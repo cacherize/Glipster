@@ -1,4 +1,8 @@
 class SupportTicketsController < ApplicationController
+  def index
+    @support_tickets = SupportTicket.unarchived.order('created_at DESC')
+  end
+
   def new
     @support_ticket = SupportTicket.new
 
