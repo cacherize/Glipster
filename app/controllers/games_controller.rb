@@ -25,7 +25,11 @@ class GamesController < ApplicationController
 		@developer = @game.developer
 		@categories = @game.categories
 		@comment = Comment.new
-    @game.record_user_game_view_for(current_user)
+
+    if current_user.present?
+      @game.record_user_game_view_for(current_user)
+      @flagged = @game.flaggers.include?(current_user)
+    end
 	end
 
 	def load_comments
