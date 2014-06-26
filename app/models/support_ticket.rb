@@ -13,8 +13,8 @@ class SupportTicket < ActiveRecord::Base
   def check_existing_tickets(ip)
     existing_ticket = SupportTicket.where(requester: ip).order("created_at ASC").last
     
-    if existing_ticket.present? && existing_ticket.created_at > 10.minutes.ago
-      timer = ((existing_ticket.created_at - 10.minutes.ago)/60).ceil
+    if existing_ticket.present? && existing_ticket.created_at > 8.minutes.ago
+      timer = ((existing_ticket.created_at - 8.minutes.ago)/60).ceil
       self.errors.add(:base, "You must wait #{pluralize(timer, 'minutes')} before submitting another ticket")
     end
   end
