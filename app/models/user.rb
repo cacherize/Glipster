@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
   has_many :games, through: :game_users
   has_many :comment_likes
   has_many :liked_comments, through: :comment_likes, source: 'comment'
+  has_many :flags
+  has_many :flagged_games, through: 'flags', class_name: 'Game'
 
   validates :password, presence: {message: 'must be provided'}, on: :create
   validates :email, presence: {message: 'must be provided'}, uniqueness: true, on: :create

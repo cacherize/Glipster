@@ -14,6 +14,8 @@ class Game < ActiveRecord::Base
   has_many :comments
   has_many :game_users
   has_many :users, through: :game_users
+  has_many :flags
+  has_many :flaggers, through: :flags, class_name: 'User'
   has_many :recommendations
   has_many :recommends, through: :recommendations
   has_one :featured_category_game
