@@ -1,4 +1,5 @@
 class SupportTicket < ActiveRecord::Base
+  include ActionView::Helpers::TextHelper
   attr_accessible :email, :reason, :message, :stickied, :archive, :other_reason, :name, :game_id, :user_id
   validates :message, presence: {message: 'must be provided'}
   validates :reason, presence: {message: 'must be selected'}
@@ -8,6 +9,15 @@ class SupportTicket < ActiveRecord::Base
 
   belongs_to :game
   belongs_to :user
+
+  def check_existing_tickets(ip)
+    existing_ticket = SupportTicket.where(requester: ip).order("created_at ASC").last
+    
+    if existing_ticket.present? && existing_ticket.created_at > 10.minutes.ago
+      timer = ((existing_ticket.created_at - 10.minutes.ago)/60).ceil
+      self.errors.add(:base, "You must wait #{pluralize(timer, 'minutes')} before submitting another ticket")
+    end
+  end
 
   def other_reason_is_present
     if self.reason.present? && (self.reason == "other") && self.other_reason.blank?

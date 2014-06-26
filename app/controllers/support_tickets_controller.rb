@@ -15,8 +15,12 @@ class SupportTicketsController < ApplicationController
       @game = Game.find(params[:support_ticket][:game_id])
     end
 
+    @support_ticket.check_existing_tickets(request.remote_ip)
+
+    @support_ticket.requester = request.remote_ip
+
     respond_to do |format|
-      if @support_ticket.save
+      if @support_ticket.errors.blank? && @support_ticket.save
         format.html{redirect_to root_path, notice: @support_ticket.success_message}
       else
         format.html{render :new}
