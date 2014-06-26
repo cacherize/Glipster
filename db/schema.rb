@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140626005156) do
+ActiveRecord::Schema.define(:version => 20140626015232) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -174,6 +174,7 @@ ActiveRecord::Schema.define(:version => 20140626005156) do
     t.string   "name"
     t.integer  "game_id"
     t.string   "browser_version", :limit => 512
+    t.integer  "user_id"
   end
 
   create_table "uploads", :force => true do |t|
