@@ -10,7 +10,7 @@ class SupportTicket < ActiveRecord::Base
   belongs_to :game
   belongs_to :user
 
-  scope :unarchived, where("archived_at IS NOT NULL")
+  scope :unarchived, where("archived_at IS NULL")
 
   def check_existing_tickets(ip)
     existing_ticket = SupportTicket.where(requester: ip).order("created_at ASC").last
