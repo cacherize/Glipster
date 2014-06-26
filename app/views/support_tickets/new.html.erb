@@ -27,7 +27,7 @@
       <div class="inline-block">
         <div class="form_field">
           <%= f.label :email %><br/>
-          <%= f.email_field :email, value: @support_ticket.email, placeholder: "Email to respond to" %>
+          <%= f.email_field :email, value: (current_user.present? ? current_user.email : @support_ticket.email), placeholder: "Email to respond to" %>
         </div>
       </div>
       <% if @game.present? %>
