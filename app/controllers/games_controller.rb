@@ -29,6 +29,7 @@ class GamesController < ApplicationController
     if current_user.present?
       @game.record_user_game_view_for(current_user)
       @flagged = @game.flaggers.include?(current_user)
+      @reported = @game.reporters.include?(current_user)
     end
 	end
 
