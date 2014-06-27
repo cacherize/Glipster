@@ -10,7 +10,7 @@
           <span class="st_sequence">
             <sup>#</sup><%= st.id %>
             <% if st.archived? %>
-              <%= link_to '', support_ticket_path(st, {support_ticket: {archive: true}}), method: :put, remote: true, class: 'st_archived' %>
+              <%= link_to '', support_ticket_path(st, {support_ticket: {archive: false}}), method: :put, remote: true, class: 'st_archived' %>
             <% else %>
               <%= link_to '', support_ticket_path(st, {support_ticket: {archive: true}}), method: :put, remote: true, class: 'st_archive' %>
             <% end %>
