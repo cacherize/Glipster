@@ -48,6 +48,35 @@
     input {width:100%;}
     input[type='text'] {padding:4px 0; text-align:center;}
     input[type='submit'] {margin-bottom:0;}
+    #st_sort_order {
+      label {font-size:0.8em;}
+      .select_wrapper {
+        display:inline-block;
+        width:120px;
+        overflow:hidden;
+        vertical-align: middle;
+        background:#ffffe6;
+        border:1px solid #ccc;
+        float:right;
+        border-radius:3px;
+        color:#ccc;
+        position:relative;
+        select {
+          width:140px;
+          background:none;
+          border:0;
+          position:relative;
+          z-index:5;
+        }
+        &:after {
+          position:absolute;
+          right:3px;
+          top:3px;
+          content: '\25BC';
+          font-size:0.6em;
+        }
+      }
+    }
   }
 }
 #st_right_col {

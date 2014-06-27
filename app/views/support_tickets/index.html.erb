@@ -5,9 +5,9 @@
           <%= label_tag "search[message]", "Search", id: 'st_message_label' %><br/>
           <%= text_field_tag "search[message]" %>
         </div>
-        <div class="form_field">
+        <div id="st_sort_order">
           <%= label_tag "search[order]", "Sort Order" %>
-          <%= select_tag "search[order]", options_for_select([["Newest First", 'newest'],["Oldest First", 'oldest']]) %>
+          <div class="select_wrapper"><%= select_tag "search[order]", options_for_select([["Newest First", 'newest'],["Oldest First", 'oldest']]) %></div>
         </div>
         <div class="form_submit">
           <%= submit_tag 'Search' %>
