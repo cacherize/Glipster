@@ -3,7 +3,7 @@
       <%= form_tag support_tickets_path, method: :get, class: 'form', id: 'support_ticket_form' do %>
         <div class="form_field">
           <%= label_tag "search[message]", "Search", id: 'st_message_label' %><br/>
-          <%= text_field_tag "search[message]" %>
+          <%= text_field_tag "search[message]", (@filters.present? ? params[:search][:message] : nil) %>
         </div>
         <div id="st_sort_order">
           <%= label_tag "search[order]", "Sort Order" %>

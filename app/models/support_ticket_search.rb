@@ -13,6 +13,7 @@ class SupportTicketSearch
 
   def search_support_tickets(params)
     support_tickets = SupportTicket
+    
     if params[:message].present?
       support_tickets = support_tickets.where("lower(message) LIKE ?", params[:message].downcase)
     end
