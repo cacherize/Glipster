@@ -1,6 +1,6 @@
 class SupportTicketsController < ApplicationController
   def index
-    @support_tickets = SupportTicketSearch.new(params[:support_ticket_search]).results
+    @support_tickets = SupportTicketSearch.new(params[:search]).results
   end
 
   def new

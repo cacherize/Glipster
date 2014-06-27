@@ -2,8 +2,8 @@
   <div id="st_left_column">
       <%= form_tag support_tickets_path, method: :get, class: 'form', id: 'support_ticket_form' do %>
         <div class="form_field">
-          <%= label_tag :message, "Search", id: 'st_message_label' %><br/>
-          <%= text_field_tag :message %>
+          <%= label_tag "search[message]", "Search", id: 'st_message_label' %><br/>
+          <%= text_field_tag "search[message]" %>
         </div>
         <div class="form_submit">
           <%= submit_tag 'Search' %>
