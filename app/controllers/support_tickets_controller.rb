@@ -1,6 +1,10 @@
 class SupportTicketsController < ApplicationController
   def index
     @support_tickets = SupportTicketSearch.new(params[:search]).results
+
+    if params[:search].present?
+      @filters = params[:search]
+    end
   end
 
   def new

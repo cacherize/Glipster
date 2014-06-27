@@ -17,6 +17,14 @@ class SupportTicketSearch
       support_tickets = support_tickets.where("lower(message) LIKE ?", params[:message].downcase)
     end
 
+    if params[:unarchived] == "0"
+      support_tickets = support_tickets.archived
+    end
+
+    if params[:archived] == "0"
+      support_tickets = support_tickets.unarchived
+    end
+
     if params[:order].present? && (params[:order] == "oldest")
       support_tickets = support_tickets.order('created_at ASC')
     else
