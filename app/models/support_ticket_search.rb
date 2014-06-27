@@ -17,6 +17,12 @@ class SupportTicketSearch
       support_tickets = support_tickets.where("lower(message) LIKE ?", params[:message].downcase)
     end
 
-    return support_tickets.order('created_at DESC')
+    if params[:order].present? && (params[:order] == "oldest")
+      support_tickets = support_tickets.order('created_at ASC')
+    else
+      support_tickets = support_tickets.order('created_at DESC')
+    end
+
+    return support_tickets
   end
 end

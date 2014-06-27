@@ -6,8 +6,8 @@
           <%= text_field_tag "search[message]" %>
         </div>
         <div class="form_field">
-          <%= label_tag "search[archived]", "Archived" %>
-          <%= check_box_tag "search[archived]" %>
+          <%= label_tag "search[order]", "Sort Order" %>
+          <%= select_tag "search[order]", options_for_select([["Newest First", 'newest'],["Oldest First", 'oldest']]) %>
         </div>
         <div class="form_submit">
           <%= submit_tag 'Search' %>
