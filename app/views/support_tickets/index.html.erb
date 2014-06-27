@@ -5,6 +5,10 @@
           <%= label_tag "search[message]", "Search", id: 'st_message_label' %><br/>
           <%= text_field_tag "search[message]" %>
         </div>
+        <div class="form_field">
+          <%= label_tag "search[archived]", "Archived" %>
+          <%= check_box_tag "search[archived]" %>
+        </div>
         <div class="form_submit">
           <%= submit_tag 'Search' %>
         </div>

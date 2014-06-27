@@ -16,5 +16,7 @@ class SupportTicketSearch
     if params[:message].present?
       support_tickets = support_tickets.where("lower(message) LIKE ?", params[:message].downcase)
     end
+
+    return support_tickets.order('created_at DESC')
   end
 end
