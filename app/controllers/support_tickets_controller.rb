@@ -11,6 +11,12 @@ class SupportTicketsController < ApplicationController
     end
   end
 
+  def update
+    @support_ticket = SupportTicket.find(params[:id])
+
+    @support_ticket.update_attributes(params[:support_ticket])
+  end
+
   def create
     @support_ticket = SupportTicket.new(params[:support_ticket])
     @support_ticket.browser_version = request.user_agent
