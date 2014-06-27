@@ -9,7 +9,16 @@
         <dt class="st_header">
           <span class="st_sequence">
             <sup>#</sup><%= st.id %>
-            <%= link_to '', '', class: 'st_archive' %><%= link_to '', '', class: 'st_sticky' %>
+            <% if st.archived? %>
+              <%= link_to '', support_ticket_path(st, {support_ticket: {archive: true}}), method: :put, remote: true, class: 'st_archived' %>
+            <% else %>
+              <%= link_to '', support_ticket_path(st, {support_ticket: {archive: true}}), method: :put, remote: true, class: 'st_archive' %>
+            <% end %>
+            <% if st.pinned? %>
+              <%= link_to '', support_ticket_path(st, {support_ticket: {pinned: false}}), method: :put, remote: true, class: 'st_pinned' %>
+            <% else %>
+              <%= link_to '', support_ticket_path(st, {support_ticket: {pinned: true}}), method: :put, remote: true, class: 'st_pin' %>
+            <% end %>
           </span>
           <%= st.reason.titleize %><%= ": #{st.other_reason}" if st.other_reason.present? %>
         </dt>

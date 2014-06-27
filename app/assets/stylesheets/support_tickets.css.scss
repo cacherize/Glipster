@@ -70,7 +70,7 @@
         text-align:right;
         display:inline-block;
         sup {vertical-align:top; font-size:0.7em;}
-        .st_sticky, .st_archive {
+        .st_pin, .st_archive, .st_pinned, .st_archived {
           height:14px;
           width:14px;
           display:inline-block;
@@ -83,11 +83,19 @@
           top:37.5px;
           &:hover {background-position:-14px 0;}
         }
-        .st_sticky {
+        .st_pin, .st_pinned {
           background-position:-28px 0;
           margin-left:5px;
           right:20px;
           &:hover {background-position:-42px 0;}
+        }
+        .st_pinned {
+          background-position:-42px 0;
+          &:hover {background-position:-28px 0;}
+        }
+        .st_archived {
+          background-position:-14px 0;
+          &:hover {background-position:0 0;}
         }
       }
     }
