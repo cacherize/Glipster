@@ -67,7 +67,28 @@
         top:0;
         color:#c5c5c5;
         font-weight:normal;
-        sub {position:relative; bottom:5px;}
+        text-align:right;
+        display:inline-block;
+        sup {vertical-align:top; font-size:0.7em;}
+        .st_sticky, .st_archive {
+          height:14px;
+          width:14px;
+          display:inline-block;
+          background-image:url('support_ticket_actions.png');
+          background-repeat:no-repeat;
+          background-position:0 0;
+          margin-bottom:20px;
+          position:absolute;
+          right:0;
+          top:37.5px;
+          &:hover {background-position:-14px 0;}
+        }
+        .st_sticky {
+          background-position:-28px 0;
+          margin-left:5px;
+          right:20px;
+          &:hover {background-position:-42px 0;}
+        }
       }
     }
     .st_body {

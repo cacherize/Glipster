@@ -7,7 +7,10 @@
     <dl id="st_list">
       <% @support_tickets.each do |st| %>
         <dt class="st_header">
-          <span class="st_sequence"><sub>#</sub><%= st.id %></span>
+          <span class="st_sequence">
+            <sup>#</sup><%= st.id %>
+            <%= link_to '', '', class: 'st_archive' %><%= link_to '', '', class: 'st_sticky' %>
+          </span>
           <%= st.reason.titleize %><%= ": #{st.other_reason}" if st.other_reason.present? %>
         </dt>
         <dd class="st_body">
