@@ -34,3 +34,53 @@
   }
   #messageCharCount {float:right; font-size:0.75em; color:#888;}
 }
+#st_left_column {
+  float:left;
+  width:25%;
+  .wrapper {
+    margin-top:60px;
+  }
+}
+#st_right_col {
+  float:left;
+  width:75%;
+  h1 {
+    text-align:right;
+    border-bottom:3px dotted #444;
+    margin-left:100px;
+    letter-spacing: 3px;
+    span {
+      font-weight:normal;
+      font-size:0.8em;
+    }
+  }
+  #st_list {
+    padding-left:90px;
+    .st_header {
+      position:relative;
+      font-size:1.8em;
+      font-weight:bold;
+      padding-left:10px;
+      .st_sequence {
+        position:absolute;
+        right:100%;
+        top:0;
+        color:#c5c5c5;
+        font-weight:normal;
+        sub {position:relative; bottom:5px;}
+      }
+    }
+    .st_body {
+      padding-left:10px;
+      margin:0 0 20px 0;
+      .st_message {
+        margin:0;
+      }
+      .st_details {
+        margin:10px 0 0 0;
+        font-size:0.7em;
+        color:#bbb;
+      }
+    }
+  }
+}

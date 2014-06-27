@@ -1,0 +1,29 @@
+<div class="constraint">
+  <div id="st_left_column">
+    <div class="wrapper"></div>
+  </div>
+  <div id="st_right_col">
+    <h1>S<span>upport</span> T<span>ickets</span></h1>
+    <dl id="st_list">
+      <% @support_tickets.each do |st| %>
+        <dt class="st_header">
+          <span class="st_sequence"><sub>#</sub><%= st.id %></span>
+          <%= st.reason.titleize %><%= ": #{st.other_reason}" if st.other_reason.present? %>
+        </dt>
+        <dd class="st_body">
+          <p class="st_message"><%= st.message %></p>
+          <p class="st_details">
+            <%= st.created_at.strftime("%b %e, %Y %l:%m %p") %>
+            <% if st.user %>
+              <%= "| #{link_to(st.user.username, st.user)}".html_safe  %>
+            <% else %>
+              <%= "| #{mail_to(st.email)}".html_safe  %>
+            <% end %>
+            | <%= st.browser_version %>
+          </p>
+        </dd>
+      <% end %>
+    </dl>
+  </div>
+  <br class="clear"/>
+</div>
