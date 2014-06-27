@@ -49,6 +49,10 @@ class SupportTicket < ActiveRecord::Base
     self.save!
   end
 
+  def archived?
+    self.archived_at.present?
+  end
+
   def success_message
     reason = self.reason
     case reason
