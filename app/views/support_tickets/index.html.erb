@@ -7,7 +7,7 @@
         </div>
         <div id="st_sort_order">
           <%= label_tag "search[order]", "Sort Order" %>
-          <div class="select_wrapper"><%= select_tag "search[order]", options_for_select([["Newest First", 'newest'],["Oldest First", 'oldest']]) %></div>
+          <div class="select_wrapper"><%= select_tag "search[order]", options_for_select([["Newest First", 'newest'],["Oldest First", 'oldest']], (@filters.present? ? params[:search][:order] : 'newest')) %></div>
         </div>
         <div id="st_archived_cbs">
           <%= check_box "search", "archived", {checked: ((@filters.present?) ? (params[:search][:archived] == "1") : false)}, 1, 0 %>
