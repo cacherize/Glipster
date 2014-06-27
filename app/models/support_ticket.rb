@@ -32,7 +32,21 @@ class SupportTicket < ActiveRecord::Base
   end
 
   def archive=(boolean)
-    raise boolean.inspect
+    if boolean == "true"
+      self.archive!
+    else
+      self.unarchive!
+    end
+  end
+
+  def archive!
+    self.archived_at = DateTime.current
+    self.save!
+  end
+
+  def unarchive!
+    self.archived_at = nil
+    self.save!
   end
 
   def success_message
