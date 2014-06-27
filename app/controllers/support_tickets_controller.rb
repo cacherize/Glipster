@@ -15,6 +15,9 @@ class SupportTicketsController < ApplicationController
     @support_ticket = SupportTicket.find(params[:id])
 
     @support_ticket.update_attributes(params[:support_ticket])
+    respond_to do |format|
+      format.all { render :nothing => true, :status => 200 }
+    end
   end
 
   def create
