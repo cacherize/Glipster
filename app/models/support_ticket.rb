@@ -1,6 +1,6 @@
 class SupportTicket < ActiveRecord::Base
   include ActionView::Helpers::TextHelper
-  attr_accessible :email, :reason, :message, :stickied, :archive, :other_reason, :name, :game_id, :user_id
+  attr_accessible :email, :reason, :message, :pinned, :archive, :other_reason, :name, :game_id, :user_id
   validates :message, presence: {message: 'must be provided'}
   validates :reason, presence: {message: 'must be selected'}
   validates :email, presence: {message: 'must be provided'}
