@@ -21,6 +21,14 @@
           <%= check_box "search", "unarchived", {checked: ((@filters.present?) ? (params[:search][:unarchived] == "1") : true)}, 1, 0 %>
           <%= label_tag "search[unarchived]", "Unarchived" %>
         </div>
+        <div>
+          <%= check_box_tag 'search[reason][]', 'report bug' %><%= label_tag 'search[reason][]', "Report Bug" %><br/>
+          <%= check_box_tag 'search[reason][]', 'general comment' %><%= label_tag 'search[reason][]', "General Comment" %><br/>
+          <%= check_box_tag 'search[reason][]', 'make a suggestion' %><%= label_tag 'search[reason][]', "Make A Suggestion" %><br/>
+          <%= check_box_tag 'search[reason][]', 'trouble registering' %><%= label_tag 'search[reason][]', "Trouble Registering" %><br/>
+          <%= check_box_tag 'search[reason][]', 'game doesnt play' %><%= label_tag 'search[reason][]', "Game Doesn't Play" %><br/>
+          <%= check_box_tag 'search[reason][]', 'other' %><%= label_tag 'search[reason][]', "Other" %>
+        </div>
         <div class="form_submit">
           <%= submit_tag 'Search' %>
         </div>
