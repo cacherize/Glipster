@@ -1,6 +1,14 @@
 <div class="constraint">
   <div id="st_left_column">
-    <div class="wrapper"></div>
+      <%= form_tag support_tickets_path, method: :get, class: 'form', id: 'support_ticket_form' do %>
+        <div class="form_field">
+          <%= label_tag :message, "Search", id: 'st_message_label' %><br/>
+          <%= text_field_tag :message %>
+        </div>
+        <div class="form_submit">
+          <%= submit_tag 'Search' %>
+        </div>
+      <% end %>
   </div>
   <div id="st_right_col">
     <h1>S<span>upport</span> T<span>ickets</span></h1>

@@ -1,6 +1,7 @@
 class SupportTicketsController < ApplicationController
   def index
-    @support_tickets = SupportTicket.unarchived.order('created_at DESC')
+    sp_list = SupportTicketSearch.new(params[:support_ticket_search]).results
+    @support_tickets = sp_list
   end
 
   def new

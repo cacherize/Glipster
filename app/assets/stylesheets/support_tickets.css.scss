@@ -37,8 +37,17 @@
 #st_left_column {
   float:left;
   width:25%;
-  .wrapper {
+  #support_ticket_form {
     margin-top:60px;
+    display:block;
+    padding:30px;
+    #st_message_label {
+      font-weight:bold;
+      font-size:1.2em;
+    }
+    input {width:100%;}
+    input[type='text'] {padding:4px 0; text-align:center;}
+    input[type='submit'] {margin-bottom:0;}
   }
 }
 #st_right_col {
