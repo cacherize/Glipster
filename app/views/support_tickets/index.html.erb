@@ -23,8 +23,10 @@
         </div>
         <div>
           <% SupportTicket::REASONS.each do |k,v| %>
-            <%= check_box_tag 'search[reason][]', k, mark_support_ticket_reason_filters(k, params[:search]), id: "reason_#{k.parameterize}" %>
-            <%= label_tag "reason_#{k.parameterize}", v %><br/>
+            <div class="reason_filter_wrapper">
+              <%= check_box_tag 'search[reason][]', k, mark_support_ticket_reason_filters(k, params[:search]), id: "reason_#{k.parameterize}", class: 'reason_filter' %>
+              <%= label_tag "reason_#{k.parameterize}", v %>
+            </div>
           <% end %>
         </div>
         <div class="form_submit">
@@ -69,3 +71,4 @@
   </div>
   <br class="clear"/>
 </div>
+<%= javascript_include_tag params[:controller] %>
