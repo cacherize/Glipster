@@ -12,6 +12,7 @@ class SupportTicket < ActiveRecord::Base
 
   scope :archived, where("archived_at IS NOT NULL")
   scope :unarchived, where("archived_at IS NULL")
+  scope :pinned, where('pinned IS TRUE')
 
   REASONS = [
     ["report bug", "Report Bug"],
