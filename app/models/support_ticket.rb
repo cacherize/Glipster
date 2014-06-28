@@ -13,6 +13,15 @@ class SupportTicket < ActiveRecord::Base
   scope :archived, where("archived_at IS NOT NULL")
   scope :unarchived, where("archived_at IS NULL")
 
+  REASONS = [
+    ["report bug", "Report Bug"],
+    ["general comment", "General Comment"],
+    ["make a suggestion", "Make A Suggestion"],
+    ["trouble registering", "Trouble Registering"],
+    ["game doesnt play", "Game Doesn't play"],
+    ["other", "Other"]
+  ]
+
   def check_existing_tickets(ip)
     existing_ticket = SupportTicket.where(requester: ip).order("created_at ASC").last
     

@@ -22,12 +22,10 @@
           <%= label_tag "search[unarchived]", "Unarchived" %>
         </div>
         <div>
-          <%= check_box_tag 'search[reason][]', 'report bug' %><%= label_tag 'search[reason][]', "Report Bug" %><br/>
-          <%= check_box_tag 'search[reason][]', 'general comment' %><%= label_tag 'search[reason][]', "General Comment" %><br/>
-          <%= check_box_tag 'search[reason][]', 'make a suggestion' %><%= label_tag 'search[reason][]', "Make A Suggestion" %><br/>
-          <%= check_box_tag 'search[reason][]', 'trouble registering' %><%= label_tag 'search[reason][]', "Trouble Registering" %><br/>
-          <%= check_box_tag 'search[reason][]', 'game doesnt play' %><%= label_tag 'search[reason][]', "Game Doesn't Play" %><br/>
-          <%= check_box_tag 'search[reason][]', 'other' %><%= label_tag 'search[reason][]', "Other" %>
+          <% SupportTicket::REASONS.each do |reason| %>
+            <%= check_box_tag 'search[reason][]', reason.first, false, id: "reason_#{reason.first.parameterize}" %>
+            <%= label_tag "reason_#{reason.first.parameterize}", reason.last %><br/>
+          <% end %>
         </div>
         <div class="form_submit">
           <%= submit_tag 'Search' %>
