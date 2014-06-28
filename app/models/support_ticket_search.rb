@@ -1,9 +1,13 @@
 class SupportTicketSearch
-  def initialize(params)
-    if params.nil?
+  attr_accessor :filters
+
+  def initialize(args)
+    @filters = args[:filters]
+
+    if @filters.nil?
       @support_ticket_list = SupportTicket.unarchived.order('created_at DESC')
     else
-      @support_ticket_list = search_support_tickets(params)
+      @support_ticket_list = search_support_tickets(@filters)
     end
   end
 
@@ -12,7 +16,7 @@ class SupportTicketSearch
   end 
 
   def search_support_tickets(params)
-    support_tickets = SupportTicket
+    support_tickets = SupportTicket.all
 
     if params[:message].present?
       support_tickets = support_tickets.where("lower(message) LIKE ?", params[:message].downcase)
