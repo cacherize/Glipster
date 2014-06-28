@@ -22,9 +22,9 @@
           <%= label_tag "search[unarchived]", "Unarchived" %>
         </div>
         <div>
-          <% SupportTicket::REASONS.each do |reason| %>
-            <%= check_box_tag 'search[reason][]', reason.first, false, id: "reason_#{reason.first.parameterize}" %>
-            <%= label_tag "reason_#{reason.first.parameterize}", reason.last %><br/>
+          <% SupportTicket::REASONS.each do |k,v| %>
+            <%= check_box_tag 'search[reason][]', k, mark_support_ticket_reason_filters(k, params[:search]), id: "reason_#{k.parameterize}" %>
+            <%= label_tag "reason_#{k.parameterize}", v %><br/>
           <% end %>
         </div>
         <div class="form_submit">
