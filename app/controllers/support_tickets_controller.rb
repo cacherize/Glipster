@@ -1,4 +1,6 @@
 class SupportTicketsController < ApplicationController
+  before_filter :authorize, only: :index
+  
   def index
     support_ticket_search = SupportTicketSearch.new(filters: params[:search])
     @support_tickets = support_ticket_search.results
