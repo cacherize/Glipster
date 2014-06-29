@@ -61,6 +61,8 @@
 				a{
 					color:#999;
 					text-decoration: none;
+          position:relative;
+          z-index:9;
 					&:hover {color:#444;}
 				}
 			}
