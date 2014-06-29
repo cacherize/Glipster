@@ -1,4 +1,4 @@
-<div class="center">
+<div class="center" id="game_form">
 	<%= form_for @game, html: {class: "form"} do |f| %>
 		<h2 class="form_header"><%= params[:action].titleize %> Game</h2><br/>
     <% if @game.errors.any? %>
@@ -85,9 +85,9 @@
 
     <hr class="form_divider"/>
     <% if params[:key].present? %>
-      <%= content_tag :embed, "", src: parse_upload_path(params), width: 550, height: 400 %>
+      <%= content_tag :embed, "", src: parse_upload_path(params), width: 550, height: 400, id: 'game_form_preview' %>
     <% else %>
-      <%= content_tag :embed, "", src: @game.flash_file.url, width: @game.width, height: @game.height %>
+      <%= content_tag :embed, "", src: @game.flash_file.url, width: @game.width, height: @game.height, id: 'game_form_preview' %>
     <% end %>
 
 	<% end %>

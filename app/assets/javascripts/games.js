@@ -7,6 +7,10 @@ $(document).ready(function(){
     most_played_games();
   }
 
+  if ($("#game_form").length > 0) {
+    game_form();
+  }
+
   $("#game_stats").on('click', '#stats_toggle, #hide', function(event){
     if ($("#stats_toggle span").text() == "More Info") {
       $("#stats_toggle").html("<img src='/assets/toggle_up.png'/><span>Hide Info</span>");
@@ -145,6 +149,18 @@ function commentOverflow(){
   $(".comment_message").dotdotdot({
     ellipsis : '',
     after: "a.read_more"
+  });
+}
+
+function game_form(){
+  $("#game_height").keyup(function(){
+    var dim = $(this).val();
+    $("#game_form_preview").attr('height', dim);
+  });
+
+  $("#game_width").keyup(function(){
+    var dim = $(this).val();
+    $("#game_form_preview").attr('width', dim);
   });
 }
 
