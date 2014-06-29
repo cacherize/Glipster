@@ -82,6 +82,14 @@
 		<div class="form_submit">
 			<%= f.submit %>
 		</div>	
+
+    <hr class="form_divider"/>
+    <% if params[:key].present? %>
+      <%= content_tag :embed, "", src: parse_upload_path(params), width: 550, height: 400 %>
+    <% else %>
+      <%= content_tag :embed, "", src: @game.flash_file.url, width: @game.width, height: @game.height %>
+    <% end %>
+
 	<% end %>
 </div>
 <script>

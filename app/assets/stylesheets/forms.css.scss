@@ -140,6 +140,9 @@
     vertical-align: top;
     &:hover {background-position:-30px 0;}
   }
+  .form_divider {
+    margin:15px 0; border:0; border-top:1px solid #ccc;
+  }
 }
 .form_wrapper {
   display:inline-block;

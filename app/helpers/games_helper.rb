@@ -37,4 +37,8 @@ module GamesHelper
   def new_game_status(game)
     link_to('', game_path(game), class: 'new_status') if (game.created_at + 5.days) > DateTime.now
   end
+
+  def parse_upload_path(params)
+    "https://#{params[:bucket]}.s3.amazonaws.com/#{params[:key]}"
+  end
 end
