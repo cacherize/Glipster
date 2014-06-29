@@ -16,11 +16,7 @@ class SupportTicketSearch
   end 
 
   def search_support_tickets(params)
-    support_tickets = SupportTicket.all
-
-    if params[:message].present?
-      support_tickets = support_tickets.where("lower(message) LIKE ?", params[:message].downcase)
-    end
+    support_tickets = SupportTicket
 
     if params[:unarchived] == "0"
       support_tickets = support_tickets.archived
@@ -28,6 +24,10 @@ class SupportTicketSearch
 
     if params[:archived] == "0"
       support_tickets = support_tickets.unarchived
+    end
+
+    if params[:message].present?
+      support_tickets = support_tickets.where("lower(message) LIKE ?", params[:message].downcase)
     end
 
     if params[:reason].present?
