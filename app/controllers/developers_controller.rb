@@ -17,8 +17,19 @@ class DevelopersController < ApplicationController
 	end
 
 	def index
-		@developers = Developer.order(:name).where("lower(name) like ?", "%#{params[:term].downcase}%")
-    render json: @developers.map(&:name)
+    if params[:term].present?
+		  @developers = Developer.where("lower(name) like ?", "%#{params[:term].downcase}%")
+    else
+      @developers = Developer.order(:name)
+    end
+
+    respond_to do |format|
+      if params[:term].present?
+        format.js {render json: @developers.map(&:name)}
+      else
+        format.html
+      end
+    end
 	end
 
 	def show

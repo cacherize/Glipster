@@ -1,1 +1,6 @@
 <%= link_to "Add Developer", new_developer_path %>
+<ul>
+  <% @developers.each do |dev| %>
+    <li><%= link_to dev.name, dev %> <%= link_to image_tag('edit.png'), edit_developer_path(dev) %></li>
+  <% end %>
+</ul>
