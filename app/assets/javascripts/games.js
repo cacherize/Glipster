@@ -162,6 +162,10 @@ function game_form(){
     var dim = $(this).val();
     $("#game_form_preview").attr('width', dim);
   });
+
+  $("#hide_game_preview").click(function(){
+    $("#game_preview").remove();
+  });
 }
 
 jQuery(window).load(function(){

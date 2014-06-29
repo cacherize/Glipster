@@ -83,12 +83,15 @@
 			<%= f.submit %>
 		</div>	
 
-    <hr class="form_divider"/>
-    <% if params[:key].present? %>
-      <%= content_tag :embed, "", src: parse_upload_path(params), width: 550, height: 400, id: 'game_form_preview' %>
-    <% else %>
-      <%= content_tag :embed, "", src: @game.flash_file.url, width: @game.width, height: @game.height, id: 'game_form_preview' %>
-    <% end %>
+    <div id="game_preview">
+      <hr class="form_divider"/>
+      <% if params[:key].present? %>
+        <%= content_tag :embed, "", src: parse_upload_path(params), width: 550, height: 400, id: 'game_form_preview' %>
+      <% else %>
+        <%= content_tag :embed, "", src: @game.flash_file.url, width: @game.width, height: @game.height, id: 'game_form_preview' %>
+      <% end %>
+      <%= link_to image_tag('delete.png'), "javascript:void(0)", id: 'hide_game_preview' %>
+    </div>
 
 	<% end %>
 </div>
